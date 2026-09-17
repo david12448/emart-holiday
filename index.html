@@ -3,14 +3,278 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>이마트 휴점일 안내</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, "Noto Sans KR", sans-serif;
+      background: #f5f6f7;
+      color: #222;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin-bottom: 8px;
+    }
+
+    .description {
+      color: #666;
+      margin-bottom: 25px;
+    }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 25px;
+    }
+
+    .tab-button {
+      border: 1px solid #ddd;
+      background: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .tab-button:hover {
+      background: #f0f0f0;
+    }
+
+    .tab-button.active {
+      background: #222;
+      color: white;
+      border-color: #222;
+    }
+
+    .region-panel {
+      display: none;
+    }
+
+    .region-panel.active {
+      display: block;
+    }
+
+    .holiday-group {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 15px;
+      border: 1px solid #e5e5e5;
+    }
+
+    .holiday-group h2 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    .store-list {
+      line-height: 1.9;
+    }
+
+    .notice {
+      color: #777;
+      font-size: 14px;
+      margin-top: 30px;
+    }
+  </style>
 </head>
+
 
 <body>
 
+<div class="container">
+
   <h1>이마트 휴점일 안내</h1>
 
-  <p>이마트 점포별 휴점일을 자동으로 업데이트하는 페이지입니다.</p>
+  <div class="description">
+    지역을 선택하면 해당 지역의 휴점일을 요일별로 확인할 수 있습니다.
+  </div>
+
+
+  <div class="tabs">
+
+    <button class="tab-button active" data-region="seoul">서울</button>
+    <button class="tab-button" data-region="incheon">인천</button>
+    <button class="tab-button" data-region="gyeonggi">경기</button>
+
+    <button class="tab-button" data-region="daejeon">대전</button>
+    <button class="tab-button" data-region="sejong">세종</button>
+    <button class="tab-button" data-region="chungcheong">충청</button>
+
+    <button class="tab-button" data-region="daegu">대구</button>
+    <button class="tab-button" data-region="gyeongsang">경상</button>
+    <button class="tab-button" data-region="ulsan">울산</button>
+
+    <button class="tab-button" data-region="busan">부산</button>
+    <button class="tab-button" data-region="jeolla">전라</button>
+    <button class="tab-button" data-region="gwangju">광주</button>
+
+    <button class="tab-button" data-region="gangwon">강원</button>
+    <button class="tab-button" data-region="jeju">제주</button>
+
+  </div>
+
+
+
+  <div id="seoul" class="region-panel active">
+
+    <h2>서울 지역</h2>
+
+    <div class="holiday-group">
+      <h2>일요일 휴무</h2>
+
+      <div class="store-list">
+        테스트 점포 A<br>
+        테스트 점포 B<br>
+        테스트 점포 C
+      </div>
+    </div>
+
+    <div class="holiday-group">
+      <h2>수요일 휴무</h2>
+
+      <div class="store-list">
+        테스트 점포 D
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <div id="incheon" class="region-panel">
+    <h2>인천 지역</h2>
+
+    <div class="holiday-group">
+      아직 데이터를 연결하지 않았습니다.
+    </div>
+  </div>
+
+
+  <div id="gyeonggi" class="region-panel">
+    <h2>경기 지역</h2>
+
+    <div class="holiday-group">
+      아직 데이터를 연결하지 않았습니다.
+    </div>
+  </div>
+
+
+  <div id="daejeon" class="region-panel">
+    <h2>대전 지역</h2>
+  </div>
+
+
+  <div id="sejong" class="region-panel">
+    <h2>세종 지역</h2>
+  </div>
+
+
+  <div id="chungcheong" class="region-panel">
+    <h2>충청 지역</h2>
+  </div>
+
+
+  <div id="daegu" class="region-panel">
+    <h2>대구 지역</h2>
+  </div>
+
+
+  <div id="gyeongsang" class="region-panel">
+    <h2>경상 지역</h2>
+  </div>
+
+
+  <div id="ulsan" class="region-panel">
+    <h2>울산 지역</h2>
+  </div>
+
+
+  <div id="busan" class="region-panel">
+    <h2>부산 지역</h2>
+  </div>
+
+
+  <div id="jeolla" class="region-panel">
+    <h2>전라 지역</h2>
+  </div>
+
+
+  <div id="gwangju" class="region-panel">
+    <h2>광주 지역</h2>
+  </div>
+
+
+  <div id="gangwon" class="region-panel">
+    <h2>강원 지역</h2>
+  </div>
+
+
+  <div id="jeju" class="region-panel">
+    <h2>제주 지역</h2>
+  </div>
+
+
+  <div class="notice">
+    자료 출처 : 이마트 공식 홈페이지
+  </div>
+
+</div>
+
+
+
+<script>
+
+  const buttons =
+    document.querySelectorAll(".tab-button");
+
+  const panels =
+    document.querySelectorAll(".region-panel");
+
+
+  buttons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+      buttons.forEach(btn =>
+        btn.classList.remove("active")
+      );
+
+      panels.forEach(panel =>
+        panel.classList.remove("active")
+      );
+
+
+      button.classList.add("active");
+
+
+      const region =
+        button.dataset.region;
+
+
+      document
+        .getElementById(region)
+        .classList.add("active");
+
+    });
+
+  });
+
+</script>
+
 
 </body>
 </html>
