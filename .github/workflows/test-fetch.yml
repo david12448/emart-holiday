@@ -3,6 +3,13 @@ name: Update Emart Holidays
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: "17 5 * * *"
+      timezone: "Asia/Seoul"
+
+permissions:
+  contents: write
+
 jobs:
   update-holidays:
     runs-on: ubuntu-latest
@@ -24,11 +31,23 @@ jobs:
       - name: 이마트 휴점일 수집
         run: python fetch_emart.py
 
-      - name: 생성 파일 확인
+      - name: 변경 파일 확인
         run: |
-          echo "===== holidays.json ====="
-          head -n 80 holidays.json
-
+          git status
           echo ""
-          echo "===== holiday_archive.json ====="
-          head -n 80 holiday_archive.json
+          echo "===== holidays.json ====="
+          head -n 40 holidays.json
+
+      - name: 변경 내용 GitHub에 저장
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add holidays.json holiday_archive.json
+
+          if git diff --cached --quiet; then
+            echo "변경된 휴점일 데이터가 없습니다."
+          else
+            git commit -m "이마트 휴점일 자동 업데이트"
+            git push
+          fi
