@@ -1,6 +1,7 @@
 import json
 import time
 from datetime import date, datetime
+from zoneinfo import ZoneInfo
 from pathlib import Path
 
 import requests
@@ -11,6 +12,12 @@ API_URL = "https://store.emart.com/branch/holidayList.do"
 
 ARCHIVE_FILE = Path("holiday_archive.json")
 OUTPUT_FILE = Path("holidays.json")
+
+KST = ZoneInfo("Asia/Seoul")
+
+
+def korea_today():
+    return datetime.now(KST).date()
 
 
 # 이마트 공식 지역 코드
@@ -242,7 +249,7 @@ def update_month(
     fresh_stores
 ):
 
-    today = date.today()
+    today = korea_today()
 
     prefix = (
         f"{year:04d}-{month:02d}-"
@@ -411,7 +418,7 @@ def save_files(archive):
 
 
     # 웹페이지에는 현재 달만 표시
-    today = date.today()
+    today = korea_today()
 
     current_prefix = (
         f"{today.year:04d}-"
@@ -468,7 +475,7 @@ def save_files(archive):
 
 def main():
 
-    today = date.today()
+    today = korea_today()
 
     current_year = today.year
     current_month = today.month
