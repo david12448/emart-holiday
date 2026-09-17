@@ -1,76 +1,150 @@
-import requests
-from bs4 import BeautifulSoup
-
+from playwright.sync_api import sync_playwright
 
 URL = "https://store.emart.com/main/holiday.do"
 
 
 def main():
-    print("이마트 휴점일 페이지 접속 시작")
 
-    headers = {
-        "User-Agent": (
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-            "AppleWebKit/537.36 "
-            "Chrome/140.0 Safari/537.36"
+    print("=== 이마트 Playwright 진단 시작 ===")
+
+    with sync_playwright() as p:
+
+        browser = p.chromium.launch(
+            headless=True
         )
-    }
 
-    response = requests.get(
-        URL,
-        headers=headers,
-        timeout=30
-    )
+        page = browser.new_page(
+            viewport={
+                "width": 1440,
+                "height": 1200
+            }
+        )
 
-    print("HTTP 상태 코드:", response.status_code)
-    print("받은 HTML 크기:", len(response.text))
+        # 이마트 페이지가 백그라운드에서 호출하는
+        # XHR / fetch 주소를 확인하기 위한 로그
+        def log_response(response):
 
-    response.raise_for_status()
+            resource_type = response.request.resource_type
 
-    soup = BeautifulSoup(
-        response.text,
-        "html.parser"
-    )
+            if resource_type in ("xhr", "fetch"):
 
-    tables = soup.select(
-        'table[id^="d-store-"]'
-    )
+                print(
+                    "[XHR/FETCH]",
+                    response.status,
+                    response.url
+                )
 
-    print()
-    print("발견된 휴점일 테이블 수:", len(tables))
+        page.on(
+            "response",
+            log_response
+        )
 
-    if not tables:
+        print("페이지 접속 중...")
+
+        page.goto(
+            URL,
+            wait_until="domcontentloaded",
+            timeout=60000
+        )
+
+        # 자바스크립트가 데이터를 불러올 시간을 줌
+        page.wait_for_timeout(10000)
+
         print()
-        print("휴점일 테이블을 찾지 못했습니다.")
-        print("다음 단계에서 브라우저 방식으로 전환해야 합니다.")
-        return
+        print("페이지 제목:", page.title())
+        print("현재 주소:", page.url)
 
-    print()
-    print("발견된 테이블 ID:")
+        print()
+        print("=== TABLE 검사 ===")
 
-    for table in tables:
-        print("-", table.get("id"))
+        tables = page.locator("table")
 
-    print()
-    print("첫 번째 테이블 테스트")
+        table_count = tables.count()
 
-    first_table = tables[0]
+        print("전체 table 개수:", table_count)
 
-    rows = first_table.select("tbody tr")
+        for i in range(table_count):
 
-    print("행 개수:", len(rows))
+            table = tables.nth(i)
 
-    for row in rows[:5]:
+            try:
+                text = table.inner_text().strip()
+            except Exception:
+                text = ""
 
-        cells = [
-            cell.get_text(
-                " ",
-                strip=True
+            print()
+            print(f"[TABLE {i}]")
+
+            if text:
+                print(text[:1000])
+            else:
+                print("(내용 없음)")
+
+        print()
+        print("=== 휴점일 주변 화면 텍스트 ===")
+
+        body_text = page.locator("body").inner_text()
+
+        position = body_text.find("휴점일 안내")
+
+        if position >= 0:
+
+            start = max(
+                0,
+                position - 500
             )
-            for cell in row.select("td")
-        ]
 
-        print(cells)
+            end = min(
+                len(body_text),
+                position + 5000
+            )
+
+            print(
+                body_text[start:end]
+            )
+
+        else:
+
+            print(
+                "'휴점일 안내' 문구를 찾지 못했습니다."
+            )
+
+        print()
+        print("=== 행(tr) 검사 ===")
+
+        rows = page.locator("table tr")
+
+        print(
+            "전체 table tr 개수:",
+            rows.count()
+        )
+
+        for i in range(
+            min(rows.count(), 20)
+        ):
+
+            try:
+
+                row_text = (
+                    rows
+                    .nth(i)
+                    .inner_text()
+                    .strip()
+                )
+
+                if row_text:
+                    print(
+                        f"ROW {i}:",
+                        row_text
+                    )
+
+            except Exception:
+                pass
+
+        browser.close()
+
+    print()
+    print("=== 진단 완료 ===")
 
 
 if __name__ == "__main__":
