@@ -59,12 +59,8 @@
       border-color: #222;
     }
 
-    .region-panel {
-      display: none;
-    }
-
-    .region-panel.active {
-      display: block;
+    .region-title {
+      margin-bottom: 15px;
     }
 
     .holiday-group {
@@ -77,11 +73,35 @@
 
     .holiday-group h2 {
       margin-top: 0;
+      margin-bottom: 15px;
       font-size: 20px;
     }
 
-    .store-list {
-      line-height: 1.9;
+    .store-item {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .store-item:last-child {
+      border-bottom: 0;
+    }
+
+    .store-name {
+      font-weight: bold;
+    }
+
+    .dates {
+      color: #666;
+      margin-top: 4px;
+      font-size: 14px;
+    }
+
+    .empty {
+      background: white;
+      border: 1px solid #e5e5e5;
+      border-radius: 12px;
+      padding: 20px;
+      color: #777;
     }
 
     .notice {
@@ -89,9 +109,16 @@
       font-size: 14px;
       margin-top: 30px;
     }
+
+    .error {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 20px;
+      color: #b00020;
+    }
   </style>
 </head>
-
 
 <body>
 
@@ -103,130 +130,11 @@
     지역을 선택하면 해당 지역의 휴점일을 요일별로 확인할 수 있습니다.
   </div>
 
+  <div id="tabs" class="tabs"></div>
 
-  <div class="tabs">
-
-    <button class="tab-button active" data-region="seoul">서울</button>
-    <button class="tab-button" data-region="incheon">인천</button>
-    <button class="tab-button" data-region="gyeonggi">경기</button>
-
-    <button class="tab-button" data-region="daejeon">대전</button>
-    <button class="tab-button" data-region="sejong">세종</button>
-    <button class="tab-button" data-region="chungcheong">충청</button>
-
-    <button class="tab-button" data-region="daegu">대구</button>
-    <button class="tab-button" data-region="gyeongsang">경상</button>
-    <button class="tab-button" data-region="ulsan">울산</button>
-
-    <button class="tab-button" data-region="busan">부산</button>
-    <button class="tab-button" data-region="jeolla">전라</button>
-    <button class="tab-button" data-region="gwangju">광주</button>
-
-    <button class="tab-button" data-region="gangwon">강원</button>
-    <button class="tab-button" data-region="jeju">제주</button>
-
+  <div id="content">
+    데이터를 불러오는 중입니다...
   </div>
-
-
-
-  <div id="seoul" class="region-panel active">
-
-    <h2>서울 지역</h2>
-
-    <div class="holiday-group">
-      <h2>일요일 휴무</h2>
-
-      <div class="store-list">
-        테스트 점포 A<br>
-        테스트 점포 B<br>
-        테스트 점포 C
-      </div>
-    </div>
-
-    <div class="holiday-group">
-      <h2>수요일 휴무</h2>
-
-      <div class="store-list">
-        테스트 점포 D
-      </div>
-    </div>
-
-  </div>
-
-
-
-  <div id="incheon" class="region-panel">
-    <h2>인천 지역</h2>
-
-    <div class="holiday-group">
-      아직 데이터를 연결하지 않았습니다.
-    </div>
-  </div>
-
-
-  <div id="gyeonggi" class="region-panel">
-    <h2>경기 지역</h2>
-
-    <div class="holiday-group">
-      아직 데이터를 연결하지 않았습니다.
-    </div>
-  </div>
-
-
-  <div id="daejeon" class="region-panel">
-    <h2>대전 지역</h2>
-  </div>
-
-
-  <div id="sejong" class="region-panel">
-    <h2>세종 지역</h2>
-  </div>
-
-
-  <div id="chungcheong" class="region-panel">
-    <h2>충청 지역</h2>
-  </div>
-
-
-  <div id="daegu" class="region-panel">
-    <h2>대구 지역</h2>
-  </div>
-
-
-  <div id="gyeongsang" class="region-panel">
-    <h2>경상 지역</h2>
-  </div>
-
-
-  <div id="ulsan" class="region-panel">
-    <h2>울산 지역</h2>
-  </div>
-
-
-  <div id="busan" class="region-panel">
-    <h2>부산 지역</h2>
-  </div>
-
-
-  <div id="jeolla" class="region-panel">
-    <h2>전라 지역</h2>
-  </div>
-
-
-  <div id="gwangju" class="region-panel">
-    <h2>광주 지역</h2>
-  </div>
-
-
-  <div id="gangwon" class="region-panel">
-    <h2>강원 지역</h2>
-  </div>
-
-
-  <div id="jeju" class="region-panel">
-    <h2>제주 지역</h2>
-  </div>
-
 
   <div class="notice">
     자료 출처 : 이마트 공식 홈페이지
@@ -235,46 +143,263 @@
 </div>
 
 
-
 <script>
 
-  const buttons =
-    document.querySelectorAll(".tab-button");
+const regionOrder = [
+  "서울",
+  "인천",
+  "경기",
+  "대전",
+  "세종",
+  "충청",
+  "대구",
+  "경상",
+  "울산",
+  "부산",
+  "전라",
+  "광주",
+  "강원",
+  "제주"
+];
 
-  const panels =
-    document.querySelectorAll(".region-panel");
+const weekdayNames = [
+  "일요일",
+  "월요일",
+  "화요일",
+  "수요일",
+  "목요일",
+  "금요일",
+  "토요일"
+];
+
+let holidayData = [];
+let selectedRegion = "서울";
 
 
-  buttons.forEach(button => {
+function getWeekday(dateString) {
+
+  const parts = dateString.split("-");
+
+  const year = Number(parts[0]);
+  const month = Number(parts[1]) - 1;
+  const day = Number(parts[2]);
+
+  const date = new Date(year, month, day);
+
+  return weekdayNames[date.getDay()];
+}
+
+
+function formatDate(dateString) {
+
+  const parts = dateString.split("-");
+
+  const month = Number(parts[1]);
+  const day = Number(parts[2]);
+
+  const weekday = getWeekday(dateString);
+
+  return `${month}월 ${day}일(${weekday.charAt(0)})`;
+}
+
+
+function classifyStore(store) {
+
+  const weekdays =
+    store.holidays.map(date => getWeekday(date));
+
+  const uniqueWeekdays =
+    [...new Set(weekdays)];
+
+  if (uniqueWeekdays.length === 1) {
+    return uniqueWeekdays[0];
+  }
+
+  return "기타·변동 휴무";
+}
+
+
+function createTabs() {
+
+  const tabs = document.getElementById("tabs");
+
+  tabs.innerHTML = "";
+
+  regionOrder.forEach(region => {
+
+    const button = document.createElement("button");
+
+    button.className = "tab-button";
+
+    if (region === selectedRegion) {
+      button.classList.add("active");
+    }
+
+    button.textContent = region;
 
     button.addEventListener("click", () => {
 
-      buttons.forEach(btn =>
-        btn.classList.remove("active")
-      );
+      selectedRegion = region;
 
-      panels.forEach(panel =>
-        panel.classList.remove("active")
-      );
-
-
-      button.classList.add("active");
-
-
-      const region =
-        button.dataset.region;
-
-
-      document
-        .getElementById(region)
-        .classList.add("active");
+      createTabs();
+      renderRegion();
 
     });
 
+    tabs.appendChild(button);
+
+  });
+}
+
+
+function renderRegion() {
+
+  const content =
+    document.getElementById("content");
+
+  const stores =
+    holidayData.filter(
+      item => item.region === selectedRegion
+    );
+
+
+  content.innerHTML =
+    `<h2 class="region-title">${selectedRegion} 지역</h2>`;
+
+
+  if (stores.length === 0) {
+
+    content.innerHTML += `
+      <div class="empty">
+        현재 등록된 휴점일 데이터가 없습니다.
+      </div>
+    `;
+
+    return;
+  }
+
+
+  const groups = {};
+
+
+  stores.forEach(store => {
+
+    const group =
+      classifyStore(store);
+
+    if (!groups[group]) {
+      groups[group] = [];
+    }
+
+    groups[group].push(store);
+
   });
 
-</script>
 
+  const displayOrder = [
+    "일요일",
+    "월요일",
+    "화요일",
+    "수요일",
+    "목요일",
+    "금요일",
+    "토요일",
+    "기타·변동 휴무"
+  ];
+
+
+  displayOrder.forEach(groupName => {
+
+    if (!groups[groupName]) {
+      return;
+    }
+
+
+    let html = `
+      <div class="holiday-group">
+
+        <h2>${groupName} 휴무</h2>
+    `;
+
+
+    groups[groupName].forEach(store => {
+
+      const dates =
+        store.holidays
+          .map(date => formatDate(date))
+          .join(" · ");
+
+
+      html += `
+        <div class="store-item">
+
+          <div class="store-name">
+            ${store.store}
+          </div>
+
+          <div class="dates">
+            ${dates}
+          </div>
+
+        </div>
+      `;
+
+    });
+
+
+    html += `</div>`;
+
+    content.innerHTML += html;
+
+  });
+
+}
+
+
+async function loadData() {
+
+  try {
+
+    const response =
+      await fetch(
+        "./holidays.json?time=" + Date.now(),
+        {
+          cache: "no-store"
+        }
+      );
+
+
+    if (!response.ok) {
+      throw new Error("데이터 파일을 불러오지 못했습니다.");
+    }
+
+
+    holidayData =
+      await response.json();
+
+
+    createTabs();
+    renderRegion();
+
+
+  } catch (error) {
+
+    document.getElementById("content").innerHTML = `
+      <div class="error">
+        휴점일 데이터를 불러오는 중 오류가 발생했습니다.
+      </div>
+    `;
+
+    console.error(error);
+
+  }
+
+}
+
+
+loadData();
+
+</script>
 
 </body>
 </html>
