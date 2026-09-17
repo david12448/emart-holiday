@@ -1,10 +1,10 @@
-name: Test Emart Fetch
+name: Update Emart Holidays
 
 on:
   workflow_dispatch:
 
 jobs:
-  test-fetch:
+  update-holidays:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,9 +21,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Chromium 브라우저 설치
-        run: |
-          python -m playwright install --with-deps chromium
-
-      - name: 이마트 휴점일 테스트 실행
+      - name: 이마트 휴점일 수집
         run: python fetch_emart.py
+
+      - name: 생성 파일 확인
+        run: |
+          echo "===== holidays.json ====="
+          head -n 80 holidays.json
+
+          echo ""
+          echo "===== holiday_archive.json ====="
+          head -n 80 holiday_archive.json
