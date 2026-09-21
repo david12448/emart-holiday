@@ -117,6 +117,87 @@
       padding: 20px;
       color: #b00020;
     }
+    .holiday-accordion {
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  overflow: hidden;
+}
+
+.holiday-accordion summary {
+  padding: 18px 20px;
+  font-size: 19px;
+  font-weight: bold;
+  cursor: pointer;
+  list-style: none;
+}
+
+.holiday-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.holiday-accordion summary::before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 9px;
+  font-size: 13px;
+}
+
+.holiday-accordion[open] summary::before {
+  content: "▼";
+}
+
+.accordion-content {
+  padding: 0 20px 20px;
+}
+
+.date-group {
+  padding-top: 16px;
+  margin-top: 6px;
+  border-top: 1px solid #eee;
+}
+
+.date-group:first-child {
+  border-top: 0;
+  padding-top: 5px;
+}
+
+.date-title {
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #555;
+}
+
+.store-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px 18px;
+}
+
+.store-grid-item {
+  padding: 9px 10px;
+  background: #f7f7f7;
+  border-radius: 6px;
+}
+
+.region-count {
+  color: #777;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+@media (max-width: 700px) {
+  .store-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 450px) {
+  .store-grid {
+    grid-template-columns: 1fr;
+  }
+}
   </style>
 </head>
 
@@ -175,7 +256,11 @@ const weekdayNames = [
 let holidayData = [];
 let selectedRegion = "서울";
 
+function shortStoreName(name) {
+  return name.replace(/^이마트\s+/, "");
+}
 
+  
 function getWeekday(dateString) {
 
   const parts = dateString.split("-");
@@ -262,9 +347,13 @@ function renderRegion() {
       item => item.region === selectedRegion
     );
 
-
   content.innerHTML =
-    `<h2 class="region-title">${selectedRegion} 지역</h2>`;
+    `<h2 class="region-title">
+      ${selectedRegion} 지역
+      <span class="region-count">
+        · ${stores.length}개 점포
+      </span>
+    </h2>`;
 
 
   if (stores.length === 0) {
@@ -279,19 +368,19 @@ function renderRegion() {
   }
 
 
-  const groups = {};
+  const weekdayGroups = {};
 
 
   stores.forEach(store => {
 
-    const group =
+    const weekday =
       classifyStore(store);
 
-    if (!groups[group]) {
-      groups[group] = [];
+    if (!weekdayGroups[weekday]) {
+      weekdayGroups[weekday] = [];
     }
 
-    groups[group].push(store);
+    weekdayGroups[weekday].push(store);
 
   });
 
@@ -308,46 +397,110 @@ function renderRegion() {
   ];
 
 
-  displayOrder.forEach(groupName => {
+  displayOrder.forEach((groupName, index) => {
 
-    if (!groups[groupName]) {
+    const groupStores =
+      weekdayGroups[groupName];
+
+    if (!groupStores) {
       return;
     }
 
 
-    let html = `
-      <div class="holiday-group">
+    /*
+      같은 휴무 날짜를 가진 점포끼리
+      다시 한 번 그룹화
+    */
 
-        <h2>${groupName} 휴무</h2>
-    `;
-
-
-    groups[groupName].forEach(store => {
-
-      const dates =
-        store.holidays
-          .map(date => formatDate(date))
-          .join(" · ");
+    const dateGroups = {};
 
 
-      html += `
-        <div class="store-item">
+    groupStores.forEach(store => {
 
-          <div class="store-name">
-            ${store.store}
-          </div>
+      const key =
+        [...store.holidays]
+          .sort()
+          .join("|");
 
-          <div class="dates">
-            ${dates}
-          </div>
+      if (!dateGroups[key]) {
+        dateGroups[key] = [];
+      }
 
-        </div>
-      `;
+      dateGroups[key].push(store);
 
     });
 
 
-    html += `</div>`;
+    let html = `
+      <details
+        class="holiday-accordion"
+        ${index === 0 ? "open" : ""}
+      >
+
+        <summary>
+          ${groupName} 휴무
+          · ${groupStores.length}개 점포
+        </summary>
+
+        <div class="accordion-content">
+    `;
+
+
+    Object.entries(dateGroups)
+      .sort(([a], [b]) =>
+        a.localeCompare(b)
+      )
+      .forEach(([dateKey, storesInDate]) => {
+
+        const dates =
+          dateKey
+            .split("|")
+            .map(date => formatDate(date))
+            .join(" · ");
+
+
+        html += `
+          <div class="date-group">
+
+            <div class="date-title">
+              ${dates}
+            </div>
+
+            <div class="store-grid">
+        `;
+
+
+        storesInDate
+          .sort((a, b) =>
+            a.store.localeCompare(
+              b.store,
+              "ko"
+            )
+          )
+          .forEach(store => {
+
+            html += `
+              <div class="store-grid-item">
+                ${shortStoreName(store.store)}
+              </div>
+            `;
+
+          });
+
+
+        html += `
+            </div>
+          </div>
+        `;
+
+      });
+
+
+    html += `
+        </div>
+      </details>
+    `;
+
 
     content.innerHTML += html;
 
