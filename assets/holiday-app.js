@@ -49,6 +49,13 @@ let holidayData = [];
 
 
 /*
+자동 수집기가 만든
+data/<brand>/change_status.json 내용
+*/
+let changeStatusData = null;
+
+
+/*
 주소 파라미터
 예:
 ?region=대구
@@ -479,6 +486,259 @@ function buildCalendarQuickSummary(
 
 }
 
+
+
+
+/*
+==================================================
+휴무 일정 변경 안내
+==================================================
+*/
+
+function getChangeStatusUrl() {
+
+  if (
+    MART_CONFIG.changeStatusUrl
+  ) {
+
+    return (
+      MART_CONFIG.changeStatusUrl
+    );
+
+  }
+
+
+  /*
+  별도 설정이 없어도
+  holidays.json과 같은 폴더의
+  change_status.json을 자동 사용합니다.
+
+  예:
+  data/emart/holidays.json
+  →
+  data/emart/change_status.json
+  */
+  return String(
+    MART_CONFIG.currentDataUrl || ""
+  ).replace(
+    /holidays\.json$/,
+    "change_status.json"
+  );
+
+}
+
+
+function formatCheckedAt(
+  isoString
+) {
+
+  if (!isoString) {
+    return "";
+  }
+
+
+  const date =
+    new Date(
+      isoString
+    );
+
+
+  if (
+    Number.isNaN(
+      date.getTime()
+    )
+  ) {
+
+    return "";
+
+  }
+
+
+  return (
+    `${date.getFullYear()}년 ` +
+    `${date.getMonth() + 1}월 ` +
+    `${date.getDate()}일 ` +
+    `${pad2(date.getHours())}:` +
+    `${pad2(date.getMinutes())}`
+  );
+
+}
+
+
+function buildChangeNotice(
+  stores
+) {
+
+  if (
+    !changeStatusData ||
+    !changeStatusData.notice_active
+  ) {
+
+    return "";
+
+  }
+
+
+  const changes =
+    Array.isArray(
+      changeStatusData.changes
+    )
+      ? changeStatusData.changes
+      : [];
+
+
+  if (
+    changes.length === 0
+  ) {
+
+    return "";
+
+  }
+
+
+  const storeIds =
+    new Set(
+      stores.map(
+        store =>
+          String(store.id)
+      )
+    );
+
+
+  const monthKey =
+    getSelectedMonthKey();
+
+
+  /*
+  현재 보고 있는 지역/점포 + 현재 보고 있는 달에
+  실제로 관련된 변경만 표시합니다.
+  */
+  const relevantChanges =
+    changes.filter(
+      change => {
+
+        if (
+          !storeIds.has(
+            String(change.id)
+          )
+        ) {
+
+          return false;
+
+        }
+
+
+        const dates = [
+          ...(
+            change.added_holidays
+            || []
+          ),
+          ...(
+            change.removed_holidays
+            || []
+          )
+        ];
+
+
+        return dates.some(
+          date =>
+            String(date)
+              .startsWith(
+                monthKey
+              )
+        );
+
+      }
+    );
+
+
+  if (
+    relevantChanges.length === 0
+  ) {
+
+    return "";
+
+  }
+
+
+  const sampleNames =
+    relevantChanges
+      .slice(0, 4)
+      .map(
+        change =>
+          shortStoreName(
+            change.store || ""
+          )
+      );
+
+
+  const extraCount =
+    Math.max(
+      0,
+      relevantChanges.length -
+      sampleNames.length
+    );
+
+
+  const storeText =
+    sampleNames.join(", ")
+    +
+    (
+      extraCount > 0
+        ? ` 외 ${extraCount}개 점포`
+        : ""
+    );
+
+
+  const checkedAt =
+    formatCheckedAt(
+      changeStatusData.last_change_at
+      ||
+      changeStatusData.checked_at
+    );
+
+
+  return `
+    <div class="holiday-change-notice">
+
+      <div class="holiday-change-icon">
+        !
+      </div>
+
+      <div class="holiday-change-body">
+
+        <div class="holiday-change-title">
+          휴무 일정 변경이 확인되었습니다
+        </div>
+
+        <div class="holiday-change-text">
+          공식 홈페이지의 휴무 일정이
+          이전 확인 때와 달라졌습니다.
+          현재 화면에는 최신 확인 결과가 반영되어 있습니다.
+        </div>
+
+        <div class="holiday-change-detail">
+          변경 확인 점포:
+          <strong>${storeText}</strong>
+        </div>
+
+        ${
+          checkedAt
+            ? `
+              <div class="holiday-change-time">
+                마지막 변경 확인:
+                ${checkedAt}
+              </div>
+            `
+            : ""
+        }
+
+      </div>
+
+    </div>
+  `;
+
+}
 
 
 /*
@@ -1314,6 +1574,13 @@ function renderSingleStore(store) {
       </span>
 
     </h2>
+
+    ${
+      buildChangeNotice(
+        [store]
+      )
+    }
+
     ${
       buildMonthCalendar(
         [store]
@@ -1424,6 +1691,12 @@ function renderStoreCollection(
       </span>
 
     </h2>
+
+    ${
+      buildChangeNotice(
+        stores
+      )
+    }
 
     ${
       buildMonthCalendar(
@@ -1745,6 +2018,12 @@ function renderAllRegions() {
       </span>
 
     </h2>
+
+    ${
+      buildChangeNotice(
+        holidayData
+      )
+    }
 
     ${
       buildMonthCalendar(
@@ -2300,6 +2579,55 @@ async function loadData() {
 
     const currentData =
       await currentResponse.json();
+
+
+    /*
+    변경 상태 파일은 없어도
+    페이지 자체는 정상 작동해야 합니다.
+    */
+    changeStatusData =
+      null;
+
+
+    try {
+
+      const changeStatusUrl =
+        getChangeStatusUrl();
+
+
+      if (changeStatusUrl) {
+
+        const statusResponse =
+          await fetch(
+            `${changeStatusUrl}?time=` +
+            cacheKey,
+            {
+              cache: "no-store"
+            }
+          );
+
+
+        if (
+          statusResponse.ok
+        ) {
+
+          changeStatusData =
+            await statusResponse.json();
+
+        }
+
+      }
+
+    } catch (
+      statusError
+    ) {
+
+      console.warn(
+        "change_status.json을 사용할 수 없습니다.",
+        statusError
+      );
+
+    }
 
 
     let archiveData = null;
