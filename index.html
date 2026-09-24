@@ -912,9 +912,50 @@ async function loadData() {
       await response.json();
 
 
-    createTabs();
+/*
+주소에 ?storeId= 가 있으면
+해당 점포 하나만 표시
+*/
+if (requestedStoreId) {
 
-    renderRegion();
+  const store =
+    holidayData.find(
+      item =>
+        String(item.id) ===
+        String(requestedStoreId)
+    );
+
+  if (store) {
+
+    renderSingleStore(store);
+
+    return;
+
+  }
+
+  document
+    .getElementById("tabs")
+    .style.display = "none";
+
+  document
+    .getElementById("content")
+    .innerHTML = `
+      <div class="error">
+        해당 점포를 찾을 수 없습니다.
+      </div>
+    `;
+
+  return;
+}
+
+
+/*
+storeId가 없으면
+기존 지역별 화면 표시
+*/
+createTabs();
+
+renderRegion();
 
 
   } catch (error) {
