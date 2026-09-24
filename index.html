@@ -289,9 +289,59 @@
   padding: 0;
 }
 
+/* 휴무일 공통 */
 .calendar-day.closed {
-  background: #fff2a8;
-  border-color: #f0cf38;
+  border-width: 1px;
+  border-style: solid;
+}
+
+
+/* 일요일 휴무 */
+.calendar-day.closed.day-sun {
+  background: #ffe3e3;
+  border-color: #efa9a9;
+}
+
+
+/* 월요일 휴무 */
+.calendar-day.closed.day-mon {
+  background: #fff0a6;
+  border-color: #e7c63c;
+}
+
+
+/* 화요일 휴무 */
+.calendar-day.closed.day-tue {
+  background: #ffe6c7;
+  border-color: #e5b36d;
+}
+
+
+/* 수요일 휴무 */
+.calendar-day.closed.day-wed {
+  background: #e1f3df;
+  border-color: #9dce98;
+}
+
+
+/* 목요일 휴무 */
+.calendar-day.closed.day-thu {
+  background: #dff1f5;
+  border-color: #9bcbd4;
+}
+
+
+/* 금요일 휴무 */
+.calendar-day.closed.day-fri {
+  background: #eee5f7;
+  border-color: #c7abe0;
+}
+
+
+/* 토요일 휴무 */
+.calendar-day.closed.day-sat {
+  background: #dfeaff;
+  border-color: #9db9eb;
 }
 
 .calendar-day.today {
@@ -774,7 +824,7 @@ ${
       </div>
 
       <div class="calendar-legend">
-        노란색 날짜는 휴무일입니다.
+        색상이 표시된 날짜는 휴무일입니다.
       </div>
 
     </div>
