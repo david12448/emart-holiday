@@ -371,52 +371,48 @@ function renderRegion() {
 
   displayOrder.forEach(groupName => {
 
-    const groupStores =
-      weekdayGroups[groupName];
+  const groupStores =
+    weekdayGroups[groupName];
 
-    if (!groupStores) {
-      return;
+  if (!groupStores) {
+    return;
+  }
+
+  const groupTitle =
+    groupName === "기타·변동 휴무"
+      ? groupName
+      : `${groupName} 휴무`;
+
+  const dateGroups = {};
+
+  groupStores.forEach(store => {
+
+    const key =
+      [...store.holidays]
+        .sort()
+        .join("|");
+
+    if (!dateGroups[key]) {
+      dateGroups[key] = [];
     }
 
+    dateGroups[key].push(store);
 
-    const groupTitle =
-      groupName === "기타·변동 휴무"
-        ? groupName
-        : `${groupName} 휴무`;
+  });
 
+  let html = `
+    <details
+      class="holiday-accordion"
+      open
+    >
 
-    const dateGroups = {};
+      <summary>
+        ${groupTitle}
+        · ${groupStores.length}개 점포
+      </summary>
 
-
-    groupStores.forEach(store => {
-
-      const key =
-        [...store.holidays]
-          .sort()
-          .join("|");
-
-      if (!dateGroups[key]) {
-        dateGroups[key] = [];
-      }
-
-      dateGroups[key].push(store);
-
-    });
-
-
-    let html = `
-      <details
-        class="holiday-accordion"
-        ${firstGroup ? "open" : ""}
-      >
-
-        <summary>
-          ${groupTitle}
-          · ${groupStores.length}개 점포
-        </summary>
-
-        <div class="accordion-content">
-    `;
+      <div class="accordion-content">
+  `;
 
 
     firstGroup = false;
