@@ -440,6 +440,209 @@ function formatDate(dateString) {
 
 }
 
+/*
+월간 휴무 달력 생성
+*/
+function buildMonthCalendar(stores) {
+
+  const holidayCount = {};
+
+
+  /*
+  날짜별 휴무 점포 수 계산
+  */
+  stores.forEach(
+    store => {
+
+      store.holidays.forEach(
+        date => {
+
+          if (!holidayCount[date]) {
+            holidayCount[date] = 0;
+          }
+
+          holidayCount[date]++;
+
+        }
+      );
+
+    }
+  );
+
+
+  /*
+  데이터에 있는 가장 첫 휴무일을 기준으로
+  표시할 연도/월 결정
+  */
+  const holidayDates =
+    Object.keys(holidayCount)
+      .sort();
+
+
+  const now =
+    new Date();
+
+
+  let year =
+    now.getFullYear();
+
+  let month =
+    now.getMonth() + 1;
+
+
+  if (holidayDates.length > 0) {
+
+    const parts =
+      holidayDates[0].split("-");
+
+    year =
+      Number(parts[0]);
+
+    month =
+      Number(parts[1]);
+
+  }
+
+
+  const firstDay =
+    new Date(
+      year,
+      month - 1,
+      1
+    ).getDay();
+
+
+  const daysInMonth =
+    new Date(
+      year,
+      month,
+      0
+    ).getDate();
+
+
+  const pad =
+    number =>
+      String(number)
+        .padStart(2, "0");
+
+
+  const todayKey =
+    `${now.getFullYear()}-` +
+    `${pad(now.getMonth() + 1)}-` +
+    `${pad(now.getDate())}`;
+
+
+  let html = `
+    <div class="month-calendar">
+
+      <div class="calendar-header">
+        ${year}년 ${month}월
+      </div>
+
+      <div class="calendar-grid">
+
+        <div class="calendar-weekday sunday">일</div>
+        <div class="calendar-weekday">월</div>
+        <div class="calendar-weekday">화</div>
+        <div class="calendar-weekday">수</div>
+        <div class="calendar-weekday">목</div>
+        <div class="calendar-weekday">금</div>
+        <div class="calendar-weekday saturday">토</div>
+  `;
+
+
+  /*
+  1일 이전 빈칸
+  */
+  for (
+    let i = 0;
+    i < firstDay;
+    i++
+  ) {
+
+    html += `
+      <div class="calendar-day empty"></div>
+    `;
+
+  }
+
+
+  /*
+  날짜 출력
+  */
+  for (
+    let day = 1;
+    day <= daysInMonth;
+    day++
+  ) {
+
+    const dateKey =
+      `${year}-` +
+      `${pad(month)}-` +
+      `${pad(day)}`;
+
+
+    const count =
+      holidayCount[dateKey] || 0;
+
+
+    const isClosed =
+      count > 0;
+
+
+    const isToday =
+      dateKey === todayKey;
+
+
+    const closedText =
+      stores.length === 1
+        ? "휴무"
+        : `${count}개 휴무`;
+
+
+    html += `
+      <div
+        class="
+          calendar-day
+          ${isClosed ? "closed" : ""}
+          ${isToday ? "today" : ""}
+        "
+      >
+
+        <div class="calendar-date-number">
+          ${day}
+        </div>
+
+        ${
+          isClosed
+            ? `
+              <div class="calendar-closed-count">
+                ${closedText}
+              </div>
+            `
+            : ""
+        }
+
+      </div>
+    `;
+
+  }
+
+
+  html += `
+      </div>
+
+      <div class="calendar-legend">
+        노란색 날짜는 휴무일입니다.
+      </div>
+
+    </div>
+  `;
+
+
+  return html;
+
+}  
 
 /*
 점포의 휴무일들이
@@ -559,16 +762,20 @@ function renderSingleStore(store) {
       .map(date => formatDate(date))
       .join(" · ");
 
-  content.innerHTML = `
-    <h2 class="region-title">
-      ${displayName}
+content.innerHTML = `
+  <h2 class="region-title">
+    ${displayName}
 
-      <span class="region-count">
-        · ${store.region}
-      </span>
-    </h2>
+    <span class="region-count">
+      · ${store.region}
+    </span>
+  </h2>
 
-    <div class="holiday-accordion">
+
+  ${buildMonthCalendar([store])}
+
+
+  <div class="holiday-accordion">
 
       <div
         class="accordion-content"
@@ -651,7 +858,9 @@ function renderRegion() {
     </h2>
   `;
 
-
+content.innerHTML +=
+  buildMonthCalendar(stores);
+  
   if (
     stores.length === 0
   ) {
