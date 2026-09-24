@@ -64,6 +64,18 @@ const requestedRegion =
   urlParams.get("region");
 
 
+/*
+?region=all
+또는
+?region=전체
+
+→ 지역 탭을 숨기고 전국 점포를 한 화면에 표시
+*/
+const isAllRegions =
+  requestedRegion === "all" ||
+  requestedRegion === "전체";
+
+
 const requestedStoreId =
   urlParams.get("storeId");
 
@@ -1026,33 +1038,75 @@ function buildThisWeekSummary(
 
 /*
 ==================================================
-점포 분류
+휴무 날짜 기준 요일 그룹 생성
+
+중요:
+점포 전체를 한 요일로 분류하지 않고,
+각 휴무 날짜 하나하나를 해당 요일에 넣습니다.
+
+예:
+한 점포가 금요일 + 일요일에 모두 쉬면
+금요일 그룹과 일요일 그룹 양쪽에 모두 표시됩니다.
+
+이렇게 해야 달력의 점포 수와
+하단 목록의 점포 수가 일치합니다.
 ==================================================
 */
 
-function classifyStore(store) {
+function buildWeekdayGroups(
+  stores
+) {
 
-  const weekdays =
-    store.holidays.map(
-      date =>
-        getWeekday(date)
+  const groups = {};
+
+
+  const monthStores =
+    getMonthStores(
+      stores
     );
 
 
-  const uniqueWeekdays =
-    [...new Set(weekdays)];
+  monthStores.forEach(
+    store => {
+
+      (store.holidays || [])
+        .forEach(
+          date => {
+
+            const weekday =
+              getWeekday(
+                date
+              );
 
 
-  if (
-    uniqueWeekdays.length === 1
-  ) {
+            if (
+              !groups[
+                weekday
+              ]
+            ) {
 
-    return uniqueWeekdays[0];
+              groups[
+                weekday
+              ] = [];
 
-  }
+            }
 
 
-  return "기타·변동 휴무";
+            groups[
+              weekday
+            ].push({
+              date,
+              store
+            });
+
+          }
+        );
+
+    }
+  );
+
+
+  return groups;
 
 }
 
@@ -1260,11 +1314,16 @@ function renderSingleStore(store) {
 
 /*
 ==================================================
-지역 화면
+지역/전국 공통 화면
 ==================================================
 */
 
-function renderRegion() {
+function renderStoreCollection(
+  stores,
+  titleText,
+  descriptionText,
+  showRegionName = false
+) {
 
   const content =
     document.getElementById(
@@ -1278,14 +1337,6 @@ function renderRegion() {
     );
 
 
-  const stores =
-    holidayData.filter(
-      item =>
-        item.region ===
-        selectedRegion
-    );
-
-
   const monthStores =
     getMonthStores(
       stores
@@ -1293,20 +1344,21 @@ function renderRegion() {
 
 
   description.textContent =
-    `${selectedRegion} 지역의 ${MART_CONFIG.brandName || "마트"} 휴무일을 확인할 수 있습니다.`;
+    descriptionText;
 
 
   content.innerHTML = `
 
     <h2 class="region-title">
 
-      ${selectedRegion} 지역
+      ${titleText}
 
       <span class="region-count">
         · ${stores.length}개 점포
       </span>
 
     </h2>
+
     ${
       buildMonthCalendar(
         stores
@@ -1335,39 +1387,14 @@ function renderRegion() {
   }
 
 
-  const weekdayGroups = {};
-
-
-  monthStores.forEach(
-    store => {
-
-      const weekday =
-        classifyStore(
-          store
-        );
-
-
-      if (
-        !weekdayGroups[
-          weekday
-        ]
-      ) {
-
-        weekdayGroups[
-          weekday
-        ] = [];
-
-      }
-
-
-      weekdayGroups[
-        weekday
-      ].push(
-        store
-      );
-
-    }
-  );
+  /*
+  각 휴무 날짜를 기준으로
+  요일 그룹에 넣습니다.
+  */
+  const weekdayGroups =
+    buildWeekdayGroups(
+      stores
+    );
 
 
   const displayOrder = [
@@ -1377,55 +1404,68 @@ function renderRegion() {
     "수요일",
     "목요일",
     "금요일",
-    "토요일",
-    "기타·변동 휴무"
+    "토요일"
   ];
 
 
   displayOrder.forEach(
     groupName => {
 
-      const groupStores =
+      const entries =
         weekdayGroups[
           groupName
         ];
 
 
-      if (!groupStores) {
+      if (
+        !entries ||
+        entries.length === 0
+      ) {
+
         return;
+
       }
 
 
-      const groupTitle =
-        groupName ===
-        "기타·변동 휴무"
-          ? groupName
-          : `${groupName} 휴무`;
+      /*
+      요일 제목의 점포 수는
+      같은 점포가 여러 날짜에 있어도
+      한 번만 계산합니다.
+      */
+      const uniqueStoreCount =
+        new Set(
+          entries.map(
+            item =>
+              String(
+                item.store.id
+              )
+          )
+        ).size;
 
 
       const dateGroups = {};
 
 
-      groupStores.forEach(
-        store => {
-
-          const key =
-            [...store.holidays]
-              .sort()
-              .join("|");
-
+      entries.forEach(
+        item => {
 
           if (
-            !dateGroups[key]
+            !dateGroups[
+              item.date
+            ]
           ) {
 
-            dateGroups[key] = [];
+            dateGroups[
+              item.date
+            ] = [];
 
           }
 
 
-          dateGroups[key].push(
-            store
+          dateGroups[
+            item.date
+          ].push(
+            item.store
           );
 
         }
@@ -1439,8 +1479,8 @@ function renderRegion() {
         >
 
           <summary>
-            ${groupTitle}
-            · ${groupStores.length}개 점포
+            ${groupName} 휴무
+            · ${uniqueStoreCount}개 점포
           </summary>
 
           <div class="accordion-content">
@@ -1455,23 +1495,14 @@ function renderRegion() {
             a.localeCompare(b)
         )
         .forEach(
-          ([dateKey, storesInDate]) => {
-
-            const dates =
-              dateKey
-                .split("|")
-                .map(
-                  date =>
-                    formatDate(date)
-                )
-                .join(" · ");
-
+          ([date, storesInDate]) => {
 
             html += `
               <div class="date-group">
 
                 <div class="date-title">
-                  ${dates}
+                  ${formatDate(date)}
+                  · ${storesInDate.length}개 점포
                 </div>
 
                 <div class="store-grid">
@@ -1495,6 +1526,12 @@ function renderRegion() {
                     );
 
 
+                  const visibleName =
+                    showRegionName
+                      ? `${displayName} · ${store.region}`
+                      : displayName;
+
+
                   html += `
                     <a
                       class="store-grid-item store-link"
@@ -1504,7 +1541,7 @@ function renderRegion() {
                       data-store-id="${store.id}"
                       title="${displayName} 상세정보 보기"
                     >
-                      ${displayName}
+                      ${visibleName}
                     </a>
                   `;
 
@@ -1539,6 +1576,63 @@ function renderRegion() {
 
 
 /*
+==================================================
+지역 화면
+==================================================
+*/
+
+function renderRegion() {
+
+  const stores =
+    holidayData.filter(
+      item =>
+        item.region ===
+        selectedRegion
+    );
+
+
+  renderStoreCollection(
+    stores,
+    `${selectedRegion} 지역`,
+    `${selectedRegion} 지역의 ${MART_CONFIG.brandName || "마트"} 휴무일을 확인할 수 있습니다.`,
+    false
+  );
+
+}
+
+
+/*
+==================================================
+전국 전체 점포 화면
+
+주소:
+?region=all
+==================================================
+*/
+
+function renderAllRegions() {
+
+  const tabs =
+    document.getElementById(
+      "tabs"
+    );
+
+
+  tabs.style.display =
+    "none";
+
+
+  renderStoreCollection(
+    holidayData,
+    "전국",
+    `전국의 ${MART_CONFIG.brandName || "마트"} 휴무일을 한 화면에서 확인할 수 있습니다.`,
+    true
+  );
+
+}
+
+
+/*
 현재 화면 다시 그리기
 달력 좌우 버튼에서 사용
 */
@@ -1563,6 +1657,17 @@ function renderCurrentView() {
       );
 
     }
+
+    return;
+
+  }
+
+
+  if (
+    isAllRegions
+  ) {
+
+    renderAllRegions();
 
     return;
 
@@ -1839,6 +1944,17 @@ async function loadData() {
           </div>
         `;
 
+
+      return;
+
+    }
+
+
+    if (
+      isAllRegions
+    ) {
+
+      renderAllRegions();
 
       return;
 
