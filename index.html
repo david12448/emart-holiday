@@ -585,15 +585,32 @@ function renderSingleStore(store) {
 
         <div style="margin-top:18px;">
 
-          <a
-            class="store-grid-item store-link"
-            href="${TISTORY_POST_URL}"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-store-id="${store.id}"
-          >
-            ${displayName} 점포 상세정보 보기
-          </a>
+       <a
+  class="store-detail-button store-link"
+  href="${TISTORY_POST_URL}"
+  target="_blank"
+  rel="noopener noreferrer"
+  data-store-id="${store.id}"
+  title="${displayName} 상세정보 보기"
+>
+
+  <span class="store-detail-text">
+
+    <span>
+      ${displayName} 점포 상세정보 보기
+    </span>
+
+    <span class="store-detail-sub">
+      이마트 공식 점포 페이지
+    </span>
+
+  </span>
+
+  <span class="store-detail-arrow">
+    →
+  </span>
+
+</a>
 
         </div>
 
