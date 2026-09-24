@@ -1,0 +1,651 @@
+
+:root {
+  --brand-main: #ffd800;
+  --brand-main-hover: #ffcf00;
+  --brand-dark: #222;
+  --brand-on-dark: #fff;
+  --brand-border: #e6c200;
+  --brand-badge: #e7a900;
+  --brand-soft: #fffaf0;
+  --brand-soft-border: #f0dfad;
+  --brand-soft-text: #665927;
+  --brand-soft-strong: #3f3a26;
+}
+
+* {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, "Noto Sans KR", sans-serif;
+      background: #f5f6f7;
+      color: #222;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin-bottom: 8px;
+    }
+
+    .description {
+      color: #666;
+      margin-bottom: 25px;
+    }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 25px;
+    }
+
+    .tab-button {
+      border: 1px solid #ddd;
+      background: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .tab-button:hover {
+      background: #f0f0f0;
+    }
+
+    .tab-button.active {
+      background: var(--brand-dark);
+      color: var(--brand-on-dark);
+      border-color: var(--brand-dark);
+    }
+
+    .region-title {
+      margin-bottom: 15px;
+    }
+
+    .region-count {
+      color: #777;
+      font-size: 14px;
+      font-weight: normal;
+    }
+
+    .empty {
+      background: white;
+      border: 1px solid #e5e5e5;
+      border-radius: 12px;
+      padding: 20px;
+      color: #777;
+    }
+
+    .notice {
+      color: #777;
+      font-size: 14px;
+      margin-top: 30px;
+    }
+
+    .error {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 20px;
+      color: #b00020;
+    }
+
+    /* 요일별 묶음 */
+    .holiday-accordion {
+      background: white;
+      border: 1px solid #e5e5e5;
+      border-radius: 12px;
+      margin-bottom: 14px;
+      overflow: hidden;
+    }
+
+    .holiday-accordion summary {
+      padding: 18px 20px;
+      font-size: 19px;
+      font-weight: bold;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .holiday-accordion summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .holiday-accordion summary::before {
+      content: "▶";
+      display: inline-block;
+      margin-right: 9px;
+      font-size: 13px;
+    }
+
+    .holiday-accordion[open] summary::before {
+      content: "▼";
+    }
+
+    .accordion-content {
+      padding: 0 20px 20px;
+    }
+
+    /* 같은 날짜별 묶음 */
+    .date-group {
+      padding-top: 16px;
+      margin-top: 6px;
+      border-top: 1px solid #eee;
+    }
+
+    .date-group:first-child {
+      border-top: 0;
+      padding-top: 5px;
+    }
+
+    .date-title {
+      font-weight: bold;
+      margin-bottom: 12px;
+      color: #555;
+    }
+
+    /* 점포 3열 */
+    .store-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px 18px;
+    }
+
+    /* 점포 링크 */
+    .store-grid-item {
+      display: block;
+      padding: 9px 10px;
+      background: #f7f7f7;
+      border-radius: 6px;
+
+      color: #222;
+      text-decoration: none;
+      cursor: pointer;
+
+      transition:
+        background 0.15s ease,
+        transform 0.15s ease;
+    }
+
+    .store-grid-item:hover {
+      background: #e9e9e9;
+      transform: translateY(-1px);
+    }
+
+    .store-grid-item:focus {
+      outline: 2px solid #888;
+      outline-offset: 2px;
+    }
+
+    /* 개별 점포 상세보기 버튼 */
+.store-detail-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 16px 18px;
+
+  background: var(--brand-main);
+  border: 1px solid var(--brand-border);
+  border-radius: 10px;
+
+  color: #222;
+  text-decoration: none;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.store-detail-button:hover {
+  background: var(--brand-main-hover);
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 14px rgba(0, 0, 0, 0.12);
+}
+
+.store-detail-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.store-detail-sub {
+  font-size: 13px;
+  font-weight: normal;
+  color: #555;
+}
+
+.store-detail-arrow {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+/* =========================
+   월간 휴무 달력
+   ========================= */
+
+.month-calendar {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 22px;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+.calendar-month-title {
+  min-width: 120px;
+  text-align: center;
+}
+
+.calendar-nav-button {
+  width: 36px;
+  height: 36px;
+
+  border: 1px solid #ddd;
+  border-radius: 50%;
+
+  background: #fff;
+  color: #222;
+
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease;
+}
+
+.calendar-nav-button:hover:not(:disabled) {
+  background: #f2f2f2;
+  transform: translateY(-1px);
+}
+
+.calendar-nav-button:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.calendar-weekday {
+  text-align: center;
+  padding: 7px 2px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #666;
+}
+
+.calendar-weekday.sunday {
+  color: #d33;
+}
+
+.calendar-weekday.saturday {
+  color: #3567b7;
+}
+
+.calendar-day {
+  min-height: 66px;
+  padding: 7px 5px;
+  border-radius: 8px;
+  background: #fff;
+  text-align: center;
+  border: 1px solid transparent;
+}
+
+/* 달력 앞뒤 빈칸 */
+.calendar-empty {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+/* 휴무일 공통 */
+.calendar-day.closed {
+  border-width: 1px;
+  border-style: solid;
+}
+
+/* 요일별 휴무일 배경색 */
+.calendar-day.closed.day-sun {
+  background: #ffe3e3;
+  border-color: #efa9a9;
+}
+
+.calendar-day.closed.day-mon {
+  background: #fff0a6;
+  border-color: #e7c63c;
+}
+
+.calendar-day.closed.day-tue {
+  background: #ffe6c7;
+  border-color: #e5b36d;
+}
+
+.calendar-day.closed.day-wed {
+  background: #e1f3df;
+  border-color: #9dce98;
+}
+
+.calendar-day.closed.day-thu {
+  background: #dff1f5;
+  border-color: #9bcbd4;
+}
+
+.calendar-day.closed.day-fri {
+  background: #eee5f7;
+  border-color: #c7abe0;
+}
+
+.calendar-day.closed.day-sat {
+  background: #dfeaff;
+  border-color: #9db9eb;
+}
+
+/* 지난 휴무일은 연하게 */
+.calendar-day.closed.past-closed {
+  opacity: 0.52;
+}
+
+.calendar-day.today {
+  box-shadow: inset 0 0 0 2px #555;
+}
+
+.calendar-date-number {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.calendar-closed-count {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 3px 7px;
+
+  background: var(--brand-badge);
+  color: #222;
+
+  border-radius: 10px;
+
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 1.25;
+}
+
+.calendar-today-label {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 2px 7px;
+
+  background: #333;
+  color: white;
+
+  border-radius: 10px;
+
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.calendar-legend {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
+
+  margin-top: 14px;
+
+  font-size: 12px;
+  color: #666;
+}
+
+.calendar-legend::before {
+  content: "";
+
+  width: 10px;
+  height: 10px;
+
+  background: var(--brand-badge);
+  border-radius: 50%;
+
+  flex-shrink: 0;
+}
+
+
+
+/* =========================
+   달력 안의 간단 요약
+   ========================= */
+.calendar-quick-summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 7px 10px;
+
+  margin: -4px 0 16px;
+  padding: 9px 12px;
+
+  background: #fafafa;
+  border-radius: 8px;
+
+  font-size: 13px;
+  color: #555;
+}
+
+.calendar-summary-label {
+  display: inline-block;
+  padding: 2px 7px;
+
+  background: var(--brand-badge);
+  color: #222;
+
+  border-radius: 10px;
+
+  font-size: 11px;
+  font-weight: bold;
+}
+
+
+@media (max-width: 700px) {
+  .calendar-quick-summary {
+    justify-content: flex-start;
+    line-height: 1.5;
+  }
+}
+
+
+/* =========================
+   점포 공식 페이지 안내
+   ========================= */
+.store-click-guide {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin: -7px 0 16px;
+  padding: 11px 14px;
+
+  background: var(--brand-soft);
+  border: 1px solid var(--brand-soft-border);
+  border-radius: 9px;
+
+  color: var(--brand-soft-text);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.store-click-guide-icon {
+  flex-shrink: 0;
+
+  width: 22px;
+  height: 22px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--brand-badge);
+  color: #222;
+
+  border-radius: 50%;
+
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.store-click-guide strong {
+  color: var(--brand-soft-strong);
+}
+
+@media (max-width: 700px) {
+  .store-click-guide {
+    align-items: flex-start;
+  }
+}
+
+/* 상단 자동 안내 */
+.auto-summary {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-left: 4px solid #e7a900;
+
+  border-radius: 10px;
+
+  padding: 13px 16px;
+  margin-bottom: 14px;
+
+  color: #444;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.auto-summary strong {
+  color: #222;
+}
+
+
+/* 이번 주 휴무 */
+.week-summary {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+
+  padding: 17px 18px;
+  margin-bottom: 18px;
+}
+
+.week-summary-title {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-bottom: 12px;
+
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.week-summary-period {
+  margin-left: auto;
+  color: #888;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.week-date-block + .week-date-block {
+  border-top: 1px solid #eee;
+  margin-top: 13px;
+  padding-top: 13px;
+}
+
+.week-date-title {
+  margin-bottom: 9px;
+  font-weight: bold;
+  color: #555;
+}
+
+.week-store-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px 12px;
+}
+
+.week-empty {
+  color: #777;
+  font-size: 14px;
+}
+
+@media (max-width: 700px) {
+      .store-grid,
+      .week-store-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .month-calendar {
+        padding: 14px;
+      }
+
+      .calendar-grid {
+        gap: 4px;
+      }
+
+      .calendar-day {
+        min-height: 62px;
+        padding: 6px 3px;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .store-grid,
+      .week-store-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .calendar-header {
+        gap: 10px;
+      }
+
+      .calendar-nav-button {
+        width: 32px;
+        height: 32px;
+        font-size: 21px;
+      }
+
+      .calendar-day {
+        min-height: 58px;
+      }
+
+      .calendar-closed-count {
+        padding: 2px 4px;
+        font-size: 10px;
+      }
+    }

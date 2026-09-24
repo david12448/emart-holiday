@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>트레이더스 홀세일 클럽 휴점일 안내</title>
+  <link rel="stylesheet" href="../assets/holiday.css">
+
+  <style>
+    :root {
+      --brand-main: #174f8a;
+      --brand-main-hover: #123f70;
+      --brand-dark: #17324f;
+      --brand-on-dark: #fff;
+      --brand-border: #123f70;
+      --brand-badge: #174f8a;
+      --brand-soft: #f1f6fb;
+      --brand-soft-border: #bfd1e4;
+      --brand-soft-text: #38546f;
+      --brand-soft-strong: #213b54;
+    }
+  </style>
+
+</head>
+<body>
+
+<div class="container">
+
+  <h1 id="page-title">트레이더스 홀세일 클럽 휴점일 안내</h1>
+
+  <div id="description" class="description">
+    지역을 선택하면 휴점일을 확인할 수 있습니다.
+  </div>
+
+  <div id="tabs" class="tabs"></div>
+
+  <div id="content">
+    데이터를 불러오는 중입니다...
+  </div>
+
+  <div id="source-label" class="notice">
+    자료 출처 : 이마트 공식 홈페이지
+  </div>
+
+</div>
+
+<script>
+window.MART_CONFIG = {
+  brandKey: "traders",
+  brandName: "트레이더스 홀세일 클럽",
+  storePrefix: "트레이더스 홀세일 클럽 ",
+  currentDataUrl: "../data/traders/holidays.json",
+  archiveDataUrl: "../data/traders/holiday_archive.json",
+  detailBaseUrl: "https://eapp.emart.com/branch/view.do?id=",
+  sourceLabel: "이마트 공식 홈페이지",
+  officialPageLabel: "트레이더스 공식 점포 페이지"
+};
+</script>
+
+<script src="../assets/holiday-app.js"></script>
+</body>
+</html>

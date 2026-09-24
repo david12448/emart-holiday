@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>노브랜드 휴점일 안내</title>
+  <link rel="stylesheet" href="../assets/holiday.css">
+
+  <style>
+    :root {
+      --brand-main: #f4d000;
+      --brand-main-hover: #e8c300;
+      --brand-dark: #202020;
+      --brand-on-dark: #fff;
+      --brand-border: #d8b900;
+      --brand-badge: #d3ad00;
+      --brand-soft: #fffbed;
+      --brand-soft-border: #eadf9e;
+      --brand-soft-text: #625b2d;
+      --brand-soft-strong: #373315;
+    }
+  </style>
+
+</head>
+<body>
+
+<div class="container">
+
+  <h1 id="page-title">노브랜드 휴점일 안내</h1>
+
+  <div id="description" class="description">
+    지역을 선택하면 휴점일을 확인할 수 있습니다.
+  </div>
+
+  <div id="tabs" class="tabs"></div>
+
+  <div id="content">
+    데이터를 불러오는 중입니다...
+  </div>
+
+  <div id="source-label" class="notice">
+    자료 출처 : 이마트 공식 홈페이지
+  </div>
+
+</div>
+
+<script>
+window.MART_CONFIG = {
+  brandKey: "nobrand",
+  brandName: "노브랜드",
+  storePrefix: "노브랜드 ",
+  currentDataUrl: "../data/nobrand/holidays.json",
+  archiveDataUrl: "../data/nobrand/holiday_archive.json",
+  detailBaseUrl: "https://eapp.emart.com/branch/view.do?id=",
+  sourceLabel: "이마트 공식 홈페이지",
+  officialPageLabel: "노브랜드 공식 점포 페이지"
+};
+</script>
+
+<script src="../assets/holiday-app.js"></script>
+</body>
+</html>

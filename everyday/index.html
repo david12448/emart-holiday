@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이마트 에브리데이 휴점일 안내</title>
+  <link rel="stylesheet" href="../assets/holiday.css">
+
+  <style>
+    :root {
+      --brand-main: #69a942;
+      --brand-main-hover: #5c9838;
+      --brand-dark: #24451f;
+      --brand-on-dark: #fff;
+      --brand-border: #579037;
+      --brand-badge: #5a9638;
+      --brand-soft: #f3faef;
+      --brand-soft-border: #cce4bf;
+      --brand-soft-text: #44613b;
+      --brand-soft-strong: #2c4726;
+    }
+  </style>
+
+</head>
+<body>
+
+<div class="container">
+
+  <h1 id="page-title">이마트 에브리데이 휴점일 안내</h1>
+
+  <div id="description" class="description">
+    지역을 선택하면 휴점일을 확인할 수 있습니다.
+  </div>
+
+  <div id="tabs" class="tabs"></div>
+
+  <div id="content">
+    데이터를 불러오는 중입니다...
+  </div>
+
+  <div id="source-label" class="notice">
+    자료 출처 : 이마트 공식 홈페이지
+  </div>
+
+</div>
+
+<script>
+window.MART_CONFIG = {
+  brandKey: "everyday",
+  brandName: "이마트 에브리데이",
+  storePrefix: "에브리데이 ",
+  currentDataUrl: "../data/everyday/holidays.json",
+  archiveDataUrl: "../data/everyday/holiday_archive.json",
+  detailBaseUrl: "https://eapp.emart.com/branch/view.do?id=",
+  sourceLabel: "이마트 공식 홈페이지",
+  officialPageLabel: "에브리데이 공식 점포 페이지"
+};
+</script>
+
+<script src="../assets/holiday-app.js"></script>
+</body>
+</html>
