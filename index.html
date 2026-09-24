@@ -274,7 +274,16 @@ const weekdayNames = [
 
 
 let holidayData = [];
-let selectedRegion = "서울";
+const urlParams =
+  new URLSearchParams(window.location.search);
+
+const requestedRegion =
+  urlParams.get("region");
+
+let selectedRegion =
+  regionOrder.includes(requestedRegion)
+    ? requestedRegion
+    : "서울";
 
 
 /*
