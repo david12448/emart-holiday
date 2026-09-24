@@ -474,6 +474,73 @@ function createTabs() {
 
 
 /*
+개별 점포 하나만 표시
+*/
+function renderSingleStore(store) {
+
+  const tabs =
+    document.getElementById("tabs");
+
+  const content =
+    document.getElementById("content");
+
+  // 개별 점포 화면에서는 지역 탭 숨기기
+  tabs.style.display = "none";
+
+  const displayName =
+    shortStoreName(store.store);
+
+  const dates =
+    store.holidays
+      .map(date => formatDate(date))
+      .join(" · ");
+
+  content.innerHTML = `
+    <h2 class="region-title">
+      ${displayName}
+
+      <span class="region-count">
+        · ${store.region}
+      </span>
+    </h2>
+
+    <div class="holiday-accordion">
+
+      <div
+        class="accordion-content"
+        style="padding-top:20px;"
+      >
+
+        <div class="date-title">
+          이번 달 휴무일
+        </div>
+
+        <div class="store-grid-item">
+          ${dates || "등록된 휴무일이 없습니다."}
+        </div>
+
+        <div style="margin-top:18px;">
+
+          <a
+            class="store-grid-item store-link"
+            href="${TISTORY_POST_URL}"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-store-id="${store.id}"
+          >
+            ${displayName} 점포 상세정보 보기
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+  `;
+}
+
+
+/*
 선택 지역 화면 출력
 */
 function renderRegion() {
@@ -482,7 +549,6 @@ function renderRegion() {
     document.getElementById(
       "content"
     );
-
 
   const stores =
     holidayData.filter(
