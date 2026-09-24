@@ -280,7 +280,10 @@
   border: 1px solid transparent;
 }
 
-
+/* 지난 휴무일 */
+.calendar-day.closed.past-closed {
+  opacity: 0.48;
+}
     
 /* 달력 앞뒤 빈칸 */
 .calendar-empty {
@@ -775,6 +778,9 @@ function buildMonthCalendar(stores) {
     const isToday =
       dateKey === todayKey;
 
+    const isPast =
+  dateKey < todayKey;
+
     const weekdayIndex =
   new Date(
     year,
@@ -806,6 +812,7 @@ const weekdayClass =
   calendar-day
   ${weekdayClass}
   ${isClosed ? "closed" : ""}
+  ${isClosed && isPast ? "past-closed" : ""}
   ${isToday ? "today" : ""}
 "
       >
