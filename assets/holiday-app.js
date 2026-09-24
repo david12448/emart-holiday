@@ -489,15 +489,42 @@ function buildCalendarQuickSummary(
 
 function buildStoreClickGuide() {
 
+  const regionGuide =
+    isAllRegions
+      ? `
+        <span class="store-click-guide-line">
+          <strong>지역별로 자세히 보려면 왼쪽 지역명을 클릭하세요.</strong>
+        </span>
+      `
+      : "";
+
+
   return `
     <div class="store-click-guide">
-      <span class="store-click-guide-icon">i</span>
 
-      <span>
-        점포별 영업시간·전화번호 등 자세한 정보는
-        <strong>아래 점포명을 클릭해 확인할 수 있습니다.</strong>
-        ${MART_CONFIG.officialPageLabel || "공식 점포 페이지"}가 새 탭에서 열립니다.
+      <span class="store-click-guide-icon">
+        i
       </span>
+
+      <span class="store-click-guide-body">
+
+        <span class="store-click-guide-label">
+          이용 안내
+        </span>
+
+        ${regionGuide}
+
+        <span class="store-click-guide-line">
+          점포별 영업시간·전화번호 등 자세한 정보는
+          <strong>아래 점포명을 클릭해 확인할 수 있습니다.</strong>
+        </span>
+
+        <span class="store-click-guide-sub">
+          ${MART_CONFIG.officialPageLabel || "공식 점포 페이지"}가 새 탭에서 열립니다.
+        </span>
+
+      </span>
+
     </div>
   `;
 
@@ -1963,7 +1990,14 @@ function renderAllRegions() {
                     <div class="
                       all-regions-region
                     ">
-                      ${region}
+                      <a
+                        class="all-regions-region-link"
+                        href="?region=${encodeURIComponent(region)}"
+                        title="${region} 지역만 보기"
+                      >
+                        ${region}
+                        <span class="all-regions-region-arrow">›</span>
+                      </a>
                     </div>
 
                     <div class="
