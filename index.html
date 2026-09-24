@@ -469,31 +469,61 @@
   font-weight: bold;
 }
 
-.calendar-week-mini {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-
-  margin: -7px 0 15px;
-
-  font-size: 12px;
-  color: #777;
-}
-
-.calendar-week-mini strong {
-  color: #444;
-}
 
 @media (max-width: 700px) {
   .calendar-quick-summary {
     justify-content: flex-start;
     line-height: 1.5;
   }
+}
 
-  .calendar-week-mini {
-    justify-content: flex-start;
-    line-height: 1.5;
+
+/* =========================
+   점포 공식 페이지 안내
+   ========================= */
+.store-click-guide {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin: -7px 0 16px;
+  padding: 11px 14px;
+
+  background: #fffaf0;
+  border: 1px solid #f0dfad;
+  border-radius: 9px;
+
+  color: #665927;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.store-click-guide-icon {
+  flex-shrink: 0;
+
+  width: 22px;
+  height: 22px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e7a900;
+  color: #222;
+
+  border-radius: 50%;
+
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.store-click-guide strong {
+  color: #3f3a26;
+}
+
+@media (max-width: 700px) {
+  .store-click-guide {
+    align-items: flex-start;
   }
 }
 
@@ -1080,21 +1110,7 @@ function buildCalendarQuickSummary(
       .map(
         date => {
 
-          const count =
-            holidayCount[date] || 0;
-
-
-          if (stores.length === 1) {
-
-            return formatDate(date);
-
-          }
-
-
-          return (
-            `${formatDate(date)} ` +
-            `${count}개 점포`
-          );
+          return formatDate(date);
 
         }
       )
@@ -1111,137 +1127,24 @@ function buildCalendarQuickSummary(
 }
 
 
+
 /*
 ==================================================
-현재 달에서는 이번 주 휴무를 한 줄로 간단히 표시
+점포명을 클릭하면 공식 점포 페이지로 이동한다는 안내
 ==================================================
 */
 
-function buildCalendarWeekMini(
-  stores
-) {
-
-  const currentYear =
-    koreaToday.getFullYear();
-
-
-  const currentMonth =
-    koreaToday.getMonth() + 1;
-
-
-  if (
-    selectedYear !== currentYear ||
-    selectedMonth !== currentMonth
-  ) {
-
-    return "";
-
-  }
-
-
-  const dayOfWeek =
-    koreaToday.getDay();
-
-
-  const mondayOffset =
-    dayOfWeek === 0
-      ? -6
-      : 1 - dayOfWeek;
-
-
-  const weekStart =
-    new Date(koreaToday);
-
-
-  weekStart.setDate(
-    koreaToday.getDate() +
-    mondayOffset
-  );
-
-
-  const weekEnd =
-    new Date(weekStart);
-
-
-  weekEnd.setDate(
-    weekStart.getDate() + 6
-  );
-
-
-  const startKey =
-    dateToKey(weekStart);
-
-
-  const endKey =
-    dateToKey(weekEnd);
-
-
-  const dateCount = {};
-
-
-  stores.forEach(
-    store => {
-
-      (store.holidays || [])
-        .forEach(
-          date => {
-
-            if (
-              date >= startKey &&
-              date <= endKey
-            ) {
-
-              if (!dateCount[date]) {
-                dateCount[date] = 0;
-              }
-
-              dateCount[date]++;
-
-            }
-
-          }
-        );
-
-    }
-  );
-
-
-  const entries =
-    Object.entries(dateCount)
-      .sort(
-        ([a], [b]) =>
-          a.localeCompare(b)
-      );
-
-
-  const text =
-    entries.length === 0
-      ? "이번 주 휴무 예정 없음"
-      : entries
-          .map(
-            ([date, count]) => {
-
-              if (stores.length === 1) {
-
-                return formatDate(date);
-
-              }
-
-
-              return (
-                `${formatDate(date)} ` +
-                `${count}개 점포`
-              );
-
-            }
-          )
-          .join(" · ");
-
+function buildStoreClickGuide() {
 
   return `
-    <div class="calendar-week-mini">
-      <strong>이번 주</strong>
-      <span>${text}</span>
+    <div class="store-click-guide">
+      <span class="store-click-guide-icon">i</span>
+
+      <span>
+        점포별 영업시간·전화번호 등 자세한 정보는
+        <strong>아래 점포명을 클릭해 확인할 수 있습니다.</strong>
+        이마트 공식 점포 페이지가 새 탭에서 열립니다.
+      </span>
     </div>
   `;
 
@@ -1354,13 +1257,6 @@ function buildMonthCalendar(stores) {
           stores
         )
       }
-
-      ${
-        buildCalendarWeekMini(
-          stores
-        )
-      }
-
       <div class="calendar-grid">
 
         <div class="calendar-weekday sunday">일</div>
@@ -2074,6 +1970,10 @@ function renderRegion() {
       buildMonthCalendar(
         stores
       )
+    }
+
+    ${
+      buildStoreClickGuide()
     }
   `;
 
