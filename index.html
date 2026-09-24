@@ -178,6 +178,57 @@
       outline-offset: 2px;
     }
 
+    /* 개별 점포 상세보기 버튼 */
+.store-detail-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 16px 18px;
+
+  background: #ffd800;
+  border: 1px solid #e6c200;
+  border-radius: 10px;
+
+  color: #222;
+  text-decoration: none;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.store-detail-button:hover {
+  background: #ffcf00;
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 14px rgba(0, 0, 0, 0.12);
+}
+
+.store-detail-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.store-detail-sub {
+  font-size: 13px;
+  font-weight: normal;
+  color: #555;
+}
+
+.store-detail-arrow {
+  font-size: 24px;
+  font-weight: bold;
+}
+
     @media (max-width: 700px) {
       .store-grid {
         grid-template-columns: repeat(2, 1fr);
