@@ -280,6 +280,35 @@
   border: 1px solid transparent;
 }
 
+    /* 요일별 날짜칸 배경색 */
+.calendar-day.day-sun {
+  background: #fff1f1;
+}
+
+.calendar-day.day-mon {
+  background: #f7f7f7;
+}
+
+.calendar-day.day-tue {
+  background: #f8f6ef;
+}
+
+.calendar-day.day-wed {
+  background: #f3f7f3;
+}
+
+.calendar-day.day-thu {
+  background: #f2f6f8;
+}
+
+.calendar-day.day-fri {
+  background: #f5f3f8;
+}
+
+.calendar-day.day-sat {
+  background: #eef4ff;
+}
+    
 /* 달력 앞뒤 빈칸 */
 .calendar-empty {
   background: transparent;
@@ -302,10 +331,19 @@
 }
 
 .calendar-closed-count {
+  display: inline-block;
+
   margin-top: 6px;
+  padding: 3px 7px;
+
+  background: #e7a900;
+  color: #222;
+
+  border-radius: 10px;
+
   font-size: 11px;
   font-weight: bold;
-  color: #665400;
+
   line-height: 1.25;
 }
 
@@ -316,6 +354,20 @@
   text-align: right;
 }    
 
+.calendar-today-label {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 2px 7px;
+
+  background: #333;
+  color: white;
+
+  border-radius: 10px;
+
+  font-size: 10px;
+  font-weight: bold;
+}
+    
     @media (max-width: 700px) {
       .store-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -680,35 +732,64 @@ function buildMonthCalendar(stores) {
     const isToday =
       dateKey === todayKey;
 
+    const weekdayIndex =
+  new Date(
+    year,
+    month - 1,
+    day
+  ).getDay();
+
+const weekdayClass =
+  [
+    "day-sun",
+    "day-mon",
+    "day-tue",
+    "day-wed",
+    "day-thu",
+    "day-fri",
+    "day-sat"
+  ][weekdayIndex];
+
 
     const closedText =
       stores.length === 1
         ? "휴무"
-        : `${count}개 휴무`;
+        : `${count}개 점포`;
 
 
     html += `
       <div
-        class="
-          calendar-day
-          ${isClosed ? "closed" : ""}
-          ${isToday ? "today" : ""}
-        "
+       class="
+  calendar-day
+  ${weekdayClass}
+  ${isClosed ? "closed" : ""}
+  ${isToday ? "today" : ""}
+"
       >
 
         <div class="calendar-date-number">
-          ${day}
-        </div>
+  ${day}
+</div>
 
-        ${
-          isClosed
-            ? `
-              <div class="calendar-closed-count">
-                ${closedText}
-              </div>
-            `
-            : ""
-        }
+${
+  isToday
+    ? `
+      <div class="calendar-today-label">
+        오늘
+      </div>
+    `
+    : ""
+}
+
+${
+  isClosed
+    ? `
+      <div class="calendar-closed-count">
+        ${closedText}
+      </div>
+    `
+    : ""
+}
 
       </div>
     `;
