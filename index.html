@@ -274,8 +274,23 @@ const weekdayNames = [
 
 
 let holidayData = [];
+
+
+/*
+주소의 ?region= 값을 읽습니다.
+
+예:
+?region=인천
+?region=대구
+?region=경기
+
+지역값이 없거나 잘못된 값이면
+기본값은 서울입니다.
+*/
 const urlParams =
-  new URLSearchParams(window.location.search);
+  new URLSearchParams(
+    window.location.search
+  );
 
 const requestedRegion =
   urlParams.get("region");
