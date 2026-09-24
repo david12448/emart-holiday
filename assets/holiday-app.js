@@ -1226,6 +1226,11 @@ function createTabs() {
 
 function renderSingleStore(store) {
 
+  document.body.classList.remove(
+    "all-regions-mode"
+  );
+
+
   const tabs =
     document.getElementById(
       "tabs"
@@ -1617,6 +1622,21 @@ function renderStoreCollection(
 
 function renderRegion() {
 
+  document.body.classList.remove(
+    "all-regions-mode"
+  );
+
+
+  const tabs =
+    document.getElementById(
+      "tabs"
+    );
+
+
+  tabs.style.display =
+    "";
+
+
   const stores =
     holidayData.filter(
       item =>
@@ -1652,15 +1672,378 @@ function renderAllRegions() {
     );
 
 
+  const content =
+    document.getElementById(
+      "content"
+    );
+
+
+  const description =
+    document.getElementById(
+      "page-description"
+    );
+
+
+  /*
+  전국 보기에서는 지역 탭을 숨기고
+  전용 압축 레이아웃을 사용합니다.
+  */
   tabs.style.display =
     "none";
 
 
-  renderStoreCollection(
-    holidayData,
-    "전국",
-    `전국의 ${MART_CONFIG.brandName || "마트"} 휴무일을 한 화면에서 확인할 수 있습니다.`,
-    true
+  document.body.classList.add(
+    "all-regions-mode"
+  );
+
+
+  description.textContent =
+    `전국의 ${MART_CONFIG.brandName || "마트"} 휴무일을 휴무일별·지역별로 한눈에 확인할 수 있습니다.`;
+
+
+  const monthStores =
+    getMonthStores(
+      holidayData
+    );
+
+
+  content.innerHTML = `
+
+    <h2 class="region-title">
+
+      전국
+
+      <span class="region-count">
+        · ${holidayData.length}개 점포
+      </span>
+
+    </h2>
+
+    ${
+      buildMonthCalendar(
+        holidayData
+      )
+    }
+
+    ${
+      buildStoreClickGuide()
+    }
+  `;
+
+
+  if (
+    monthStores.length === 0
+  ) {
+
+    content.innerHTML += `
+      <div class="empty">
+        ${selectedYear}년 ${selectedMonth}월에
+        등록된 휴점일 데이터가 없습니다.
+      </div>
+    `;
+
+    return;
+
+  }
+
+
+  const weekdayGroups =
+    buildWeekdayGroups(
+      holidayData
+    );
+
+
+  const displayOrder = [
+    "일요일",
+    "월요일",
+    "화요일",
+    "수요일",
+    "목요일",
+    "금요일",
+    "토요일"
+  ];
+
+
+  displayOrder.forEach(
+    groupName => {
+
+      const entries =
+        weekdayGroups[
+          groupName
+        ];
+
+
+      if (
+        !entries ||
+        entries.length === 0
+      ) {
+
+        return;
+
+      }
+
+
+      const uniqueStoreCount =
+        new Set(
+          entries.map(
+            item =>
+              String(
+                item.store.id
+              )
+          )
+        ).size;
+
+
+      const dateGroups = {};
+
+
+      entries.forEach(
+        item => {
+
+          if (
+            !dateGroups[
+              item.date
+            ]
+          ) {
+
+            dateGroups[
+              item.date
+            ] = [];
+
+          }
+
+
+          dateGroups[
+            item.date
+          ].push(
+            item.store
+          );
+
+        }
+      );
+
+
+      let html = `
+        <details
+          class="
+            holiday-accordion
+            all-regions-accordion
+          "
+          open
+        >
+
+          <summary>
+            ${groupName} 휴무
+            · ${uniqueStoreCount}개 점포
+          </summary>
+
+          <div class="
+            accordion-content
+            all-regions-content
+          ">
+      `;
+
+
+      Object.entries(
+        dateGroups
+      )
+        .sort(
+          ([a], [b]) =>
+            a.localeCompare(b)
+        )
+        .forEach(
+          ([date, storesInDate]) => {
+
+            /*
+            같은 날짜의 점포를 다시 지역별로 묶습니다.
+            */
+            const regionGroups = {};
+
+
+            storesInDate
+              .forEach(
+                store => {
+
+                  const region =
+                    store.region ||
+                    "기타";
+
+
+                  if (
+                    !regionGroups[
+                      region
+                    ]
+                  ) {
+
+                    regionGroups[
+                      region
+                    ] = [];
+
+                  }
+
+
+                  regionGroups[
+                    region
+                  ].push(
+                    store
+                  );
+
+                }
+              );
+
+
+            const orderedRegions = [
+              ...regionOrder.filter(
+                region =>
+                  regionGroups[
+                    region
+                  ]
+              ),
+              ...Object.keys(
+                regionGroups
+              ).filter(
+                region =>
+                  !regionOrder.includes(
+                    region
+                  )
+              )
+            ];
+
+
+            html += `
+              <div class="
+                all-regions-date-group
+              ">
+
+                <div class="
+                  all-regions-date-title
+                ">
+                  ${formatDate(date)}
+                  · ${storesInDate.length}개 점포
+                </div>
+            `;
+
+
+            orderedRegions.forEach(
+              region => {
+
+                /*
+                같은 점포가 중복되어 들어온 경우를 대비해
+                ID 기준으로 한 번만 표시합니다.
+                */
+                const uniqueStores =
+                  Array.from(
+                    new Map(
+                      regionGroups[
+                        region
+                      ].map(
+                        store => [
+                          String(
+                            store.id
+                          ),
+                          store
+                        ]
+                      )
+                    ).values()
+                  )
+                    .sort(
+                      (a, b) =>
+                        a.store.localeCompare(
+                          b.store,
+                          "ko"
+                        )
+                    );
+
+
+                html += `
+                  <div class="
+                    all-regions-row
+                  ">
+
+                    <div class="
+                      all-regions-region
+                    ">
+                      ${region}
+                    </div>
+
+                    <div class="
+                      all-regions-stores
+                    ">
+                `;
+
+
+                uniqueStores.forEach(
+                  (store, index) => {
+
+                    const displayName =
+                      shortStoreName(
+                        store.store
+                      );
+
+
+                    html += `
+                      <a
+                        class="
+                          all-regions-store-link
+                          store-link
+                        "
+                        href="${TISTORY_POST_URL}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-store-id="${store.id}"
+                        title="${displayName} 상세정보 보기"
+                      >
+                        ${displayName}
+                      </a>
+                    `;
+
+
+                    if (
+                      index <
+                      uniqueStores.length - 1
+                    ) {
+
+                      html += `
+                        <span class="
+                          all-regions-separator
+                        ">,</span>
+                      `;
+
+                    }
+
+                  }
+                );
+
+
+                html += `
+                    </div>
+
+                  </div>
+                `;
+
+              }
+            );
+
+
+            html += `
+              </div>
+            `;
+
+          }
+        );
+
+
+      html += `
+          </div>
+
+        </details>
+      `;
+
+
+      content.innerHTML +=
+        html;
+
+    }
   );
 
 }
