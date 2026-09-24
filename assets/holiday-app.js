@@ -1125,12 +1125,45 @@ function createTabs() {
     );
 
 
-  tabs.style.display = "flex";
-
   tabs.innerHTML = "";
 
 
-  regionOrder.forEach(
+  /*
+  실제로 이 브랜드의 점포가 존재하는 지역만 표시합니다.
+
+  예:
+  트레이더스에 세종 점포가 없으면
+  세종 탭은 자동으로 생성되지 않습니다.
+  */
+  const availableRegions =
+    regionOrder.filter(
+      region =>
+        holidayData.some(
+          item =>
+            item.region === region
+        )
+    );
+
+
+  /*
+  URL로 지정한 지역이 없거나,
+  해당 브랜드에 존재하지 않는 지역이면
+  실제 존재하는 첫 번째 지역을 기본 선택합니다.
+  */
+  if (
+    !availableRegions.includes(
+      selectedRegion
+    ) &&
+    availableRegions.length > 0
+  ) {
+
+    selectedRegion =
+      availableRegions[0];
+
+  }
+
+
+  availableRegions.forEach(
     region => {
 
       const button =
@@ -1165,6 +1198,7 @@ function createTabs() {
 
           selectedRegion =
             region;
+
 
           createTabs();
 
