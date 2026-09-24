@@ -295,6 +295,9 @@ const urlParams =
 const requestedRegion =
   urlParams.get("region");
 
+const requestedStoreId =
+  urlParams.get("storeId");
+
 let selectedRegion =
   regionOrder.includes(requestedRegion)
     ? requestedRegion
