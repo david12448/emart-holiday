@@ -371,10 +371,30 @@
 }
 
 .calendar-legend {
-  margin-top: 12px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
+
+  margin-top: 14px;
+
   font-size: 12px;
-  color: #777;
-  text-align: right;
+  color: #666;
+}
+
+
+/* 휴무일 안내 색상 표시 */
+.calendar-legend::before {
+  content: "";
+
+  width: 11px;
+  height: 11px;
+
+  background: #ffe3e3;
+  border: 1px solid #efa9a9;
+  border-radius: 3px;
+
+  flex-shrink: 0;
 }    
 
 .calendar-today-label {
