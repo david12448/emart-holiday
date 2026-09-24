@@ -243,10 +243,48 @@
 }
 
 .calendar-header {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 18px;
+}
+
+.calendar-month-title {
+  min-width: 120px;
+  text-align: center;
+}
+
+.calendar-nav-button {
+  width: 36px;
+  height: 36px;
+
+  border: 1px solid #ddd;
+  border-radius: 50%;
+
+  background: #fff;
+  color: #222;
+
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease;
+}
+
+.calendar-nav-button:hover:not(:disabled) {
+  background: #f2f2f2;
+  transform: translateY(-1px);
+}
+
+.calendar-nav-button:disabled {
+  opacity: 0.25;
+  cursor: default;
 }
 
 .calendar-grid {
@@ -280,11 +318,6 @@
   border: 1px solid transparent;
 }
 
-/* 지난 휴무일 */
-.calendar-day.closed.past-closed {
-  opacity: 0.48;
-}
-    
 /* 달력 앞뒤 빈칸 */
 .calendar-empty {
   background: transparent;
@@ -298,53 +331,45 @@
   border-style: solid;
 }
 
-
-/* 일요일 휴무 */
+/* 요일별 휴무일 배경색 */
 .calendar-day.closed.day-sun {
   background: #ffe3e3;
   border-color: #efa9a9;
 }
 
-
-/* 월요일 휴무 */
 .calendar-day.closed.day-mon {
   background: #fff0a6;
   border-color: #e7c63c;
 }
 
-
-/* 화요일 휴무 */
 .calendar-day.closed.day-tue {
   background: #ffe6c7;
   border-color: #e5b36d;
 }
 
-
-/* 수요일 휴무 */
 .calendar-day.closed.day-wed {
   background: #e1f3df;
   border-color: #9dce98;
 }
 
-
-/* 목요일 휴무 */
 .calendar-day.closed.day-thu {
   background: #dff1f5;
   border-color: #9bcbd4;
 }
 
-
-/* 금요일 휴무 */
 .calendar-day.closed.day-fri {
   background: #eee5f7;
   border-color: #c7abe0;
 }
 
-
-/* 토요일 휴무 */
 .calendar-day.closed.day-sat {
   background: #dfeaff;
   border-color: #9db9eb;
+}
+
+/* 지난 휴무일은 연하게 */
+.calendar-day.closed.past-closed {
+  opacity: 0.52;
 }
 
 .calendar-day.today {
@@ -358,7 +383,6 @@
 
 .calendar-closed-count {
   display: inline-block;
-
   margin-top: 6px;
   padding: 3px 7px;
 
@@ -369,36 +393,8 @@
 
   font-size: 11px;
   font-weight: bold;
-
   line-height: 1.25;
 }
-
-.calendar-legend {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 6px;
-
-  margin-top: 14px;
-
-  font-size: 12px;
-  color: #666;
-}
-
-
-/* 휴무일 안내 색상 표시 */
-.calendar-legend::before {
-  content: "";
-
-  width: 11px;
-  height: 11px;
-
-  background: #ffe3e3;
-  border: 1px solid #efa9a9;
-  border-radius: 3px;
-
-  flex-shrink: 0;
-}    
 
 .calendar-today-label {
   display: inline-block;
@@ -413,16 +409,147 @@
   font-size: 10px;
   font-weight: bold;
 }
-    
-    @media (max-width: 700px) {
-      .store-grid {
+
+.calendar-legend {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
+
+  margin-top: 14px;
+
+  font-size: 12px;
+  color: #666;
+}
+
+.calendar-legend::before {
+  content: "";
+
+  width: 10px;
+  height: 10px;
+
+  background: #e7a900;
+  border-radius: 50%;
+
+  flex-shrink: 0;
+}
+
+
+/* 상단 자동 안내 */
+.auto-summary {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-left: 4px solid #e7a900;
+
+  border-radius: 10px;
+
+  padding: 13px 16px;
+  margin-bottom: 14px;
+
+  color: #444;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.auto-summary strong {
+  color: #222;
+}
+
+
+/* 이번 주 휴무 */
+.week-summary {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+
+  padding: 17px 18px;
+  margin-bottom: 18px;
+}
+
+.week-summary-title {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-bottom: 12px;
+
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.week-summary-period {
+  margin-left: auto;
+  color: #888;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.week-date-block + .week-date-block {
+  border-top: 1px solid #eee;
+  margin-top: 13px;
+  padding-top: 13px;
+}
+
+.week-date-title {
+  margin-bottom: 9px;
+  font-weight: bold;
+  color: #555;
+}
+
+.week-store-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px 12px;
+}
+
+.week-empty {
+  color: #777;
+  font-size: 14px;
+}
+
+@media (max-width: 700px) {
+      .store-grid,
+      .week-store-grid {
         grid-template-columns: repeat(2, 1fr);
+      }
+
+      .month-calendar {
+        padding: 14px;
+      }
+
+      .calendar-grid {
+        gap: 4px;
+      }
+
+      .calendar-day {
+        min-height: 62px;
+        padding: 6px 3px;
       }
     }
 
     @media (max-width: 450px) {
-      .store-grid {
+      .store-grid,
+      .week-store-grid {
         grid-template-columns: 1fr;
+      }
+
+      .calendar-header {
+        gap: 10px;
+      }
+
+      .calendar-nav-button {
+        width: 32px;
+        height: 32px;
+        font-size: 21px;
+      }
+
+      .calendar-day {
+        min-height: 58px;
+      }
+
+      .calendar-closed-count {
+        padding: 2px 4px;
+        font-size: 10px;
       }
     }
   </style>
@@ -434,7 +561,7 @@
 
   <h1>이마트 휴점일 안내</h1>
 
-  <div class="description">
+  <div id="page-description" class="description">
     지역을 선택하면 해당 지역의 휴점일을 요일별로 확인할 수 있습니다.
   </div>
 
@@ -455,27 +582,14 @@
 
 /*
 ==================================================
-반드시 수정할 부분
+기본 설정
 ==================================================
-
-아래 주소를
-실제로 iframe을 넣어 놓은
-본인의 티스토리 포스팅 주소로 변경하세요.
-
-예:
-https://abcdef.tistory.com/123
 */
 
 const TISTORY_POST_URL =
   "javascript:void(0)";
 
 
-/*
-이마트 공식 점포 상세페이지 기본 주소
-
-첨부해주신 기존 JS와 동일한 방식이며,
-현재 공식 페이지에서도 작동하는 것을 확인했습니다.
-*/
 const EMART_DETAIL_BASE_URL =
   "https://eapp.emart.com/branch/view.do?id=";
 
@@ -509,13 +623,11 @@ const weekdayNames = [
 ];
 
 
-  
 let holidayData = [];
 
 
 /*
-주소의 파라미터 읽기
-
+주소 파라미터
 예:
 ?region=대구
 ?storeId=1118
@@ -526,38 +638,115 @@ const urlParams =
   );
 
 
-/*
-지역 지정
-*/
 const requestedRegion =
   urlParams.get("region");
 
 
-/*
-개별 점포 지정
-*/
 const requestedStoreId =
   urlParams.get("storeId");
 
 
-/*
-지역값이 없거나 잘못되면
-기본값은 서울
-*/
 let selectedRegion =
   regionOrder.includes(requestedRegion)
     ? requestedRegion
     : "서울";
 
 
+/*
+한국 날짜 기준
+*/
+function getKoreaTodayDate() {
 
+  const parts =
+    new Intl.DateTimeFormat(
+      "en-US",
+      {
+        timeZone: "Asia/Seoul",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit"
+      }
+    ).formatToParts(
+      new Date()
+    );
+
+
+  const values = {};
+
+  parts.forEach(
+    part => {
+
+      if (
+        part.type === "year" ||
+        part.type === "month" ||
+        part.type === "day"
+      ) {
+
+        values[part.type] =
+          Number(part.value);
+
+      }
+
+    }
+  );
+
+
+  return new Date(
+    values.year,
+    values.month - 1,
+    values.day
+  );
+
+}
+
+
+const koreaToday =
+  getKoreaTodayDate();
+
+
+let selectedYear =
+  koreaToday.getFullYear();
+
+
+let selectedMonth =
+  koreaToday.getMonth() + 1;
 
 
 /*
-화면에서는
-"이마트 가든5점" → "가든5점"
-처럼 표시
+==================================================
+공통 함수
+==================================================
 */
+
+function pad2(number) {
+
+  return String(number)
+    .padStart(2, "0");
+
+}
+
+
+function dateToKey(date) {
+
+  return (
+    `${date.getFullYear()}-` +
+    `${pad2(date.getMonth() + 1)}-` +
+    `${pad2(date.getDate())}`
+  );
+
+}
+
+
+function getSelectedMonthKey() {
+
+  return (
+    `${selectedYear}-` +
+    `${pad2(selectedMonth)}`
+  );
+
+}
+
+
 function shortStoreName(name) {
 
   return name.replace(
@@ -568,29 +757,19 @@ function shortStoreName(name) {
 }
 
 
-/*
-날짜에서 요일 계산
-*/
 function getWeekday(dateString) {
 
   const parts =
     dateString.split("-");
 
-  const year =
-    Number(parts[0]);
-
-  const month =
-    Number(parts[1]) - 1;
-
-  const day =
-    Number(parts[2]);
 
   const date =
     new Date(
-      year,
-      month,
-      day
+      Number(parts[0]),
+      Number(parts[1]) - 1,
+      Number(parts[2])
     );
+
 
   return weekdayNames[
     date.getDay()
@@ -599,24 +778,23 @@ function getWeekday(dateString) {
 }
 
 
-/*
-2026-09-27
-↓
-9월 27일(일)
-*/
 function formatDate(dateString) {
 
   const parts =
     dateString.split("-");
 
+
   const month =
     Number(parts[1]);
+
 
   const day =
     Number(parts[2]);
 
+
   const weekday =
     getWeekday(dateString);
+
 
   return (
     `${month}월 ${day}일` +
@@ -625,103 +803,285 @@ function formatDate(dateString) {
 
 }
 
+
 /*
-월간 휴무 달력 생성
+선택한 달의 휴무일만 반환
 */
-function buildMonthCalendar(stores) {
+function getMonthHolidays(store) {
 
-  const holidayCount = {};
+  const prefix =
+    getSelectedMonthKey() + "-";
 
 
-  /*
-  날짜별 휴무 점포 수 계산
-  */
-  stores.forEach(
+  return (
+    Array.isArray(store.holidays)
+      ? store.holidays.filter(
+          date =>
+            date.startsWith(prefix)
+        )
+      : []
+  );
+
+}
+
+
+/*
+선택한 달에 휴무가 있는 점포만 생성
+기존 점포 객체는 건드리지 않습니다.
+*/
+function getMonthStores(stores) {
+
+  return stores
+    .map(
+      store => ({
+        ...store,
+        holidays:
+          getMonthHolidays(store)
+      })
+    )
+    .filter(
+      store =>
+        store.holidays.length > 0
+    );
+
+}
+
+
+/*
+holiday_archive.json에 존재하는
+가장 이른 달 / 가장 늦은 달
+*/
+function getAvailableMonthRange() {
+
+  const months = [];
+
+
+  holidayData.forEach(
     store => {
 
-      store.holidays.forEach(
-        date => {
+      (store.holidays || [])
+        .forEach(
+          date => {
 
-          if (!holidayCount[date]) {
-            holidayCount[date] = 0;
+            if (
+              typeof date === "string" &&
+              date.length >= 7
+            ) {
+
+              months.push(
+                date.slice(0, 7)
+              );
+
+            }
+
           }
-
-          holidayCount[date]++;
-
-        }
-      );
+        );
 
     }
   );
 
 
-  /*
-  데이터에 있는 가장 첫 휴무일을 기준으로
-  표시할 연도/월 결정
-  */
-  const holidayDates =
-    Object.keys(holidayCount)
+  const uniqueMonths =
+    [...new Set(months)]
       .sort();
 
 
-  const now =
-    new Date();
+  if (
+    uniqueMonths.length === 0
+  ) {
 
+    const currentKey =
+      `${koreaToday.getFullYear()}-` +
+      `${pad2(koreaToday.getMonth() + 1)}`;
 
-  let year =
-    now.getFullYear();
-
-  let month =
-    now.getMonth() + 1;
-
-
-  if (holidayDates.length > 0) {
-
-    const parts =
-      holidayDates[0].split("-");
-
-    year =
-      Number(parts[0]);
-
-    month =
-      Number(parts[1]);
+    return {
+      min: currentKey,
+      max: currentKey
+    };
 
   }
 
 
+  return {
+    min: uniqueMonths[0],
+    max:
+      uniqueMonths[
+        uniqueMonths.length - 1
+      ]
+  };
+
+}
+
+
+function getShiftedMonth(step) {
+
+  const date =
+    new Date(
+      selectedYear,
+      selectedMonth - 1 + step,
+      1
+    );
+
+
+  return {
+    year:
+      date.getFullYear(),
+
+    month:
+      date.getMonth() + 1,
+
+    key:
+      `${date.getFullYear()}-` +
+      `${pad2(date.getMonth() + 1)}`
+  };
+
+}
+
+
+function canMoveMonth(step) {
+
+  const range =
+    getAvailableMonthRange();
+
+
+  const target =
+    getShiftedMonth(step);
+
+
+  return (
+    target.key >= range.min &&
+    target.key <= range.max
+  );
+
+}
+
+
+function moveMonth(step) {
+
+  if (
+    !canMoveMonth(step)
+  ) {
+
+    return;
+
+  }
+
+
+  const target =
+    getShiftedMonth(step);
+
+
+  selectedYear =
+    target.year;
+
+
+  selectedMonth =
+    target.month;
+
+
+  renderCurrentView();
+
+}
+
+
+/*
+==================================================
+월간 달력
+==================================================
+*/
+
+function buildMonthCalendar(stores) {
+
+  const holidayCount = {};
+
+
+  const prefix =
+    getSelectedMonthKey() + "-";
+
+
+  stores.forEach(
+    store => {
+
+      (store.holidays || [])
+        .filter(
+          date =>
+            date.startsWith(prefix)
+        )
+        .forEach(
+          date => {
+
+            if (!holidayCount[date]) {
+              holidayCount[date] = 0;
+            }
+
+            holidayCount[date]++;
+
+          }
+        );
+
+    }
+  );
+
+
   const firstDay =
     new Date(
-      year,
-      month - 1,
+      selectedYear,
+      selectedMonth - 1,
       1
     ).getDay();
 
 
   const daysInMonth =
     new Date(
-      year,
-      month,
+      selectedYear,
+      selectedMonth,
       0
     ).getDate();
 
 
-  const pad =
-    number =>
-      String(number)
-        .padStart(2, "0");
-
-
   const todayKey =
-    `${now.getFullYear()}-` +
-    `${pad(now.getMonth() + 1)}-` +
-    `${pad(now.getDate())}`;
+    dateToKey(
+      koreaToday
+    );
+
+
+  const previousDisabled =
+    !canMoveMonth(-1);
+
+
+  const nextDisabled =
+    !canMoveMonth(1);
 
 
   let html = `
     <div class="month-calendar">
 
       <div class="calendar-header">
-        ${year}년 ${month}월
+
+        <button
+          type="button"
+          class="calendar-nav-button"
+          data-month-step="-1"
+          aria-label="이전 달"
+          ${previousDisabled ? "disabled" : ""}
+        >
+          ‹
+        </button>
+
+        <div class="calendar-month-title">
+          ${selectedYear}년 ${selectedMonth}월
+        </div>
+
+        <button
+          type="button"
+          class="calendar-nav-button"
+          data-month-step="1"
+          aria-label="다음 달"
+          ${nextDisabled ? "disabled" : ""}
+        >
+          ›
+        </button>
+
       </div>
 
       <div class="calendar-grid">
@@ -736,25 +1096,19 @@ function buildMonthCalendar(stores) {
   `;
 
 
-  /*
-  1일 이전 빈칸
-  */
   for (
     let i = 0;
     i < firstDay;
     i++
   ) {
 
-  html += `
-  <div class="calendar-day calendar-empty"></div>
-`;
+    html += `
+      <div class="calendar-day calendar-empty"></div>
+    `;
 
   }
 
 
-  /*
-  날짜 출력
-  */
   for (
     let day = 1;
     day <= daysInMonth;
@@ -762,9 +1116,9 @@ function buildMonthCalendar(stores) {
   ) {
 
     const dateKey =
-      `${year}-` +
-      `${pad(month)}-` +
-      `${pad(day)}`;
+      `${selectedYear}-` +
+      `${pad2(selectedMonth)}-` +
+      `${pad2(day)}`;
 
 
     const count =
@@ -778,26 +1132,29 @@ function buildMonthCalendar(stores) {
     const isToday =
       dateKey === todayKey;
 
+
     const isPast =
-  dateKey < todayKey;
+      dateKey < todayKey;
+
 
     const weekdayIndex =
-  new Date(
-    year,
-    month - 1,
-    day
-  ).getDay();
+      new Date(
+        selectedYear,
+        selectedMonth - 1,
+        day
+      ).getDay();
 
-const weekdayClass =
-  [
-    "day-sun",
-    "day-mon",
-    "day-tue",
-    "day-wed",
-    "day-thu",
-    "day-fri",
-    "day-sat"
-  ][weekdayIndex];
+
+    const weekdayClass =
+      [
+        "day-sun",
+        "day-mon",
+        "day-tue",
+        "day-wed",
+        "day-thu",
+        "day-fri",
+        "day-sat"
+      ][weekdayIndex];
 
 
     const closedText =
@@ -808,38 +1165,38 @@ const weekdayClass =
 
     html += `
       <div
-       class="
-  calendar-day
-  ${weekdayClass}
-  ${isClosed ? "closed" : ""}
-  ${isClosed && isPast ? "past-closed" : ""}
-  ${isToday ? "today" : ""}
-"
+        class="
+          calendar-day
+          ${weekdayClass}
+          ${isClosed ? "closed" : ""}
+          ${isClosed && isPast ? "past-closed" : ""}
+          ${isToday ? "today" : ""}
+        "
       >
 
         <div class="calendar-date-number">
-  ${day}
-</div>
+          ${day}
+        </div>
 
-${
-  isToday
-    ? `
-      <div class="calendar-today-label">
-        오늘
-      </div>
-    `
-    : ""
-}
+        ${
+          isToday
+            ? `
+              <div class="calendar-today-label">
+                오늘
+              </div>
+            `
+            : ""
+        }
 
-${
-  isClosed
-    ? `
-      <div class="calendar-closed-count">
-        ${closedText}
-      </div>
-    `
-    : ""
-}
+        ${
+          isClosed
+            ? `
+              <div class="calendar-closed-count">
+                ${closedText}
+              </div>
+            `
+            : ""
+        }
 
       </div>
     `;
@@ -851,7 +1208,8 @@ ${
       </div>
 
       <div class="calendar-legend">
-        색상이 표시된 날짜는 휴무일입니다.
+        색상이 표시된 날짜는 휴무일이며,
+        지난 휴무일은 연하게 표시됩니다.
       </div>
 
     </div>
@@ -860,24 +1218,316 @@ ${
 
   return html;
 
-}  
+}
+
 
 /*
-점포의 휴무일들이
-모두 같은 요일이면 해당 요일 그룹으로 분류
-
-서로 다른 요일이면
-기타·변동 휴무로 분류
+==================================================
+상단 자동 안내문
+휴무 데이터가 바뀌면 문구도 자동으로 변경됩니다.
+==================================================
 */
+
+function buildAutoSummary(
+  stores,
+  label
+) {
+
+  const monthStores =
+    getMonthStores(stores);
+
+
+  const dates =
+    [
+      ...new Set(
+        monthStores.flatMap(
+          store =>
+            store.holidays
+        )
+      )
+    ].sort();
+
+
+  let message = "";
+
+
+  if (
+    dates.length === 0
+  ) {
+
+    message =
+      `${selectedYear}년 ${selectedMonth}월 ` +
+      `${label}에 등록된 휴무일이 없습니다.`;
+
+  } else {
+
+    const formattedDates =
+      dates
+        .map(
+          date =>
+            formatDate(date)
+        )
+        .join(" · ");
+
+
+    message =
+      `${selectedYear}년 ${selectedMonth}월 ` +
+      `${label} 휴무일은 ` +
+      `${formattedDates}입니다.`;
+
+  }
+
+
+  return `
+    <div class="auto-summary">
+      <strong>이번 달 안내</strong><br>
+      ${message}
+    </div>
+  `;
+
+}
+
+
+/*
+==================================================
+이번 주 휴무 점포
+선택 화면이 현재 달일 때만 표시
+==================================================
+*/
+
+function buildThisWeekSummary(
+  stores
+) {
+
+  const currentYear =
+    koreaToday.getFullYear();
+
+
+  const currentMonth =
+    koreaToday.getMonth() + 1;
+
+
+  /*
+  다른 달을 보고 있을 때는
+  이번 주 박스를 숨깁니다.
+  */
+  if (
+    selectedYear !== currentYear ||
+    selectedMonth !== currentMonth
+  ) {
+
+    return "";
+
+  }
+
+
+  const dayOfWeek =
+    koreaToday.getDay();
+
+
+  const mondayOffset =
+    dayOfWeek === 0
+      ? -6
+      : 1 - dayOfWeek;
+
+
+  const weekStart =
+    new Date(koreaToday);
+
+
+  weekStart.setDate(
+    koreaToday.getDate() +
+    mondayOffset
+  );
+
+
+  const weekEnd =
+    new Date(weekStart);
+
+
+  weekEnd.setDate(
+    weekStart.getDate() + 6
+  );
+
+
+  const startKey =
+    dateToKey(weekStart);
+
+
+  const endKey =
+    dateToKey(weekEnd);
+
+
+  const dateGroups = {};
+
+
+  stores.forEach(
+    store => {
+
+      (store.holidays || [])
+        .forEach(
+          date => {
+
+            if (
+              date >= startKey &&
+              date <= endKey
+            ) {
+
+              if (!dateGroups[date]) {
+                dateGroups[date] = [];
+              }
+
+              dateGroups[date].push(
+                store
+              );
+
+            }
+
+          }
+        );
+
+    }
+  );
+
+
+  const entries =
+    Object.entries(
+      dateGroups
+    ).sort(
+      ([a], [b]) =>
+        a.localeCompare(b)
+    );
+
+
+  let html = `
+    <div class="week-summary">
+
+      <div class="week-summary-title">
+        📅 이번 주 휴무 점포
+
+        <span class="week-summary-period">
+          ${formatDate(startKey)}
+          ~
+          ${formatDate(endKey)}
+        </span>
+      </div>
+  `;
+
+
+  if (
+    entries.length === 0
+  ) {
+
+    html += `
+      <div class="week-empty">
+        이번 주에 예정된 휴무 점포가 없습니다.
+      </div>
+    `;
+
+  } else {
+
+    entries.forEach(
+      ([date, storesInDate]) => {
+
+        const uniqueStores =
+          Array.from(
+            new Map(
+              storesInDate.map(
+                store => [
+                  String(store.id),
+                  store
+                ]
+              )
+            ).values()
+          )
+          .sort(
+            (a, b) =>
+              a.store.localeCompare(
+                b.store,
+                "ko"
+              )
+          );
+
+
+        html += `
+          <div class="week-date-block">
+
+            <div class="week-date-title">
+              ${formatDate(date)}
+              ·
+              ${uniqueStores.length}개 점포
+            </div>
+
+            <div class="week-store-grid">
+        `;
+
+
+        uniqueStores.forEach(
+          store => {
+
+            const displayName =
+              shortStoreName(
+                store.store
+              );
+
+
+            html += `
+              <a
+                class="store-grid-item store-link"
+                href="${TISTORY_POST_URL}"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-store-id="${store.id}"
+                title="${displayName} 상세정보 보기"
+              >
+                ${displayName}
+              </a>
+            `;
+
+          }
+        );
+
+
+        html += `
+            </div>
+
+          </div>
+        `;
+
+      }
+    );
+
+  }
+
+
+  html += `
+    </div>
+  `;
+
+
+  return html;
+
+}
+
+
+/*
+==================================================
+점포 분류
+==================================================
+*/
+
 function classifyStore(store) {
 
   const weekdays =
     store.holidays.map(
-      date => getWeekday(date)
+      date =>
+        getWeekday(date)
     );
+
 
   const uniqueWeekdays =
     [...new Set(weekdays)];
+
 
   if (
     uniqueWeekdays.length === 1
@@ -887,20 +1537,27 @@ function classifyStore(store) {
 
   }
 
+
   return "기타·변동 휴무";
 
 }
 
 
 /*
-지역 탭 생성
+==================================================
+지역 탭
+==================================================
 */
+
 function createTabs() {
 
   const tabs =
     document.getElementById(
       "tabs"
     );
+
+
+  tabs.style.display = "flex";
 
   tabs.innerHTML = "";
 
@@ -912,6 +1569,7 @@ function createTabs() {
         document.createElement(
           "button"
         );
+
 
       button.className =
         "tab-button";
@@ -959,41 +1617,95 @@ function createTabs() {
 
 
 /*
-개별 점포 하나만 표시
+==================================================
+개별 점포 화면
+==================================================
 */
+
 function renderSingleStore(store) {
 
   const tabs =
-    document.getElementById("tabs");
+    document.getElementById(
+      "tabs"
+    );
+
 
   const content =
-    document.getElementById("content");
+    document.getElementById(
+      "content"
+    );
 
-  // 개별 점포 화면에서는 지역 탭 숨기기
-  tabs.style.display = "none";
+
+  const description =
+    document.getElementById(
+      "page-description"
+    );
+
+
+  tabs.style.display =
+    "none";
+
 
   const displayName =
-    shortStoreName(store.store);
+    shortStoreName(
+      store.store
+    );
+
+
+  const monthHolidays =
+    getMonthHolidays(store);
+
 
   const dates =
-    store.holidays
-      .map(date => formatDate(date))
+    monthHolidays
+      .map(
+        date =>
+          formatDate(date)
+      )
       .join(" · ");
 
-content.innerHTML = `
-  <h2 class="region-title">
-    ${displayName}
 
-    <span class="region-count">
-      · ${store.region}
-    </span>
-  </h2>
+  description.textContent =
+    `${displayName}의 월별 휴무일을 ` +
+    `달력에서 확인할 수 있습니다.`;
 
 
-  ${buildMonthCalendar([store])}
+  content.innerHTML = `
+
+    <h2 class="region-title">
+
+      ${displayName}
+
+      <span class="region-count">
+        · ${store.region}
+      </span>
+
+    </h2>
 
 
-  <div class="holiday-accordion">
+    ${
+      buildAutoSummary(
+        [store],
+        displayName
+      )
+    }
+
+
+    ${
+      buildThisWeekSummary(
+        [store]
+      )
+    }
+
+
+    ${
+      buildMonthCalendar(
+        [store]
+      )
+    }
+
+
+    <div class="holiday-accordion">
 
       <div
         class="accordion-content"
@@ -1001,41 +1713,44 @@ content.innerHTML = `
       >
 
         <div class="date-title">
-          이번 달 휴무일
+          ${selectedYear}년 ${selectedMonth}월 휴무일
         </div>
 
         <div class="store-grid-item">
-          ${dates || "등록된 휴무일이 없습니다."}
+          ${
+            dates ||
+            "등록된 휴무일이 없습니다."
+          }
         </div>
 
         <div style="margin-top:18px;">
 
-       <a
-  class="store-detail-button store-link"
-  href="${TISTORY_POST_URL}"
-  target="_blank"
-  rel="noopener noreferrer"
-  data-store-id="${store.id}"
-  title="${displayName} 상세정보 보기"
->
+          <a
+            class="store-detail-button store-link"
+            href="${TISTORY_POST_URL}"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-store-id="${store.id}"
+            title="${displayName} 상세정보 보기"
+          >
 
-  <span class="store-detail-text">
+            <span class="store-detail-text">
 
-    <span>
-      ${displayName} 점포 상세정보 보기
-    </span>
+              <span>
+                ${displayName} 점포 상세정보 보기
+              </span>
 
-    <span class="store-detail-sub">
-      이마트 공식 점포 페이지
-    </span>
+              <span class="store-detail-sub">
+                이마트 공식 점포 페이지
+              </span>
 
-  </span>
+            </span>
 
-  <span class="store-detail-arrow">
-    →
-  </span>
+            <span class="store-detail-arrow">
+              →
+            </span>
 
-</a>
+          </a>
 
         </div>
 
@@ -1043,18 +1758,29 @@ content.innerHTML = `
 
     </div>
   `;
+
 }
 
 
 /*
-선택 지역 화면 출력
+==================================================
+지역 화면
+==================================================
 */
+
 function renderRegion() {
 
   const content =
     document.getElementById(
       "content"
     );
+
+
+  const description =
+    document.getElementById(
+      "page-description"
+    );
+
 
   const stores =
     holidayData.filter(
@@ -1064,7 +1790,19 @@ function renderRegion() {
     );
 
 
+  const monthStores =
+    getMonthStores(
+      stores
+    );
+
+
+  description.textContent =
+    `${selectedRegion} 지역의 월별 이마트 휴무일을 ` +
+    `달력과 점포 목록에서 확인할 수 있습니다.`;
+
+
   content.innerHTML = `
+
     <h2 class="region-title">
 
       ${selectedRegion} 지역
@@ -1074,18 +1812,39 @@ function renderRegion() {
       </span>
 
     </h2>
+
+
+    ${
+      buildAutoSummary(
+        stores,
+        `${selectedRegion} 지역`
+      )
+    }
+
+
+    ${
+      buildThisWeekSummary(
+        stores
+      )
+    }
+
+
+    ${
+      buildMonthCalendar(
+        stores
+      )
+    }
   `;
 
-content.innerHTML +=
-  buildMonthCalendar(stores);
-  
+
   if (
-    stores.length === 0
+    monthStores.length === 0
   ) {
 
     content.innerHTML += `
       <div class="empty">
-        현재 등록된 휴점일 데이터가 없습니다.
+        ${selectedYear}년 ${selectedMonth}월에
+        등록된 휴점일 데이터가 없습니다.
       </div>
     `;
 
@@ -1094,17 +1853,16 @@ content.innerHTML +=
   }
 
 
-  /*
-  요일별 그룹
-  */
   const weekdayGroups = {};
 
 
-  stores.forEach(
+  monthStores.forEach(
     store => {
 
       const weekday =
-        classifyStore(store);
+        classifyStore(
+          store
+        );
 
 
       if (
@@ -1163,10 +1921,6 @@ content.innerHTML +=
           : `${groupName} 휴무`;
 
 
-      /*
-      같은 휴무 날짜를 가진
-      점포끼리 다시 묶음
-      */
       const dateGroups = {};
 
 
@@ -1196,10 +1950,6 @@ content.innerHTML +=
       );
 
 
-      /*
-      모든 요일 그룹을
-      처음부터 펼친 상태로 표시
-      */
       let html = `
         <details
           class="holiday-accordion"
@@ -1263,17 +2013,6 @@ content.innerHTML +=
                     );
 
 
-                  /*
-                  href에는 티스토리 주소를 넣습니다.
-
-                  따라서 마우스를 올리면
-                  브라우저 좌측 아래에는
-                  티스토리 주소가 표시됩니다.
-
-                  실제 클릭은 아래의
-                  JavaScript에서 가로채서
-                  이마트 상세페이지로 이동합니다.
-                  */
                   html += `
                     <a
                       class="store-grid-item store-link"
@@ -1318,26 +2057,92 @@ content.innerHTML +=
 
 
 /*
+현재 화면 다시 그리기
+달력 좌우 버튼에서 사용
+*/
+function renderCurrentView() {
+
+  if (
+    requestedStoreId
+  ) {
+
+    const store =
+      holidayData.find(
+        item =>
+          String(item.id) ===
+          String(requestedStoreId)
+      );
+
+
+    if (store) {
+
+      renderSingleStore(
+        store
+      );
+
+    }
+
+    return;
+
+  }
+
+
+  createTabs();
+
+  renderRegion();
+
+}
+
+
+/*
+==================================================
+달력 이전/다음 달 버튼
+==================================================
+*/
+
+document.addEventListener(
+  "click",
+  function(event) {
+
+    const button =
+      event.target.closest(
+        ".calendar-nav-button"
+      );
+
+
+    if (!button) {
+      return;
+    }
+
+
+    event.preventDefault();
+
+
+    if (button.disabled) {
+      return;
+    }
+
+
+    const step =
+      Number(
+        button.dataset.monthStep
+      );
+
+
+    moveMonth(
+      step
+    );
+
+  }
+);
+
+
+/*
 ==================================================
 점포 클릭 처리
 ==================================================
-
-첨부해주신 기존 JS의
-
-e.preventDefault()
-+
-window.open()
-
-방식을 그대로 적용했습니다.
-
-차이점:
-기존에는 martIds 객체에서
-점포 ID를 찾았지만,
-
-현재는 holidays.json 안에
-공식 API에서 받은 id가 있으므로
-그 값을 바로 사용합니다.
 */
+
 document.addEventListener(
   "click",
   function(event) {
@@ -1390,80 +2195,149 @@ document.addEventListener(
 
 
 /*
-holidays.json 읽기
+==================================================
+데이터 읽기
+
+월 이동을 위해 holiday_archive.json을 우선 사용합니다.
+파일이 없거나 오류가 나면 holidays.json으로 자동 대체합니다.
+==================================================
 */
+
 async function loadData() {
 
   try {
 
-    const response =
+    const cacheKey =
+      Date.now();
+
+
+    const currentResponse =
       await fetch(
-        "./holidays.json?time="
-        +
-        Date.now(),
+        "./holidays.json?time=" +
+        cacheKey,
         {
           cache: "no-store"
         }
       );
 
 
-    if (!response.ok) {
+    if (
+      !currentResponse.ok
+    ) {
 
       throw new Error(
-        "데이터 파일을 불러오지 못했습니다."
+        "holidays.json을 불러오지 못했습니다."
       );
 
     }
 
 
-    holidayData =
-      await response.json();
+    const currentData =
+      await currentResponse.json();
 
 
-/*
-주소에 ?storeId= 가 있으면
-해당 점포 하나만 표시
-*/
-if (requestedStoreId) {
-
-  const store =
-    holidayData.find(
-      item =>
-        String(item.id) ===
-        String(requestedStoreId)
-    );
-
-  if (store) {
-
-    renderSingleStore(store);
-
-    return;
-
-  }
-
-  document
-    .getElementById("tabs")
-    .style.display = "none";
-
-  document
-    .getElementById("content")
-    .innerHTML = `
-      <div class="error">
-        해당 점포를 찾을 수 없습니다.
-      </div>
-    `;
-
-  return;
-}
+    let archiveData = null;
 
 
-/*
-storeId가 없으면
-기존 지역별 화면 표시
-*/
-createTabs();
+    try {
 
-renderRegion();
+      const archiveResponse =
+        await fetch(
+          "./holiday_archive.json?time=" +
+          cacheKey,
+          {
+            cache: "no-store"
+          }
+        );
+
+
+      if (
+        archiveResponse.ok
+      ) {
+
+        archiveData =
+          await archiveResponse.json();
+
+      }
+
+    } catch (
+      archiveError
+    ) {
+
+      console.warn(
+        "holiday_archive.json을 사용할 수 없어 현재 달 데이터로 대체합니다.",
+        archiveError
+      );
+
+    }
+
+
+    if (
+      Array.isArray(archiveData) &&
+      archiveData.length > 0
+    ) {
+
+      holidayData =
+        archiveData;
+
+    } else {
+
+      holidayData =
+        currentData;
+
+    }
+
+
+    if (
+      requestedStoreId
+    ) {
+
+      const store =
+        holidayData.find(
+          item =>
+            String(item.id) ===
+            String(requestedStoreId)
+        );
+
+
+      if (store) {
+
+        renderSingleStore(
+          store
+        );
+
+        return;
+
+      }
+
+
+      document
+        .getElementById(
+          "tabs"
+        )
+        .style.display =
+          "none";
+
+
+      document
+        .getElementById(
+          "content"
+        )
+        .innerHTML = `
+          <div class="error">
+            해당 점포를 찾을 수 없습니다.
+          </div>
+        `;
+
+
+      return;
+
+    }
+
+
+    createTabs();
+
+    renderRegion();
 
 
   } catch (error) {
