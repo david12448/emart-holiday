@@ -751,6 +751,203 @@ function formatCheckedAt(
 
 }
 
+/*
+==================================================
+데이터 출처 / 최근 확인 / 최근 정보 변경 표시
+==================================================
+*/
+
+function formatDataDate(
+  isoString
+) {
+
+  if (!isoString) {
+    return "";
+  }
+
+
+  const date =
+    new Date(
+      isoString
+    );
+
+
+  if (
+    Number.isNaN(
+      date.getTime()
+    )
+  ) {
+
+    return "";
+
+  }
+
+
+  const parts =
+    new Intl.DateTimeFormat(
+      "ko-KR",
+      {
+        timeZone: "Asia/Seoul",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit"
+      }
+    ).formatToParts(
+      date
+    );
+
+
+  const values = {};
+
+  parts.forEach(
+    part => {
+
+      if (
+        part.type === "year" ||
+        part.type === "month" ||
+        part.type === "day"
+      ) {
+
+        values[part.type] =
+          part.value;
+
+      }
+
+    }
+  );
+
+
+  return (
+    `${values.year}.` +
+    `${values.month}.` +
+    `${values.day}`
+  );
+
+}
+
+
+function getLastCheckedAt() {
+
+  if (!changeStatusData) {
+    return "";
+  }
+
+
+  return (
+    changeStatusData.checkedAt ||
+    changeStatusData.checked_at ||
+    ""
+  );
+
+}
+
+
+function getLastInformationChangedAt() {
+
+  /*
+  change_status.json에
+  별도 변경 시각이 있으면 우선 사용
+  */
+  if (changeStatusData) {
+
+    const statusChangedAt =
+      changeStatusData.lastChangeAt ||
+      changeStatusData.last_change_at ||
+      "";
+
+    if (statusChangedAt) {
+      return statusChangedAt;
+    }
+
+  }
+
+
+  /*
+  없으면 각 점포의 updatedAt 중
+  가장 최근 시각을 사용
+  */
+  const timestamps =
+    holidayData
+      .map(
+        store =>
+          store.updatedAt ||
+          store.updated_at ||
+          ""
+      )
+      .filter(Boolean)
+      .sort();
+
+
+  if (
+    timestamps.length === 0
+  ) {
+
+    return "";
+
+  }
+
+
+  return timestamps[
+    timestamps.length - 1
+  ];
+
+}
+
+
+function updateSourceStatus() {
+
+  const source =
+    document.getElementById(
+      "source-label"
+    );
+
+
+  if (!source) {
+    return;
+  }
+
+
+  const sourceText =
+    MART_CONFIG.sourceLabel ||
+    "공식 홈페이지";
+
+
+  const checkedAt =
+    formatDataDate(
+      getLastCheckedAt()
+    );
+
+
+  const changedAt =
+    formatDataDate(
+      getLastInformationChangedAt()
+    );
+
+
+  let text =
+    `자료 출처 : ${sourceText}`;
+
+
+  if (checkedAt) {
+
+    text +=
+      ` · 최근 확인 : ${checkedAt}`;
+
+  }
+
+
+  if (changedAt) {
+
+    text +=
+      ` · 최근 정보 변경 : ${changedAt}`;
+
+  }
+
+
+  source.textContent =
+    text;
+
+}
 
 function buildChangeNotice(
   stores
@@ -2889,6 +3086,11 @@ async function loadData() {
     최종 선택 월을 URL에 반영합니다.
     */
     updateDateInUrl();
+
+    /*
+    자료 출처와 최근 확인 정보를 표시
+    */
+    updateSourceStatus();
 
 
     if (
