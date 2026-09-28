@@ -92,6 +92,54 @@ let selectedRegion =
     ? requestedRegion
     : "서울";
 
+/*
+date=YYYY-MM 파라미터
+
+예:
+?date=2026-10
+*/
+const requestedDate =
+  urlParams.get("date");
+
+
+function parseRequestedMonth(
+  value
+) {
+
+  if (
+    typeof value !== "string"
+  ) {
+    return null;
+  }
+
+
+  const match =
+    value.match(
+      /^(\d{4})-(0[1-9]|1[0-2])$/
+    );
+
+
+  if (!match) {
+    return null;
+  }
+
+
+  return {
+    year:
+      Number(match[1]),
+
+    month:
+      Number(match[2])
+  };
+
+}
+
+
+const requestedMonth =
+  parseRequestedMonth(
+    requestedDate
+  );
+
 
 /*
 한국 날짜 기준
@@ -146,11 +194,15 @@ const koreaToday =
 
 
 let selectedYear =
-  koreaToday.getFullYear();
+  requestedMonth
+    ? requestedMonth.year
+    : koreaToday.getFullYear();
 
 
 let selectedMonth =
-  koreaToday.getMonth() + 1;
+  requestedMonth
+    ? requestedMonth.month
+    : koreaToday.getMonth() + 1;
 
 
 /*
@@ -187,6 +239,85 @@ function getSelectedMonthKey() {
 
 }
 
+/*
+현재 선택한 월을 URL의 date= 에 반영
+기존 region, storeId 등의 파라미터는 유지합니다.
+*/
+function updateDateInUrl() {
+
+  const params =
+    new URLSearchParams(
+      window.location.search
+    );
+
+
+  params.set(
+    "date",
+    getSelectedMonthKey()
+  );
+
+
+  const newUrl =
+    window.location.pathname +
+    "?" +
+    params.toString() +
+    window.location.hash;
+
+
+  window.history.replaceState(
+    null,
+    "",
+    newUrl
+  );
+
+}
+
+
+/*
+지역 탭을 선택했을 때
+region + 현재 date를 URL에 함께 반영
+*/
+function updateRegionInUrl(
+  region
+) {
+
+  const params =
+    new URLSearchParams(
+      window.location.search
+    );
+
+
+  params.set(
+    "region",
+    region
+  );
+
+
+  params.set(
+    "date",
+    getSelectedMonthKey()
+  );
+
+
+  params.delete(
+    "storeId"
+  );
+
+
+  const newUrl =
+    window.location.pathname +
+    "?" +
+    params.toString() +
+    window.location.hash;
+
+
+  window.history.replaceState(
+    null,
+    "",
+    newUrl
+  );
+
+}
 
 function shortStoreName(name) {
 
@@ -365,6 +496,56 @@ function getAvailableMonthRange() {
 }
 
 
+/*
+URL로 요청한 월이
+보관 데이터 범위를 벗어난 경우
+가장 가까운 사용 가능한 월로 조정
+*/
+function normalizeSelectedMonthRange() {
+
+  const range =
+    getAvailableMonthRange();
+
+
+  let monthKey =
+    getSelectedMonthKey();
+
+
+  if (
+    monthKey < range.min
+  ) {
+
+    monthKey =
+      range.min;
+
+  } else if (
+    monthKey > range.max
+  ) {
+
+    monthKey =
+      range.max;
+
+  } else {
+
+    return;
+
+  }
+
+
+  const parts =
+    monthKey.split("-");
+
+
+  selectedYear =
+    Number(parts[0]);
+
+
+  selectedMonth =
+    Number(parts[1]);
+
+}
+
+
 function getShiftedMonth(step) {
 
   const date =
@@ -429,6 +610,12 @@ function moveMonth(step) {
 
   selectedMonth =
     target.month;
+
+
+  /*
+  변경된 월을 URL에도 반영
+  */
+  updateDateInUrl();
 
 
   renderCurrentView();
@@ -1480,19 +1667,28 @@ function createTabs() {
 
 
       button.addEventListener(
-        "click",
-        () => {
+  "click",
+  () => {
 
-          selectedRegion =
-            region;
+    selectedRegion =
+      region;
 
 
-          createTabs();
+    /*
+    지역을 바꾸더라도
+    보고 있던 월은 그대로 유지
+    */
+    updateRegionInUrl(
+      region
+    );
 
-          renderRegion();
 
-        }
-      );
+    createTabs();
+
+    renderRegion();
+
+  }
+);
 
 
       tabs.appendChild(
@@ -2271,7 +2467,7 @@ function renderAllRegions() {
                     ">
                       <a
                         class="all-regions-region-link"
-                        href="?region=${encodeURIComponent(region)}"
+                        href="?region=${encodeURIComponent(region)}&date=${encodeURIComponent(getSelectedMonthKey())}"
                         title="${region} 지역만 보기"
                       >
                         ${region}
@@ -2666,7 +2862,7 @@ async function loadData() {
     }
 
 
-    if (
+       if (
       Array.isArray(archiveData) &&
       archiveData.length > 0
     ) {
@@ -2680,6 +2876,19 @@ async function loadData() {
         currentData;
 
     }
+
+
+    /*
+    date=YYYY-MM 요청값을
+    실제 보관 데이터 범위에 맞춥니다.
+    */
+    normalizeSelectedMonthRange();
+
+
+    /*
+    최종 선택 월을 URL에 반영합니다.
+    */
+    updateDateInUrl();
 
 
     if (
