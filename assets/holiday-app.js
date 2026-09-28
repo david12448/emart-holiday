@@ -2898,11 +2898,8 @@ document.addEventListener(
           );
 
 
-    window.open(
-      officialUrl,
-      "_blank",
-      "noopener"
-    );
+   window.location.href =
+     officialUrl;
 
   }
 );
