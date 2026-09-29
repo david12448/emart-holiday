@@ -319,6 +319,85 @@ function updateRegionInUrl(
 
 }
 
+/*
+==================================================
+점포 데이터 공통 형식 변환
+==================================================
+*/
+
+function getStoreId(store) {
+
+  return String(
+    store?.storeId ??
+    store?.id ??
+    ""
+  );
+
+}
+
+
+function normalizeRegionName(value) {
+
+  const region =
+    String(value || "").trim();
+
+  const regionMap = {
+    "서울특별시": "서울",
+    "부산광역시": "부산",
+    "대구광역시": "대구",
+    "인천광역시": "인천",
+    "광주광역시": "광주",
+    "대전광역시": "대전",
+    "울산광역시": "울산",
+    "세종특별자치시": "세종",
+
+    "경기도": "경기",
+
+    "강원도": "강원",
+    "강원특별자치도": "강원",
+
+    "충청북도": "충청",
+    "충청남도": "충청",
+
+    "전라북도": "전라",
+    "전북특별자치도": "전라",
+    "전라남도": "전라",
+
+    "경상북도": "경상",
+    "경상남도": "경상",
+
+    "제주특별자치도": "제주"
+  };
+
+  return (
+    regionMap[region] ||
+    region
+  );
+
+}
+
+
+function getStoreRegion(store) {
+
+  return normalizeRegionName(
+    store?.sido ??
+    store?.region ??
+    ""
+  );
+
+}
+
+
+function getStoreDetailUrl(store) {
+
+  return String(
+    store?.detailUrl ??
+    store?.detail_url ??
+    ""
+  );
+
+}
+
 function shortStoreName(name) {
 
   const prefix =
@@ -949,13 +1028,265 @@ function updateSourceStatus() {
 
 }
 
+function isChangeNoticeActive() {
+
+  if (!changeStatusData) {
+    return false;
+  }
+
+
+  if (
+    typeof changeStatusData.notice_active ===
+    "boolean"
+  ) {
+
+    return changeStatusData.notice_active;
+
+  }
+
+
+  return Boolean(
+    changeStatusData.changed
+  );
+
+}
+
+
+function getChangeNoticeDate() {
+
+  if (!changeStatusData) {
+    return "";
+  }
+
+
+  return (
+    changeStatusData.lastChangeAt ||
+    changeStatusData.last_change_at ||
+    changeStatusData.checkedAt ||
+    changeStatusData.checked_at ||
+    ""
+  );
+
+}
+
+
+function getChangeHolidayDates(change) {
+
+  if (!change) {
+    return [];
+  }
+
+
+  /*
+  이마트 형식
+  */
+  if (
+    Array.isArray(
+      change.added_holidays
+    ) ||
+    Array.isArray(
+      change.removed_holidays
+    )
+  ) {
+
+    return [
+      ...(
+        change.added_holidays ||
+        []
+      ),
+      ...(
+        change.removed_holidays ||
+        []
+      )
+    ];
+
+  }
+
+
+  /*
+  롯데 형식
+  */
+if (
+  change.field === "holidays"
+) {
+
+  const before =
+    Array.isArray(change.before)
+      ? change.before
+      : [];
+
+
+  const after =
+    Array.isArray(change.after)
+      ? change.after
+      : [];
+
+
+  const removed =
+    before.filter(
+      date =>
+        !after.includes(date)
+    );
+
+
+  const added =
+    after.filter(
+      date =>
+        !before.includes(date)
+    );
+
+
+  return [
+    ...removed,
+    ...added
+  ];
+
+}
+
+
+  return [];
+
+}
+
+function normalizeStoreName(value) {
+
+  return String(
+    value || ""
+  )
+    .replace(/\s+/g, "")
+    .trim();
+
+}
+
+
+function changeMatchesStore(
+  change,
+  store
+) {
+
+  if (
+    !change ||
+    !store
+  ) {
+
+    return false;
+
+  }
+
+
+/*
+공통 storeId 형식
+*/
+if (
+  change.storeId !== undefined &&
+  change.storeId !== null &&
+  String(change.storeId).trim()
+) {
+
+  return (
+    getStoreId(store) ===
+    String(change.storeId)
+  );
+
+}
+  
+  /*
+  이마트 형식
+  */
+  if (
+    change.id !== undefined &&
+    change.id !== null
+  ) {
+
+    return (
+      getStoreId(store) ===
+      String(change.id)
+    );
+
+  }
+
+
+  /*
+  롯데 형식
+  */
+  const changeOfficialId =
+    String(
+      change.officialStoreId ||
+      ""
+    );
+
+
+  const storeOfficialId =
+    String(
+      store.officialStoreId ||
+      ""
+    );
+
+
+  const changeStoreName =
+    normalizeStoreName(
+      change.store
+    );
+
+
+  const storeName =
+    normalizeStoreName(
+      store.store
+    );
+
+
+  if (
+    changeOfficialId &&
+    storeOfficialId
+  ) {
+
+    if (
+      changeOfficialId !==
+      storeOfficialId
+    ) {
+
+      return false;
+
+    }
+
+
+    /*
+    같은 공식 점포코드가 중복되는 경우를 대비해
+    점포명까지 함께 확인
+    */
+    if (
+      changeStoreName &&
+      storeName
+    ) {
+
+      return (
+        changeStoreName ===
+        storeName
+      );
+
+    }
+
+
+    return true;
+
+  }
+
+
+  return (
+    changeStoreName &&
+    storeName &&
+    changeStoreName ===
+    storeName
+  );
+
+}
+
 function buildChangeNotice(
   stores
 ) {
 
   if (
-    !changeStatusData ||
-    !changeStatusData.notice_active
+    !isChangeNoticeActive()
   ) {
 
     return "";
@@ -965,7 +1296,7 @@ function buildChangeNotice(
 
   const changes =
     Array.isArray(
-      changeStatusData.changes
+      changeStatusData?.changes
     )
       ? changeStatusData.changes
       : [];
@@ -980,48 +1311,39 @@ function buildChangeNotice(
   }
 
 
-  const storeIds =
-    new Set(
-      stores.map(
-        store =>
-          String(store.id)
-      )
-    );
-
-
   const monthKey =
     getSelectedMonthKey();
 
 
   /*
-  현재 보고 있는 지역/점포 + 현재 보고 있는 달에
-  실제로 관련된 변경만 표시합니다.
+  현재 화면에 표시된 점포와 관련 있고,
+  현재 보고 있는 달의 휴무일이 실제로 변경된 경우만 표시
   */
   const relevantChanges =
     changes.filter(
       change => {
 
-        if (
-          !storeIds.has(
-            String(change.id)
-          )
-        ) {
+        const matched =
+          stores.some(
+            store =>
+              changeMatchesStore(
+                change,
+                store
+              )
+          );
+
+
+        if (!matched) {
 
           return false;
 
         }
 
 
-        const dates = [
-          ...(
-            change.added_holidays
-            || []
-          ),
-          ...(
-            change.removed_holidays
-            || []
-          )
-        ];
+        const dates =
+          getChangeHolidayDates(
+            change
+          );
 
 
         return dates.some(
@@ -1076,9 +1398,7 @@ function buildChangeNotice(
 
   const checkedAt =
     formatCheckedAt(
-      changeStatusData.last_change_at
-      ||
-      changeStatusData.checked_at
+      getChangeNoticeDate()
     );
 
 
@@ -1124,6 +1444,134 @@ function buildChangeNotice(
 
 }
 
+function buildSpecialNotice() {
+
+  const notice =
+    changeStatusData?.specialNotice;
+
+
+  if (
+    !notice ||
+    !notice.active
+  ) {
+
+    return "";
+
+  }
+
+
+  /*
+  선택한 달과 특별 안내 대상 달이
+  같은 경우에만 표시
+  */
+  if (
+    notice.month &&
+    notice.month !==
+      getSelectedMonthKey()
+  ) {
+
+    return "";
+
+  }
+
+
+  const title =
+    notice.type === "chuseok"
+      ? "추석 특별 안내"
+      : (
+          notice.type === "seollal"
+            ? "설날 특별 안내"
+            : "명절 특별 안내"
+        );
+
+
+  const holidayDates =
+    Array.isArray(
+      notice.holidayDates
+    )
+      ? notice.holidayDates
+      : [];
+
+
+  const dateText =
+  [...holidayDates]
+    .sort(
+      (a, b) =>
+        String(a?.date || "")
+          .localeCompare(
+            String(b?.date || "")
+          )
+    )
+    .map(
+        item => {
+
+          const date =
+            item?.date || "";
+
+
+          const name =
+            item?.name || "";
+
+
+          if (!date) {
+            return name;
+          }
+
+
+          return (
+            `${formatDate(date)}` +
+            (
+              name
+                ? ` ${name}`
+                : ""
+            )
+          );
+
+        }
+      )
+      .filter(Boolean)
+      .join(" · ");
+
+
+  return `
+    <div class="holiday-change-notice">
+
+      <div class="holiday-change-icon">
+        !
+      </div>
+
+      <div class="holiday-change-body">
+
+        <div class="holiday-change-title">
+          ${title}
+        </div>
+
+        ${
+          dateText
+            ? `
+              <div class="holiday-change-detail">
+                ${dateText}
+              </div>
+            `
+            : ""
+        }
+
+        ${
+          notice.message
+            ? `
+              <div class="holiday-change-text">
+                ${notice.message}
+              </div>
+            `
+            : ""
+        }
+
+      </div>
+
+    </div>
+  `;
+
+}
 
 /*
 ==================================================
@@ -1164,7 +1612,7 @@ function buildStoreClickGuide() {
         </span>
 
         <span class="store-click-guide-sub">
-          ${MART_CONFIG.officialPageLabel || "공식 점포 페이지"}가 새 탭에서 열립니다.
+          ${MART_CONFIG.officialPageLabel || "공식 점포 페이지"}로 이동합니다.
         </span>
 
       </span>
@@ -1631,7 +2079,7 @@ function buildThisWeekSummary(
             new Map(
               storesInDate.map(
                 store => [
-                  String(store.id),
+                  getStoreId(store),
                   store
                 ]
               )
@@ -1672,9 +2120,7 @@ function buildThisWeekSummary(
               <a
                 class="store-grid-item store-link"
                 href="${TISTORY_POST_URL}"
-                target="_blank"
-                rel="noopener noreferrer"
-                data-store-id="${store.id}"
+                data-store-id="${getStoreId(store)}"
                 title="${displayName} 상세정보 보기"
               >
                 ${displayName}
@@ -1811,7 +2257,7 @@ function createTabs() {
       region =>
         holidayData.some(
           item =>
-            item.region === region
+            getStoreRegion(item) === region
         )
     );
 
@@ -1963,7 +2409,7 @@ function renderSingleStore(store) {
       ${displayName}
 
       <span class="region-count">
-        · ${store.region}
+        · ${getStoreRegion(store)}
       </span>
 
     </h2>
@@ -1974,6 +2420,10 @@ function renderSingleStore(store) {
       )
     }
 
+    ${
+      buildSpecialNotice()
+    }
+      
     ${
       buildMonthCalendar(
         [store]
@@ -2004,9 +2454,7 @@ function renderSingleStore(store) {
           <a
             class="store-detail-button store-link"
             href="${TISTORY_POST_URL}"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-store-id="${store.id}"
+            data-store-id="${getStoreId(store)}"
             title="${displayName} 상세정보 보기"
           >
 
@@ -2092,6 +2540,10 @@ function renderStoreCollection(
     }
 
     ${
+       buildSpecialNotice()
+    }
+
+    ${
       buildMonthCalendar(
         stores
       )
@@ -2168,8 +2620,8 @@ function renderStoreCollection(
         new Set(
           entries.map(
             item =>
-              String(
-                item.store.id
+              getStoreId(
+                item.store
               )
           )
         ).size;
@@ -2260,7 +2712,7 @@ function renderStoreCollection(
 
                   const visibleName =
                     showRegionName
-                      ? `${displayName} · ${store.region}`
+                      ? `${displayName} · ${getStoreRegion(store)}`
                       : displayName;
 
 
@@ -2268,9 +2720,7 @@ function renderStoreCollection(
                     <a
                       class="store-grid-item store-link"
                       href="${TISTORY_POST_URL}"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      data-store-id="${store.id}"
+                      data-store-id="${getStoreId(store)}"
                       title="${displayName} 상세정보 보기"
                     >
                       ${visibleName}
@@ -2333,7 +2783,7 @@ function renderRegion() {
   const stores =
     holidayData.filter(
       item =>
-        item.region ===
+        getStoreRegion(item) ===
         selectedRegion
     );
 
@@ -2419,6 +2869,10 @@ function renderAllRegions() {
     }
 
     ${
+       buildSpecialNotice()
+    }
+
+    ${
       buildMonthCalendar(
         holidayData
       )
@@ -2486,8 +2940,8 @@ function renderAllRegions() {
         new Set(
           entries.map(
             item =>
-              String(
-                item.store.id
+              getStoreId(
+                item.store
               )
           )
         ).size;
@@ -2564,7 +3018,7 @@ function renderAllRegions() {
                 store => {
 
                   const region =
-                    store.region ||
+                    getStoreRegion(store) ||
                     "기타";
 
 
@@ -2637,8 +3091,8 @@ function renderAllRegions() {
                         region
                       ].map(
                         store => [
-                          String(
-                            store.id
+                          getStoreId(
+                            store
                           ),
                           store
                         ]
@@ -2694,9 +3148,7 @@ function renderAllRegions() {
                           store-link
                         "
                         href="${TISTORY_POST_URL}"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        data-store-id="${store.id}"
+                        data-store-id="${getStoreId(store)}"
                         title="${displayName} 상세정보 보기"
                       >
                         ${displayName}
@@ -2768,7 +3220,7 @@ function renderCurrentView() {
     const store =
       holidayData.find(
         item =>
-          String(item.id) ===
+          getStoreId(item) ===
           String(requestedStoreId)
       );
 
@@ -2886,20 +3338,53 @@ document.addEventListener(
     }
 
 
-    const officialUrl =
-      MART_CONFIG.detailUrlBuilder
-        ? MART_CONFIG.detailUrlBuilder(storeId)
-        : (
-            DETAIL_BASE_URL
-            +
-            encodeURIComponent(
-              storeId
-            )
-          );
+    const store =
+  holidayData.find(
+    item =>
+      getStoreId(item) ===
+      String(storeId)
+  );
 
 
-   window.location.href =
-     officialUrl;
+const directDetailUrl =
+  store
+    ? getStoreDetailUrl(store)
+    : "";
+
+
+const officialUrl =
+  directDetailUrl
+  ||
+  (
+    MART_CONFIG.detailUrlBuilder
+      ? MART_CONFIG.detailUrlBuilder(
+          storeId
+        )
+      : (
+          DETAIL_BASE_URL
+            ? (
+                DETAIL_BASE_URL
+                +
+                encodeURIComponent(
+                  storeId
+                )
+              )
+            : ""
+        )
+  );
+
+if (!officialUrl) {
+
+  console.error(
+    "공식 점포 페이지 주소가 없습니다."
+  );
+
+  return;
+
+}    
+
+    window.location.href =
+      officialUrl;
 
   }
 );
@@ -3097,7 +3582,7 @@ async function loadData() {
       const store =
         holidayData.find(
           item =>
-            String(item.id) ===
+            getStoreId(item) ===
             String(requestedStoreId)
         );
 
