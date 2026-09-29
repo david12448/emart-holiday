@@ -1,0 +1,30 @@
+[
+  {
+    "storeId": "514a2647396c",
+    "store": "그랑그로서리 구리점",
+    "storeType": "specialty",
+    "sido": "경기도",
+    "sigungu": "구리시",
+    "holidays": [
+      "2026-09-09",
+      "2026-09-25"
+    ],
+    "holidayStatus": "정상",
+    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=405",
+    "updatedAt": "2026-09-28T02:20:48+09:00"
+  },
+  {
+    "storeId": "dd63e88cb6ff",
+    "store": "그랑그로서리 은평점",
+    "storeType": "specialty",
+    "sido": "서울특별시",
+    "sigungu": "은평구",
+    "holidays": [
+      "2026-09-13",
+      "2026-09-27"
+    ],
+    "holidayStatus": "정상",
+    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=서울&m_market=342",
+    "updatedAt": "2026-09-28T02:20:51+09:00"
+  }
+]

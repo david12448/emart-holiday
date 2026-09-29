@@ -1,0 +1,32 @@
+{
+  "checkedAt": "2026-09-28T14:27:49+09:00",
+  "changed": false,
+  "specialNotice": {
+    "active": true,
+    "type": "chuseok",
+    "month": "2026-09",
+    "holidayDates": [
+      {
+        "date": "2026-09-24",
+        "name": "추석 전날"
+      },
+      {
+        "date": "2026-09-25",
+        "name": "추석"
+      },
+      {
+        "date": "2026-09-26",
+        "name": "추석 다음날"
+      }
+    ],
+    "message": "추석이 포함된 달입니다. 명절 전후에는 점포별 휴무일이나 영업시간이 평소와 달라질 수 있으므로 방문 전 공식 점포 안내를 확인해 주세요."
+  },
+  "summary": {
+    "addedStores": 0,
+    "removedStores": 0,
+    "updatedStores": 0,
+    "fieldChanges": 0,
+    "totalChanges": 0
+  },
+  "changes": []
+}
