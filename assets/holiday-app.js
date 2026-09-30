@@ -4219,21 +4219,27 @@ function renderAllRegions() {
           localStores
         ]) => {
 
-          return `
-            <span class="
-              all-regions-local-group
-            ">
+return `
+  <span class="
+    all-regions-local-group
+  ">
 
-              <strong>
-                ${localName}
-              </strong>
+    <span class="
+      all-regions-local-badge
+    ">
+      ${localName}
+    </span>
 
-              ${buildStoreLinks(
-                localStores
-              )}
+    <span class="
+      all-regions-local-stores
+    ">
+      ${buildStoreLinks(
+        localStores
+      )}
+    </span>
 
-            </span>
-          `;
+  </span>
+`;
 
         }
       )

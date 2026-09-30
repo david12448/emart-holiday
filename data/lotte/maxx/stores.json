@@ -6,12 +6,12 @@
     "sido": "경상남도",
     "sigungu": "창원시",
     "holidays": [
-      "2026-09-13",
-      "2026-09-27"
+      "2026-10-11",
+      "2026-10-25"
     ],
     "holidayStatus": "정상",
     "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경남&m_market=2112",
-    "updatedAt": "2026-09-29T22:41:53+09:00"
+    "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
     "storeId": "c5f346a9ce88",
@@ -20,12 +20,12 @@
     "sido": "광주광역시",
     "sigungu": "서구",
     "holidays": [
-      "2026-09-13",
-      "2026-09-27"
+      "2026-10-11",
+      "2026-10-25"
     ],
     "holidayStatus": "정상",
     "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=광주&m_market=2108",
-    "updatedAt": "2026-09-29T22:41:53+09:00"
+    "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
     "storeId": "b0b9eba2ef64",
@@ -34,12 +34,12 @@
     "sido": "서울특별시",
     "sigungu": "금천구",
     "holidays": [
-      "2026-09-13",
-      "2026-09-27"
+      "2026-10-11",
+      "2026-10-25"
     ],
     "holidayStatus": "정상",
     "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=서울&m_market=2101",
-    "updatedAt": "2026-09-29T22:41:53+09:00"
+    "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
     "storeId": "115331230025",
@@ -48,12 +48,12 @@
     "sido": "서울특별시",
     "sigungu": "영등포구",
     "holidays": [
-      "2026-09-13",
-      "2026-09-27"
+      "2026-10-11",
+      "2026-10-25"
     ],
     "holidayStatus": "정상",
     "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=서울&m_market=2103",
-    "updatedAt": "2026-09-29T22:41:53+09:00"
+    "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
     "storeId": "ec1f1c669211",
@@ -62,12 +62,12 @@
     "sido": "전라남도",
     "sigungu": "목포시",
     "holidays": [
-      "2026-09-13",
-      "2026-09-27"
+      "2026-10-11",
+      "2026-10-25"
     ],
     "holidayStatus": "정상",
     "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=전남&m_market=2109",
-    "updatedAt": "2026-09-29T22:41:53+09:00"
+    "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
     "storeId": "f50e5ad2da20",
@@ -76,11 +76,11 @@
     "sido": "전북특별자치도",
     "sigungu": "전주시",
     "holidays": [
-      "2026-09-13",
-      "2026-09-27"
+      "2026-10-11",
+      "2026-10-25"
     ],
     "holidayStatus": "정상",
     "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=전북&m_market=2110",
-    "updatedAt": "2026-09-29T22:41:53+09:00"
+    "updatedAt": "2026-10-01T02:20:57+09:00"
   }
 ]

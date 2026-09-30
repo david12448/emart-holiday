@@ -1048,3 +1048,37 @@
     font-size: 11.5px;
   }
 }
+
+/* ==================================================
+   전체 지역 시단위 표시
+   ================================================== */
+.all-regions-local-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-right: 10px;
+  margin-bottom: 6px;
+}
+
+.all-regions-local-badge {
+  display: inline-block;
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  color: #374151;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.all-regions-local-stores {
+  display: inline;
+}
+
+.all-regions-local-separator {
+  color: #cbd5e1;
+  margin: 0 6px;
+}

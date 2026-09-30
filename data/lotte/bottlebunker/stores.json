@@ -6,12 +6,12 @@
     "sido": "광주광역시",
     "sigungu": "서구",
     "holidays": [
-      "2026-09-13",
-      "2026-09-27"
+      "2026-10-11",
+      "2026-10-25"
     ],
     "holidayStatus": "정상",
     "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=광주&m_market=2726",
-    "updatedAt": "2026-09-29T22:41:53+09:00"
+    "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
     "storeId": "8b5aaaee1822",
@@ -20,12 +20,12 @@
     "sido": "서울특별시",
     "sigungu": "송파구",
     "holidays": [
-      "2026-09-13",
-      "2026-09-27"
+      "2026-10-11",
+      "2026-10-25"
     ],
     "holidayStatus": "정상",
     "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=서울&m_market=2361",
-    "updatedAt": "2026-09-29T22:41:53+09:00"
+    "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
     "storeId": "36a66d2622a6",
@@ -34,11 +34,12 @@
     "sido": "서울특별시",
     "sigungu": "중구",
     "holidays": [
-      "2026-09-09",
-      "2026-09-25"
+      "2026-10-07",
+      "2026-10-14",
+      "2026-10-21"
     ],
     "holidayStatus": "정상",
     "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=서울&m_market=2361",
-    "updatedAt": "2026-09-29T22:41:53+09:00"
+    "updatedAt": "2026-10-01T02:20:57+09:00"
   }
 ]
