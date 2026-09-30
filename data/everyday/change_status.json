@@ -1,13 +1,91 @@
 {
   "brand": "everyday",
   "brand_label": "에브리데이",
-  "checked_at": "2026-09-28T16:34:45+09:00",
-  "previous_checked_at": "2026-09-28T08:02:46+09:00",
-  "has_changes": false,
-  "notice_active": false,
-  "last_change_at": null,
-  "notice_until": null,
-  "change_count": 0,
-  "changes": [],
-  "message": ""
+  "checked_at": "2026-10-01T08:48:30+09:00",
+  "previous_checked_at": "2026-09-28T16:34:45+09:00",
+  "has_changes": true,
+  "notice_active": true,
+  "last_change_at": "2026-10-01T08:48:30+09:00",
+  "notice_until": "2026-10-08",
+  "change_count": 7,
+  "changes": [
+    {
+      "id": "4015",
+      "store": "에브리데이 방촌동점",
+      "region": "대구",
+      "added_holidays": [
+        "2026-10-12"
+      ],
+      "removed_holidays": [
+        "2026-10-14"
+      ]
+    },
+    {
+      "id": "4077",
+      "store": "에브리데이 정관점",
+      "region": "부산",
+      "added_holidays": [
+        "2026-10-12"
+      ],
+      "removed_holidays": [
+        "2026-10-14"
+      ]
+    },
+    {
+      "id": "4125",
+      "store": "에브리데이 대구옥포점",
+      "region": "대구",
+      "added_holidays": [
+        "2026-10-12"
+      ],
+      "removed_holidays": [
+        "2026-10-14"
+      ]
+    },
+    {
+      "id": "4138",
+      "store": "에브리데이 부산구포점",
+      "region": "부산",
+      "added_holidays": [
+        "2026-10-12"
+      ],
+      "removed_holidays": [
+        "2026-10-14"
+      ]
+    },
+    {
+      "id": "4161",
+      "store": "에브리데이 부산일광점",
+      "region": "부산",
+      "added_holidays": [
+        "2026-10-12"
+      ],
+      "removed_holidays": [
+        "2026-10-14"
+      ]
+    },
+    {
+      "id": "4225",
+      "store": "에브리데이 대구도남점",
+      "region": "대구",
+      "added_holidays": [
+        "2026-10-12"
+      ],
+      "removed_holidays": [
+        "2026-10-14"
+      ]
+    },
+    {
+      "id": "4229",
+      "store": "에브리데이 부산반여점",
+      "region": "부산",
+      "added_holidays": [
+        "2026-10-12"
+      ],
+      "removed_holidays": [
+        "2026-10-14"
+      ]
+    }
+  ],
+  "message": "공식 홈페이지의 휴무 일정이 이전 확인 때와 달라졌습니다."
 }
