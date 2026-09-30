@@ -354,6 +354,7 @@ function normalizeRegionName(value) {
   const regionMap = {
     "서울특별시": "서울",
     "부산광역시": "부산",
+    "부산시": "부산",
     "대구광역시": "대구",
     "인천광역시": "인천",
     "광주광역시": "광주",
@@ -2961,31 +2962,43 @@ function renderRegionPatternView(
   ==================================================
   */
 
-  function compactDate(
-    date
+ function compactDate(
+  date
+) {
+
+  const parts =
+    String(date)
+      .split("-")
+      .map(
+        Number
+      );
+
+  if (
+    parts.length !== 3
   ) {
 
-    const parts =
+    return String(date);
+  }
+
+  const weekday =
+    getWeekday(
       String(date)
-        .split("-")
-        .map(
-          Number
-        );
-
-
-    if (
-      parts.length !== 3
-    ) {
-
-      return String(date);
-    }
-
-
-    return (
-      `${parts[1]}/${parts[2]}`
     );
 
-  }
+  const weekdayShort =
+    weekday
+      ? weekday.charAt(0)
+      : "";
+
+  return (
+    `${parts[1]}/${parts[2]}` +
+    (
+      weekdayShort
+        ? `(${weekdayShort})`
+        : ""
+    )
+  );
+}
 
 
   /*
