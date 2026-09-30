@@ -88,9 +88,19 @@ const requestedStoreId =
 
 
 let selectedRegion =
-  regionOrder.includes(requestedRegion)
-    ? requestedRegion
-    : "서울";
+  (
+    requestedRegion === "all"
+    ||
+    requestedRegion === "전체"
+  )
+    ? "all"
+    : (
+        regionOrder.includes(
+          requestedRegion
+        )
+          ? requestedRegion
+          : "서울"
+      );
 
 /*
 date=YYYY-MM 파라미터
@@ -1582,7 +1592,7 @@ function buildSpecialNotice() {
 function buildStoreClickGuide() {
 
   const regionGuide =
-    isAllRegions
+    selectedRegion === "all"
       ? `
         <span class="store-click-guide-line">
           <strong>지역별로 자세히 보려면 왼쪽 지역명을 클릭하세요.</strong>
@@ -2246,31 +2256,30 @@ function createTabs() {
 
 
   /*
-  실제로 이 브랜드의 점포가 존재하는 지역만 표시합니다.
-
-  예:
-  트레이더스에 세종 점포가 없으면
-  세종 탭은 자동으로 생성되지 않습니다.
+  실제로 이 브랜드의 점포가 존재하는 지역만 표시
   */
   const availableRegions =
     regionOrder.filter(
       region =>
         holidayData.some(
           item =>
-            getStoreRegion(item) === region
+            getStoreRegion(item) ===
+            region
         )
     );
 
 
   /*
-  URL로 지정한 지역이 없거나,
-  해당 브랜드에 존재하지 않는 지역이면
-  실제 존재하는 첫 번째 지역을 기본 선택합니다.
+  region=all은 정상적인 선택값이므로
+  첫 번째 지역으로 강제 변경하지 않습니다.
   */
   if (
+    selectedRegion !== "all"
+    &&
     !availableRegions.includes(
       selectedRegion
-    ) &&
+    )
+    &&
     availableRegions.length > 0
   ) {
 
@@ -2279,6 +2288,72 @@ function createTabs() {
 
   }
 
+
+  /*
+  ==================================================
+  전체 버튼
+  ==================================================
+  */
+
+  const allButton =
+    document.createElement(
+      "button"
+    );
+
+
+  allButton.className =
+    "tab-button";
+
+
+  if (
+    selectedRegion === "all"
+  ) {
+
+    allButton.classList.add(
+      "active"
+    );
+
+  }
+
+
+  allButton.textContent =
+    "전체";
+
+
+  allButton.addEventListener(
+    "click",
+    () => {
+
+      selectedRegion =
+        "all";
+
+
+      /*
+      보고 있던 월 유지
+      */
+      updateRegionInUrl(
+        "all"
+      );
+
+
+      createTabs();
+
+      renderAllRegions();
+
+    }
+  );
+
+
+  tabs.appendChild(
+    allButton
+  );
+
+
+  /*
+  ==================================================
+  지역 버튼
+  ==================================================
+  */
 
   availableRegions.forEach(
     region => {
@@ -2310,28 +2385,28 @@ function createTabs() {
 
 
       button.addEventListener(
-  "click",
-  () => {
+        "click",
+        () => {
 
-    selectedRegion =
-      region;
-
-
-    /*
-    지역을 바꾸더라도
-    보고 있던 월은 그대로 유지
-    */
-    updateRegionInUrl(
-      region
-    );
+          selectedRegion =
+            region;
 
 
-    createTabs();
+          /*
+          지역을 바꾸더라도
+          보고 있던 월은 그대로 유지
+          */
+          updateRegionInUrl(
+            region
+          );
 
-    renderRegion();
 
-  }
-);
+          createTabs();
+
+          renderRegion();
+
+        }
+      );
 
 
       tabs.appendChild(
@@ -2374,9 +2449,12 @@ function renderSingleStore(store) {
       "page-description"
     );
 
-
+/*
+전국 보기에서도 지역 탭을 표시하고
+휴무 패턴 중심 압축 화면을 사용합니다.
+*/
   tabs.style.display =
-    "none";
+    "";
 
 
   const displayName =
@@ -2756,6 +2834,733 @@ function renderStoreCollection(
 
 }
 
+/*
+==================================================
+지역 화면 - 휴무 패턴 중심
+==================================================
+*/
+
+function renderRegionPatternView(
+  stores,
+  titleText,
+  descriptionText
+) {
+
+  const content =
+    document.getElementById(
+      "content"
+    );
+
+  const description =
+    document.getElementById(
+      "page-description"
+    );
+
+  const monthStores =
+    getMonthStores(
+      stores
+    );
+
+
+  description.textContent =
+    descriptionText;
+
+
+  content.innerHTML = `
+
+    <h2 class="region-title">
+
+      ${titleText}
+
+      <span class="region-count">
+        · ${stores.length}개 점포
+      </span>
+
+    </h2>
+
+    ${
+      buildChangeNotice(
+        stores
+      )
+    }
+
+    ${
+      buildSpecialNotice()
+    }
+
+    ${
+      buildMonthCalendar(
+        stores
+      )
+    }
+
+    ${
+      buildStoreClickGuide()
+    }
+
+  `;
+
+
+  if (
+    monthStores.length === 0
+  ) {
+
+    content.innerHTML += `
+      <div class="empty">
+        ${selectedYear}년 ${selectedMonth}월에
+        등록된 휴점일 데이터가 없습니다.
+      </div>
+    `;
+
+    return;
+  }
+
+
+  const monthKey =
+    getSelectedMonthKey();
+
+
+  /*
+  ==================================================
+  점포별 해당 월 전체 휴무일
+  ==================================================
+  */
+
+  function getStoreMonthDates(
+    store
+  ) {
+
+    return Array.from(
+      new Set(
+        (
+          Array.isArray(
+            store.holidays
+          )
+            ? store.holidays
+            : []
+        )
+          .map(
+            value =>
+              String(value)
+          )
+          .filter(
+            value =>
+              value.startsWith(
+                monthKey
+              )
+          )
+      )
+    ).sort();
+
+  }
+
+
+  /*
+  ==================================================
+  날짜 간단 표시
+  ==================================================
+  */
+
+  function compactDate(
+    date
+  ) {
+
+    const parts =
+      String(date)
+        .split("-")
+        .map(
+          Number
+        );
+
+
+    if (
+      parts.length !== 3
+    ) {
+
+      return String(date);
+    }
+
+
+    return (
+      `${parts[1]}/${parts[2]}`
+    );
+
+  }
+
+
+  /*
+  ==================================================
+  정기 휴무 패턴 판정
+
+  예)
+  9/13 + 9/27
+  → 2·4째 일요일
+
+  9/9 + 9/23
+  → 2·4째 수요일
+  ==================================================
+  */
+
+  function getRegularPattern(
+    dates
+  ) {
+
+    if (
+      dates.length !== 2
+    ) {
+
+      return null;
+    }
+
+
+    const weekdayNames = [
+      "일요일",
+      "월요일",
+      "화요일",
+      "수요일",
+      "목요일",
+      "금요일",
+      "토요일"
+    ];
+
+
+    const info =
+      dates.map(
+        date => {
+
+          const [
+            year,
+            month,
+            day
+          ] =
+            String(date)
+              .split("-")
+              .map(
+                Number
+              );
+
+
+          const jsDate =
+            new Date(
+              year,
+              month - 1,
+              day
+            );
+
+
+          return {
+
+            weekday:
+              jsDate.getDay(),
+
+            week:
+              Math.ceil(
+                day / 7
+              )
+
+          };
+
+        }
+      );
+
+
+    /*
+    서로 요일이 다르면
+    정기 패턴으로 보지 않습니다.
+    */
+
+    if (
+      info[0].weekday !==
+      info[1].weekday
+    ) {
+
+      return null;
+    }
+
+
+    const weeks =
+      info
+        .map(
+          item =>
+            item.week
+        )
+        .sort(
+          (a, b) =>
+            a - b
+        );
+
+
+    if (
+      weeks[0] ===
+      weeks[1]
+    ) {
+
+      return null;
+    }
+
+
+    return {
+
+      key:
+        `regular-${weeks[0]}-${weeks[1]}-${info[0].weekday}`,
+
+      label:
+        `${weeks[0]}·${weeks[1]}째 ${weekdayNames[info[0].weekday]} 휴무`,
+
+      weekday:
+        info[0].weekday,
+
+      weeks:
+        weeks,
+
+      dates:
+        dates
+
+    };
+
+  }
+
+
+  /*
+  ==================================================
+  점포 중복 제거 + 가나다 정렬
+  ==================================================
+  */
+
+  function uniqueSortedStores(
+    storeList
+  ) {
+
+    return Array.from(
+      new Map(
+        storeList.map(
+          store => [
+            getStoreId(
+              store
+            ),
+            store
+          ]
+        )
+      ).values()
+    )
+      .sort(
+        (a, b) =>
+          a.store.localeCompare(
+            b.store,
+            "ko"
+          )
+      );
+
+  }
+
+
+  /*
+  ==================================================
+  점포 그리드
+  ==================================================
+  */
+
+  function buildStoreGrid(
+    storeList
+  ) {
+
+    const uniqueStores =
+      uniqueSortedStores(
+        storeList
+      );
+
+
+    let html = `
+      <div class="store-grid">
+    `;
+
+
+    uniqueStores.forEach(
+      store => {
+
+        const displayName =
+          shortStoreName(
+            store.store
+          );
+
+
+        html += `
+
+          <a
+            class="
+              store-grid-item
+              store-link
+            "
+            href="${TISTORY_POST_URL}"
+            data-store-id="${getStoreId(store)}"
+            title="${displayName} 상세정보 보기"
+          >
+            ${displayName}
+          </a>
+
+        `;
+
+      }
+    );
+
+
+    html += `
+      </div>
+    `;
+
+
+    return html;
+
+  }
+
+
+  /*
+  ==================================================
+  정기 패턴 / 기타 패턴 분류
+  ==================================================
+  */
+
+  const regularGroups = {};
+
+  const otherGroups = {};
+
+
+  monthStores.forEach(
+    store => {
+
+      const dates =
+        getStoreMonthDates(
+          store
+        );
+
+
+      if (
+        dates.length === 0
+      ) {
+
+        return;
+      }
+
+
+      const regular =
+        getRegularPattern(
+          dates
+        );
+
+
+      if (
+        regular
+      ) {
+
+        if (
+          !regularGroups[
+            regular.key
+          ]
+        ) {
+
+          regularGroups[
+            regular.key
+          ] = {
+
+            ...regular,
+
+            stores:
+              []
+
+          };
+
+        }
+
+
+        regularGroups[
+          regular.key
+        ].stores.push(
+          store
+        );
+
+
+        return;
+      }
+
+
+      /*
+      정기 패턴이 아니면
+      실제 휴무 날짜 조합으로 묶습니다.
+      */
+
+      const key =
+        dates.join("|");
+
+
+      if (
+        !otherGroups[
+          key
+        ]
+      ) {
+
+        otherGroups[
+          key
+        ] = {
+
+          dates:
+            dates,
+
+          stores:
+            []
+
+        };
+
+      }
+
+
+      otherGroups[
+        key
+      ].stores.push(
+        store
+      );
+
+    }
+  );
+
+
+  /*
+  ==================================================
+  정기 패턴 출력 순서
+
+  일요일
+  수요일
+  월요일
+  나머지
+  ==================================================
+  */
+
+  const weekdayOrder = {
+
+    0: 0,
+    3: 1,
+    1: 2,
+    2: 3,
+    4: 4,
+    5: 5,
+    6: 6
+
+  };
+
+
+  const orderedRegularGroups =
+    Object.values(
+      regularGroups
+    )
+      .sort(
+        (a, b) => {
+
+          const weekdayDiff =
+            weekdayOrder[
+              a.weekday
+            ]
+            -
+            weekdayOrder[
+              b.weekday
+            ];
+
+
+          if (
+            weekdayDiff !== 0
+          ) {
+
+            return weekdayDiff;
+
+          }
+
+
+          return (
+            b.stores.length -
+            a.stores.length
+          );
+
+        }
+      );
+
+
+  /*
+  ==================================================
+  정기 휴무 출력
+  ==================================================
+  */
+
+  orderedRegularGroups.forEach(
+    group => {
+
+      const dateText =
+        group.dates
+          .map(
+            compactDate
+          )
+          .join(", ");
+
+
+      const html = `
+
+        <details
+          class="holiday-accordion"
+          open
+        >
+
+          <summary>
+
+            ${group.label}
+
+            · ${group.stores.length}개 점포
+
+          </summary>
+
+
+          <div class="accordion-content">
+
+            <div class="date-group">
+
+              <div class="date-title">
+                ${dateText}
+              </div>
+
+              ${
+                buildStoreGrid(
+                  group.stores
+                )
+              }
+
+            </div>
+
+          </div>
+
+        </details>
+
+      `;
+
+
+      content.innerHTML +=
+        html;
+
+    }
+  );
+
+
+  /*
+  ==================================================
+  기타 휴무
+  ==================================================
+  */
+
+  const orderedOtherGroups =
+    Object.values(
+      otherGroups
+    )
+      .sort(
+        (a, b) =>
+          a.dates
+            .join("|")
+            .localeCompare(
+              b.dates
+                .join("|")
+            )
+      );
+
+
+  if (
+    orderedOtherGroups.length >
+    0
+  ) {
+
+    const otherStoreCount =
+      new Set(
+        orderedOtherGroups
+          .flatMap(
+            group =>
+              group.stores
+          )
+          .map(
+            store =>
+              getStoreId(
+                store
+              )
+          )
+      ).size;
+
+
+    let html = `
+
+      <details
+        class="holiday-accordion"
+        open
+      >
+
+        <summary>
+
+          기타 휴무
+
+          · ${otherStoreCount}개 점포
+
+        </summary>
+
+
+        <div class="accordion-content">
+
+    `;
+
+
+    orderedOtherGroups.forEach(
+      group => {
+
+        const dateText =
+          group.dates
+            .map(
+              compactDate
+            )
+            .join(", ");
+
+
+        html += `
+
+          <div class="date-group">
+
+            <div class="date-title">
+
+              ${dateText}
+
+              · ${group.stores.length}개 점포
+
+            </div>
+
+
+            ${
+              buildStoreGrid(
+                group.stores
+              )
+            }
+
+          </div>
+
+        `;
+
+      }
+    );
+
+
+    html += `
+
+        </div>
+
+      </details>
+
+    `;
+
+
+    content.innerHTML +=
+      html;
+
+  }
+
+}
 
 /*
 ==================================================
@@ -2775,7 +3580,10 @@ function renderRegion() {
       "tabs"
     );
 
-
+/*
+전국 보기에서도 지역 탭을 표시하고
+휴무 패턴 중심 압축 화면을 사용합니다.
+*/
   tabs.style.display =
     "";
 
@@ -2788,11 +3596,10 @@ function renderRegion() {
     );
 
 
-  renderStoreCollection(
+  renderRegionPatternView(
     stores,
     `${selectedRegion} 지역`,
-    `${selectedRegion} 지역의 ${MART_CONFIG.brandName || "마트"} 휴무일을 확인할 수 있습니다.`,
-    false
+    `${selectedRegion} 지역의 ${MART_CONFIG.brandName || "마트"} 휴무일을 휴무 패턴별로 확인할 수 있습니다.`
   );
 
 }
@@ -2826,17 +3633,17 @@ function renderAllRegions() {
 
   /*
   전국 보기에서는 지역 탭을 숨기고
-  전용 압축 레이아웃을 사용합니다.
+  휴무 패턴 중심 압축 화면을 사용합니다.
   */
   tabs.style.display =
-    "none";
+    "";
 
   document.body.classList.add(
     "all-regions-mode"
   );
 
   description.textContent =
-    `전국의 ${MART_CONFIG.brandName || "마트"} 휴무일을 지역별 기본 휴무와 예외 점포 중심으로 확인할 수 있습니다.`;
+    `전국의 ${MART_CONFIG.brandName || "마트"} 휴무일을 휴무 유형별로 한눈에 확인할 수 있습니다.`;
 
 
   const monthStores =
@@ -2896,7 +3703,7 @@ function renderAllRegions() {
 
   /*
   ==================================================
-  선택 월의 휴무일 가져오기
+  선택 월
   ==================================================
   */
 
@@ -2904,19 +3711,27 @@ function renderAllRegions() {
     getSelectedMonthKey();
 
 
-  function getHolidayDates(
+  /*
+  ==================================================
+  점포별 해당 월 휴무일
+  ==================================================
+  */
+
+  function getStoreMonthDates(
     store
   ) {
 
+    const holidays =
+      Array.isArray(
+        store.holidays
+      )
+        ? store.holidays
+        : [];
+
+
     return Array.from(
       new Set(
-        (
-          Array.isArray(
-            store.holidays
-          )
-            ? store.holidays
-            : []
-        )
+        holidays
           .map(
             value =>
               String(value)
@@ -2935,6 +3750,7 @@ function renderAllRegions() {
 
   /*
   ==================================================
+  날짜 압축
   2026-09-13 → 9/13
   ==================================================
   */
@@ -2945,7 +3761,11 @@ function renderAllRegions() {
 
     const parts =
       String(date)
-        .split("-");
+        .split("-")
+        .map(
+          Number
+        );
+
 
     if (
       parts.length !== 3
@@ -2954,8 +3774,9 @@ function renderAllRegions() {
       return String(date);
     }
 
+
     return (
-      `${Number(parts[1])}/${Number(parts[2])}`
+      `${parts[1]}/${parts[2]}`
     );
 
   }
@@ -2963,27 +3784,26 @@ function renderAllRegions() {
 
   /*
   ==================================================
-  휴무 패턴 이름
+  정기 휴무 패턴 판정
+
+  예:
+  9/13 + 9/27
+  → 2·4째 일요일
+
+  9/9 + 9/23
+  → 2·4째 수요일
   ==================================================
   */
 
-  function describePattern(
+  function getRegularPattern(
     dates
   ) {
-
-    const dateText =
-      dates
-        .map(
-          compactDate
-        )
-        .join(", ");
-
 
     if (
       dates.length !== 2
     ) {
 
-      return dateText;
+      return null;
     }
 
 
@@ -2998,7 +3818,7 @@ function renderAllRegions() {
     ];
 
 
-    const info =
+    const dateInfo =
       dates.map(
         date => {
 
@@ -3013,6 +3833,7 @@ function renderAllRegions() {
                 Number
               );
 
+
           const jsDate =
             new Date(
               year,
@@ -3020,7 +3841,9 @@ function renderAllRegions() {
               day
             );
 
+
           return {
+
             weekday:
               jsDate.getDay(),
 
@@ -3028,19 +3851,24 @@ function renderAllRegions() {
               Math.ceil(
                 day / 7
               )
+
           };
 
         }
       );
 
 
-    const sameWeekday =
-      info[0].weekday ===
-      info[1].weekday;
+    if (
+      dateInfo[0].weekday !==
+      dateInfo[1].weekday
+    ) {
+
+      return null;
+    }
 
 
     const weeks =
-      info
+      dateInfo
         .map(
           item =>
             item.week
@@ -3051,62 +3879,89 @@ function renderAllRegions() {
         );
 
 
+    /*
+    동일 요일 + 서로 다른 주차이면
+    정기 패턴으로 표시합니다.
+    */
+
     if (
-      sameWeekday
-      &&
-      weeks[0] === 2
-      &&
-      weeks[1] === 4
+      weeks[0] ===
+      weeks[1]
     ) {
 
-      return (
-        `2·4째 ${
-          weekdayNames[
-            info[0].weekday
-          ]
-        } (${dateText})`
-      );
-
+      return null;
     }
 
 
-    return dateText;
+    return {
+
+      key:
+        `regular-${weeks[0]}-${weeks[1]}-${dateInfo[0].weekday}`,
+
+      label:
+        `${weeks[0]}·${weeks[1]}째 ${weekdayNames[dateInfo[0].weekday]} 휴무`,
+
+      weekday:
+        dateInfo[0].weekday,
+
+      weeks:
+        weeks,
+
+      dates:
+        dates
+
+    };
 
   }
 
 
   /*
   ==================================================
-  원래 시·도명을 짧게 표시
+  도 이름 축약
   ==================================================
   */
 
-  function getProvinceLabel(
+  function getProvinceShortName(
     store
   ) {
 
     const sido =
       String(
         store?.sido || ""
-      );
+      ).trim();
 
 
     const map = {
 
-      "충청북도": "충북",
-      "충청남도": "충남",
+      "경상북도":
+        "경북",
 
-      "전라북도": "전북",
-      "전북특별자치도": "전북",
-      "전라남도": "전남",
+      "경상남도":
+        "경남",
 
-      "경상북도": "경북",
-      "경상남도": "경남",
+      "충청북도":
+        "충북",
 
-      "강원도": "강원",
-      "강원특별자치도": "강원",
+      "충청남도":
+        "충남",
 
-      "제주특별자치도": "제주"
+      "전라북도":
+        "전북",
+
+      "전북특별자치도":
+        "전북",
+
+      "전라남도":
+        "전남",
+
+      "강원특별자치도":
+        "강원",
+
+      "강원도":
+        "강원",
+
+      "제주특별자치도":
+        "제주"
 
     };
 
@@ -3124,33 +3979,22 @@ function renderAllRegions() {
 
   /*
   ==================================================
-  시·군·구 표시
+  경기/충청/전라/경상 등
+  점포가 많은 지역에서 사용할
+  시·군 단위 이름
   ==================================================
   */
 
-  function getLocalityLabel(
-    store
+  function getLocalGroupName(
+    store,
+    region
   ) {
 
-    return String(
-      store?.sigungu ||
-      ""
-    ).trim();
+    const sigungu =
+      String(
+        store?.sigungu || ""
+      ).trim();
 
-  }
-
-
-  /*
-  ==================================================
-  충청 / 전라 / 경상은
-  도 단위까지 나눠서 기본 휴무를 계산
-  ==================================================
-  */
-
-  function getSubRegionKey(
-    region,
-    store
-  ) {
 
     if (
       region === "충청"
@@ -3160,18 +4004,61 @@ function renderAllRegions() {
       region === "경상"
     ) {
 
-      return (
-        getProvinceLabel(
+      const province =
+        getProvinceShortName(
           store
+        );
+
+
+      return [
+        province,
+        sigungu
+      ]
+        .filter(
+          Boolean
         )
-        ||
-        region
-      );
+        .join(" ");
 
     }
 
 
-    return region;
+    return (
+      sigungu ||
+      region
+    );
+
+  }
+
+
+  /*
+  ==================================================
+  점포 중복 제거 + 정렬
+  ==================================================
+  */
+
+  function uniqueSortedStores(
+    stores
+  ) {
+
+    return Array.from(
+      new Map(
+        stores.map(
+          store => [
+            getStoreId(
+              store
+            ),
+            store
+          ]
+        )
+      ).values()
+    )
+      .sort(
+        (a, b) =>
+          a.store.localeCompare(
+            b.store,
+            "ko"
+          )
+      );
 
   }
 
@@ -3182,55 +4069,203 @@ function renderAllRegions() {
   ==================================================
   */
 
-  function buildStoreLink(
-    store
+  function buildStoreLinks(
+    stores
   ) {
 
-    const displayName =
-      shortStoreName(
-        store.store
+    return uniqueSortedStores(
+      stores
+    )
+      .map(
+        store => {
+
+          const displayName =
+            shortStoreName(
+              store.store
+            );
+
+
+          return `
+            <a
+              class="
+                all-regions-store-link
+                store-link
+              "
+              href="${TISTORY_POST_URL}"
+              data-store-id="${getStoreId(store)}"
+              title="${displayName} 상세정보 보기"
+            >
+              ${displayName}
+            </a>
+          `;
+
+        }
+      )
+      .join(
+        `
+        <span class="
+          all-regions-separator
+        ">,</span>
+        `
       );
-
-
-    return `
-      <a
-        class="
-          all-regions-store-link
-          store-link
-        "
-        href="${TISTORY_POST_URL}"
-        data-store-id="${getStoreId(store)}"
-        title="${displayName} 상세정보 보기"
-      >
-        ${displayName}
-      </a>
-    `;
 
   }
 
 
   /*
   ==================================================
-  지역별 데이터 구성
+  지역별 점포 표현
+
+  점포가 적으면 그냥 점포명 표시
+
+  경기·충청·전라·경상처럼
+  점포가 많으면 시·군 단위로 압축
   ==================================================
   */
 
-  const regions = {};
+  function buildRegionStoreSummary(
+    stores,
+    region
+  ) {
+
+    const uniqueStores =
+      uniqueSortedStores(
+        stores
+      );
+
+
+    const complexRegion =
+      region === "경기"
+      ||
+      region === "충청"
+      ||
+      region === "전라"
+      ||
+      region === "경상";
+
+
+    /*
+    점포가 4개 이하이거나
+    복잡한 광역지역이 아니면
+    그냥 점포명 표시
+    */
+
+    if (
+      uniqueStores.length <= 4
+      ||
+      !complexRegion
+    ) {
+
+      return buildStoreLinks(
+        uniqueStores
+      );
+
+    }
+
+
+    /*
+    시·군 단위로 묶기
+    */
+
+    const localGroups = {};
+
+
+    uniqueStores.forEach(
+      store => {
+
+        const localName =
+          getLocalGroupName(
+            store,
+            region
+          );
+
+
+        if (
+          !localGroups[
+            localName
+          ]
+        ) {
+
+          localGroups[
+            localName
+          ] = [];
+
+        }
+
+
+        localGroups[
+          localName
+        ].push(
+          store
+        );
+
+      }
+    );
+
+
+    return Object.entries(
+      localGroups
+    )
+      .sort(
+        ([a], [b]) =>
+          a.localeCompare(
+            b,
+            "ko"
+          )
+      )
+      .map(
+        ([
+          localName,
+          localStores
+        ]) => {
+
+          return `
+            <span class="
+              all-regions-local-group
+            ">
+
+              <strong>
+                ${localName}
+              </strong>
+
+              ${buildStoreLinks(
+                localStores
+              )}
+
+            </span>
+          `;
+
+        }
+      )
+      .join(
+        `
+        <span class="
+          all-regions-local-separator
+        ">
+          ·
+        </span>
+        `
+      );
+
+  }
+
+
+  /*
+  ==================================================
+  정기 패턴 / 기타 패턴 수집
+  ==================================================
+  */
+
+  const regularGroups = {};
+
+  const otherGroups = {};
 
 
   monthStores.forEach(
     store => {
 
-      const region =
-        getStoreRegion(
-          store
-        )
-        ||
-        "기타";
-
-
       const dates =
-        getHolidayDates(
+        getStoreMonthDates(
           store
         );
 
@@ -3243,102 +4278,284 @@ function renderAllRegions() {
       }
 
 
-      const subRegion =
-        getSubRegionKey(
-          region,
-          store
+      const regular =
+        getRegularPattern(
+          dates
         );
 
 
       if (
-        !regions[
-          region
-        ]
+        regular
       ) {
 
-        regions[
-          region
-        ] = {};
+        if (
+          !regularGroups[
+            regular.key
+          ]
+        ) {
 
+          regularGroups[
+            regular.key
+          ] = {
+
+            ...regular,
+
+            stores:
+              []
+
+          };
+
+        }
+
+
+        regularGroups[
+          regular.key
+        ].stores.push(
+          store
+        );
+
+
+        return;
       }
+
+
+      /*
+      규칙형이 아닌 휴무는
+      날짜 조합 자체를 기준으로 묶습니다.
+      */
+
+      const otherKey =
+        dates.join("|");
 
 
       if (
-        !regions[
-          region
-        ][
-          subRegion
+        !otherGroups[
+          otherKey
         ]
       ) {
 
-        regions[
-          region
-        ][
-          subRegion
-        ] = [];
+        otherGroups[
+          otherKey
+        ] = {
+
+          dates:
+            dates,
+
+          stores:
+            []
+
+        };
 
       }
 
 
-      regions[
-        region
-      ][
-        subRegion
-      ].push(
-        {
-          store,
-          dates,
-          patternKey:
-            dates.join("|")
-        }
+      otherGroups[
+        otherKey
+      ].stores.push(
+        store
       );
 
     }
   );
 
 
-  const orderedRegions = [
+  /*
+  ==================================================
+  정기 휴무 순서
 
-    ...regionOrder.filter(
-      region =>
-        regions[
-          region
-        ]
-    ),
+  가장 흔한 순서:
+  일요일 → 수요일 → 월요일 → 나머지
+  ==================================================
+  */
 
-    ...Object.keys(
-      regions
-    ).filter(
-      region =>
-        !regionOrder.includes(
-          region
-        )
+  const weekdayOrder = {
+    0: 0,
+    3: 1,
+    1: 2,
+    2: 3,
+    4: 4,
+    5: 5,
+    6: 6
+  };
+
+
+  const orderedRegularGroups =
+    Object.values(
+      regularGroups
     )
+      .sort(
+        (a, b) => {
 
-  ];
+          const weekdayDiff =
+            weekdayOrder[
+              a.weekday
+            ]
+            -
+            weekdayOrder[
+              b.weekday
+            ];
+
+
+          if (
+            weekdayDiff !== 0
+          ) {
+
+            return weekdayDiff;
+
+          }
+
+
+          return (
+            b.stores.length -
+            a.stores.length
+          );
+
+        }
+      );
 
 
   /*
   ==================================================
-  지역별 출력
+  패턴 하나를 지역별로 출력
   ==================================================
   */
 
-  orderedRegions.forEach(
-    region => {
+  function buildPatternRegionRows(
+    stores
+  ) {
 
-      const subRegions =
-        regions[
+    const regionGroups = {};
+
+
+    stores.forEach(
+      store => {
+
+        const region =
+          getStoreRegion(
+            store
+          )
+          ||
+          "기타";
+
+
+        if (
+          !regionGroups[
+            region
+          ]
+        ) {
+
+          regionGroups[
+            region
+          ] = [];
+
+        }
+
+
+        regionGroups[
           region
-        ];
+        ].push(
+          store
+        );
+
+      }
+    );
 
 
-      const totalCount =
-        Object.values(
-          subRegions
-        )
-          .flat()
-          .length;
+    const orderedRegions = [
+
+      ...regionOrder.filter(
+        region =>
+          regionGroups[
+            region
+          ]
+      ),
+
+      ...Object.keys(
+        regionGroups
+      ).filter(
+        region =>
+          !regionOrder.includes(
+            region
+          )
+      )
+
+    ];
+
+
+    let html = "";
+
+
+    orderedRegions.forEach(
+      region => {
+
+        html += `
+
+          <div class="
+            all-regions-row
+          ">
+
+            <div class="
+              all-regions-region
+            ">
+
+              <a
+                class="
+                  all-regions-region-link
+                "
+                href="?region=${encodeURIComponent(region)}&date=${encodeURIComponent(getSelectedMonthKey())}"
+                title="${region} 지역만 보기"
+              >
+                ${region}
+
+                <span class="
+                  all-regions-region-arrow
+                ">›</span>
+
+              </a>
+
+            </div>
+
+
+            <div class="
+              all-regions-stores
+            ">
+              ${
+                buildRegionStoreSummary(
+                  regionGroups[
+                    region
+                  ],
+                  region
+                )
+              }
+            </div>
+
+          </div>
+        `;
+
+      }
+    );
+
+
+    return html;
+
+  }
+
+
+  /*
+  ==================================================
+  정기 휴무 패턴 출력
+  ==================================================
+  */
+
+  orderedRegularGroups.forEach(
+    group => {
+
+      const dateText =
+        group.dates
+          .map(
+            compactDate
+          )
+          .join(", ");
 
 
       let html = `
@@ -3352,487 +4569,36 @@ function renderAllRegions() {
         >
 
           <summary>
-            ${region}
-            · ${totalCount}개 점포
+
+            ${group.label}
+
+            <span class="
+              region-count
+            ">
+              · ${group.stores.length}개 점포
+            </span>
+
           </summary>
+
 
           <div class="
             accordion-content
             all-regions-content
           ">
-      `;
 
 
-      Object.entries(
-        subRegions
-      ).forEach(
-        (
-          [
-            subRegion,
-            entries
-          ]
-        ) => {
+            <div class="
+              all-regions-date-title
+            ">
+              ${dateText}
+            </div>
 
 
-          /*
-          패턴별 그룹
-          */
-
-          const patternMap = {};
-
-
-          entries.forEach(
-            entry => {
-
-              if (
-                !patternMap[
-                  entry.patternKey
-                ]
-              ) {
-
-                patternMap[
-                  entry.patternKey
-                ] = {
-                  dates:
-                    entry.dates,
-
-                  entries:
-                    []
-                };
-
-              }
-
-
-              patternMap[
-                entry.patternKey
-              ].entries.push(
-                entry
-              );
-
+            ${
+              buildPatternRegionRows(
+                group.stores
+              )
             }
-          );
-
-
-          const patterns =
-            Object.values(
-              patternMap
-            )
-              .sort(
-                (a, b) =>
-                  b.entries.length -
-                  a.entries.length
-              );
-
-
-          const first =
-            patterns[0];
-
-          const second =
-            patterns[1];
-
-
-          const ratio =
-            first
-              ? (
-                  first.entries.length /
-                  entries.length
-                )
-              : 0;
-
-
-          /*
-          한 패턴이 60% 이상이고
-          단독 1위일 때만 기본 휴무
-          */
-
-          const hasBase =
-
-            patterns.length === 1
-
-            ||
-
-            (
-              ratio >= 0.6
-              &&
-              (
-                !second
-                ||
-                first.entries.length >
-                second.entries.length
-              )
-            );
-
-
-          const showSubRegion =
-            subRegion !== region;
-
-
-          if (
-            showSubRegion
-          ) {
-
-            html += `
-
-              <div class="
-                all-regions-date-title
-              ">
-                ${subRegion}
-              </div>
-            `;
-
-          }
-
-
-          /*
-          ==================================================
-          기본 패턴이 명확한 경우
-          ==================================================
-          */
-
-          if (
-            hasBase
-          ) {
-
-            html += `
-
-              <div class="
-                all-regions-row
-              ">
-
-                <div class="
-                  all-regions-region
-                ">
-                  ${
-                    showSubRegion
-                      ? subRegion
-                      : region
-                  }
-                </div>
-
-                <div class="
-                  all-regions-stores
-                ">
-                  <strong>
-                    기본 휴무 · ${
-                      describePattern(
-                        first.dates
-                      )
-                    }
-                  </strong>
-
-                  · ${
-                    first.entries.length
-                  }개 점포
-                </div>
-
-              </div>
-            `;
-
-
-            /*
-            예외 점포만 표시
-            */
-
-            patterns
-              .slice(
-                1
-              )
-              .forEach(
-                pattern => {
-
-                  pattern.entries
-                    .sort(
-                      (a, b) => {
-
-                        const localityCompare =
-                          getLocalityLabel(
-                            a.store
-                          )
-                            .localeCompare(
-                              getLocalityLabel(
-                                b.store
-                              ),
-                              "ko"
-                            );
-
-
-                        if (
-                          localityCompare !== 0
-                        ) {
-
-                          return localityCompare;
-                        }
-
-
-                        return (
-                          a.store.store
-                            .localeCompare(
-                              b.store.store,
-                              "ko"
-                            )
-                        );
-
-                      }
-                    )
-                    .forEach(
-                      entry => {
-
-                        const locality =
-                          getLocalityLabel(
-                            entry.store
-                          );
-
-
-                        html += `
-
-                          <div class="
-                            all-regions-row
-                          ">
-
-                            <div class="
-                              all-regions-region
-                            ">
-                              ${
-                                locality
-                                ||
-                                subRegion
-                              }
-                            </div>
-
-                            <div class="
-                              all-regions-stores
-                            ">
-
-                              ${
-                                buildStoreLink(
-                                  entry.store
-                                )
-                              }
-
-                              <span class="
-                                all-regions-separator
-                              ">
-                                ·
-                              </span>
-
-                              ${
-                                describePattern(
-                                  entry.dates
-                                )
-                              }
-
-                            </div>
-
-                          </div>
-                        `;
-
-                      }
-                    );
-
-                }
-              );
-
-
-            html += `
-
-              <div class="
-                all-regions-row
-              ">
-
-                <div class="
-                  all-regions-region
-                ">
-                  안내
-                </div>
-
-                <div class="
-                  all-regions-stores
-                ">
-                  ※ 위에 별도로 안내되지 않은
-                  ${
-                    showSubRegion
-                      ? subRegion
-                      : region
-                  }
-                  점포는 위 기본 휴무일을 따릅니다.
-                </div>
-
-              </div>
-            `;
-
-          }
-
-
-          /*
-          ==================================================
-          기본 패턴이 불분명한 경우
-          ==================================================
-          */
-
-          else {
-
-            html += `
-
-              <div class="
-                all-regions-row
-              ">
-
-                <div class="
-                  all-regions-region
-                ">
-                  ${
-                    showSubRegion
-                      ? subRegion
-                      : region
-                  }
-                </div>
-
-                <div class="
-                  all-regions-stores
-                ">
-                  <strong>
-                    휴무 패턴이 여러 형태로 나뉩니다.
-                  </strong>
-                </div>
-
-              </div>
-            `;
-
-
-            patterns.forEach(
-              pattern => {
-
-                pattern.entries
-                  .sort(
-                    (a, b) => {
-
-                      const localityCompare =
-                        getLocalityLabel(
-                          a.store
-                        )
-                          .localeCompare(
-                            getLocalityLabel(
-                              b.store
-                            ),
-                            "ko"
-                          );
-
-
-                      if (
-                        localityCompare !== 0
-                      ) {
-
-                        return localityCompare;
-
-                      }
-
-
-                      return (
-                        a.store.store
-                          .localeCompare(
-                            b.store.store,
-                            "ko"
-                          )
-                      );
-
-                    }
-                  )
-                  .forEach(
-                    entry => {
-
-                      html += `
-
-                        <div class="
-                          all-regions-row
-                        ">
-
-                          <div class="
-                            all-regions-region
-                          ">
-                            ${
-                              getLocalityLabel(
-                                entry.store
-                              )
-                              ||
-                              subRegion
-                            }
-                          </div>
-
-                          <div class="
-                            all-regions-stores
-                          ">
-
-                            ${
-                              buildStoreLink(
-                                entry.store
-                              )
-                            }
-
-                            <span class="
-                              all-regions-separator
-                            ">
-                              ·
-                            </span>
-
-                            ${
-                              describePattern(
-                                entry.dates
-                              )
-                            }
-
-                          </div>
-
-                        </div>
-                      `;
-
-                    }
-                  );
-
-              }
-            );
-
-          }
-
-        }
-      );
-
-
-      /*
-      해당 큰 지역 상세 보기
-      */
-
-      html += `
-
-        <div class="
-          all-regions-row
-        ">
-
-          <div class="
-            all-regions-region
-          ">
-            전체
-          </div>
-
-          <div class="
-            all-regions-stores
-          ">
-
-            <a
-              class="
-                all-regions-region-link
-              "
-              href="?region=${encodeURIComponent(region)}&date=${encodeURIComponent(getSelectedMonthKey())}"
-              title="${region} 지역 전체 점포 보기"
-            >
-              ${region} 지역 전체 점포 보기
-              <span class="
-                all-regions-region-arrow
-              ">›</span>
-            </a>
-
-          </div>
-
-        </div>
 
 
           </div>
@@ -3846,6 +4612,138 @@ function renderAllRegions() {
 
     }
   );
+
+
+  /*
+  ==================================================
+  기타 휴무
+  ==================================================
+  */
+
+  const orderedOtherGroups =
+    Object.values(
+      otherGroups
+    )
+      .sort(
+        (a, b) => {
+
+          const dateCompare =
+            a.dates
+              .join("|")
+              .localeCompare(
+                b.dates
+                  .join("|")
+              );
+
+
+          return dateCompare;
+
+        }
+      );
+
+
+  if (
+    orderedOtherGroups.length >
+    0
+  ) {
+
+    const otherStoreCount =
+      new Set(
+        orderedOtherGroups
+          .flatMap(
+            group =>
+              group.stores
+          )
+          .map(
+            store =>
+              getStoreId(
+                store
+              )
+          )
+      ).size;
+
+
+    let html = `
+
+      <details
+        class="
+          holiday-accordion
+          all-regions-accordion
+        "
+        open
+      >
+
+        <summary>
+
+          기타 휴무
+
+          <span class="
+            region-count
+          ">
+            · ${otherStoreCount}개 점포
+          </span>
+
+        </summary>
+
+
+        <div class="
+          accordion-content
+          all-regions-content
+        ">
+    `;
+
+
+    orderedOtherGroups.forEach(
+      group => {
+
+        const dateText =
+          group.dates
+            .map(
+              compactDate
+            )
+            .join(", ");
+
+
+        html += `
+
+          <div class="
+            all-regions-date-group
+          ">
+
+            <div class="
+              all-regions-date-title
+            ">
+              ${dateText}
+              · ${group.stores.length}개 점포
+            </div>
+
+
+            ${
+              buildPatternRegionRows(
+                group.stores
+              )
+            }
+
+
+          </div>
+        `;
+
+      }
+    );
+
+
+    html += `
+
+        </div>
+
+      </details>
+    `;
+
+
+    content.innerHTML +=
+      html;
+
+  }
 
 }
 
@@ -3883,7 +4781,7 @@ function renderCurrentView() {
 
 
   if (
-    isAllRegions
+    selectedRegion === "all"
   ) {
 
     renderAllRegions();
@@ -4266,15 +5164,16 @@ async function loadData() {
     }
 
 
-    if (
-      isAllRegions
-    ) {
+if (
+  selectedRegion === "all"
+) {
 
-      renderAllRegions();
+  createTabs();
 
-      return;
+  renderAllRegions();
 
-    }
+  return;
+}
 
 
     createTabs();
