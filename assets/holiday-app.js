@@ -1045,6 +1045,35 @@ function isChangeNoticeActive() {
     return false;
   }
 
+  const noticeUntil =
+    changeStatusData.noticeUntil ||
+    changeStatusData.notice_until ||
+    "";
+
+  /*
+  Python workflow가 월·목만 실행되더라도
+  브라우저에서 정확히 7일이 지나면
+  알림을 자동으로 숨깁니다.
+  */
+  if (noticeUntil) {
+
+    const untilDate =
+      new Date(
+        noticeUntil
+      );
+
+    if (
+      !Number.isNaN(
+        untilDate.getTime()
+      )
+      &&
+      Date.now() >=
+      untilDate.getTime()
+    ) {
+
+      return false;
+    }
+  }
 
   if (
     typeof changeStatusData.notice_active ===
@@ -1052,14 +1081,11 @@ function isChangeNoticeActive() {
   ) {
 
     return changeStatusData.notice_active;
-
   }
-
 
   return Boolean(
     changeStatusData.changed
   );
-
 }
 
 
@@ -3768,31 +3794,43 @@ function renderAllRegions() {
   ==================================================
   */
 
-  function compactDate(
-    date
+function compactDate(
+  date
+) {
+
+  const parts =
+    String(date)
+      .split("-")
+      .map(
+        Number
+      );
+
+  if (
+    parts.length !== 3
   ) {
 
-    const parts =
+    return String(date);
+  }
+
+  const weekday =
+    getWeekday(
       String(date)
-        .split("-")
-        .map(
-          Number
-        );
-
-
-    if (
-      parts.length !== 3
-    ) {
-
-      return String(date);
-    }
-
-
-    return (
-      `${parts[1]}/${parts[2]}`
     );
 
-  }
+  const weekdayShort =
+    weekday
+      ? weekday.charAt(0)
+      : "";
+
+  return (
+    `${parts[1]}/${parts[2]}` +
+    (
+      weekdayShort
+        ? `(${weekdayShort})`
+        : ""
+    )
+  );
+}
 
 
   /*
