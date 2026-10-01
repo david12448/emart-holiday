@@ -739,7 +739,7 @@ function buildCalendarQuickSummary(
       <div class="calendar-quick-summary">
 
         <span class="calendar-summary-label">
-          휴무
+          ${selectedMonth}월 휴무
         </span>
 
         <span>
@@ -765,11 +765,6 @@ function buildCalendarQuickSummary(
 
   /*
   같은 요일끼리 날짜를 묶습니다.
-
-  예:
-  10/11, 10/25
-  →
-  10월 11·25일(일)
   */
   const weekdayGroups = {};
 
@@ -862,7 +857,7 @@ function buildCalendarQuickSummary(
 
 
   /*
-  하루만 있는 휴무일은
+  한 번만 있는 날짜는
   날짜순으로 먼저 표시합니다.
   */
   singleGroups.sort(
@@ -873,11 +868,8 @@ function buildCalendarQuickSummary(
 
 
   /*
-  여러 날짜가 같은 요일인 경우
-  자주 사용하는 휴무 패턴 순으로 표시합니다.
-
-  일요일 → 수요일 → 월요일 → 토요일
-  이후 나머지 요일
+  반복 휴무는
+  일 → 수 → 월 → 토 순으로 표시합니다.
   */
   const weekdayPriority = [
     0,
@@ -934,7 +926,6 @@ function buildCalendarQuickSummary(
 
             return `
               <span class="calendar-summary-date-group">
-                ${first.month}월
                 ${first.day}일(${weekdayName})
               </span>
             `;
@@ -946,15 +937,14 @@ function buildCalendarQuickSummary(
             group
               .map(
                 item =>
-                  item.day
+                  `${item.day}일`
               )
               .join("·");
 
 
           return `
             <span class="calendar-summary-date-group">
-              ${first.month}월
-              ${days}일(${weekdayName})
+              ${days}(${weekdayName})
             </span>
           `;
 
@@ -967,7 +957,7 @@ function buildCalendarQuickSummary(
     <div class="calendar-quick-summary">
 
       <span class="calendar-summary-label">
-        휴무
+        ${selectedMonth}월 휴무
       </span>
 
       <span class="calendar-summary-dates">
