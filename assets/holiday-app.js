@@ -1668,7 +1668,7 @@ function buildStoreClickGuide() {
 
 function buildMonthCalendar(stores) {
 
-  const holidayCount = {};
+  const holidayStores = {};
 
 
   const prefix =
@@ -1686,14 +1686,75 @@ function buildMonthCalendar(stores) {
         .forEach(
           date => {
 
-            if (!holidayCount[date]) {
-              holidayCount[date] = 0;
+            if (
+              !holidayStores[
+                date
+              ]
+            ) {
+
+              holidayStores[
+                date
+              ] = [];
+
             }
 
-            holidayCount[date]++;
+
+            holidayStores[
+              date
+            ].push(
+              store
+            );
 
           }
         );
+
+    }
+  );
+
+
+  /*
+  같은 날짜에 같은 점포가
+  중복으로 들어가는 경우를 방지합니다.
+  */
+  Object.keys(
+    holidayStores
+  ).forEach(
+    date => {
+
+      holidayStores[
+        date
+      ] = Array.from(
+        new Map(
+          holidayStores[
+            date
+          ].map(
+            store => [
+              getStoreId(
+                store
+              ),
+              store
+            ]
+          )
+        ).values()
+      );
+
+    }
+  );
+
+
+  const holidayCount = {};
+
+  Object.entries(
+    holidayStores
+  ).forEach(
+    ([
+      date,
+      dateStores
+    ]) => {
+
+      holidayCount[
+        date
+      ] = dateStores.length;
 
     }
   );
@@ -1766,6 +1827,7 @@ function buildMonthCalendar(stores) {
           stores
         )
       }
+
       <div class="calendar-grid">
 
         <div class="calendar-weekday sunday">일</div>
@@ -1803,8 +1865,14 @@ function buildMonthCalendar(stores) {
       `${pad2(day)}`;
 
 
+    const dateStores =
+      holidayStores[
+        dateKey
+      ] || [];
+
+
     const count =
-      holidayCount[dateKey] || 0;
+      dateStores.length;
 
 
     const isClosed =
@@ -1845,15 +1913,39 @@ function buildMonthCalendar(stores) {
         : `${count}개 점포`;
 
 
+    const storeIds =
+      encodeURIComponent(
+        JSON.stringify(
+          dateStores.map(
+            store =>
+              getStoreId(
+                store
+              )
+          )
+        )
+      );
+
+
     html += `
       <div
         class="
           calendar-day
           ${weekdayClass}
-          ${isClosed ? "closed" : ""}
+          ${isClosed ? "closed calendar-day-clickable" : ""}
           ${isClosed && isPast ? "past-closed" : ""}
           ${isToday ? "today" : ""}
         "
+        ${
+          isClosed
+            ? `
+              data-calendar-date="${dateKey}"
+              data-calendar-store-ids="${storeIds}"
+              role="button"
+              tabindex="0"
+              title="${day}일 휴무 점포 보기"
+            `
+            : ""
+        }
       >
 
         <div class="calendar-date-number">
@@ -1889,9 +1981,15 @@ function buildMonthCalendar(stores) {
   html += `
       </div>
 
+      <div
+        class="calendar-day-detail"
+        hidden
+      ></div>
+
       <div class="calendar-legend">
         색상이 표시된 날짜는 휴무일이며,
         지난 휴무일은 연하게 표시됩니다.
+        휴무 날짜를 클릭하면 해당 점포를 확인할 수 있습니다.
       </div>
 
     </div>
@@ -1902,6 +2000,413 @@ function buildMonthCalendar(stores) {
 
 }
 
+/*
+==================================================
+달력 휴무 날짜 클릭
+==================================================
+*/
+
+function openCalendarDayDetail(
+  calendarDay
+) {
+
+  const calendar =
+    calendarDay.closest(
+      ".month-calendar"
+    );
+
+
+  if (!calendar) {
+    return;
+  }
+
+
+  const detail =
+    calendar.querySelector(
+      ".calendar-day-detail"
+    );
+
+
+  if (!detail) {
+    return;
+  }
+
+
+  const dateKey =
+    calendarDay.dataset
+      .calendarDate || "";
+
+
+  if (!dateKey) {
+    return;
+  }
+
+
+  let storeIds = [];
+
+  try {
+
+    storeIds =
+      JSON.parse(
+        decodeURIComponent(
+          calendarDay.dataset
+            .calendarStoreIds ||
+          "%5B%5D"
+        )
+      );
+
+  } catch (error) {
+
+    console.error(
+      "달력 점포 ID 읽기 실패:",
+      error
+    );
+
+    return;
+  }
+
+
+  const stores =
+    storeIds
+      .map(
+        storeId =>
+          holidayData.find(
+            store =>
+              getStoreId(
+                store
+              ) ===
+              String(storeId)
+          )
+      )
+      .filter(Boolean)
+      .sort(
+        (a, b) =>
+          String(
+            a.store || ""
+          ).localeCompare(
+            String(
+              b.store || ""
+            ),
+            "ko"
+          )
+      );
+
+
+  /*
+  같은 날짜를 다시 누르면 닫기
+  */
+  if (
+    !detail.hidden
+    &&
+    detail.dataset.date ===
+    dateKey
+  ) {
+
+    detail.hidden = true;
+
+    detail.innerHTML = "";
+
+    delete detail.dataset.date;
+
+    calendar
+      .querySelectorAll(
+        ".calendar-day-selected"
+      )
+      .forEach(
+        item =>
+          item.classList.remove(
+            "calendar-day-selected"
+          )
+      );
+
+    return;
+  }
+
+
+  calendar
+    .querySelectorAll(
+      ".calendar-day-selected"
+    )
+    .forEach(
+      item =>
+        item.classList.remove(
+          "calendar-day-selected"
+        )
+    );
+
+
+  calendarDay.classList.add(
+    "calendar-day-selected"
+  );
+
+
+  const parts =
+    dateKey
+      .split("-")
+      .map(
+        Number
+      );
+
+
+  const weekday =
+    getWeekday(
+      dateKey
+    );
+
+
+  const weekdayShort =
+    weekday
+      ? weekday.charAt(0)
+      : "";
+
+
+  const title =
+    `${parts[0]}년 ` +
+    `${parts[1]}월 ` +
+    `${parts[2]}일` +
+    (
+      weekdayShort
+        ? `(${weekdayShort})`
+        : ""
+    );
+
+
+  let bodyHtml = "";
+
+
+  /*
+  전체 탭에서는 지역별로 묶기
+  */
+  if (
+    selectedRegion === "all"
+  ) {
+
+    const regionGroups = {};
+
+
+    stores.forEach(
+      store => {
+
+        const region =
+          getStoreRegion(
+            store
+          ) || "기타";
+
+
+        if (
+          !regionGroups[
+            region
+          ]
+        ) {
+
+          regionGroups[
+            region
+          ] = [];
+
+        }
+
+
+        regionGroups[
+          region
+        ].push(
+          store
+        );
+
+      }
+    );
+
+
+    const orderedRegions = [
+      ...regionOrder.filter(
+        region =>
+          regionGroups[
+            region
+          ]
+      ),
+
+      ...Object.keys(
+        regionGroups
+      ).filter(
+        region =>
+          !regionOrder.includes(
+            region
+          )
+      )
+    ];
+
+
+    bodyHtml =
+      orderedRegions
+        .map(
+          region => {
+
+            const links =
+              regionGroups[
+                region
+              ]
+                .map(
+                  store => {
+
+                    const displayName =
+                      shortStoreName(
+                        store.store
+                      );
+
+                    return `
+                      <a
+                        class="
+                          calendar-day-store-link
+                          store-link
+                        "
+                        href="${TISTORY_POST_URL}"
+                        data-store-id="${getStoreId(store)}"
+                        title="${displayName} 상세정보 보기"
+                      >
+                        ${displayName}
+                      </a>
+                    `;
+
+                  }
+                )
+                .join(
+                  `<span class="calendar-day-store-separator">, </span>`
+                );
+
+
+            return `
+              <div class="calendar-day-detail-row">
+
+                <div class="calendar-day-detail-region">
+                  ${region}
+                </div>
+
+                <div class="calendar-day-detail-stores">
+                  ${links}
+                </div>
+
+              </div>
+            `;
+
+          }
+        )
+        .join("");
+
+  } else {
+
+    bodyHtml =
+      stores
+        .map(
+          store => {
+
+            const displayName =
+              shortStoreName(
+                store.store
+              );
+
+            return `
+              <a
+                class="
+                  calendar-day-store-link
+                  store-link
+                "
+                href="${TISTORY_POST_URL}"
+                data-store-id="${getStoreId(store)}"
+                title="${displayName} 상세정보 보기"
+              >
+                ${displayName}
+              </a>
+            `;
+
+          }
+        )
+        .join(
+          `<span class="calendar-day-store-separator">, </span>`
+        );
+
+  }
+
+
+  detail.innerHTML = `
+    <div class="calendar-day-detail-title">
+      ${title} 휴무 점포
+      <span class="calendar-day-detail-count">
+        · ${stores.length}곳
+      </span>
+    </div>
+
+    <div class="calendar-day-detail-body">
+      ${bodyHtml}
+    </div>
+  `;
+
+
+  detail.dataset.date =
+    dateKey;
+
+
+  detail.hidden = false;
+
+}
+
+
+document.addEventListener(
+  "click",
+  function(event) {
+
+    const calendarDay =
+      event.target.closest(
+        ".calendar-day-clickable"
+      );
+
+
+    if (!calendarDay) {
+      return;
+    }
+
+
+    openCalendarDayDetail(
+      calendarDay
+    );
+
+  }
+);
+
+
+document.addEventListener(
+  "keydown",
+  function(event) {
+
+    if (
+      event.key !== "Enter"
+      &&
+      event.key !== " "
+    ) {
+
+      return;
+
+    }
+
+
+    const calendarDay =
+      event.target.closest(
+        ".calendar-day-clickable"
+      );
+
+
+    if (!calendarDay) {
+      return;
+    }
+
+
+    event.preventDefault();
+
+
+    openCalendarDayDetail(
+      calendarDay
+    );
+
+  }
+);
 
 /*
 ==================================================
