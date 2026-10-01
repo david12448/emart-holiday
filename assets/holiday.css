@@ -1213,3 +1213,27 @@
   }
 
 }
+
+/* ==================================================
+   달력 상단 휴무일 요약
+   ================================================== */
+
+.calendar-summary-dates {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px 12px;
+  min-width: 0;
+}
+
+.calendar-summary-date-group {
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+
+  .calendar-summary-dates {
+    gap: 4px 9px;
+  }
+
+}

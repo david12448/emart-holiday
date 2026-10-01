@@ -726,38 +726,254 @@ function buildCalendarQuickSummary(
 ) {
 
   const dates =
-    Object.keys(holidayCount)
-      .sort();
+    Object.keys(
+      holidayCount
+    ).sort();
 
 
-  if (dates.length === 0) {
+  if (
+    dates.length === 0
+  ) {
 
     return `
       <div class="calendar-quick-summary">
-        <span class="calendar-summary-label">휴무</span>
-        등록된 휴무일이 없습니다.
+
+        <span class="calendar-summary-label">
+          휴무
+        </span>
+
+        <span>
+          등록된 휴무일이 없습니다.
+        </span>
+
       </div>
     `;
 
   }
 
 
-  const summary =
-    dates
-      .map(
-        date => {
+  const weekdayNames = [
+    "일",
+    "월",
+    "화",
+    "수",
+    "목",
+    "금",
+    "토"
+  ];
 
-          return formatDate(date);
+
+  /*
+  같은 요일끼리 날짜를 묶습니다.
+
+  예:
+  10/11, 10/25
+  →
+  10월 11·25일(일)
+  */
+  const weekdayGroups = {};
+
+
+  dates.forEach(
+    date => {
+
+      const [
+        year,
+        month,
+        day
+      ] =
+        String(
+          date
+        )
+          .split("-")
+          .map(
+            Number
+          );
+
+
+      const weekday =
+        new Date(
+          year,
+          month - 1,
+          day
+        ).getDay();
+
+
+      if (
+        !weekdayGroups[
+          weekday
+        ]
+      ) {
+
+        weekdayGroups[
+          weekday
+        ] = [];
+
+      }
+
+
+      weekdayGroups[
+        weekday
+      ].push({
+        date,
+        year,
+        month,
+        day,
+        weekday
+      });
+
+    }
+  );
+
+
+  const singleGroups = [];
+  const multipleGroups = [];
+
+
+  Object.values(
+    weekdayGroups
+  ).forEach(
+    group => {
+
+      group.sort(
+        (a, b) =>
+          a.day - b.day
+      );
+
+
+      if (
+        group.length === 1
+      ) {
+
+        singleGroups.push(
+          group
+        );
+
+      } else {
+
+        multipleGroups.push(
+          group
+        );
+
+      }
+
+    }
+  );
+
+
+  /*
+  하루만 있는 휴무일은
+  날짜순으로 먼저 표시합니다.
+  */
+  singleGroups.sort(
+    (a, b) =>
+      a[0].day -
+      b[0].day
+  );
+
+
+  /*
+  여러 날짜가 같은 요일인 경우
+  자주 사용하는 휴무 패턴 순으로 표시합니다.
+
+  일요일 → 수요일 → 월요일 → 토요일
+  이후 나머지 요일
+  */
+  const weekdayPriority = [
+    0,
+    3,
+    1,
+    6,
+    2,
+    4,
+    5
+  ];
+
+
+  multipleGroups.sort(
+    (a, b) => {
+
+      return (
+        weekdayPriority.indexOf(
+          a[0].weekday
+        )
+        -
+        weekdayPriority.indexOf(
+          b[0].weekday
+        )
+      );
+
+    }
+  );
+
+
+  const groups = [
+    ...singleGroups,
+    ...multipleGroups
+  ];
+
+
+  const summary =
+    groups
+      .map(
+        group => {
+
+          const first =
+            group[0];
+
+
+          const weekdayName =
+            weekdayNames[
+              first.weekday
+            ];
+
+
+          if (
+            group.length === 1
+          ) {
+
+            return `
+              <span class="calendar-summary-date-group">
+                ${first.month}월
+                ${first.day}일(${weekdayName})
+              </span>
+            `;
+
+          }
+
+
+          const days =
+            group
+              .map(
+                item =>
+                  item.day
+              )
+              .join("·");
+
+
+          return `
+            <span class="calendar-summary-date-group">
+              ${first.month}월
+              ${days}일(${weekdayName})
+            </span>
+          `;
 
         }
       )
-      .join(" · ");
+      .join("");
 
 
   return `
     <div class="calendar-quick-summary">
-      <span class="calendar-summary-label">휴무</span>
-      <span>${summary}</span>
+
+      <span class="calendar-summary-label">
+        휴무
+      </span>
+
+      <span class="calendar-summary-dates">
+        ${summary}
+      </span>
+
     </div>
   `;
 
