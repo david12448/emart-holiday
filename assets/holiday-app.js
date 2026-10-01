@@ -4903,7 +4903,9 @@ function buildRegionStoreSummary(
     ||
     region === "전라"
     ||
-    region === "경상";
+    region === "경상"
+    ||
+    region === "강원";
 
 
   /*
