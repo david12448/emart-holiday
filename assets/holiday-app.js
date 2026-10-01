@@ -4885,87 +4885,145 @@ function compactDate(
   ==================================================
   */
 
-  function buildRegionStoreSummary(
-    stores,
-    region
-  ) {
+function buildRegionStoreSummary(
+  stores,
+  region
+) {
 
-    const uniqueStores =
-      uniqueSortedStores(
-        stores
-      );
-
-
-    const complexRegion =
-      region === "경기"
-      ||
-      region === "충청"
-      ||
-      region === "전라"
-      ||
-      region === "경상";
-
-
-    /*
-    점포가 4개 이하이거나
-    복잡한 광역지역이 아니면
-    그냥 점포명 표시
-    */
-
-    if (
-      uniqueStores.length <= 4
-      ||
-      !complexRegion
-    ) {
-
-      return buildStoreLinks(
-        uniqueStores
-      );
-
-    }
-
-
-    /*
-    시·군 단위로 묶기
-    */
-
-    const localGroups = {};
-
-
-    uniqueStores.forEach(
-      store => {
-
-        const localName =
-          getLocalGroupName(
-            store,
-            region
-          );
-
-
-        if (
-          !localGroups[
-            localName
-          ]
-        ) {
-
-          localGroups[
-            localName
-          ] = [];
-
-        }
-
-
-        localGroups[
-          localName
-        ].push(
-          store
-        );
-
-      }
+  const uniqueStores =
+    uniqueSortedStores(
+      stores
     );
 
 
-    return Object.entries(
+  const complexRegion =
+    region === "경기"
+    ||
+    region === "충청"
+    ||
+    region === "전라"
+    ||
+    region === "경상";
+
+
+  /*
+  경기·충청·전라·경상이 아니면
+  기존처럼 점포명만 표시
+  */
+  if (
+    !complexRegion
+  ) {
+
+    return buildStoreLinks(
+      uniqueStores
+    );
+
+  }
+
+
+  /*
+  실제 시·군·구 정보가 있는 점포가
+  하나라도 있는지 확인
+
+  이마트처럼 sigungu가 전혀 없으면
+  빈 배지를 만들지 않고 점포명만 표시
+  */
+  const hasLocalData =
+    uniqueStores.some(
+      store =>
+        String(
+          store?.sigungu || ""
+        ).trim()
+    );
+
+
+  if (
+    !hasLocalData
+  ) {
+
+    return buildStoreLinks(
+      uniqueStores
+    );
+
+  }
+
+
+  const localGroups = {};
+
+  const noLocalStores = [];
+
+
+  uniqueStores.forEach(
+    store => {
+
+      const sigungu =
+        String(
+          store?.sigungu || ""
+        ).trim();
+
+
+      /*
+      일부 점포만 sigungu가 없으면
+      빈 배지를 만들지 않음
+      */
+      if (
+        !sigungu
+      ) {
+
+        noLocalStores.push(
+          store
+        );
+
+        return;
+
+      }
+
+
+      const localName =
+        getLocalGroupName(
+          store,
+          region
+        );
+
+
+      if (
+        !localName
+      ) {
+
+        noLocalStores.push(
+          store
+        );
+
+        return;
+
+      }
+
+
+      if (
+        !localGroups[
+          localName
+        ]
+      ) {
+
+        localGroups[
+          localName
+        ] = [];
+
+      }
+
+
+      localGroups[
+        localName
+      ].push(
+        store
+      );
+
+    }
+  );
+
+
+  const groupedHtml =
+    Object.entries(
       localGroups
     )
       .sort(
@@ -4981,27 +5039,27 @@ function compactDate(
           localStores
         ]) => {
 
-return `
-  <span class="
-    all-regions-local-group
-  ">
+          return `
+            <span class="
+              all-regions-local-group
+            ">
 
-    <span class="
-      all-regions-local-badge
-    ">
-      ${localName}
-    </span>
+              <span class="
+                all-regions-local-badge
+              ">
+                ${localName}
+              </span>
 
-    <span class="
-      all-regions-local-stores
-    ">
-      ${buildStoreLinks(
-        localStores
-      )}
-    </span>
+              <span class="
+                all-regions-local-stores
+              ">
+                ${buildStoreLinks(
+                  localStores
+                )}
+              </span>
 
-  </span>
-`;
+            </span>
+          `;
 
         }
       )
@@ -5015,7 +5073,43 @@ return `
         `
       );
 
+
+  const noLocalHtml =
+    noLocalStores.length > 0
+      ? buildStoreLinks(
+          noLocalStores
+        )
+      : "";
+
+
+  if (
+    groupedHtml
+    &&
+    noLocalHtml
+  ) {
+
+    return `
+      ${groupedHtml}
+
+      <span class="
+        all-regions-local-separator
+      ">
+        ·
+      </span>
+
+      ${noLocalHtml}
+    `;
+
   }
+
+
+  return (
+    groupedHtml
+    ||
+    noLocalHtml
+  );
+
+}
 
 
   /*
