@@ -1609,6 +1609,26 @@ function buildChangeNotice(
 
   }
 
+  const changeCards =
+    relevantChanges
+      .map(
+        change => {
+
+          const store =
+            stores.find(
+              item =>
+                getStoreId(item) ===
+                String(change.storeId)
+            );
+
+          return {
+            change,
+            store
+          };
+
+        }
+      );
+
 
   const sampleNames =
     relevantChanges
@@ -1667,6 +1687,70 @@ function buildChangeNotice(
         <div class="holiday-change-detail">
           변경 확인 점포:
           <strong>${storeText}</strong>
+        </div>
+
+                <div class="holiday-change-store-list">
+
+        ${
+          changeCards
+            .slice(0, 10)
+            .map(
+              item => {
+
+                const change =
+                  item.change;
+
+                const store =
+                  item.store;
+
+                return `
+                  <div class="holiday-change-store-card">
+
+                    <div class="holiday-change-store-name">
+                      ${shortStoreName(
+                        change.store || ""
+                      )}
+                    </div>
+
+                    <div>
+                      변경 전:
+                      ${
+                        (change.before || [])
+                          .join(", ")
+                      }
+                    </div>
+
+                    <div>
+                      변경 후:
+                      ${
+                        (change.after || [])
+                          .join(", ")
+                      }
+                    </div>
+
+                    ${
+                      store?.detailUrl
+                        ?
+                        `
+                        <a
+                          href="${store.detailUrl}"
+                          target="_blank"
+                        >
+                          공식 매장정보
+                        </a>
+                        `
+                        :
+                        ""
+                    }
+
+                  </div>
+                `;
+
+              }
+            )
+            .join("")
+        }
+
         </div>
 
         ${
