@@ -1,13 +1,45 @@
 {
   "brand": "traders",
   "brand_label": "트레이더스",
-  "checked_at": "2026-10-03T00:32:45+09:00",
-  "previous_checked_at": "2026-10-02T15:14:43+09:00",
-  "has_changes": false,
-  "notice_active": false,
-  "last_change_at": null,
-  "notice_until": null,
-  "change_count": 0,
-  "changes": [],
-  "message": ""
+  "checked_at": "2026-10-05T08:09:31+09:00",
+  "previous_checked_at": "2026-10-03T00:32:45+09:00",
+  "has_changes": true,
+  "notice_active": true,
+  "last_change_at": "2026-10-05T08:09:31+09:00",
+  "notice_until": "2026-10-12",
+  "change_count": 3,
+  "changes": [
+    {
+      "id": "2007",
+      "store": "트레이더스 홀세일 클럽 천안아산점",
+      "region": "충청",
+      "added_holidays": [
+        "2026-11-08",
+        "2026-11-22"
+      ],
+      "removed_holidays": []
+    },
+    {
+      "id": "2021",
+      "store": "트레이더스 홀세일 클럽 동탄점",
+      "region": "경기",
+      "added_holidays": [
+        "2026-11-08",
+        "2026-11-22"
+      ],
+      "removed_holidays": []
+    },
+    {
+      "id": "2024",
+      "store": "트레이더스 홀세일 클럽 구월점",
+      "region": "인천",
+      "added_holidays": [
+        "2026-11-22"
+      ],
+      "removed_holidays": [
+        "2026-11-21"
+      ]
+    }
+  ],
+  "message": "공식 홈페이지의 휴무 일정이 이전 확인 때와 달라졌습니다."
 }

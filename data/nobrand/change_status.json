@@ -1,13 +1,51 @@
 {
   "brand": "nobrand",
   "brand_label": "노브랜드",
-  "checked_at": "2026-10-03T00:32:45+09:00",
-  "previous_checked_at": "2026-10-02T15:14:43+09:00",
-  "has_changes": false,
-  "notice_active": false,
-  "last_change_at": null,
-  "notice_until": null,
-  "change_count": 0,
-  "changes": [],
-  "message": ""
+  "checked_at": "2026-10-05T08:09:31+09:00",
+  "previous_checked_at": "2026-10-03T00:32:45+09:00",
+  "has_changes": true,
+  "notice_active": true,
+  "last_change_at": "2026-10-05T08:09:31+09:00",
+  "notice_until": "2026-10-12",
+  "change_count": 3,
+  "changes": [
+    {
+      "id": "3239",
+      "store": "노브랜드 구성TR점",
+      "region": "경기",
+      "added_holidays": [
+        "2026-10-11"
+      ],
+      "removed_holidays": [
+        "2026-10-10"
+      ]
+    },
+    {
+      "id": "3252",
+      "store": "노브랜드 양주옥정2점",
+      "region": "경기",
+      "added_holidays": [
+        "2026-10-14",
+        "2026-10-28"
+      ],
+      "removed_holidays": [
+        "2026-10-07",
+        "2026-10-21"
+      ]
+    },
+    {
+      "id": "3815",
+      "store": "노브랜드 경산사동점",
+      "region": "경상",
+      "added_holidays": [
+        "2026-10-14",
+        "2026-10-28"
+      ],
+      "removed_holidays": [
+        "2026-10-07",
+        "2026-10-21"
+      ]
+    }
+  ],
+  "message": "공식 홈페이지의 휴무 일정이 이전 확인 때와 달라졌습니다."
 }
