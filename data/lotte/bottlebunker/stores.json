@@ -5,6 +5,7 @@
     "storeType": "specialty",
     "sido": "광주광역시",
     "sigungu": "서구",
+    "address": "광주광역시 서구 시청로 40, 3층 (치평동)",
     "phone": "062-602-2500",
     "holidays": [
       "2026-10-11",
@@ -20,6 +21,7 @@
     "storeType": "specialty",
     "sido": "서울특별시",
     "sigungu": "송파구",
+    "address": "서울 송파구 올림픽로 240(잠실동) 롯데마트 1층",
     "phone": "02-411-8025",
     "holidays": [
       "2026-10-11",
@@ -35,6 +37,7 @@
     "storeType": "specialty",
     "sido": "서울특별시",
     "sigungu": "중구",
+    "address": "서울시 중구 청파로 426 롯데마트 서울역점 3층",
     "phone": "02-390-2595",
     "holidays": [
       "2026-10-07",
