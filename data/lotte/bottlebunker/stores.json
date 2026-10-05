@@ -5,6 +5,7 @@
     "storeType": "specialty",
     "sido": "광주광역시",
     "sigungu": "서구",
+    "phone": "062-602-2500",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
@@ -19,6 +20,7 @@
     "storeType": "specialty",
     "sido": "서울특별시",
     "sigungu": "송파구",
+    "phone": "02-411-8025",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
@@ -33,6 +35,7 @@
     "storeType": "specialty",
     "sido": "서울특별시",
     "sigungu": "중구",
+    "phone": "02-390-2595",
     "holidays": [
       "2026-10-07",
       "2026-10-14",

@@ -5,6 +5,7 @@
     "storeType": "warehouse",
     "sido": "경상남도",
     "sigungu": "창원시",
+    "phone": "055-240-2500",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
@@ -19,6 +20,7 @@
     "storeType": "warehouse",
     "sido": "광주광역시",
     "sigungu": "서구",
+    "phone": "062-602-2500",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
@@ -33,6 +35,7 @@
     "storeType": "warehouse",
     "sido": "서울특별시",
     "sigungu": "금천구",
+    "phone": "02-809-2500",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
@@ -47,6 +50,7 @@
     "storeType": "warehouse",
     "sido": "서울특별시",
     "sigungu": "영등포구",
+    "phone": "02-2165-2500",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
@@ -61,6 +65,7 @@
     "storeType": "warehouse",
     "sido": "전라남도",
     "sigungu": "목포시",
+    "phone": "061-280-2500",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
@@ -75,6 +80,7 @@
     "storeType": "warehouse",
     "sido": "전북특별자치도",
     "sigungu": "전주시",
+    "phone": "063-219-2500",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
