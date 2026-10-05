@@ -444,6 +444,38 @@ function formatStoreDisplayName(
       store?.storeType || "standard"
     ).trim();
 
+  const brandBadgeLabel =
+    String(
+      MART_CONFIG.storeBrandBadgeLabel || ""
+    ).trim();
+
+  if (
+    MART_CONFIG.showBrandBadge === true
+    &&
+    brandBadgeLabel
+  ) {
+
+    return `
+      <span class="
+        store-special-name
+        store-special-name-brand
+      ">
+        <span class="
+          store-special-base
+        ">
+          ${rawDisplayName}
+        </span>
+        <span class="
+          store-type-text
+          store-type-text-brand
+        ">
+          ${brandBadgeLabel}
+        </span>
+      </span>
+    `;
+
+  }
+
   if (
     MART_CONFIG.showStoreTypeBadges !== true
   ) {
