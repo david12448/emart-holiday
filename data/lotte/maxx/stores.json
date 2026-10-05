@@ -5,6 +5,7 @@
     "storeType": "warehouse",
     "sido": "경상남도",
     "sigungu": "창원시",
+    "address": "경남 창원시 성산구 중앙대로 123(중앙동)",
     "phone": "055-240-2500",
     "holidays": [
       "2026-10-11",
@@ -20,6 +21,7 @@
     "storeType": "warehouse",
     "sido": "광주광역시",
     "sigungu": "서구",
+    "address": "광주광역시 서구 시청로 40 (치평동)",
     "phone": "062-602-2500",
     "holidays": [
       "2026-10-11",
@@ -35,6 +37,7 @@
     "storeType": "warehouse",
     "sido": "서울특별시",
     "sigungu": "금천구",
+    "address": "서울 금천구 두산로 71 (독산동)",
     "phone": "02-809-2500",
     "holidays": [
       "2026-10-11",
@@ -50,6 +53,7 @@
     "storeType": "warehouse",
     "sido": "서울특별시",
     "sigungu": "영등포구",
+    "address": "서울 영등포구 영중로 125 (62-1번지 )",
     "phone": "02-2165-2500",
     "holidays": [
       "2026-10-11",
@@ -65,6 +69,7 @@
     "storeType": "warehouse",
     "sido": "전라남도",
     "sigungu": "목포시",
+    "address": "전남 목포시 원형서로 15 (상동)",
     "phone": "061-280-2500",
     "holidays": [
       "2026-10-11",
@@ -80,6 +85,7 @@
     "storeType": "warehouse",
     "sido": "전북특별자치도",
     "sigungu": "전주시",
+    "address": "전북 전주시 덕진구 송천중앙로 82 (송천동1가)",
     "phone": "063-219-2500",
     "holidays": [
       "2026-10-11",
