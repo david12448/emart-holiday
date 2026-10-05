@@ -446,9 +446,24 @@ function getStoreTelHref(store) {
 }
 
 
-function buildStorePhoneButton(
+function getStoreAddress(store) {
+
+  return String(
+    store?.address ??
+    ""
+  ).trim();
+
+}
+
+
+function buildStoreBasicInfo(
   store
 ) {
+
+  const address =
+    getStoreAddress(
+      store
+    );
 
   const phone =
     getStorePhone(
@@ -461,8 +476,8 @@ function buildStorePhoneButton(
     );
 
   if (
-    !phone ||
-    !telHref
+    !address &&
+    !phone
   ) {
 
     return "";
@@ -470,23 +485,48 @@ function buildStorePhoneButton(
   }
 
   return `
-    <a
-      class="store-phone-button"
-      href="${telHref}"
-      aria-label="${phone} 전화 연결"
-    >
-      <span class="store-phone-icon">
-        📞
-      </span>
-      <span class="store-phone-text">
-        <span class="store-phone-label">
-          점포 대표전화
-        </span>
-        <span class="store-phone-number">
-          ${phone}
-        </span>
-      </span>
-    </a>
+    <div class="store-basic-info">
+      ${address
+        ? `
+          <div class="store-basic-info-row">
+            <span class="store-basic-info-label">
+              주소
+            </span>
+            <span class="store-basic-info-value">
+              ${address}
+            </span>
+          </div>
+        `
+        : ""
+      }
+
+      ${phone
+        ? `
+          <div class="store-basic-info-row">
+            <span class="store-basic-info-label">
+              전화
+            </span>
+            ${telHref
+              ? `
+                <a
+                  class="store-basic-info-phone"
+                  href="${telHref}"
+                  aria-label="${phone} 전화 연결"
+                >
+                  ${phone}
+                </a>
+              `
+              : `
+                <span class="store-basic-info-value">
+                  ${phone}
+                </span>
+              `
+            }
+          </div>
+        `
+        : ""
+      }
+    </div>
   `;
 
 }
@@ -3562,10 +3602,6 @@ function renderSingleStore(store) {
           }
         </div>
 
-        ${buildStorePhoneButton(
-          store
-        )}
-
         <div style="margin-top:18px;">
 
           <a
@@ -3594,6 +3630,10 @@ function renderSingleStore(store) {
           </a>
 
         </div>
+
+        ${buildStoreBasicInfo(
+          store
+        )}
 
       </div>
 
