@@ -409,6 +409,90 @@ function getStoreDetailUrl(store) {
 
 }
 
+function getStorePhone(store) {
+
+  return String(
+    store?.phone ??
+    store?.telephone ??
+    ""
+  ).trim();
+
+}
+
+
+function getStoreTelHref(store) {
+
+  const phone =
+    getStorePhone(
+      store
+    );
+
+  if (!phone) {
+    return "";
+  }
+
+  const telNumber =
+    phone.replace(
+      /[^0-9+]/g,
+      ""
+    );
+
+  return (
+    telNumber
+      ? `tel:${telNumber}`
+      : ""
+  );
+
+}
+
+
+function buildStorePhoneButton(
+  store
+) {
+
+  const phone =
+    getStorePhone(
+      store
+    );
+
+  const telHref =
+    getStoreTelHref(
+      store
+    );
+
+  if (
+    !phone ||
+    !telHref
+  ) {
+
+    return "";
+
+  }
+
+  return `
+    <a
+      class="store-phone-button"
+      href="${telHref}"
+      aria-label="${phone} 전화 연결"
+    >
+      <span class="store-phone-icon">
+        📞
+      </span>
+      <span class="store-phone-text">
+        <span class="store-phone-label">
+          점포 대표전화
+        </span>
+        <span class="store-phone-number">
+          ${phone}
+        </span>
+      </span>
+    </a>
+  `;
+
+}
+
+
+
 function shortStoreName(name) {
 
   const prefix =
@@ -3477,6 +3561,10 @@ function renderSingleStore(store) {
             "등록된 휴무일이 없습니다."
           }
         </div>
+
+        ${buildStorePhoneButton(
+          store
+        )}
 
         <div style="margin-top:18px;">
 

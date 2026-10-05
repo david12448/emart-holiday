@@ -184,6 +184,71 @@
     }
 
     /* 개별 점포 상세보기 버튼 */
+/* 개별 점포 전화 연결 */
+.store-phone-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  margin-top: 18px;
+  padding: 10px 17px;
+
+  background: #03cf5d;
+  border-radius: 999px;
+
+  color: #fff;
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  box-shadow:
+    0 4px 10px rgba(3, 207, 93, 0.3);
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    filter 0.15s ease;
+}
+
+.store-phone-button:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 6px 14px rgba(3, 207, 93, 0.34);
+  filter: brightness(0.98);
+}
+
+.store-phone-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.store-phone-text {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 7px;
+}
+
+.store-phone-label {
+  font-size: 12px;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+.store-phone-number {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+@media (max-width: 700px) {
+  .store-phone-button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+
 .store-detail-button {
   display: flex;
   align-items: center;
