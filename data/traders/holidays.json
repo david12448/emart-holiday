@@ -7,6 +7,7 @@
     "sido": "경기도",
     "sigungu": "고양시",
     "address": "경기도 고양시 덕양구 고양대로 1955(동산동)스타필드 고양 지하 2층 ( 412-090 )",
+    "phone": "031-5174-1234",
     "detailUrl": "https://store.emart.com/branch/view.do?id=2012&type=2",
     "holidays": [
       "2026-10-14",
@@ -21,6 +22,7 @@
     "sido": "경기도",
     "sigungu": "용인시",
     "address": "경기도 용인시 기흥구 용구대로 2457 ( 446-855 )",
+    "phone": "031-327-1234",
     "detailUrl": "https://store.emart.com/branch/view.do?id=2001&type=2",
     "holidays": [
       "2026-10-11",
@@ -35,6 +37,7 @@
     "sido": "경기도",
     "sigungu": "군포시",
     "address": "경기 군포시 삼성로 74 (부곡동) ( 15874 )",
+    "phone": "031-361-3456",
     "detailUrl": "https://store.emart.com/branch/view.do?id=2013&type=2",
     "holidays": [
       "2026-10-11",
@@ -49,6 +52,7 @@
     "sido": "경기도",
     "sigungu": "김포시",
     "address": "경기 김포시 김포대로 715 (풍무동, 트레이더스 김포점) ( 10113 )",
+    "phone": "031-8048-5678",
     "detailUrl": "https://store.emart.com/branch/view.do?id=2014&type=2",
     "holidays": [
       "2026-10-14",
@@ -63,6 +67,7 @@
     "sido": "경기도",
     "sigungu": "화성시",
     "address": "경기 화성시 동탄구 동탄대로 451 (여울동)트레이더스 홀세일 클럽 동탄점 ( 18481 )",
+    "phone": "031-8097-1888",
     "detailUrl": "https://store.emart.com/branch/view.do?id=2021&type=2",
     "holidays": [
       "2026-10-11",
@@ -77,6 +82,7 @@
     "sido": "경기도",
     "sigungu": "부천시",
     "address": "경기 부천시 소사구 옥길로 1 (옥길동, 스타필드시티 부천)지하2층 ( 14789 )",
+    "phone": "02-6256-1234",
     "detailUrl": "https://store.emart.com/branch/view.do?id=2017&type=2",
     "holidays": [
       "2026-10-11",
@@ -91,6 +97,7 @@
     "sido": "경기도",
     "sigungu": "수원시",
     "address": "경기 수원시 영통구 삼성로 2 (신동) ( 16682 )",
+    "phone": "031-8005-1234",
     "detailUrl": "https://store.emart.com/branch/view.do?id=2009&type=2",
     "holidays": [
       "2026-10-11",
@@ -105,6 +112,7 @@
     "sido": "경기도",
     "sigungu": "수원시",
     "address": "경기 수원시 장안구 수성로 175지하 2층 ( 16318 )",
+    "phone": "031-690-1888",
     "detailUrl": "https://store.emart.com/branch/view.do?id=2022&type=2",
     "holidays": [
       "2026-10-11",
@@ -119,6 +127,7 @@
     "sido": "경기도",
     "sigungu": "안산시",
     "address": "경기 안산시 단원구 중앙대로 397 (신길동, 트레이더스 홀세일 클럽 안산점) ( 15402 )",
+    "phone": "031-363-1234",
     "detailUrl": "https://store.emart.com/branch/view.do?id=2006&type=2",
     "holidays": [
       "2026-10-10",
@@ -133,6 +142,7 @@
     "sido": "경기도",
     "sigungu": "안성시",
     "address": "경기 안성시 공도읍 서동대로 3930-39스타필드 안성점 지하 2층 ( 17563 )",
+    "phone": "031-8092-1234",
     "detailUrl": "https://store.emart.com/branch/view.do?id=2019&type=2",
     "holidays": [
       "2026-10-14",
@@ -147,6 +157,7 @@
     "sido": "경기도",
     "sigungu": "하남시",
     "address": "경기 하남시 위례대로 200B3층 ( 13012 )",
+    "phone": "031-8097-1234",
     "detailUrl": "https://store.emart.com/branch/view.do?id=2015&type=2",
     "holidays": [
       "2026-10-14",
@@ -161,6 +172,7 @@
     "sido": "경기도",
     "sigungu": "고양시",
     "address": "경기도 고양시 일산서구 킨텍스로 171(대화동) ( 411-410 )",
+    "phone": "031-810-1013",
     "detailUrl": "https://store.emart.com/branch/view.do?id=2010&type=2",
     "holidays": [
       "2026-10-14",
@@ -175,6 +187,7 @@
     "sido": "경기도",
     "sigungu": "하남시",
     "address": "경기 하남시 신장동 미사대로 750하남 스타필드 지하 2층 ( 465-809 )",
+    "phone": "031-8069-1234",
     "detailUrl": "https://store.emart.com/branch/view.do?id=2011&type=2",
     "holidays": [
       "2026-10-14",
@@ -189,6 +202,7 @@
     "sido": "경상남도",
     "sigungu": "양산시",
     "address": "경상남도 양산시 평산로 16 ( 626-848 )",
+    "phone": "055-380-6123",
     "detailUrl": "https://store.emart.com/branch/view.do?id=2008&type=2",
     "holidays": [
       "2026-10-11",
@@ -203,6 +217,7 @@
     "sido": "대구광역시",
     "sigungu": "서구",
     "address": "대구광역시 서구 팔달로 54 ( 703-824 )",
+    "phone": "053-714-1234",
     "detailUrl": "https://store.emart.com/branch/view.do?id=2005&type=2",
     "holidays": [
       "2026-10-12",
@@ -217,6 +232,7 @@
     "sido": "대전광역시",
     "sigungu": "서구",
     "address": "대전광역시 서구 한밭대로 580 ( 302-852 )",
+    "phone": "042-718-1234",
     "detailUrl": "https://store.emart.com/branch/view.do?id=2003&type=2",
     "holidays": [
       "2026-10-11",
@@ -231,6 +247,7 @@
     "sido": "부산광역시",
     "sigungu": "강서구",
     "address": "부산 강서구 명지국제6로 168 (명지동, 스타필드 시티 명지점)지하 2층 ( 46726 )",
+    "phone": "051-922-4100",
     "detailUrl": "https://store.emart.com/branch/view.do?id=2018&type=2",
     "holidays": [
       "2026-10-12",
@@ -245,6 +262,7 @@
     "sido": "부산광역시",
     "sigungu": "부산진구",
     "address": "부산광역시 부산진구 시민공원로 31 ( 614-836 )",
+    "phone": "051-718-1234",
     "detailUrl": "https://store.emart.com/branch/view.do?id=2004&type=2",
     "holidays": [
       "2026-10-12",
@@ -259,6 +277,7 @@
     "sido": "부산광역시",
     "sigungu": "연제구",
     "address": "부산 연제구 좌수영로 241 (연산동)트레이더스 홀세일 클럽 연산점 ( 47569 )",
+    "phone": "051-968-5600",
     "detailUrl": "https://store.emart.com/branch/view.do?id=2020&type=2",
     "holidays": [
       "2026-10-12",
@@ -273,6 +292,7 @@
     "sido": "서울특별시",
     "sigungu": "강서구",
     "address": "서울 강서구 공항대로 165 (마곡동)마곡원그로브 지하 2층 ( 07800 )",
+    "phone": "02-6252-1234",
     "detailUrl": "https://store.emart.com/branch/view.do?id=2023&type=2",
     "holidays": [
       "2026-10-11",
@@ -287,6 +307,7 @@
     "sido": "서울특별시",
     "sigungu": "노원구",
     "address": "서울 노원구 마들로3길 17 (월계동, 월계트레이더스)이마트 월계점 우측건물 1층 ( 01906 )",
+    "phone": "02-6320-1234",
     "detailUrl": "https://store.emart.com/branch/view.do?id=2016&type=2",
     "holidays": [
       "2026-10-11",
@@ -301,6 +322,7 @@
     "sido": "인천광역시",
     "sigungu": "남동구",
     "address": "인천 남동구 매소홀로 759 (구월동) ( 21582 )",
+    "phone": "032-210-8000",
     "detailUrl": "https://store.emart.com/branch/view.do?id=2024&type=2",
     "holidays": [
       "2026-10-11",
@@ -315,6 +337,7 @@
     "sido": "인천광역시",
     "sigungu": "제물포구",
     "address": "인천 제물포구 봉수대로 82 (송림동, 이마트 트레이더스) ( 22531 )",
+    "phone": "032-722-1234",
     "detailUrl": "https://store.emart.com/branch/view.do?id=2002&type=2",
     "holidays": [
       "2026-10-11",
@@ -329,6 +352,7 @@
     "sido": "충청남도",
     "sigungu": "아산시",
     "address": "충청남도 아산시 배방읍 고속철대로 133 ( 336-857 )",
+    "phone": "041-423-0123",
     "detailUrl": "https://store.emart.com/branch/view.do?id=2007&type=2",
     "holidays": [
       "2026-10-11",
