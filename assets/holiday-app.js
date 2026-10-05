@@ -430,6 +430,103 @@ function shortStoreName(name) {
 }
 
 
+function formatStoreDisplayName(
+  store
+) {
+
+  const rawDisplayName =
+    shortStoreName(
+      store.store
+    );
+
+  const storeType =
+    String(
+      store?.storeType || "standard"
+    ).trim();
+
+  if (
+    MART_CONFIG.showStoreTypeBadges !== true
+  ) {
+
+    return rawDisplayName;
+
+  }
+
+  if (
+    storeType === "foodmarket"
+  ) {
+
+    const baseName =
+      rawDisplayName
+        .replace(
+          /^푸드마켓\s*/,
+          ""
+        )
+        .trim();
+
+    return `
+      <span class="
+        store-special-name
+        store-special-name-foodmarket
+      ">
+        <span class="
+          store-special-base
+        ">
+          ${baseName}
+        </span>
+        <span class="
+          store-type-text
+          store-type-text-foodmarket
+        ">
+          푸드마켓
+        </span>
+      </span>
+    `;
+
+  }
+
+  if (
+    storeType === "starfieldmarket"
+  ) {
+
+    const baseName =
+      rawDisplayName
+        .replace(
+          /^스타필드\s*마켓\s*/,
+          ""
+        )
+        .replace(
+          /^스타필드마켓\s*/,
+          ""
+        )
+        .trim();
+
+    return `
+      <span class="
+        store-special-name
+        store-special-name-starfieldmarket
+      ">
+        <span class="
+          store-special-base
+        ">
+          ${baseName}
+        </span>
+        <span class="
+          store-type-text
+          store-type-text-starfieldmarket
+        ">
+          스타필드
+        </span>
+      </span>
+    `;
+
+  }
+
+  return rawDisplayName;
+
+}
+
+
 function getWeekday(dateString) {
 
   const parts =
@@ -4930,6 +5027,11 @@ function compactDate(
               store.store
             );
 
+          const formattedDisplayName =
+            formatStoreDisplayName(
+              store
+            );
+
 
           return `
             <a
@@ -4941,7 +5043,7 @@ function compactDate(
               data-store-id="${getStoreId(store)}"
               title="${displayName} 상세정보 보기"
             >
-              ${displayName}
+              ${formattedDisplayName}
             </a>
           `;
 
@@ -4981,6 +5083,8 @@ function buildRegionStoreSummary(
 
 
   const complexRegion =
+    MART_CONFIG.showLocalBadgeForAllRegions === true
+    ||
     region === "경기"
     ||
     region === "충청"
