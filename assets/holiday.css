@@ -184,67 +184,56 @@
     }
 
     /* 개별 점포 상세보기 버튼 */
-/* 개별 점포 전화 연결 */
-.store-phone-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
+/* 개별 점포 간단 정보 */
+.store-basic-info {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #ececec;
 
-  margin-top: 18px;
-  padding: 10px 17px;
-
-  background: #03cf5d;
-  border-radius: 999px;
-
-  color: #fff;
-  text-decoration: none;
-
-  font-size: 14px;
-  font-weight: 800;
-
-  box-shadow:
-    0 4px 10px rgba(3, 207, 93, 0.3);
-
-  transition:
-    transform 0.15s ease,
-    box-shadow 0.15s ease,
-    filter 0.15s ease;
-}
-
-.store-phone-button:hover {
-  transform: translateY(-1px);
-  box-shadow:
-    0 6px 14px rgba(3, 207, 93, 0.34);
-  filter: brightness(0.98);
-}
-
-.store-phone-icon {
-  font-size: 18px;
-  line-height: 1;
-}
-
-.store-phone-text {
-  display: inline-flex;
-  align-items: baseline;
+  display: flex;
+  flex-direction: column;
   gap: 7px;
+
+  color: #555;
+  font-size: 13px;
+  line-height: 1.55;
 }
 
-.store-phone-label {
+.store-basic-info-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.store-basic-info-label {
+  flex: 0 0 34px;
+  color: #777;
   font-size: 12px;
   font-weight: 700;
-  opacity: 0.9;
 }
 
-.store-phone-number {
-  font-size: 14px;
-  font-weight: 800;
+.store-basic-info-value {
+  min-width: 0;
+  word-break: keep-all;
+}
+
+.store-basic-info-phone {
+  color: #1769aa;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.store-basic-info-phone:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 700px) {
-  .store-phone-button {
-    width: 100%;
-    box-sizing: border-box;
+  .store-basic-info-row {
+    gap: 8px;
+  }
+
+  .store-basic-info-label {
+    flex-basis: 32px;
   }
 }
 
