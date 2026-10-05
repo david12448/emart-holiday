@@ -1,11 +1,11 @@
 {
   "brand": "nobrand",
   "brand_label": "노브랜드",
-  "checked_at": "2026-10-05T08:09:31+09:00",
-  "previous_checked_at": "2026-10-03T00:32:45+09:00",
-  "has_changes": true,
+  "checked_at": "2026-10-05T20:27:06+09:00",
+  "previous_checked_at": "2026-10-05T20:26:31+09:00",
+  "has_changes": false,
   "notice_active": true,
-  "last_change_at": "2026-10-05T08:09:31+09:00",
+  "last_change_at": "2026-10-05T16:38:20+09:00",
   "notice_until": "2026-10-12",
   "change_count": 3,
   "changes": [

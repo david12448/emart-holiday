@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-05T08:09:31+09:00",
+  "checked_at": "2026-10-05T20:27:06+09:00",
   "months": [
     "2026-10",
     "2026-11"
@@ -9,6 +9,7 @@
       "id": "4703",
       "store": "에브리데이 속초삼환점",
       "region": "강원",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -20,6 +21,7 @@
       "id": "4705",
       "store": "에브리데이 속초영랑점",
       "region": "강원",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -31,6 +33,7 @@
       "id": "4117",
       "store": "에브리데이 춘천석사점",
       "region": "강원",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -42,6 +45,7 @@
       "id": "4192",
       "store": "에브리데이 춘천우두점",
       "region": "강원",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -53,6 +57,7 @@
       "id": "4725",
       "store": "에브리데이 고양덕은점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -64,6 +69,7 @@
       "id": "4186",
       "store": "에브리데이 고양덕이점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -75,6 +81,7 @@
       "id": "4085",
       "store": "에브리데이 고양동점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -86,6 +93,7 @@
       "id": "4736",
       "store": "에브리데이 고양마두점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -97,6 +105,7 @@
       "id": "4094",
       "store": "에브리데이 고양삼송2점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -108,6 +117,7 @@
       "id": "4092",
       "store": "에브리데이 고양삼송점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -119,6 +129,7 @@
       "id": "4177",
       "store": "에브리데이 고양식사점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -130,6 +141,7 @@
       "id": "4227",
       "store": "에브리데이 고양지축점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -141,6 +153,7 @@
       "id": "4058",
       "store": "에브리데이 고촌점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -152,6 +165,7 @@
       "id": "4086",
       "store": "에브리데이 관산동점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -163,6 +177,7 @@
       "id": "4765",
       "store": "에브리데이 광교웰빙타운점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -174,6 +189,7 @@
       "id": "4182",
       "store": "에브리데이 광교하동점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -185,6 +201,7 @@
       "id": "4102",
       "store": "에브리데이 광릉점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -196,6 +213,7 @@
       "id": "4221",
       "store": "에브리데이 광명점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -207,6 +225,7 @@
       "id": "4772",
       "store": "에브리데이 광주태전점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -218,6 +237,7 @@
       "id": "4084",
       "store": "에브리데이 광탄점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -229,6 +249,7 @@
       "id": "4123",
       "store": "에브리데이 구리갈매점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -240,6 +261,7 @@
       "id": "4197",
       "store": "에브리데이 군포대야미점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -251,6 +273,7 @@
       "id": "4701",
       "store": "에브리데이 궁내점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -262,6 +285,7 @@
       "id": "4156",
       "store": "에브리데이 김포자이점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -273,6 +297,7 @@
       "id": "4103",
       "store": "에브리데이 남양주도곡점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -284,6 +309,7 @@
       "id": "4742",
       "store": "에브리데이 남양주진접점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -295,6 +321,7 @@
       "id": "4099",
       "store": "에브리데이 녹양동점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -306,6 +333,7 @@
       "id": "4070",
       "store": "에브리데이 능동점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -317,6 +345,7 @@
       "id": "4153",
       "store": "에브리데이 다산점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -328,6 +357,7 @@
       "id": "4762",
       "store": "에브리데이 다산지금점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -339,6 +369,7 @@
       "id": "4214",
       "store": "에브리데이 동탄그랑파사쥬점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -350,6 +381,7 @@
       "id": "4213",
       "store": "에브리데이 동탄목동점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -361,6 +393,7 @@
       "id": "4137",
       "store": "에브리데이 동탄카림점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -372,6 +405,7 @@
       "id": "4152",
       "store": "에브리데이 동탄호수점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -383,6 +417,7 @@
       "id": "4145",
       "store": "에브리데이 마두역점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -394,6 +429,7 @@
       "id": "4073",
       "store": "에브리데이 마북동점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -405,6 +441,7 @@
       "id": "4065",
       "store": "에브리데이 매탄동점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -416,6 +453,7 @@
       "id": "4089",
       "store": "에브리데이 법원점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -427,6 +465,7 @@
       "id": "4748",
       "store": "에브리데이 병점점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -438,6 +477,7 @@
       "id": "4726",
       "store": "에브리데이 보정점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -449,6 +489,7 @@
       "id": "4115",
       "store": "에브리데이 본오점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-10",
         "2026-10-25",
@@ -460,6 +501,7 @@
       "id": "4069",
       "store": "에브리데이 봉담2호점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -471,6 +513,7 @@
       "id": "4149",
       "store": "에브리데이 부천SF점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -482,6 +525,7 @@
       "id": "4210",
       "store": "에브리데이 분당구미점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -493,6 +537,7 @@
       "id": "4074",
       "store": "에브리데이 분당정자2점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -504,6 +549,7 @@
       "id": "4071",
       "store": "에브리데이 분당정자점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -515,6 +561,7 @@
       "id": "4704",
       "store": "에브리데이 산본점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -526,6 +573,7 @@
       "id": "4067",
       "store": "에브리데이 상현동점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -537,6 +585,7 @@
       "id": "4081",
       "store": "에브리데이 서천점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -548,6 +597,7 @@
       "id": "4079",
       "store": "에브리데이 서판교점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -559,6 +609,7 @@
       "id": "4706",
       "store": "에브리데이 석수점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -570,6 +621,7 @@
       "id": "4735",
       "store": "에브리데이 성대점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -581,6 +633,7 @@
       "id": "4155",
       "store": "에브리데이 수원태장점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -592,6 +645,7 @@
       "id": "4133",
       "store": "에브리데이 신곡풍림점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -603,6 +657,7 @@
       "id": "4729",
       "store": "에브리데이 신길점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-10",
         "2026-10-25",
@@ -614,6 +669,7 @@
       "id": "4072",
       "store": "에브리데이 신영통점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -625,6 +681,7 @@
       "id": "4211",
       "store": "에브리데이 신원당점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -636,6 +693,7 @@
       "id": "4100",
       "store": "에브리데이 신읍동점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -647,6 +705,7 @@
       "id": "4743",
       "store": "에브리데이 안산역점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-10",
         "2026-10-25",
@@ -658,6 +717,7 @@
       "id": "4181",
       "store": "에브리데이 안양관양점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -669,6 +729,7 @@
       "id": "4101",
       "store": "에브리데이 영북점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -680,6 +741,7 @@
       "id": "4142",
       "store": "에브리데이 오포신현2점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -691,6 +753,7 @@
       "id": "4136",
       "store": "에브리데이 오포신현점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -702,6 +765,7 @@
       "id": "4757",
       "store": "에브리데이 오포점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -713,6 +777,7 @@
       "id": "4770",
       "store": "에브리데이 용인보라점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -724,6 +789,7 @@
       "id": "4767",
       "store": "에브리데이 용인상하점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -735,6 +801,7 @@
       "id": "4740",
       "store": "에브리데이 용인수지점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -746,6 +813,7 @@
       "id": "4096",
       "store": "에브리데이 용현동점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -757,6 +825,7 @@
       "id": "4056",
       "store": "에브리데이 월피동점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-10",
         "2026-10-25",
@@ -768,6 +837,7 @@
       "id": "4233",
       "store": "에브리데이 의정부호원점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -779,6 +849,7 @@
       "id": "4066",
       "store": "에브리데이 이매동점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -790,6 +861,7 @@
       "id": "4121",
       "store": "에브리데이 이천갈산점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -801,6 +873,7 @@
       "id": "4236",
       "store": "에브리데이 이천부발점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -812,6 +885,7 @@
       "id": "4068",
       "store": "에브리데이 이천점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -823,6 +897,7 @@
       "id": "4738",
       "store": "에브리데이 인덕원자이SK점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -834,6 +909,7 @@
       "id": "4088",
       "store": "에브리데이 일산2호점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -845,6 +921,7 @@
       "id": "4063",
       "store": "에브리데이 장현점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -856,6 +933,7 @@
       "id": "4024",
       "store": "에브리데이 죽전점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -867,6 +945,7 @@
       "id": "4091",
       "store": "에브리데이 탄현역점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -878,6 +957,7 @@
       "id": "4090",
       "store": "에브리데이 통일동산점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -889,6 +969,7 @@
       "id": "4240",
       "store": "에브리데이 파주와동점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -900,6 +981,7 @@
       "id": "4126",
       "store": "에브리데이 평내점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -911,6 +993,7 @@
       "id": "4209",
       "store": "에브리데이 평택동삭점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -922,6 +1005,7 @@
       "id": "4146",
       "store": "에브리데이 평택비전점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -933,6 +1017,7 @@
       "id": "4769",
       "store": "에브리데이 평택용죽점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -944,6 +1029,7 @@
       "id": "4745",
       "store": "에브리데이 풍무2점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -955,6 +1041,7 @@
       "id": "4222",
       "store": "에브리데이 하남감일점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -966,6 +1053,7 @@
       "id": "4053",
       "store": "에브리데이 하안동점",
       "region": "경기",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -977,6 +1065,7 @@
       "id": "4205",
       "store": "에브리데이 거제상동점",
       "region": "경상",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -988,6 +1077,7 @@
       "id": "4118",
       "store": "에브리데이 거제수월점",
       "region": "경상",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -999,6 +1089,7 @@
       "id": "4184",
       "store": "에브리데이 경산무학점",
       "region": "경상",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1010,6 +1101,7 @@
       "id": "4709",
       "store": "에브리데이 경주용강점",
       "region": "경상",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1021,6 +1113,7 @@
       "id": "4080",
       "store": "에브리데이 구미구평점",
       "region": "경상",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1032,6 +1125,7 @@
       "id": "4119",
       "store": "에브리데이 구미봉곡점",
       "region": "경상",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1043,6 +1137,7 @@
       "id": "4143",
       "store": "에브리데이 김해율하점",
       "region": "경상",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1054,6 +1149,7 @@
       "id": "4013",
       "store": "에브리데이 김해점",
       "region": "경상",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1065,6 +1161,7 @@
       "id": "4011",
       "store": "에브리데이 성주점",
       "region": "경상",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -1076,6 +1173,7 @@
       "id": "4082",
       "store": "에브리데이 양산물금점",
       "region": "경상",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1087,6 +1185,7 @@
       "id": "4753",
       "store": "에브리데이 양산석산점",
       "region": "경상",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1098,6 +1197,7 @@
       "id": "4019",
       "store": "에브리데이 연일점",
       "region": "경상",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1109,6 +1209,7 @@
       "id": "4188",
       "store": "에브리데이 월영마린애시앙점",
       "region": "경상",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1120,6 +1221,7 @@
       "id": "4204",
       "store": "에브리데이 진주가좌점",
       "region": "경상",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1131,6 +1233,7 @@
       "id": "4768",
       "store": "에브리데이 진해경화점",
       "region": "경상",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1142,6 +1245,7 @@
       "id": "4178",
       "store": "에브리데이 창원더스퀘어점",
       "region": "경상",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1153,6 +1257,7 @@
       "id": "4199",
       "store": "에브리데이 포항양덕점",
       "region": "경상",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1164,6 +1269,7 @@
       "id": "4702",
       "store": "에브리데이 포항학천점",
       "region": "경상",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1175,6 +1281,7 @@
       "id": "4012",
       "store": "에브리데이 형곡동점",
       "region": "경상",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1186,6 +1293,7 @@
       "id": "4035",
       "store": "에브리데이 동림동점",
       "region": "광주",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1197,6 +1305,7 @@
       "id": "4031",
       "store": "에브리데이 일곡동점",
       "region": "광주",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1208,6 +1317,7 @@
       "id": "4225",
       "store": "에브리데이 대구도남점",
       "region": "대구",
+      "storeType": "standard",
       "holidays": [
         "2026-10-12",
         "2026-10-26",
@@ -1219,6 +1329,7 @@
       "id": "4125",
       "store": "에브리데이 대구옥포점",
       "region": "대구",
+      "storeType": "standard",
       "holidays": [
         "2026-10-12",
         "2026-10-26",
@@ -1230,6 +1341,7 @@
       "id": "4015",
       "store": "에브리데이 방촌동점",
       "region": "대구",
+      "storeType": "standard",
       "holidays": [
         "2026-10-12",
         "2026-10-26",
@@ -1241,6 +1353,7 @@
       "id": "4749",
       "store": "에브리데이 대전둔산점",
       "region": "대전",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1252,6 +1365,7 @@
       "id": "4744",
       "store": "에브리데이 대전숭어리점",
       "region": "대전",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1263,6 +1377,7 @@
       "id": "4771",
       "store": "에브리데이 대전신갈마점",
       "region": "대전",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1274,6 +1389,7 @@
       "id": "4041",
       "store": "에브리데이 법동점",
       "region": "대전",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1285,6 +1401,7 @@
       "id": "4231",
       "store": "에브리데이 신탄진점",
       "region": "대전",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1296,6 +1413,7 @@
       "id": "4232",
       "store": "에브리데이 용방점",
       "region": "대전",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1307,6 +1425,7 @@
       "id": "4138",
       "store": "에브리데이 부산구포점",
       "region": "부산",
+      "storeType": "standard",
       "holidays": [
         "2026-10-12",
         "2026-10-26",
@@ -1318,6 +1437,7 @@
       "id": "4229",
       "store": "에브리데이 부산반여점",
       "region": "부산",
+      "storeType": "standard",
       "holidays": [
         "2026-10-12",
         "2026-10-26",
@@ -1329,6 +1449,7 @@
       "id": "4161",
       "store": "에브리데이 부산일광점",
       "region": "부산",
+      "storeType": "standard",
       "holidays": [
         "2026-10-12",
         "2026-10-26",
@@ -1340,6 +1461,7 @@
       "id": "4162",
       "store": "에브리데이 오션시티점",
       "region": "부산",
+      "storeType": "standard",
       "holidays": [
         "2026-10-12",
         "2026-10-26",
@@ -1351,6 +1473,7 @@
       "id": "4077",
       "store": "에브리데이 정관점",
       "region": "부산",
+      "storeType": "standard",
       "holidays": [
         "2026-10-12",
         "2026-10-26",
@@ -1362,6 +1485,7 @@
       "id": "4733",
       "store": "에브리데이 가락동점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1373,6 +1497,7 @@
       "id": "4052",
       "store": "에브리데이 가양동점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1384,6 +1509,7 @@
       "id": "4208",
       "store": "에브리데이 가양역점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1395,6 +1521,7 @@
       "id": "4191",
       "store": "에브리데이 강남시장점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1406,6 +1533,7 @@
       "id": "4055",
       "store": "에브리데이 개봉동점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1417,6 +1545,7 @@
       "id": "4206",
       "store": "에브리데이 개포래미안포레점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1428,6 +1557,7 @@
       "id": "4219",
       "store": "에브리데이 개포자이점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1439,6 +1569,7 @@
       "id": "4016",
       "store": "에브리데이 개포점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1450,6 +1581,7 @@
       "id": "4159",
       "store": "에브리데이 고덕강일점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1461,6 +1593,7 @@
       "id": "4036",
       "store": "에브리데이 공릉동점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1472,6 +1605,7 @@
       "id": "4164",
       "store": "에브리데이 광나루역점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1483,6 +1617,7 @@
       "id": "4754",
       "store": "에브리데이 광장점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1494,6 +1629,7 @@
       "id": "4183",
       "store": "에브리데이 구로항동점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1505,6 +1641,7 @@
       "id": "4212",
       "store": "에브리데이 길음점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1516,6 +1653,7 @@
       "id": "4201",
       "store": "에브리데이 남가좌점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1527,6 +1665,7 @@
       "id": "4017",
       "store": "에브리데이 남부터미널점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -1538,6 +1677,7 @@
       "id": "4039",
       "store": "에브리데이 답십리점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -1549,6 +1689,7 @@
       "id": "4185",
       "store": "에브리데이 당고개역점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1560,6 +1701,7 @@
       "id": "4002",
       "store": "에브리데이 대방동점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1571,6 +1713,7 @@
       "id": "4180",
       "store": "에브리데이 대치은마점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1582,6 +1725,7 @@
       "id": "4761",
       "store": "에브리데이 도봉아테라점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1593,6 +1737,7 @@
       "id": "4044",
       "store": "에브리데이 도봉점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1604,6 +1749,7 @@
       "id": "4237",
       "store": "에브리데이 둔촌포레온점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1615,6 +1761,7 @@
       "id": "4216",
       "store": "에브리데이 등촌점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1626,6 +1773,7 @@
       "id": "4170",
       "store": "에브리데이 래미안리더스원점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -1637,6 +1785,7 @@
       "id": "4037",
       "store": "에브리데이 면목동점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1648,6 +1797,7 @@
       "id": "4190",
       "store": "에브리데이 명지대점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1659,6 +1809,7 @@
       "id": "4173",
       "store": "에브리데이 목동역점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1670,6 +1821,7 @@
       "id": "4731",
       "store": "에브리데이 목동점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1681,6 +1833,7 @@
       "id": "4732",
       "store": "에브리데이 목동중앙점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1692,6 +1845,7 @@
       "id": "4223",
       "store": "에브리데이 무악재점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1703,6 +1857,7 @@
       "id": "4025",
       "store": "에브리데이 미아동점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1714,6 +1869,7 @@
       "id": "4724",
       "store": "에브리데이 방배그랑자이점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -1725,6 +1881,7 @@
       "id": "4040",
       "store": "에브리데이 번동점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1736,6 +1893,7 @@
       "id": "4728",
       "store": "에브리데이 봉천동점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1747,6 +1905,7 @@
       "id": "4010",
       "store": "에브리데이 사당동점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1758,6 +1917,7 @@
       "id": "4746",
       "store": "에브리데이 상계역점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1769,6 +1929,7 @@
       "id": "4730",
       "store": "에브리데이 상도동점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1780,6 +1941,7 @@
       "id": "4008",
       "store": "에브리데이 서초그랑자이점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -1791,6 +1953,7 @@
       "id": "4198",
       "store": "에브리데이 서초내곡점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -1802,6 +1965,7 @@
       "id": "4005",
       "store": "에브리데이 서초동점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -1813,6 +1977,7 @@
       "id": "4157",
       "store": "에브리데이 서초센트럴점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -1824,6 +1989,7 @@
       "id": "4027",
       "store": "에브리데이 성북동점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1835,6 +2001,7 @@
       "id": "4154",
       "store": "에브리데이 송파점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1846,6 +2013,7 @@
       "id": "4773",
       "store": "에브리데이 수색아트포레점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1857,6 +2025,7 @@
       "id": "4241",
       "store": "에브리데이 수유시장점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1868,6 +2037,7 @@
       "id": "4235",
       "store": "에브리데이 신풍역점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1879,6 +2049,7 @@
       "id": "4026",
       "store": "에브리데이 쌍문동점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1890,6 +2061,7 @@
       "id": "4759",
       "store": "에브리데이 양재역점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -1901,6 +2073,7 @@
       "id": "4043",
       "store": "에브리데이 양재점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -1912,6 +2085,7 @@
       "id": "4224",
       "store": "에브리데이 영등포구청역점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1923,6 +2097,7 @@
       "id": "4009",
       "store": "에브리데이 올림픽점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1934,6 +2109,7 @@
       "id": "4020",
       "store": "에브리데이 우면점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -1945,6 +2121,7 @@
       "id": "4226",
       "store": "에브리데이 은평수색점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1956,6 +2133,7 @@
       "id": "4719",
       "store": "에브리데이 은평진관점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1967,6 +2145,7 @@
       "id": "4176",
       "store": "에브리데이 이문점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -1978,6 +2157,7 @@
       "id": "4220",
       "store": "에브리데이 이수점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -1989,6 +2169,7 @@
       "id": "4734",
       "store": "에브리데이 이태원점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2000,6 +2181,7 @@
       "id": "4741",
       "store": "에브리데이 자곡점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2011,6 +2193,7 @@
       "id": "4242",
       "store": "에브리데이 잠실리센츠점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2022,6 +2205,7 @@
       "id": "4239",
       "store": "에브리데이 잠원메이플자이점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -2033,6 +2217,7 @@
       "id": "4042",
       "store": "에브리데이 중계동점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2044,6 +2229,7 @@
       "id": "4028",
       "store": "에브리데이 중곡동점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2055,6 +2241,7 @@
       "id": "4750",
       "store": "에브리데이 중화리버센SK점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2066,6 +2253,7 @@
       "id": "4034",
       "store": "에브리데이 창동점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2077,6 +2265,7 @@
       "id": "4238",
       "store": "에브리데이 평택고덕점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2088,6 +2277,7 @@
       "id": "4228",
       "store": "에브리데이 행당점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2099,6 +2289,7 @@
       "id": "4171",
       "store": "에브리데이 홍은점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2110,6 +2301,7 @@
       "id": "4049",
       "store": "에브리데이 화곡동점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2121,6 +2313,7 @@
       "id": "4739",
       "store": "에브리데이 휘경자이점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -2132,6 +2325,7 @@
       "id": "4006",
       "store": "에브리데이 흑석동점",
       "region": "서울",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2143,6 +2337,7 @@
       "id": "4758",
       "store": "에브리데이 세종고운점",
       "region": "세종",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2154,6 +2349,7 @@
       "id": "4140",
       "store": "에브리데이 세종다정점",
       "region": "세종",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2165,6 +2361,7 @@
       "id": "4751",
       "store": "에브리데이 세종도담점",
       "region": "세종",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2176,6 +2373,7 @@
       "id": "4721",
       "store": "에브리데이 세종소담점",
       "region": "세종",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2187,6 +2385,7 @@
       "id": "4752",
       "store": "에브리데이 세종종촌점",
       "region": "세종",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2198,6 +2397,7 @@
       "id": "4139",
       "store": "에브리데이 울산무거점",
       "region": "울산",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-25",
@@ -2209,6 +2409,7 @@
       "id": "4124",
       "store": "에브리데이 울산야음점",
       "region": "울산",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-25",
@@ -2220,6 +2421,7 @@
       "id": "4062",
       "store": "에브리데이 경서점",
       "region": "인천",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2231,6 +2433,7 @@
       "id": "4059",
       "store": "에브리데이 동양점",
       "region": "인천",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2242,6 +2445,7 @@
       "id": "4064",
       "store": "에브리데이 서창2점",
       "region": "인천",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2253,6 +2457,7 @@
       "id": "4057",
       "store": "에브리데이 서창동점",
       "region": "인천",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2264,6 +2469,7 @@
       "id": "4196",
       "store": "에브리데이 인천SK리더스뷰점",
       "region": "인천",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2275,6 +2481,7 @@
       "id": "4175",
       "store": "에브리데이 인천논현점",
       "region": "인천",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2286,6 +2493,7 @@
       "id": "4174",
       "store": "에브리데이 인천대입구역점",
       "region": "인천",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2297,6 +2505,7 @@
       "id": "4163",
       "store": "에브리데이 인천도화점",
       "region": "인천",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2308,6 +2517,7 @@
       "id": "4158",
       "store": "에브리데이 인천송도점",
       "region": "인천",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2319,6 +2529,7 @@
       "id": "4203",
       "store": "에브리데이 인천영종점",
       "region": "인천",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2330,6 +2541,7 @@
       "id": "4737",
       "store": "에브리데이 인천청라점",
       "region": "인천",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2341,6 +2553,7 @@
       "id": "4755",
       "store": "에브리데이 인천효성점",
       "region": "인천",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2352,6 +2565,7 @@
       "id": "4060",
       "store": "에브리데이 작전점",
       "region": "인천",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2363,6 +2577,7 @@
       "id": "4766",
       "store": "에브리데이 청라파크자이점",
       "region": "인천",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2374,6 +2589,7 @@
       "id": "4030",
       "store": "에브리데이 고흥점",
       "region": "전라",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2385,6 +2601,7 @@
       "id": "4032",
       "store": "에브리데이 나운동점",
       "region": "전라",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2396,6 +2613,7 @@
       "id": "4111",
       "store": "에브리데이 나주혁신점",
       "region": "전라",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2407,6 +2625,7 @@
       "id": "4202",
       "store": "에브리데이 무안오룡점",
       "region": "전라",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2418,6 +2637,7 @@
       "id": "4168",
       "store": "에브리데이 임실점",
       "region": "전라",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -2429,6 +2649,7 @@
       "id": "4108",
       "store": "에브리데이 전주혁신점",
       "region": "전라",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2440,6 +2661,7 @@
       "id": "4712",
       "store": "에브리데이 전주휴먼시아점",
       "region": "전라",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2451,6 +2673,7 @@
       "id": "4033",
       "store": "에브리데이 평화동점",
       "region": "전라",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2462,6 +2685,7 @@
       "id": "4029",
       "store": "에브리데이 모충동점",
       "region": "충청",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -2473,6 +2697,7 @@
       "id": "4128",
       "store": "에브리데이 서산예천점",
       "region": "충청",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2484,6 +2709,7 @@
       "id": "4141",
       "store": "에브리데이 서산읍내점",
       "region": "충청",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2495,6 +2721,7 @@
       "id": "4150",
       "store": "에브리데이 서충주점",
       "region": "충청",
+      "storeType": "standard",
       "holidays": [
         "2026-10-10",
         "2026-10-25",
@@ -2506,6 +2733,7 @@
       "id": "4047",
       "store": "에브리데이 아산공수점",
       "region": "충청",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2517,6 +2745,7 @@
       "id": "4107",
       "store": "에브리데이 아산장재점",
       "region": "충청",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2528,6 +2757,7 @@
       "id": "4194",
       "store": "에브리데이 아산탕정점",
       "region": "충청",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2539,6 +2769,7 @@
       "id": "4165",
       "store": "에브리데이 오창산단점",
       "region": "충청",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -2550,6 +2781,7 @@
       "id": "4048",
       "store": "에브리데이 음성점",
       "region": "충청",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2561,6 +2793,7 @@
       "id": "4132",
       "store": "에브리데이 진천옥동점",
       "region": "충청",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2572,6 +2805,7 @@
       "id": "4747",
       "store": "에브리데이 천안두정점",
       "region": "충청",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2583,6 +2817,7 @@
       "id": "4135",
       "store": "에브리데이 천안불당점",
       "region": "충청",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2594,6 +2829,7 @@
       "id": "4756",
       "store": "에브리데이 천안청당점",
       "region": "충청",
+      "storeType": "standard",
       "holidays": [
         "2026-10-11",
         "2026-10-25",
@@ -2605,6 +2841,7 @@
       "id": "4045",
       "store": "에브리데이 충북오창점",
       "region": "충청",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -2616,6 +2853,7 @@
       "id": "4200",
       "store": "에브리데이 충주호암점",
       "region": "충청",
+      "storeType": "standard",
       "holidays": [
         "2026-10-10",
         "2026-10-25",
@@ -2627,6 +2865,7 @@
       "id": "4038",
       "store": "에브리데이 탑동점",
       "region": "충청",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
@@ -2638,6 +2877,7 @@
       "id": "4112",
       "store": "에브리데이 홍성내포점",
       "region": "충청",
+      "storeType": "standard",
       "holidays": [
         "2026-10-14",
         "2026-10-28",
