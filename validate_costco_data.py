@@ -61,6 +61,11 @@ def main():
             "최상위 데이터가 배열이 아닙니다."
         )
 
+    if len(stores) < 20:
+        fail(
+            f"점포 수가 예상보다 적습니다: {len(stores)}"
+        )
+
     store_ids = set()
     store_names = set()
 
@@ -90,6 +95,21 @@ def main():
         holidays = store.get(
             "holidays"
         )
+
+        address = str(
+            store.get("address")
+            or ""
+        ).strip()
+
+        phone = str(
+            store.get("phone")
+            or ""
+        ).strip()
+
+        detail_url = str(
+            store.get("detailUrl")
+            or ""
+        ).strip()
 
         if not store_id:
             fail(
@@ -124,12 +144,34 @@ def main():
                 f"{name} 지역 정보가 비어 있습니다."
             )
 
+        if not address:
+            fail(
+                f"{name} 주소가 비어 있습니다."
+            )
+
+        if not phone:
+            fail(
+                f"{name} 전화번호가 비어 있습니다."
+            )
+
+        if not detail_url.startswith(
+            "https://www.costco.co.kr/store/"
+        ):
+            fail(
+                f"{name} 공식 상세 URL 형식 오류: {detail_url!r}"
+            )
+
         if not isinstance(
             holidays,
             list,
         ):
             fail(
                 f"{name} holidays가 배열이 아닙니다."
+            )
+
+        if not holidays:
+            fail(
+                f"{name} 휴무일이 비어 있습니다."
             )
 
         if holidays != sorted(
@@ -176,8 +218,8 @@ def main():
         )
 
     if unexpected:
-        fail(
-            "예상하지 못한 점포: "
+        print(
+            "새 점포 후보: "
             +
             ", ".join(
                 sorted(unexpected)
