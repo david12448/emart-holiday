@@ -10,6 +10,9 @@ on:
       - "costco/**"
       - "assets/holiday-app.js"
       - "assets/holiday.css"
+      - "scripts/**"
+      - "docs/PRIVATE_SOURCE_MIGRATION.md"
+      - ".gitignore"
       - "data/costco/**"
       - "data/traders/**"
       - "fetch_costco.py"
@@ -38,6 +41,9 @@ jobs:
 
       - name: 공통 JavaScript 문법 검사
         run: node --check assets/holiday-app.js
+
+      - name: 공개/비공개 빌드 분리 자체 테스트
+        run: python scripts/test_public_build.py
 
       - name: 트레이더스 보조 데이터 확인
         run: |
