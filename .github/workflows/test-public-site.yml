@@ -78,5 +78,18 @@ jobs:
           test ! -e validate_costco_data.py
           test ! -e data/costco/latest_snapshot.json
           test ! -e data/costco/source_state.json
+
+          test ! -e data/emart/latest_snapshot.json
+          test ! -e data/traders/latest_snapshot.json
+          test ! -e data/everyday/latest_snapshot.json
+          test ! -e data/nobrand/latest_snapshot.json
+
+          test ! -e holidays.json
+          test ! -e holiday_archive.json
+
           test ! -e docs/PRIVATE_SOURCE_MIGRATION.md
+          test ! -e docs/IMPLEMENTATION_NOTES.md
+
           test ! -e scripts/build_public_payload.py
+          test ! -e scripts/verify_public_payload.py
+          test ! -e scripts/test_public_build.py
