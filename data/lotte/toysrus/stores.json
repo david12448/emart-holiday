@@ -1,6 +1,6 @@
 [
   {
-    "storeId": "8073dd04e14b",
+    "sid": "840c4b23a638e2a5",
     "store": "토이저러스 춘천점",
     "storeType": "specialty",
     "sido": "강원특별자치도",
@@ -8,11 +8,10 @@
     "address": "강원도 춘천시 방송길 84 (온의동)",
     "holidays": [],
     "holidayStatus": "정보없음",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=강원&m_market=28021",
     "updatedAt": "2026-09-29T22:41:53+09:00"
   },
   {
-    "storeId": "521c6c8875d9",
+    "sid": "19114134d4f3a7de",
     "store": "토이저러스 광명점",
     "storeType": "specialty",
     "sido": "경기도",
@@ -21,11 +20,10 @@
     "phone": "02-6226-2236",
     "holidays": [],
     "holidayStatus": "정보없음",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=2416",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "cde0d145565d",
+    "sid": "94e6f44188a871d1",
     "store": "토이저러스 김포한강점",
     "storeType": "specialty",
     "sido": "경기도",
@@ -33,11 +31,10 @@
     "address": "경기 김포시 김포한강2로 41(장기동 2031번지)",
     "holidays": [],
     "holidayStatus": "정보없음",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=24791",
     "updatedAt": "2026-09-29T22:41:53+09:00"
   },
   {
-    "storeId": "15e351b8597e",
+    "sid": "2e7e3740e19d391f",
     "store": "토이저러스 광교점",
     "storeType": "specialty",
     "sido": "경기도",
@@ -49,11 +46,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=2489",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "566162416157",
+    "sid": "b1bea4ac1570519e",
     "store": "토이저러스 수원점",
     "storeType": "specialty",
     "sido": "경기도",
@@ -61,11 +57,10 @@
     "address": "경기 수원시 권선구 세화로 134(서둔동)",
     "holidays": [],
     "holidayStatus": "2,4번째 일요일",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=24621",
     "updatedAt": "2026-09-29T22:41:53+09:00"
   },
   {
-    "storeId": "4d5436b39c7b",
+    "sid": "cfbc3bb3594b6911",
     "store": "토이저러스 안산점",
     "storeType": "specialty",
     "sido": "경기도",
@@ -74,11 +69,10 @@
     "phone": "031-508-2500",
     "holidays": [],
     "holidayStatus": "정보없음",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=24151",
     "updatedAt": "2026-09-29T22:41:53+09:00"
   },
   {
-    "storeId": "f914637563f3",
+    "sid": "09a489ab18638f65",
     "store": "토이저러스 평촌점",
     "storeType": "specialty",
     "sido": "경기도",
@@ -87,11 +81,10 @@
     "phone": "031-478-0333",
     "holidays": [],
     "holidayStatus": "정보없음",
-    "detailUrl": null,
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "26640a6fb186",
+    "sid": "d3f418fc1c8b9f42",
     "store": "토이저러스 기흥점",
     "storeType": "specialty",
     "sido": "경기도",
@@ -100,11 +93,10 @@
     "phone": "031-8036-3200",
     "holidays": [],
     "holidayStatus": "정보없음",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=2496",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "187687959a2d",
+    "sid": "7ac951989679decb",
     "store": "토이저러스 롯데몰수지점",
     "storeType": "specialty",
     "sido": "경기도",
@@ -112,11 +104,10 @@
     "address": "경기도 용인시 수지구 성복2로 38(성복동)",
     "holidays": [],
     "holidayStatus": "정보없음",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=2448",
     "updatedAt": "2026-09-29T22:41:53+09:00"
   },
   {
-    "storeId": "ca431ebe937b",
+    "sid": "00527fd682eccabc",
     "store": "토이저러스 이천점",
     "storeType": "specialty",
     "sido": "경기도",
@@ -125,11 +116,10 @@
     "phone": "031-887-4507",
     "holidays": [],
     "holidayStatus": "금~일,공휴일: 10:30~21:00 -",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=2492",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "4245ee952d25",
+    "sid": "408b19cd6fe414aa",
     "store": "토이저러스 파주점",
     "storeType": "specialty",
     "sido": "경기도",
@@ -138,11 +128,10 @@
     "phone": "031-960-2750",
     "holidays": [],
     "holidayStatus": "정보없음",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=2497",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "ca643b07f38a",
+    "sid": "d6ee9422b08e0f89",
     "store": "토이저러스 양덕점",
     "storeType": "specialty",
     "sido": "경상남도",
@@ -151,11 +140,10 @@
     "phone": "055-243-2500",
     "holidays": [],
     "holidayStatus": "정보없음",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경남&m_market=26431",
     "updatedAt": "2026-09-29T22:41:53+09:00"
   },
   {
-    "storeId": "acc150579d8b",
+    "sid": "9e6621fa126b5ff3",
     "store": "토이저러스 구미점",
     "storeType": "specialty",
     "sido": "경상북도",
@@ -164,11 +152,10 @@
     "phone": "054-440-2500",
     "holidays": [],
     "holidayStatus": "정보없음",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경북&m_market=26131",
     "updatedAt": "2026-09-29T22:41:53+09:00"
   },
   {
-    "storeId": "28b83b77216a",
+    "sid": "f93b426160122400",
     "store": "토이저러스 수완점",
     "storeType": "specialty",
     "sido": "광주광역시",
@@ -177,11 +164,10 @@
     "phone": "062-975-2700",
     "holidays": [],
     "holidayStatus": "정보없음",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=광주&m_market=2722",
     "updatedAt": "2026-09-29T22:41:53+09:00"
   },
   {
-    "storeId": "c402e6a5cfbc",
+    "sid": "f41a45453381f709",
     "store": "토이저러스 대구죽전점",
     "storeType": "specialty",
     "sido": "대구광역시",
@@ -190,11 +176,10 @@
     "phone": "053-555-2500",
     "holidays": [],
     "holidayStatus": "정보없음",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=대구&m_market=2664",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "7aef11c18b45",
+    "sid": "bd22b8bf7a932045",
     "store": "토이저러스 대구율하점",
     "storeType": "specialty",
     "sido": "대구광역시",
@@ -203,11 +188,10 @@
     "phone": "053-607-2700",
     "holidays": [],
     "holidayStatus": "연중무휴",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=대구&m_market=2649",
     "updatedAt": "2026-09-29T22:41:53+09:00"
   },
   {
-    "storeId": "ea5454b2d676",
+    "sid": "ac4ba35d598b66e1",
     "store": "토이저러스 대덕점",
     "storeType": "specialty",
     "sido": "대전광역시",
@@ -216,11 +200,10 @@
     "phone": "042-930-2500",
     "holidays": [],
     "holidayStatus": "정보없음",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=대전&m_market=25081",
     "updatedAt": "2026-09-29T22:41:53+09:00"
   },
   {
-    "storeId": "feb5587cf3ba",
+    "sid": "d75a993721ce65bd",
     "store": "토이저러스 동래점",
     "storeType": "specialty",
     "sido": "부산광역시",
@@ -229,11 +212,10 @@
     "phone": "051-668-2700",
     "holidays": [],
     "holidayStatus": "주말: 10:00~22:00 -",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=부산&m_market=26181",
     "updatedAt": "2026-09-29T22:41:53+09:00"
   },
   {
-    "storeId": "9903f7b240b1",
+    "sid": "a89b1707e9b7dd11",
     "store": "토이저러스 부산점",
     "storeType": "specialty",
     "sido": "부산광역시",
@@ -242,11 +224,10 @@
     "phone": "051-608-2500",
     "holidays": [],
     "holidayStatus": "정보없음",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=부산&m_market=26261",
     "updatedAt": "2026-09-29T22:41:53+09:00"
   },
   {
-    "storeId": "83ddec287514",
+    "sid": "c69015f6d28e0595",
     "store": "토이저러스 사상점",
     "storeType": "specialty",
     "sido": "부산광역시",
@@ -255,11 +236,10 @@
     "phone": "051-329-2500",
     "holidays": [],
     "holidayStatus": "정보없음",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=부산&m_market=26121",
     "updatedAt": "2026-09-29T22:41:53+09:00"
   },
   {
-    "storeId": "77cc6d98ef10",
+    "sid": "d2dd881a767fa106",
     "store": "토이저러스 동부산점",
     "storeType": "specialty",
     "sido": "부산시",
@@ -268,11 +248,10 @@
     "phone": "051-922-2600",
     "holidays": [],
     "holidayStatus": "연중무휴",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=부산&m_market=2662",
     "updatedAt": "2026-09-29T22:41:53+09:00"
   },
   {
-    "storeId": "5c4668433a12",
+    "sid": "a4c6aac39a010a4f",
     "store": "토이저러스 김포공항점",
     "storeType": "specialty",
     "sido": "서울특별시",
@@ -281,11 +260,10 @@
     "phone": "02-6124-2500",
     "holidays": [],
     "holidayStatus": "정보없음",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=서울&m_market=24411",
     "updatedAt": "2026-09-29T22:41:53+09:00"
   },
   {
-    "storeId": "ff937c5da527",
+    "sid": "1906e614592885c1",
     "store": "토이저러스 중계점",
     "storeType": "specialty",
     "sido": "서울특별시",
@@ -294,11 +272,10 @@
     "phone": "02-2092-2500",
     "holidays": [],
     "holidayStatus": "둘째,넷째주 일요일: 11:00~19:00 -",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=서울&m_market=2339",
     "updatedAt": "2026-09-29T22:41:53+09:00"
   },
   {
-    "storeId": "fe39bca02ece",
+    "sid": "d347f2964a9fa416",
     "store": "토이저러스 청량리점",
     "storeType": "specialty",
     "sido": "서울특별시",
@@ -307,11 +284,10 @@
     "phone": "02-3298-2500",
     "holidays": [],
     "holidayStatus": "정보없음",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=서울&m_market=23121",
     "updatedAt": "2026-09-29T22:41:53+09:00"
   },
   {
-    "storeId": "bfc483d82e65",
+    "sid": "35b9f99d9bbda21f",
     "store": "토이저러스 제타플렉스",
     "storeType": "specialty",
     "sido": "서울특별시",
@@ -320,11 +296,10 @@
     "phone": "02-411-8025",
     "holidays": [],
     "holidayStatus": "정보없음",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=서울&m_market=2326",
     "updatedAt": "2026-09-29T22:41:53+09:00"
   },
   {
-    "storeId": "c1ce73f49d4c",
+    "sid": "4b849af49fb89425",
     "store": "토이저러스 은평점",
     "storeType": "specialty",
     "sido": "서울특별시",
@@ -333,11 +308,10 @@
     "phone": "02-2097-2500",
     "holidays": [],
     "holidayStatus": "정보없음",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=서울&m_market=2343",
     "updatedAt": "2026-09-29T22:41:53+09:00"
   },
   {
-    "storeId": "ced57faa5841",
+    "sid": "ef62d5b22fc2b9cd",
     "store": "토이저러스 진장점",
     "storeType": "specialty",
     "sido": "울산광역시",
@@ -346,11 +320,10 @@
     "phone": "052-240-2500",
     "holidays": [],
     "holidayStatus": "정보없음",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=울산&m_market=26141",
     "updatedAt": "2026-09-29T22:41:53+09:00"
   },
   {
-    "storeId": "e287ca2eb9ea",
+    "sid": "f82ad602753114ce",
     "store": "토이저러스 계양점",
     "storeType": "specialty",
     "sido": "인천광역시",
@@ -359,11 +332,10 @@
     "phone": "032-550-2500",
     "holidays": [],
     "holidayStatus": "정보없음",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=인천&m_market=24691",
     "updatedAt": "2026-09-29T22:41:53+09:00"
   },
   {
-    "storeId": "650e7928e1d5",
+    "sid": "9ce9c21116079cef",
     "store": "토이저러스 청라점",
     "storeType": "specialty",
     "sido": "인천광역시",
@@ -372,11 +344,10 @@
     "phone": "032-590-2500",
     "holidays": [],
     "holidayStatus": "정보없음",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=인천&m_market=24611",
     "updatedAt": "2026-09-29T22:41:53+09:00"
   },
   {
-    "storeId": "ada8584d612f",
+    "sid": "58a5942e503fd7db",
     "store": "토이저러스 송도점",
     "storeType": "specialty",
     "sido": "인천광역시",
@@ -385,11 +356,10 @@
     "phone": "032-222-2500",
     "holidays": [],
     "holidayStatus": "정보없음",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=인천&m_market=24651",
     "updatedAt": "2026-09-29T22:41:53+09:00"
   },
   {
-    "storeId": "5664e6518e4a",
+    "sid": "9f2796f4a48f5bd3",
     "store": "토이저러스 남악점",
     "storeType": "specialty",
     "sido": "전라남도",
@@ -398,11 +368,10 @@
     "phone": "061-740-2500",
     "holidays": [],
     "holidayStatus": "정보없음",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=전남&m_market=27241",
     "updatedAt": "2026-09-29T22:41:53+09:00"
   },
   {
-    "storeId": "1b25331cc20a",
+    "sid": "cab7f96fe4c008a7",
     "store": "토이저러스 여수점",
     "storeType": "specialty",
     "sido": "전라남도",
@@ -411,11 +380,10 @@
     "phone": "061-640-2500",
     "holidays": [],
     "holidayStatus": "정보없음",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=전남&m_market=27051",
     "updatedAt": "2026-09-29T22:41:53+09:00"
   },
   {
-    "storeId": "45c065db26ff",
+    "sid": "e7331eebc66f9874",
     "store": "토이저러스 군산점",
     "storeType": "specialty",
     "sido": "전북특별자치도",
@@ -424,11 +392,10 @@
     "phone": "063-441-2500",
     "holidays": [],
     "holidayStatus": "정보없음",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=전북&m_market=27071",
     "updatedAt": "2026-09-29T22:41:53+09:00"
   },
   {
-    "storeId": "6c2100a1e049",
+    "sid": "58028ec382c8364b",
     "store": "토이저러스 전주점",
     "storeType": "specialty",
     "sido": "전북특별자치도",
@@ -437,11 +404,10 @@
     "phone": "063-249-2500",
     "holidays": [],
     "holidayStatus": "정보없음",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=전북&m_market=27081",
     "updatedAt": "2026-09-29T22:41:53+09:00"
   },
   {
-    "storeId": "553caf5fe490",
+    "sid": "18a6885fe7e9ac5d",
     "store": "토이저러스 제주점",
     "storeType": "specialty",
     "sido": "제주특별자치도",
@@ -450,11 +416,10 @@
     "phone": "064-798-2500",
     "holidays": [],
     "holidayStatus": "정보없음",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=기타&m_market=28521",
     "updatedAt": "2026-09-29T22:41:53+09:00"
   },
   {
-    "storeId": "7f9208903ab0",
+    "sid": "9a38359e71c8e458",
     "store": "토이저러스 성정점",
     "storeType": "specialty",
     "sido": "충청남도",
@@ -463,11 +428,10 @@
     "phone": "041-553-2500",
     "holidays": [],
     "holidayStatus": "정보없음",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=충남&m_market=25071",
     "updatedAt": "2026-09-29T22:41:53+09:00"
   },
   {
-    "storeId": "cdae7e9d36ad",
+    "sid": "40d8457f6de5cbbb",
     "store": "토이저러스 서청주점",
     "storeType": "specialty",
     "sido": "충청북도",
@@ -476,11 +440,10 @@
     "phone": "043-254-2500",
     "holidays": [],
     "holidayStatus": "정보없음",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=충북&m_market=25131",
     "updatedAt": "2026-09-29T22:41:53+09:00"
   },
   {
-    "storeId": "f88462949329",
+    "sid": "cca0f1ffb3dc8290",
     "store": "토이저러스 충주점",
     "storeType": "specialty",
     "sido": "충청북도",
@@ -489,7 +452,6 @@
     "phone": "043-841-2500",
     "holidays": [],
     "holidayStatus": "정보없음",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=충북&m_market=25051",
     "updatedAt": "2026-09-29T22:41:53+09:00"
   }
 ]

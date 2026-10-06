@@ -1,6 +1,6 @@
 [
   {
-    "storeId": "c9f4930eace2",
+    "sid": "b1898a9fa862b4c8",
     "store": "맥스 창원중앙점",
     "storeType": "warehouse",
     "sido": "경상남도",
@@ -12,11 +12,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경남&m_market=2112",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "c5f346a9ce88",
+    "sid": "8976e9eb23a6b776",
     "store": "맥스 상무점",
     "storeType": "warehouse",
     "sido": "광주광역시",
@@ -28,11 +27,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=광주&m_market=2108",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "b0b9eba2ef64",
+    "sid": "5f701ee1298594e8",
     "store": "맥스 금천점",
     "storeType": "warehouse",
     "sido": "서울특별시",
@@ -44,11 +42,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=서울&m_market=2101",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "115331230025",
+    "sid": "45e2187edfddad89",
     "store": "맥스 영등포점",
     "storeType": "warehouse",
     "sido": "서울특별시",
@@ -60,11 +57,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=서울&m_market=2103",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "ec1f1c669211",
+    "sid": "d207ea2a04744be1",
     "store": "맥스 목포점",
     "storeType": "warehouse",
     "sido": "전라남도",
@@ -76,11 +72,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=전남&m_market=2109",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "f50e5ad2da20",
+    "sid": "1791696aba649239",
     "store": "맥스 송천점",
     "storeType": "warehouse",
     "sido": "전북특별자치도",
@@ -92,7 +87,6 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=전북&m_market=2110",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   }
 ]

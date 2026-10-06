@@ -1,6 +1,6 @@
 [
   {
-    "storeId": "d8a438a3de94",
+    "sid": "b012ff92932fe14c",
     "store": "보틀벙커 상무점",
     "storeType": "specialty",
     "sido": "광주광역시",
@@ -12,11 +12,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=광주&m_market=2726",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "8b5aaaee1822",
+    "sid": "31b6c0a4bc5a1f45",
     "store": "보틀벙커 제타플렉스",
     "storeType": "specialty",
     "sido": "서울특별시",
@@ -28,11 +27,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=서울&m_market=2361",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "36a66d2622a6",
+    "sid": "55a0da26fba06c96",
     "store": "보틀벙커 서울역점",
     "storeType": "specialty",
     "sido": "서울특별시",
@@ -45,7 +43,6 @@
       "2026-10-21"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=서울&m_market=2361",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   }
 ]

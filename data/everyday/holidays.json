@@ -1,3599 +1,3359 @@
 [
   {
-    "id": "4703",
+    "sid": "14c02bfca8a2e444",
     "store": "에브리데이 속초삼환점",
-    "region": "강원",
     "storeType": "standard",
+    "region": "강원",
     "sido": "강원특별자치도",
     "sigungu": "속초시",
     "address": "강원특별자치도 속초시 밤골3길 39-1 (교동)1층 ( 24861 )",
     "phone": "033-632-2989",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4703&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4705",
+    "sid": "019f744f19a9129c",
     "store": "에브리데이 속초영랑점",
-    "region": "강원",
     "storeType": "standard",
+    "region": "강원",
     "sido": "강원특별자치도",
     "sigungu": "속초시",
     "address": "강원특별자치도 속초시 중앙로 323 (영랑동)1층 ( 24807 )",
     "phone": "033-632-4607",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4705&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4117",
+    "sid": "85a86e1ee1e79f6b",
     "store": "에브리데이 춘천석사점",
-    "region": "강원",
     "storeType": "standard",
+    "region": "강원",
     "sido": "강원특별자치도",
     "sigungu": "춘천시",
     "address": "강원특별자치도 춘천시 영서로 2027 (석사동)1층 ( 24415 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4117&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4192",
+    "sid": "035c45af4433cbf3",
     "store": "에브리데이 춘천우두점",
-    "region": "강원",
     "storeType": "standard",
+    "region": "강원",
     "sido": "강원특별자치도",
     "sigungu": "춘천시",
     "address": "강원특별자치도 춘천시 우두1길 93 (우두동)1층 ( 24221 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4192&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4725",
+    "sid": "9af7db983663a6f3",
     "store": "에브리데이 고양덕은점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "고양시",
     "address": "경기 고양시 덕양구 대덕산로 31 (덕은동, DMC한강 호반써밋) ( 10543 )",
     "phone": "02-3159-0314",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4725&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4186",
+    "sid": "cfd3bf18e3373c72",
     "store": "에브리데이 고양덕이점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "고양시",
     "address": "경기 고양시 일산서구 하이파크2로 65 (덕이동)지하1층 ( 10231 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4186&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4085",
+    "sid": "39035ba201f36709",
     "store": "에브리데이 고양동점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "고양시",
     "address": "경기도 고양시 덕양구 혜음로22 ( 10275 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4085&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4736",
+    "sid": "ec9a61ce39aaa09f",
     "store": "에브리데이 고양마두점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "고양시",
     "address": "경기 고양시 일산동구 일산로 219 (마두동, 학원)1층 ( 10416 )",
     "phone": "031-994-2776",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4736&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4094",
+    "sid": "7818719b36abdad0",
     "store": "에브리데이 고양삼송2점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "고양시",
     "address": "경기도 고양시 덕양구 삼송로94-14 ( 10589 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4094&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4092",
+    "sid": "37a13da78fabafac",
     "store": "에브리데이 고양삼송점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "고양시",
     "address": "경기도 고양시 덕양구 권율대로 907 KN빌딩 1층 ( 10568 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4092&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4177",
+    "sid": "80b6482df7163a7d",
     "store": "에브리데이 고양식사점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "고양시",
     "address": "경기도 고양시 일산동구 위시티4로79 제상가1동 제1층 제110호, 제지층 제비 01호 ( 10325 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4177&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4227",
+    "sid": "d0577d9761261b47",
     "store": "에브리데이 고양지축점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "고양시",
     "address": "경기도 고양시 덕양구 오부자1길37 B1층 B101호-102호 ( 10583 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4227&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4058",
+    "sid": "8401a57a9635741a",
     "store": "에브리데이 고촌점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "김포시",
     "address": "경기도 김포시 고촌읍 장차로13번길25 세종프라자 ( 10126 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4058&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4086",
+    "sid": "ab4252a9022e9c06",
     "store": "에브리데이 관산동점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "고양시",
     "address": "경기도 고양시 덕양구 통일로768번길49 ( 10286 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4086&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4765",
+    "sid": "3896ae281f70e770",
     "store": "에브리데이 광교웰빙타운점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "수원시",
     "address": "경기 수원시 영통구 웰빙타운로 43 (이의동)1층 ( 16224 )",
     "phone": "031-895-5900",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4765&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4182",
+    "sid": "6df124a42041e077",
     "store": "에브리데이 광교하동점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "수원시",
     "address": "경기도 수원시 영통구 법조로149번길269 1층 전체 ( 16512 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4182&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4102",
+    "sid": "7714bbaf981a89f8",
     "store": "에브리데이 광릉점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "남양주시",
     "address": "경기도 남양주시 진접읍 광릉내로107 ( 12019 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4102&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4221",
+    "sid": "6f462026c8010af5",
     "store": "에브리데이 광명점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "광명시",
     "address": "경기도 광명시 오리로970 제지하2층 제2001호,2002호,2003호 ( 14220 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4221&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4772",
+    "sid": "e2397c5ff0662127",
     "store": "에브리데이 광주태전점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "광주시",
     "address": "경기 광주시 태봉로 173 (태전동)1층 ( 12789 )",
     "phone": "031-8027-8089",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4772&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4084",
+    "sid": "d2de91cff03787d3",
     "store": "에브리데이 광탄점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "파주시",
     "address": "경기도 파주시 광탄면 큰여울길44 ( 10948 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4084&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4123",
+    "sid": "30bc16aec83bdd1a",
     "store": "에브리데이 구리갈매점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "구리시",
     "address": "경기 구리시 갈매순환로 202 (갈매동, 로터스타워)B01호 ( 11901 )",
     "phone": "031-523-3744",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4123&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4197",
+    "sid": "a108776f53d92b12",
     "store": "에브리데이 군포대야미점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "군포시",
     "address": "경기 군포시 대야1로 7 (대야미동)제1층 제101호, 제2층 202호 ( 15888 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4197&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4701",
+    "sid": "e023ddece9f2a62d",
     "store": "에브리데이 궁내점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "성남시",
     "address": "경기도 성남시 분당구 대왕판교로272 ( 13550 )",
     "phone": "031-716-1622",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4701&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4156",
+    "sid": "4f90f82fa4204320",
     "store": "에브리데이 김포자이점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "김포시",
     "address": "경기도 김포시 걸포2로74 상가동 2동 114호 ( 10099 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4156&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4103",
+    "sid": "6a6e026a074a4a3a",
     "store": "에브리데이 남양주도곡점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "남양주시",
     "address": "경기도 남양주시 와부읍 덕소로 230-52 제이엠골프연습장 ( 12276 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4103&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4742",
+    "sid": "7d27451a4acf9db5",
     "store": "에브리데이 남양주진접점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "남양주시",
     "address": "경기 남양주시 진접읍 부평로48번길 33 (부평리)1층 ( 12022 )",
     "phone": "031-522-4704",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4742&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4099",
+    "sid": "1d0ef0750136eaaf",
     "store": "에브리데이 녹양동점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "의정부시",
     "address": "경기도 의정부시 비우로57 ( 11608 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4099&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4070",
+    "sid": "e19343dcda286ab2",
     "store": "에브리데이 능동점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "화성시",
     "address": "경기 화성시 병점구 동탄숲속로 63-1 (능동)1층 ( 18421 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4070&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4153",
+    "sid": "72aeffdb06af2688",
     "store": "에브리데이 다산점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "남양주시",
     "address": "경기도 남양주시 다산중앙로146번길18 101~105,108,116~7호 ( 12285 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4153&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4762",
+    "sid": "b140ac107c772537",
     "store": "에브리데이 다산지금점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "남양주시",
     "address": "경기 남양주시 다산중앙로82번안길 28 (다산동)1동 1층 103~109호(다산동,제이원타워) ( 12249 )",
     "phone": "031-522-4620",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4762&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4214",
+    "sid": "3b1be204c3a602d7",
     "store": "에브리데이 동탄그랑파사쥬점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "화성시",
     "address": "경기 화성시 동탄구 동탄대로5길 15 (송동, 더샵 동탄센텀폴리스 1단지)지하 1층 B25~B35호 ( 18497 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4214&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4213",
+    "sid": "92939a835e4bfc2d",
     "store": "에브리데이 동탄목동점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "화성시",
     "address": "경기 화성시 동탄구 동탄신리천로1길 4 (목동)1층 ( 18490 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4213&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4137",
+    "sid": "166b987ea5278d0b",
     "store": "에브리데이 동탄카림점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "화성시",
     "address": "경기 화성시 동탄구 동탄대로시범길 134 (청계동, 동탄역시범반도유보라아이비파크4.0)1층 ( 18476 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4137&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4152",
+    "sid": "6e831b33b4db566b",
     "store": "에브리데이 동탄호수점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "화성시",
     "address": "경기 화성시 동탄구 동탄대로 181 (송동, 동탄린스트라우스더레이크)B동 B1층 130호 ( 18497 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4152&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4145",
+    "sid": "deaef3841cd2c54a",
     "store": "에브리데이 마두역점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "고양시",
     "address": "경기도 고양시 일산동구 장백로178 ( 10414 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4145&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4073",
+    "sid": "bc6dcbe6ce137933",
     "store": "에브리데이 마북동점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "용인시",
     "address": "경기도 용인시 기흥구 구교동로172 ( 16910 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4073&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4065",
+    "sid": "fb250b01aeb22f7e",
     "store": "에브리데이 매탄동점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "수원시",
     "address": "경기도 수원시 영통구 인계로219 삼성1차아파트 ( 16537 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4065&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4089",
+    "sid": "8049a53ca0f8abea",
     "store": "에브리데이 법원점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "파주시",
     "address": "경기도 파주시 법원읍 술이홀로899 ( 10826 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4089&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4748",
+    "sid": "989fbf998be37491",
     "store": "에브리데이 병점점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "화성시",
     "address": "경기 화성시 병점구 병점1로 66-10 (병점동)1층 ( 18417 )",
     "phone": "031-546-8442",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4748&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4726",
+    "sid": "bac72e20073a7239",
     "store": "에브리데이 보정점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "용인시",
     "address": "경기 용인시 기흥구 죽현로 8-20 (보정동, 아이원프라자) ( 16897 )",
     "phone": "031-889-7722",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4726&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4115",
+    "sid": "15a3cc40a33aa792",
     "store": "에브리데이 본오점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "안산시",
     "address": "경기도 안산시 상록구 본이로46 ( 15549 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4115&type=2",
     "holidays": [
       "2026-10-10",
       "2026-10-25"
     ]
   },
   {
-    "id": "4069",
+    "sid": "2334a33f80858e8b",
     "store": "에브리데이 봉담2호점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "화성시",
     "address": "경기 화성시 효행구 봉담읍 와우로73번길 6 (와우리, 태천센타)1층 ( 18321 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4069&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4149",
+    "sid": "f909208f03de451f",
     "store": "에브리데이 부천SF점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "부천시",
     "address": "경기 부천시 소사구 옥길로 1 (옥길동, 스타필드시티 부천)1층 ( 14789 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4149&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4210",
+    "sid": "a3dbd38fff84849a",
     "store": "에브리데이 분당구미점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "성남시",
     "address": "경기도 성남시 분당구 미금로48 제지하1층(구미동,오성프라자) ( 13626 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4210&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4074",
+    "sid": "8ab7d29f90b842a6",
     "store": "에브리데이 분당정자2점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "성남시",
     "address": "경기도 성남시 분당구 정자일로 120 삼성아데나루체아파트 ( 13559 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4074&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4071",
+    "sid": "82c6a643d9e902bb",
     "store": "에브리데이 분당정자점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "성남시",
     "address": "경기도 성남시 분당구 정자일로242 ( 13555 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4071&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4704",
+    "sid": "b03d4cd46346a2d5",
     "store": "에브리데이 산본점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "군포시",
     "address": "경기 군포시 고산로539번길7-6, 상가동 지하층 1호 ( 15822 )",
     "phone": "031-391-8706",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4704&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4067",
+    "sid": "d78a50f521be7811",
     "store": "에브리데이 상현동점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "용인시",
     "address": "경기도 용인시 수지구 만현로100 ( 16930 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4067&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4081",
+    "sid": "e294f6c0b17b71fa",
     "store": "에브리데이 서천점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "용인시",
     "address": "경기도 용인시 기흥구 서천로127번길8 ( 17108 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4081&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4079",
+    "sid": "fed5105e1ab296bd",
     "store": "에브리데이 서판교점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "성남시",
     "address": "경기도 성남시 분당구 판교공원로5길20 ( 13477 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4079&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4706",
+    "sid": "83f6064ac0723630",
     "store": "에브리데이 석수점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "안양시",
     "address": "경기도 안양시 만안구 석수동 연현로103, 지하1층 ( 13902 )",
     "phone": "031-473-9945",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4706&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4735",
+    "sid": "c9849c3a8c613dad",
     "store": "에브리데이 성대점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "수원시",
     "address": "경기 수원시 장안구 율전로 80 (율전동)1층 ( 16362 )",
     "phone": "031-548-0151",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4735&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4155",
+    "sid": "6921c98c2b1737dd",
     "store": "에브리데이 수원태장점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "수원시",
     "address": "경기도 수원시 영통구 동탄지성로550 외 4필지 102,106~115-2 ( 16685 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4155&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4133",
+    "sid": "7d7b039e1a5bfcdc",
     "store": "에브리데이 신곡풍림점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "의정부시",
     "address": "경기도 의정부시 회룡로241 ( 11739 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4133&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4729",
+    "sid": "04bc52d358cdd66e",
     "store": "에브리데이 신길점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "안산시",
     "address": "경기 안산시 단원구 새뿔길 22-1 (신길동, 새뿔프라자)1층 ( 15399 )",
     "phone": "070-4639-0713",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4729&type=2",
     "holidays": [
       "2026-10-10",
       "2026-10-25"
     ]
   },
   {
-    "id": "4072",
+    "sid": "c2a556cfd86fefc1",
     "store": "에브리데이 신영통점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "화성시",
     "address": "경기도 화성시 영통로75 ( 18377 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4072&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4211",
+    "sid": "84fc8bc783bfc254",
     "store": "에브리데이 신원당점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "고양시",
     "address": "경기도 고양시 덕양구 고양대로1384번길6 제1층 제9호,18호,제지하층 제1호,2호,3호 ( 10468 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4211&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4100",
+    "sid": "ee7dd9909e71996b",
     "store": "에브리데이 신읍동점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "포천시",
     "address": "경기도 포천시 호병로1길3 ( 11148 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4100&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4743",
+    "sid": "0e3e4be4668aa28b",
     "store": "에브리데이 안산역점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "안산시",
     "address": "경기 안산시 단원구 중앙대로 463 (원곡동)1층 ( 15393 )",
     "phone": "031-495-0888",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4743&type=2",
     "holidays": [
       "2026-10-10",
       "2026-10-25"
     ]
   },
   {
-    "id": "4181",
+    "sid": "590330a06a422cdb",
     "store": "에브리데이 안양관양점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "안양시",
     "address": "경기도 안양시 동안구 동편로136 제101호 ( 13928 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4181&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4101",
+    "sid": "51213c4fca2d2f66",
     "store": "에브리데이 영북점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "포천시",
     "address": "경기도 포천시 영북면 영북로178 ( 11104 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4101&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4142",
+    "sid": "2a6a7fdc4a1e80ad",
     "store": "에브리데이 오포신현2점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "광주시",
     "address": "경기도 광주시 오포읍 문형산길67 ( 12771 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4142&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4136",
+    "sid": "c01508f013bdc67a",
     "store": "에브리데이 오포신현점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "광주시",
     "address": "경기도 광주시 오포읍 새말길78 ( 12771 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4136&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4757",
+    "sid": "b1324b01e98e376a",
     "store": "에브리데이 오포점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "광주시",
     "address": "경기 광주시 신현로 12-52 (신현동)1층 ( 12771 )",
     "phone": "031-778-7226",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4757&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4770",
+    "sid": "b052166b0c5a34e5",
     "store": "에브리데이 용인보라점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "용인시",
     "address": "경기 용인시 기흥구 한보라2로 271층 ( 17079 )",
     "phone": "031-286-9990",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4770&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4767",
+    "sid": "7666edf0981790dd",
     "store": "에브리데이 용인상하점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "용인시",
     "address": "경기 용인시 기흥구 중부대로788번길 9 (상하동)1층 ( 17077 )",
     "phone": "031-546-5985",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4767&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4740",
+    "sid": "e92475db11b31b29",
     "store": "에브리데이 용인수지점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "용인시",
     "address": "경기 용인시 수지구 수풍로 65 (풍덕천동)지하1층 ( 16820 )",
     "phone": "031-548-0299",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4740&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4096",
+    "sid": "d6d9e1728faee189",
     "store": "에브리데이 용현동점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "의정부시",
     "address": "경기도 의정부시 오목로35번길20 ( 11789 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4096&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4056",
+    "sid": "c675f6880f07039b",
     "store": "에브리데이 월피동점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "안산시",
     "address": "경기도 안산시 상록구 광덕산2로28 ( 15258 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4056&type=2",
     "holidays": [
       "2026-10-10",
       "2026-10-25"
     ]
   },
   {
-    "id": "4233",
+    "sid": "b886b80c264ed1c2",
     "store": "에브리데이 의정부호원점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "의정부시",
     "address": "경기 의정부시 평화로 196 (호원동, 신일엘리시움)1층, 115호 ( 11712 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4233&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4066",
+    "sid": "f7fcd3edc18e4ce5",
     "store": "에브리데이 이매동점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "성남시",
     "address": "경기도 성남시 분당구 양현로94번길29 이매촌청구아파트 ( 13568 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4066&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4121",
+    "sid": "e56d52d2b3825737",
     "store": "에브리데이 이천갈산점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "이천시",
     "address": "경기도 이천시 안흥로70 ( 17359 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4121&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4236",
+    "sid": "70a3c02ff2d19a1a",
     "store": "에브리데이 이천부발점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "이천시",
     "address": "경기 이천시 부발읍 경충대로 2269 (신하리, 롯데프라자)1층 ( 17328 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4236&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4068",
+    "sid": "68cb3ecd70991461",
     "store": "에브리데이 이천점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "이천시",
     "address": "경기도 이천시 중리천로18 ( 17375 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4068&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4738",
+    "sid": "535e648ac313ab52",
     "store": "에브리데이 인덕원자이SK점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "의왕시",
     "address": "경기 의왕시 내손중앙로 68 (내손동)1층 ( 16031 )",
     "phone": "031-360-0118",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4738&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4088",
+    "sid": "a22c1d6a30185347",
     "store": "에브리데이 일산2호점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "고양시",
     "address": "경기도 고양시 일산서구 일청로46 ( 10342 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4088&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4063",
+    "sid": "c2ed938dc211da1d",
     "store": "에브리데이 장현점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "시흥시",
     "address": "경기도 시흥시 새재로17번길3 ( 14998 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4063&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4024",
+    "sid": "e5cb499c8c4ace3a",
     "store": "에브리데이 죽전점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "용인시",
     "address": "경기도 용인시 수지구 대지로3번길 51 ( 16868 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4024&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4091",
+    "sid": "e30fa30c5f5e6148",
     "store": "에브리데이 탄현역점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "고양시",
     "address": "경기도 고양시 일산서구 일현로 97-11 일산 위브더제니스 ( 10242 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4091&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4090",
+    "sid": "695b95a6e05164b2",
     "store": "에브리데이 통일동산점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "파주시",
     "address": "경기도 파주시 탄현면 사슴벌레로73번길51 ( 10861 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4090&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4240",
+    "sid": "4f78b296abad52e4",
     "store": "에브리데이 파주와동점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "파주시",
     "address": "경기 파주시 가람로 121-6 (와동동)1층 ( 10869 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4240&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4126",
+    "sid": "7bda6698e910954e",
     "store": "에브리데이 평내점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "남양주시",
     "address": "경기도 남양주시 경춘로1256번길34 ( 12225 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4126&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4209",
+    "sid": "1ba2bc942209fee5",
     "store": "에브리데이 평택동삭점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "평택시",
     "address": "경기도 평택시 상서재로2길56 해밀프라자 102호, 103호, 109~113호 ( 18032 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4209&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4146",
+    "sid": "a58d3d7bd9e71e84",
     "store": "에브리데이 평택비전점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "평택시",
     "address": "경기도 평택시 비전2로73 ( 17851 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4146&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4769",
+    "sid": "2ed65591ac0af765",
     "store": "에브리데이 평택용죽점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "평택시",
     "address": "경기 평택시 용죽2로 32-521층 ( 17870 )",
     "phone": "031-656-0988",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4769&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4745",
+    "sid": "28aced7bb0cb983d",
     "store": "에브리데이 풍무2점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "김포시",
     "address": "경기 김포시 풍무로 64 (풍무동)1층 ( 10120 )",
     "phone": "031-986-1621",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4745&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4222",
+    "sid": "f2eaf13df1672297",
     "store": "에브리데이 하남감일점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "하남시",
     "address": "경기도 하남시 감일중앙로80 지하 1층,B012,B023호 ( 12999 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4222&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4053",
+    "sid": "c517abb813f162e5",
     "store": "에브리데이 하안동점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "광명시",
     "address": "경기도 광명시 하안로288번길15 조일프라자빌딩 ( 14306 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4053&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4205",
+    "sid": "211784f598bd0ba3",
     "store": "에브리데이 거제상동점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상남도",
     "sigungu": "거제시",
     "address": "경상남도 거제시 상동동263-3 ( 53290 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4205&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4118",
+    "sid": "c95789fb57c5e639",
     "store": "에브리데이 거제수월점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상남도",
     "sigungu": "거제시",
     "address": "경상남도 거제시 수양로448-29 ( 53237 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4118&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4184",
+    "sid": "4bdb224f47ab33af",
     "store": "에브리데이 경산무학점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상북도",
     "sigungu": "경산시",
     "address": "경상북도 경산시 하양읍 서사도리4로8 제1층 제101호, 제2층 제201호 ( 38699 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4184&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4709",
+    "sid": "868e70d175a00312",
     "store": "에브리데이 경주용강점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상북도",
     "sigungu": "경주시",
     "address": "경상북도 경주시 용강동 다불로9 ( 38090 )",
     "phone": "054-744-8011",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4709&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4080",
+    "sid": "2bc79dfd1f363ab5",
     "store": "에브리데이 구미구평점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상북도",
     "sigungu": "구미시",
     "address": "경상북도 구미시 인동가산로308 ( 39445 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4080&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4119",
+    "sid": "e4bd126f417ca0fb",
     "store": "에브리데이 구미봉곡점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상북도",
     "sigungu": "구미시",
     "address": "경상북도 구미시 봉곡로24길14 ( 39205 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4119&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4143",
+    "sid": "98bb6015972550f8",
     "store": "에브리데이 김해율하점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상남도",
     "sigungu": "김해시",
     "address": "경상남도 김해시 율하2로140 ( 51017 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4143&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4013",
+    "sid": "2015d66144fb4b97",
     "store": "에브리데이 김해점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상남도",
     "sigungu": "김해시",
     "address": "경상남도 김해시 가야로38번길10 ( 50896 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4013&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4011",
+    "sid": "321289279a71b89f",
     "store": "에브리데이 성주점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상북도",
     "sigungu": "성주군",
     "address": "경상북도 성주군 성주읍 성주로3246 ( 40028 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4011&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4082",
+    "sid": "5dacfac35d8c6c5a",
     "store": "에브리데이 양산물금점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상남도",
     "sigungu": "양산시",
     "address": "경상남도 양산시 물금읍 야리로45 ( 50653 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4082&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4753",
+    "sid": "f67f0c3f60fd1e6b",
     "store": "에브리데이 양산석산점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상남도",
     "sigungu": "양산시",
     "address": "경남 양산시 동면 금오13길 52 (석산리)1층 ( 50650 )",
     "phone": "055-781-1009",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4753&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4019",
+    "sid": "92cf7c28e5e42598",
     "store": "에브리데이 연일점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상북도",
     "sigungu": "포항시",
     "address": "경상북도 포항시 남구 연일읍 유강길17 ( 37656 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4019&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4188",
+    "sid": "a243c7565a4726a9",
     "store": "에브리데이 월영마린애시앙점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상남도",
     "sigungu": "창원시",
     "address": "경상남도 창원시 마산합포구 가포순환로33 상가1동 1층 101,105,106호 ( 51754 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4188&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4204",
+    "sid": "89024dfbf3da9ccd",
     "store": "에브리데이 진주가좌점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상남도",
     "sigungu": "진주시",
     "address": "경상남도 진주시 관문로10 (가좌동 2067-3) ( 52860 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4204&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4768",
+    "sid": "09c287eb05ea3509",
     "store": "에브리데이 진해경화점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상남도",
     "sigungu": "창원시",
     "address": "경남 창원시 진해구 조천북로 761층 ( 51584 )",
     "phone": "055-552-8987",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4768&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4178",
+    "sid": "2067415f9f8e41a6",
     "store": "에브리데이 창원더스퀘어점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상남도",
     "sigungu": "창원시",
     "address": "경상남도 창원시 성산구 대암로247 1층 제씨101호, 111호 ( 51471 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4178&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4199",
+    "sid": "ff6e7601f73d9a2d",
     "store": "에브리데이 포항양덕점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상북도",
     "sigungu": "포항시",
     "address": "경상북도 포항시 북구 장량중앙로49 1층 ( 37572 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4199&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4702",
+    "sid": "08f9d99178aa2f08",
     "store": "에브리데이 포항학천점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상북도",
     "sigungu": "포항시",
     "address": "경상북도 포항시 북구 흥해읍 도음로917번길46003 ( 37562 )",
     "phone": "054-261-8845",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4702&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4012",
+    "sid": "e174ffe5784ac801",
     "store": "에브리데이 형곡동점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상북도",
     "sigungu": "구미시",
     "address": "경상북도 구미시 경은로88 ( 39294 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4012&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4035",
+    "sid": "65ff0bea0c256327",
     "store": "에브리데이 동림동점",
-    "region": "광주",
     "storeType": "standard",
+    "region": "광주",
     "sido": "광주광역시",
     "sigungu": "북구",
     "address": "광주광역시 북구 북문대로242번길9 ( 61096 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4035&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4031",
+    "sid": "76ae86f162cb62f0",
     "store": "에브리데이 일곡동점",
-    "region": "광주",
     "storeType": "standard",
+    "region": "광주",
     "sido": "광주광역시",
     "sigungu": "북구",
     "address": "광주 북구 설죽로 517 (일곡동) ( 61040 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4031&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4225",
+    "sid": "aa4b8a83839d3edf",
     "store": "에브리데이 대구도남점",
-    "region": "대구",
     "storeType": "standard",
+    "region": "대구",
     "sido": "대구광역시",
     "sigungu": "북구",
     "address": "대구광역시 북구 도남중앙로7길20 -55(국우동) ( 41408 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4225&type=2",
     "holidays": [
       "2026-10-12",
       "2026-10-26"
     ]
   },
   {
-    "id": "4125",
+    "sid": "617ffac640d7fdd2",
     "store": "에브리데이 대구옥포점",
-    "region": "대구",
     "storeType": "standard",
+    "region": "대구",
     "sido": "대구광역시",
     "sigungu": "달성군",
     "address": "대구광역시 달성군 옥포읍 돌미상업로1길25 ( 42974 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4125&type=2",
     "holidays": [
       "2026-10-12",
       "2026-10-26"
     ]
   },
   {
-    "id": "4015",
+    "sid": "056c6dcc3a55eba0",
     "store": "에브리데이 방촌동점",
-    "region": "대구",
     "storeType": "standard",
+    "region": "대구",
     "sido": "대구광역시",
     "sigungu": "동구",
     "address": "대구광역시 동구 동촌로45길5 방촌동마트 ( 41145 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4015&type=2",
     "holidays": [
       "2026-10-12",
       "2026-10-26"
     ]
   },
   {
-    "id": "4749",
+    "sid": "469757a1af443cd2",
     "store": "에브리데이 대전둔산점",
-    "region": "대전",
     "storeType": "standard",
+    "region": "대전",
     "sido": "대전광역시",
     "sigungu": "서구",
     "address": "대전 서구 둔산로 201 (둔산동, 국화아파트)1층 ( 35245 )",
     "phone": "042-710-2344",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4749&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4744",
+    "sid": "552f4c84e74664bc",
     "store": "에브리데이 대전숭어리점",
-    "region": "대전",
     "storeType": "standard",
+    "region": "대전",
     "sido": "대전광역시",
     "sigungu": "서구",
     "address": "대전 서구 괴정로 30 (괴정동)1층(숭어리샘타운) ( 35290 )",
     "phone": "042-710-5515",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4744&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4771",
+    "sid": "0e0fb3c2038a94ed",
     "store": "에브리데이 대전신갈마점",
-    "region": "대전",
     "storeType": "standard",
+    "region": "대전",
     "sido": "대전광역시",
     "sigungu": "서구",
     "address": "대전 서구 신갈마로 129 (갈마동)1층 ( 35281 )",
     "phone": "042-710-7373",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4771&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4041",
+    "sid": "daa68a6df530a991",
     "store": "에브리데이 법동점",
-    "region": "대전",
     "storeType": "standard",
+    "region": "대전",
     "sido": "대전광역시",
     "sigungu": "대덕구",
     "address": "대전광역시 대덕구 동춘당로178 보람아파트 ( 34398 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4041&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4231",
+    "sid": "15fc7ce93510835c",
     "store": "에브리데이 신탄진점",
-    "region": "대전",
     "storeType": "standard",
+    "region": "대전",
     "sido": "대전광역시",
     "sigungu": "대덕구",
     "address": "대전광역시 대덕구 대청로62 ( 34308 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4231&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4232",
+    "sid": "00f0078f9fb0d827",
     "store": "에브리데이 용방점",
-    "region": "대전",
     "storeType": "standard",
+    "region": "대전",
     "sido": "대전광역시",
     "sigungu": "동구",
     "address": "대전광역시 동구 계족로140번길183 1층 ( 34526 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4232&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4138",
+    "sid": "e117293fb7c1b5b0",
     "store": "에브리데이 부산구포점",
-    "region": "부산",
     "storeType": "standard",
+    "region": "부산",
     "sido": "부산광역시",
     "sigungu": "북구",
     "address": "부산광역시 북구 시랑로128 ( 46644 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4138&type=2",
     "holidays": [
       "2026-10-12",
       "2026-10-26"
     ]
   },
   {
-    "id": "4229",
+    "sid": "ae6b881f02651296",
     "store": "에브리데이 부산반여점",
-    "region": "부산",
     "storeType": "standard",
+    "region": "부산",
     "sido": "부산광역시",
     "sigungu": "해운대구",
     "address": "부산 해운대구 선수촌로 65-7 (반여동)외 3필지 ( 48038 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4229&type=2",
     "holidays": [
       "2026-10-12",
       "2026-10-26"
     ]
   },
   {
-    "id": "4161",
+    "sid": "af0a1fbb89fe8987",
     "store": "에브리데이 부산일광점",
-    "region": "부산",
     "storeType": "standard",
+    "region": "부산",
     "sido": "부산광역시",
     "sigungu": "기장군",
     "address": "부산 기장군 일광읍 해빛로 39-22 (삼성리)1층 ( 46048 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4161&type=2",
     "holidays": [
       "2026-10-12",
       "2026-10-26"
     ]
   },
   {
-    "id": "4162",
+    "sid": "e45a95715255fee0",
     "store": "에브리데이 오션시티점",
-    "region": "부산",
     "storeType": "standard",
+    "region": "부산",
     "sido": "부산광역시",
     "sigungu": "강서구",
     "address": "부산광역시 강서구 명지오션시티4로68 ( 46765 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4162&type=2",
     "holidays": [
       "2026-10-12",
       "2026-10-26"
     ]
   },
   {
-    "id": "4077",
+    "sid": "f946cf839a684e28",
     "store": "에브리데이 정관점",
-    "region": "부산",
     "storeType": "standard",
+    "region": "부산",
     "sido": "부산광역시",
     "sigungu": "기장군",
     "address": "부산광역시 기장군 정관읍 정관로696-27 ( 46021 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4077&type=2",
     "holidays": [
       "2026-10-12",
       "2026-10-26"
     ]
   },
   {
-    "id": "4733",
+    "sid": "083c1c58a17b2f25",
     "store": "에브리데이 가락동점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "송파구",
     "address": "서울 송파구 중대로9길 35 (가락동)1층 ( 05711 )",
     "phone": "02-848-3651",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4733&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4052",
+    "sid": "60dffc12b99b3728",
     "store": "에브리데이 가양동점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "강서구",
     "address": "서울특별시 강서구 허준로121 대림경동아파트 ( 07525 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4052&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4208",
+    "sid": "29c538036123c8bc",
     "store": "에브리데이 가양역점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "강서구",
     "address": "서울특별시 강서구 양천로476 1층 (등촌동, 금부빌딩) ( 07575 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4208&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4191",
+    "sid": "f1d3c5d2975a4eab",
     "store": "에브리데이 강남시장점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "강남구",
     "address": "서울특별시 강남구 압구정로2길46 ( 06034 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4191&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4055",
+    "sid": "3e6fa060d043298d",
     "store": "에브리데이 개봉동점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "구로구",
     "address": "서울특별시 구로구 개봉로17길34 중앙시장 ( 08337 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4055&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4206",
+    "sid": "145519f3efa8df26",
     "store": "에브리데이 개포래미안포레점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "강남구",
     "address": "서울특별시 강남구 언주로7길6 개포자이르네 상가 지하1층 B101호, B105호 ( 06310 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4206&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4219",
+    "sid": "9f0f64ab8db662d2",
     "store": "에브리데이 개포자이점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "강남구",
     "address": "서울특별시 강남구 삼성로14 개포자이스퀘어 B110,B111,B117,B118호 ( 06331 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4219&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4016",
+    "sid": "90370cc7696b9d8d",
     "store": "에브리데이 개포점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "강남구",
     "address": "서울특별시 강남구 개포로 623 대청타워 ( 06336 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4016&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4159",
+    "sid": "7df15ff5ccc780d7",
     "store": "에브리데이 고덕강일점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "강동구",
     "address": "서울특별시 강동구 아리수로93나길38 아이프라자 B1 ( 05415 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4159&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4036",
+    "sid": "0603737250ef0ac8",
     "store": "에브리데이 공릉동점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "노원구",
     "address": "서울특별시 노원구 노원로1길 67 대덕프라자 ( 01827 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4036&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4164",
+    "sid": "3f7e3fd930315261",
     "store": "에브리데이 광나루역점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "광진구",
     "address": "서울특별시 광진구 아차산로599 지하1층 105호~109호 ( 04968 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4164&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4754",
+    "sid": "b50f1eab40e0f3f5",
     "store": "에브리데이 광장점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "광진구",
     "address": "서울 광진구 아차산로 506 (광장동, 은석)1층 ( 04974 )",
     "phone": "02-6953-1865",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4754&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4183",
+    "sid": "e8deebea91156460",
     "store": "에브리데이 구로항동점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "구로구",
     "address": "서울특별시 구로구 서해안로2124 111, 112, 113, 114호 ( 08368 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4183&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4212",
+    "sid": "2b130be04f5f8c1a",
     "store": "에브리데이 길음점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "성북구",
     "address": "서울특별시 성북구 길음로7길6 길음뉴타운상가동 제비 1-4,5,6,7,8호 ( 02721 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4212&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4201",
+    "sid": "1ebaf01ffd4d9f8b",
     "store": "에브리데이 남가좌점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "서대문구",
     "address": "서울특별시 서대문구 수색로2길39 지하1층 B105-1,105-2호 ( 03712 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4201&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4017",
+    "sid": "573a960140db5e89",
     "store": "에브리데이 남부터미널점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "서초구",
     "address": "서울특별시 서초구 효령로68길74 한진택배 ( 06721 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4017&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4039",
+    "sid": "10f0ea27c4b8d07c",
     "store": "에브리데이 답십리점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "동대문구",
     "address": "서울특별시 동대문구 고미술로49 ( 02604 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4039&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4185",
+    "sid": "9c9e2d58b4916c2a",
     "store": "에브리데이 당고개역점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "노원구",
     "address": "서울특별시 노원구 덕릉로126길2 B102호~B103호 ( 01644 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4185&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4002",
+    "sid": "bde44a760e26f9bd",
     "store": "에브리데이 대방동점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "동작구",
     "address": "서울특별시 동작구 상도로 81 대방동크리닉센타 ( 06953 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4002&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4180",
+    "sid": "84e1d5cfe474658b",
     "store": "에브리데이 대치은마점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "강남구",
     "address": "서울특별시 강남구 삼성로212 편의시설동 103호 ( 06284 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4180&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4761",
+    "sid": "bf39d0cfd9b71f1f",
     "store": "에브리데이 도봉아테라점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "도봉구",
     "address": "서울 도봉구 마들로 708 (도봉동, 도봉 아테라)도봉 아테라아파트 상가 ( 01325 )",
     "phone": "02-6951-1044",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4761&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4044",
+    "sid": "c978a6b72fde9c3b",
     "store": "에브리데이 도봉점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "도봉구",
     "address": "서울특별시 도봉구 도봉로180길38 ( 01320 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4044&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4237",
+    "sid": "5316f2f89cb399d6",
     "store": "에브리데이 둔촌포레온점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "강동구",
     "address": "서울 강동구 양재대로 1300 (둔촌동, 올림픽파크포레온)포레온스테이션9 지하 1층 ( 05410 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4237&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4216",
+    "sid": "c34ec5fcdccb7e7e",
     "store": "에브리데이 등촌점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "강서구",
     "address": "서울특별시 강서구 공항대로41길34 ( 07587 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4216&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4170",
+    "sid": "edc0e113d742d492",
     "store": "에브리데이 래미안리더스원점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "서초구",
     "address": "서울특별시 서초구 사임당로158 ( 06629 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4170&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4037",
+    "sid": "0f66abf37f603628",
     "store": "에브리데이 면목동점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "중랑구",
     "address": "서울특별시 중랑구 면목로39길11 카멜리아쇼핑센타 ( 02239 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4037&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4190",
+    "sid": "ae18f6437b56d62b",
     "store": "에브리데이 명지대점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "서대문구",
     "address": "서울특별시 서대문구 거북골로34 명지대인문캠퍼스 MCC관 상가1층 ( 03674 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4190&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4173",
+    "sid": "d8b4fb40df30ea2e",
     "store": "에브리데이 목동역점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "양천구",
     "address": "서울특별시 양천구 목동로183 1층 ( 08022 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4173&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4731",
+    "sid": "8fd7fecf2227af92",
     "store": "에브리데이 목동점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "양천구",
     "address": "서울 양천구 목동서로 130 (목동, 목동신시가지아파트4단지)1층 ( 07989 )",
     "phone": "02-2646-4331",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4731&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4732",
+    "sid": "2bca883cb0afc89d",
     "store": "에브리데이 목동중앙점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "양천구",
     "address": "서울 양천구 목동동로 411 (목동, 부영그린타운3차)1층 ( 07984 )",
     "phone": "02-2062-8683",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4732&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4223",
+    "sid": "842d195ed7aa5ad8",
     "store": "에브리데이 무악재점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "서대문구",
     "address": "서울특별시 서대문구 통일로339 101동 B201~207 , B105호 ( 03731 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4223&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4025",
+    "sid": "61e4fbac2c7a5aa2",
     "store": "에브리데이 미아동점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "강북구",
     "address": "서울특별시 강북구 도봉로157 두원프라자 ( 01171 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4025&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4724",
+    "sid": "dffb58875e2a1cfa",
     "store": "에브리데이 방배그랑자이점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "서초구",
     "address": "서울 서초구 방배로 21 (방배동, 방배그랑자이)101호 ( 06703 )",
     "phone": "02-6953-7112",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4724&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4040",
+    "sid": "185d6da353681e2b",
     "store": "에브리데이 번동점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "강북구",
     "address": "서울특별시 강북구 오현로32길18 ( 01224 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4040&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4728",
+    "sid": "294c93c9854021e9",
     "store": "에브리데이 봉천동점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "관악구",
     "address": "서울 관악구 은천로 51 (봉천동, 은호빌딩)1층 ( 08716 )",
     "phone": "02-3285-3651",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4728&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4010",
+    "sid": "9837c01cf3086ae5",
     "store": "에브리데이 사당동점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "동작구",
     "address": "서울특별시 동작구 동작대로29길110 신동아아파트 ( 06998 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4010&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4746",
+    "sid": "c39e267cf7945b83",
     "store": "에브리데이 상계역점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "노원구",
     "address": "서울 노원구 덕릉로 690 (중계동)1층 ( 01715 )",
     "phone": "02-2039-2687",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4746&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4730",
+    "sid": "adb6e910424e35a3",
     "store": "에브리데이 상도동점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "동작구",
     "address": "서울 동작구 상도로31길 19 (상도동, 브라운스톤상도아파트)1층 ( 06921 )",
     "phone": "02-951-5930",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4730&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4008",
+    "sid": "2076301fdb8f7fff",
     "store": "에브리데이 서초그랑자이점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "서초구",
     "address": "서울특별시 서초구 효령로403 서초그랑자이상가 지하1층 ( 06630 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4008&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4198",
+    "sid": "f6de0f6586a3bf6c",
     "store": "에브리데이 서초내곡점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "서초구",
     "address": "서울특별시 서초구 청계산로9길70 내곡에스에이치플라자 ( 06800 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4198&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4005",
+    "sid": "221327ce175c5280",
     "store": "에브리데이 서초동점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "서초구",
     "address": "서울특별시 서초구 서운로216 GDA주니어스쿨 ( 06609 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4005&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4157",
+    "sid": "a5a0157ca1e7e415",
     "store": "에브리데이 서초센트럴점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "서초구",
     "address": "서울특별시 서초구 반포대로18길36 판매시설 112~3호 ( 06652 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4157&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4027",
+    "sid": "a676423d82335ac2",
     "store": "에브리데이 성북동점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "성북구",
     "address": "서울특별시 성북구 성북로 122 하나은행 ( 02837 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4027&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4154",
+    "sid": "e194c14e6cdda2f4",
     "store": "에브리데이 송파점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "송파구",
     "address": "서울특별시 송파구 송파대로 3451블록 A동 지하1층, 149호(가락동, 송파헬리오시티) ( 05698 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4154&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4773",
+    "sid": "40927ea52181b61b",
     "store": "에브리데이 수색아트포레점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "은평구",
     "address": "서울 은평구 은평터널로 27 (수색동, DMC아트포레자이)DMC아트포레자이아파트 상가 1층 ( 03490 )",
     "phone": "02-6952-4442",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4773&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4241",
+    "sid": "80bb2bc27353fa83",
     "store": "에브리데이 수유시장점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "강북구",
     "address": "서울 강북구 도봉로67길 18 (수유동, 수유시장)1층 ( 01117 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4241&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4235",
+    "sid": "77eed695f6d5b2e5",
     "store": "에브리데이 신풍역점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "영등포구",
     "address": "서울 영등포구 신풍로 28 (신길동, 비스타동원)지하1층 ( 07430 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4235&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4026",
+    "sid": "bbfe4af143715764",
     "store": "에브리데이 쌍문동점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "도봉구",
     "address": "서울특별시 도봉구 삼양로610 산수디앤씨 ( 01366 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4026&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4759",
+    "sid": "d10ec882931abbec",
     "store": "에브리데이 양재역점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "서초구",
     "address": "서울 서초구 남부순환로356길 491층 ( 06742 )",
     "phone": "02-529-1400",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4759&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4043",
+    "sid": "ea5e7a3134b58a3c",
     "store": "에브리데이 양재점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "서초구",
     "address": "서울특별시 서초구 동산로2길16 ( 06787 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4043&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4224",
+    "sid": "a13a12badbdf0777",
     "store": "에브리데이 영등포구청역점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "영등포구",
     "address": "서울특별시 영등포구 당산로83 1층 102,103호 ( 07264 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4224&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4009",
+    "sid": "75b6ae38b91137a6",
     "store": "에브리데이 올림픽점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "송파구",
     "address": "서울특별시 송파구 양재대로1222 올림픽프라자 ( 05648 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4009&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4020",
+    "sid": "dca679a1fb6782c8",
     "store": "에브리데이 우면점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "서초구",
     "address": "서울특별시 서초구 태봉로60 1층 ( 06764 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4020&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4226",
+    "sid": "1ab725838a4b8f25",
     "store": "에브리데이 은평수색점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "은평구",
     "address": "서울 은평구 수색로 322 (수색동)일원 DMC SKVIEW 아이파크포레단지상가 ( 03488 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4226&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4719",
+    "sid": "6ec3e4a7ca8ca034",
     "store": "에브리데이 은평진관점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "은평구",
     "address": "서울 은평구 진관3로 37 (진관동, 은평구 뉴타운2지구 에코테라스)뉴타운2차구 에코테라스 101,126호 ( 03301 )",
     "phone": "02-6951-5887",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4719&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4176",
+    "sid": "74dddd67f6a53973",
     "store": "에브리데이 이문점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "동대문구",
     "address": "서울특별시 동대문구 이문로136 지하1층 마트호 ( 02418 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4176&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4220",
+    "sid": "e98a7aa2da486429",
     "store": "에브리데이 이수점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "동작구",
     "address": "서울특별시 동작구 사당로300 제2지1층 제비101호, 제지하2층 제비 204호 ( 07013 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4220&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4734",
+    "sid": "feb58a877ac9575a",
     "store": "에브리데이 이태원점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "용산구",
     "address": "서울 용산구 회나무로13길 20-4 (이태원동, 일각빌딩)1층 ( 04344 )",
     "phone": "02-6956-6181",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4734&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4741",
+    "sid": "6741313962c5ba5f",
     "store": "에브리데이 자곡점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "강남구",
     "address": "서울 강남구 자곡로 106 (자곡동, S-플라자)1층 ( 06373 )",
     "phone": "02-2039-2239",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4741&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4242",
+    "sid": "b1dceb790ec5d563",
     "store": "에브리데이 잠실리센츠점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "송파구",
     "address": "서울 송파구 올림픽로 145 (잠실동, 리센츠)리센츠상가 지하1층 ( 05502 )",
     "phone": "02-2039-5141",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4242&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4239",
+    "sid": "5085f79b116a0509",
     "store": "에브리데이 잠원메이플자이점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "서초구",
     "address": "서울 서초구 잠원로4길 50 (잠원동, 메이플 자이 근린생활시설)지하1층 ( 06522 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4239&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4042",
+    "sid": "03ab1723f07797a4",
     "store": "에브리데이 중계동점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "노원구",
     "address": "서울특별시 노원구 중계로12길39 이연아마빌레 ( 01726 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4042&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4028",
+    "sid": "a8507493d1c7d53c",
     "store": "에브리데이 중곡동점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "광진구",
     "address": "서울특별시 광진구 긴고랑로11길11 ( 04910 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4028&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4750",
+    "sid": "933205ba6dee89ce",
     "store": "에브리데이 중화리버센SK점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "중랑구",
     "address": "서울 중랑구 중랑천로 200 (중화동, 리버센 SK VIEW 롯데캐슬)1층 ( 02016 )",
     "phone": "02-6949-0204",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4750&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4034",
+    "sid": "4a44cf1d15995bd1",
     "store": "에브리데이 창동점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "도봉구",
     "address": "서울특별시 도봉구 도봉로104길53 ( 01460 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4034&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4238",
+    "sid": "86212abe12c8f7db",
     "store": "에브리데이 평택고덕점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "경기도",
     "sigungu": "평택시",
     "address": "경기 평택시 고덕국제대로 77브리티시상가 지하1층 ( 18018 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4238&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4228",
+    "sid": "fbb3b2aba27e3d1b",
     "store": "에브리데이 행당점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "성동구",
     "address": "서울 성동구 고산자로6길 40 (행당동, 행당동 레몬프라자)1층 101호, 102호 ( 04745 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4228&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4171",
+    "sid": "b0ce4c124240d36f",
     "store": "에브리데이 홍은점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "서대문구",
     "address": "서울특별시 서대문구 홍은중앙로89 ( 03604 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4171&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4049",
+    "sid": "4306cd81012f20e1",
     "store": "에브리데이 화곡동점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "강서구",
     "address": "서울특별시 강서구 화곡로274 크라운뷰, 크라운타워 ( 07663 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4049&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4739",
+    "sid": "d21563f0eb3ce7f4",
     "store": "에브리데이 휘경자이점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "동대문구",
     "address": "서울 동대문구 외대역동로 63-27 (휘경동, 휘경자이디센시아)1층 ( 02431 )",
     "phone": "02-2039-7929",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4739&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4006",
+    "sid": "21bbf52fbad35e3a",
     "store": "에브리데이 흑석동점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "동작구",
     "address": "서울특별시 동작구 서달로158 명수대아파트 ( 06979 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4006&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4758",
+    "sid": "b02e2b73f69b9203",
     "store": "에브리데이 세종고운점",
-    "region": "세종",
     "storeType": "standard",
+    "region": "세종",
     "sido": "세종특별자치시",
     "sigungu": "",
     "address": "세종특별자치시 마음안1로 155 (고운동, 성진프라자)1층 ( 30062 )",
     "phone": "044-715-7959",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4758&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4140",
+    "sid": "d54f52a37c1614e2",
     "store": "에브리데이 세종다정점",
-    "region": "세종",
     "storeType": "standard",
+    "region": "세종",
     "sido": "세종특별자치시",
     "sigungu": "",
     "address": "세종특별자치시 다정중앙로53 ( 30124 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4140&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4751",
+    "sid": "36ef026acf560e68",
     "store": "에브리데이 세종도담점",
-    "region": "세종",
     "storeType": "standard",
+    "region": "세종",
     "sido": "세종특별자치시",
     "sigungu": "",
     "address": "세종특별자치시 보람로 96 (도담동, 도램마을20단지)상가동 1층 ( 30098 )",
     "phone": "044-417-6003",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4751&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4721",
+    "sid": "088588b0ec952217",
     "store": "에브리데이 세종소담점",
-    "region": "세종",
     "storeType": "standard",
+    "region": "세종",
     "sido": "세종특별자치시",
     "sigungu": "",
     "address": "세종특별자치시 시청대로 236 (소담동, 새샘마을3단지)150~156호 ( 30151 )",
     "phone": "044-715-7151",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4721&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4752",
+    "sid": "129ebd2ea0d8a937",
     "store": "에브리데이 세종종촌점",
-    "region": "세종",
     "storeType": "standard",
+    "region": "세종",
     "sido": "세종특별자치시",
     "sigungu": "",
     "address": "세종특별자치시 도움3로 105-6 (종촌동, 스마트빌딩)1층 ( 30064 )",
     "phone": "044-868-6441",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4752&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4139",
+    "sid": "f019432c3692a169",
     "store": "에브리데이 울산무거점",
-    "region": "울산",
     "storeType": "standard",
+    "region": "울산",
     "sido": "울산광역시",
     "sigungu": "남구",
     "address": "울산광역시 남구 신복로72번길45836 ( 44600 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4139&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-25"
     ]
   },
   {
-    "id": "4124",
+    "sid": "477ead2bde95f360",
     "store": "에브리데이 울산야음점",
-    "region": "울산",
     "storeType": "standard",
+    "region": "울산",
     "sido": "울산광역시",
     "sigungu": "남구",
     "address": "울산광역시 남구 대암로69 107동 B101호 ( 44733 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4124&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-25"
     ]
   },
   {
-    "id": "4062",
+    "sid": "1be52b1db16070f7",
     "store": "에브리데이 경서점",
-    "region": "인천",
     "storeType": "standard",
+    "region": "인천",
     "sido": "인천광역시",
     "sigungu": "서해구",
     "address": "인천 서해구 푸른로7번안길 4 (청라동, 이마트 에브리데이 경서점)1층 ( 22765 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4062&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4059",
+    "sid": "eec483a018caa0d8",
     "store": "에브리데이 동양점",
-    "region": "인천",
     "storeType": "standard",
+    "region": "인천",
     "sido": "인천광역시",
     "sigungu": "계양구",
     "address": "인천광역시 계양구 당미길23 ( 21012 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4059&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4064",
+    "sid": "7cb4cbd8452928e9",
     "store": "에브리데이 서창2점",
-    "region": "인천",
     "storeType": "standard",
+    "region": "인천",
     "sido": "인천광역시",
     "sigungu": "남동구",
     "address": "인천광역시 남동구 서창남순환로215번길20 ( 21607 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4064&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4057",
+    "sid": "f7e006f4e93f960d",
     "store": "에브리데이 서창동점",
-    "region": "인천",
     "storeType": "standard",
+    "region": "인천",
     "sido": "인천광역시",
     "sigungu": "남동구",
     "address": "인천광역시 남동구 독곡로51 ( 21607 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4057&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4196",
+    "sid": "ba180673c6f3cb42",
     "store": "에브리데이 인천SK리더스뷰점",
-    "region": "인천",
     "storeType": "standard",
+    "region": "인천",
     "sido": "인천광역시",
     "sigungu": "서해구",
     "address": "인천 서해구 가정로 437 (가정동, 루원시티 SK Leaders' VIEW)1층 ( 22775 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4196&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4175",
+    "sid": "8ef650a9d71353cd",
     "store": "에브리데이 인천논현점",
-    "region": "인천",
     "storeType": "standard",
+    "region": "인천",
     "sido": "인천광역시",
     "sigungu": "남동구",
     "address": "인천광역시 남동구 앵고개로847번길56 101~106호 ( 21679 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4175&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4174",
+    "sid": "6a3af9bae8bb96af",
     "store": "에브리데이 인천대입구역점",
-    "region": "인천",
     "storeType": "standard",
+    "region": "인천",
     "sido": "인천광역시",
     "sigungu": "연수구",
     "address": "인천광역시 연수구 벤처로10 B동 102, 103, 104호 ( 22011 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4174&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4163",
+    "sid": "324b62a6334bd06f",
     "store": "에브리데이 인천도화점",
-    "region": "인천",
     "storeType": "standard",
+    "region": "인천",
     "sido": "인천광역시",
     "sigungu": "미추홀구",
     "address": "인천광역시 미추홀구 숙골로88번길12 더샵인천스카이타워1단지 제 110동 제지1층 제비-20호 ( 22101 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4163&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4158",
+    "sid": "f427969beec423ad",
     "store": "에브리데이 인천송도점",
-    "region": "인천",
     "storeType": "standard",
+    "region": "인천",
     "sido": "인천광역시",
     "sigungu": "연수구",
     "address": "인천광역시 연수구 센트럴로415 1층 199호 ( 22020 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4158&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4203",
+    "sid": "04a52473be27c0f6",
     "store": "에브리데이 인천영종점",
-    "region": "인천",
     "storeType": "standard",
+    "region": "인천",
     "sido": "인천광역시",
     "sigungu": "영종구",
     "address": "인천 영종구 흰바위로 284 (운남동, 디딤돌프라자)1층 ( 23244 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4203&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4737",
+    "sid": "a0750fe6837e8f0c",
     "store": "에브리데이 인천청라점",
-    "region": "인천",
     "storeType": "standard",
+    "region": "인천",
     "sido": "인천광역시",
     "sigungu": "서해구",
     "address": "인천 서해구 중봉대로586번길 22 (청라동, 청라 엑슬루타워)엑슬루타워상가B동 1층 ( 22737 )",
     "phone": "032-716-6076",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4737&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4755",
+    "sid": "33d7dd22b442fde6",
     "store": "에브리데이 인천효성점",
-    "region": "인천",
     "storeType": "standard",
+    "region": "인천",
     "sido": "인천광역시",
     "sigungu": "계양구",
     "address": "인천 계양구 마장로544번길 10 (효성동, 제일풍경채계양위너스카이1단지)1층 ( 21105 )",
     "phone": "032-716-5737",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4755&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4060",
+    "sid": "14865bbcbb4cdaa6",
     "store": "에브리데이 작전점",
-    "region": "인천",
     "storeType": "standard",
+    "region": "인천",
     "sido": "인천광역시",
     "sigungu": "계양구",
     "address": "인천광역시 계양구 효서로348-1 ( 21127 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4060&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4766",
+    "sid": "6e30135893a96428",
     "store": "에브리데이 청라파크자이점",
-    "region": "인천",
     "storeType": "standard",
+    "region": "인천",
     "sido": "인천광역시",
     "sigungu": "서해구",
     "address": "인천 서해구 보석로 44 (청라동, 태영빌딩)1층 ( 22766 )",
     "phone": "032-710-6006",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4766&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4030",
+    "sid": "1c20d621799367c8",
     "store": "에브리데이 고흥점",
-    "region": "전라",
     "storeType": "standard",
+    "region": "전라",
     "sido": "전라남도",
     "sigungu": "고흥군",
     "address": "전라남도 고흥군 고흥읍 고흥로1871 ( 59535 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4030&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4032",
+    "sid": "6eb86778ceb0bef0",
     "store": "에브리데이 나운동점",
-    "region": "전라",
     "storeType": "standard",
+    "region": "전라",
     "sido": "전북특별자치도",
     "sigungu": "군산시",
     "address": "전북특별자치도 군산시 하나운로 32 (나운동, 세경아파트 상가)지하1층 ( 54144 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4032&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4111",
+    "sid": "cec231d2c3a044bb",
     "store": "에브리데이 나주혁신점",
-    "region": "전라",
     "storeType": "standard",
+    "region": "전라",
     "sido": "전라남도",
     "sigungu": "나주시",
     "address": "전라남도 나주시 그린로200 ( 58329 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4111&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4202",
+    "sid": "6cff6df1dbf43c17",
     "store": "에브리데이 무안오룡점",
-    "region": "전라",
     "storeType": "standard",
+    "region": "전라",
     "sido": "전라남도",
     "sigungu": "무안군",
     "address": "전라남도 무안군 일로읍 오남로1길9 ( 58581 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4202&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4168",
+    "sid": "6832beb6651b2a56",
     "store": "에브리데이 임실점",
-    "region": "전라",
     "storeType": "standard",
+    "region": "전라",
     "sido": "전북특별자치도",
     "sigungu": "임실군",
     "address": "전북특별자치도 임실군 임실읍 운수로 33 (이도리, 정마트)(외2필지) ( 55927 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4168&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4108",
+    "sid": "55417f4535a0d40b",
     "store": "에브리데이 전주혁신점",
-    "region": "전라",
     "storeType": "standard",
+    "region": "전라",
     "sido": "전북특별자치도",
     "sigungu": "완주군",
     "address": "전북특별자치도 완주군 이서면 출판로 26-7 (갈산리)1층 ( 55365 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4108&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4712",
+    "sid": "5d862e579b67e8e4",
     "store": "에브리데이 전주휴먼시아점",
-    "region": "전라",
     "storeType": "standard",
+    "region": "전라",
     "sido": "전북특별자치도",
     "sigungu": "전주시",
     "address": "전북특별자치도 전주시 완산구 호암로 69 (효자동2가)1층 ( 55062 )",
     "phone": "063-229-4199",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4712&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4033",
+    "sid": "b548475e03049792",
     "store": "에브리데이 평화동점",
-    "region": "전라",
     "storeType": "standard",
+    "region": "전라",
     "sido": "전북특별자치도",
     "sigungu": "전주시",
     "address": "전북특별자치도 전주시 완산구 평화로 131 (평화동2가, 우리동네할인마트킴스마트)1층 ( 55123 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4033&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4029",
+    "sid": "066d3a9f85fdc125",
     "store": "에브리데이 모충동점",
-    "region": "충청",
     "storeType": "standard",
+    "region": "충청",
     "sido": "충청북도",
     "sigungu": "청주시",
     "address": "충청북도 청주시 서원구 남들로44 ( 28679 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4029&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4128",
+    "sid": "0b7901931306f0d5",
     "store": "에브리데이 서산예천점",
-    "region": "충청",
     "storeType": "standard",
+    "region": "충청",
     "sido": "충청남도",
     "sigungu": "서산시",
     "address": "충청남도 서산시 동서1로230 ( 31998 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4128&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4141",
+    "sid": "4fab1ba91febbe91",
     "store": "에브리데이 서산읍내점",
-    "region": "충청",
     "storeType": "standard",
+    "region": "충청",
     "sido": "충청남도",
     "sigungu": "서산시",
     "address": "충청남도 서산시 안견로421 ( 31987 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4141&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4150",
+    "sid": "09a50d5bcada2355",
     "store": "에브리데이 서충주점",
-    "region": "충청",
     "storeType": "standard",
+    "region": "충청",
     "sido": "충청북도",
     "sigungu": "충주시",
     "address": "충청북도 충주시 중앙탑면 원앙9길18 ( 27465 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4150&type=2",
     "holidays": [
       "2026-10-10",
       "2026-10-25"
     ]
   },
   {
-    "id": "4047",
+    "sid": "2c912c4cac4092d1",
     "store": "에브리데이 아산공수점",
-    "region": "충청",
     "storeType": "standard",
+    "region": "충청",
     "sido": "충청남도",
     "sigungu": "아산시",
     "address": "충청남도 아산시 배방읍 배방로45 ( 31494 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4047&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4107",
+    "sid": "d88cdcef79a98f87",
     "store": "에브리데이 아산장재점",
-    "region": "충청",
     "storeType": "standard",
+    "region": "충청",
     "sido": "충청남도",
     "sigungu": "아산시",
     "address": "충청남도 아산시 배방읍 용연로30803 ( 31466 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4107&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4194",
+    "sid": "69343a98f17d854b",
     "store": "에브리데이 아산탕정점",
-    "region": "충청",
     "storeType": "standard",
+    "region": "충청",
     "sido": "충청남도",
     "sigungu": "아산시",
     "address": "충청남도 아산시 탕정면 매곡중앙로70 B동 109~113호, 120~121호 ( 31465 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4194&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4165",
+    "sid": "14fe7a92fc6dbf96",
     "store": "에브리데이 오창산단점",
-    "region": "충청",
     "storeType": "standard",
+    "region": "충청",
     "sido": "충청북도",
     "sigungu": "청주시",
     "address": "충북 청주시 청원구 오창읍 주성1길 18-6 (주성리)585,588 ( 28117 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4165&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4048",
+    "sid": "a59a2c59ae7a02f3",
     "store": "에브리데이 음성점",
-    "region": "충청",
     "storeType": "standard",
+    "region": "충청",
     "sido": "충청북도",
     "sigungu": "음성군",
     "address": "충청북도 음성군 맹동면 사예1길7 ( 27738 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4048&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4132",
+    "sid": "39c21fbeb27d3f99",
     "store": "에브리데이 진천옥동점",
-    "region": "충청",
     "storeType": "standard",
+    "region": "충청",
     "sido": "충청북도",
     "sigungu": "진천군",
     "address": "충청북도 진천군 덕산읍 연미1길33 ( 27875 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4132&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4747",
+    "sid": "5d74bf4363c56842",
     "store": "에브리데이 천안두정점",
-    "region": "충청",
     "storeType": "standard",
+    "region": "충청",
     "sido": "충청남도",
     "sigungu": "천안시",
     "address": "충남 천안시 서북구 천안대로 980-22 (두정동)1동 2층 ( 31113 )",
     "phone": "041-418-3400",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4747&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4135",
+    "sid": "91b6b0369ae00a8d",
     "store": "에브리데이 천안불당점",
-    "region": "충청",
     "storeType": "standard",
+    "region": "충청",
     "sido": "충청남도",
     "sigungu": "천안시",
     "address": "충청남도 천안시 서북구 불당25로8 ( 31156 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4135&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4756",
+    "sid": "d827fa6b68482900",
     "store": "에브리데이 천안청당점",
-    "region": "충청",
     "storeType": "standard",
+    "region": "충청",
     "sido": "충청남도",
     "sigungu": "천안시",
     "address": "충남 천안시 동남구 청당4로 671층 ( 31211 )",
     "phone": "070-4333-7521",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4756&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "4045",
+    "sid": "082114e7b3f886d1",
     "store": "에브리데이 충북오창점",
-    "region": "충청",
     "storeType": "standard",
+    "region": "충청",
     "sido": "충청북도",
     "sigungu": "청주시",
     "address": "충청북도 청주시 청원구 오창읍 과학산업3로202-3 ( 28125 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4045&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4200",
+    "sid": "ead6564da36fec31",
     "store": "에브리데이 충주호암점",
-    "region": "충청",
     "storeType": "standard",
+    "region": "충청",
     "sido": "충청북도",
     "sigungu": "충주시",
     "address": "충청북도 충주시 호암수청4길5 1층 101호 ( 27502 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4200&type=2",
     "holidays": [
       "2026-10-10",
       "2026-10-25"
     ]
   },
   {
-    "id": "4038",
+    "sid": "12bd02e0546b5a09",
     "store": "에브리데이 탑동점",
-    "region": "충청",
     "storeType": "standard",
+    "region": "충청",
     "sido": "충청북도",
     "sigungu": "청주시",
     "address": "충청북도 청주시 상당구 용담로82번길16 ( 28522 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4038&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "4112",
+    "sid": "b09298c11725fd5e",
     "store": "에브리데이 홍성내포점",
-    "region": "충청",
     "storeType": "standard",
+    "region": "충청",
     "sido": "충청남도",
     "sigungu": "홍성군",
     "address": "충청남도 홍성군 홍북읍 홍학로77 ( 32265 )",
     "phone": "02-380-5060",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=4112&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"

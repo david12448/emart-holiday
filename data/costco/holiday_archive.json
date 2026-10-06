@@ -1,362 +1,282 @@
 [
   {
-    "storeId": "costcoKoreaWarehouse056",
+    "sid": "962353da6acef9e0",
     "store": "공세점",
     "storeType": "warehouse",
     "sido": "경기도",
     "sigungu": "용인시",
     "address": "경기도 용인시 기흥구 탑실로 38 (공세동 734-1)",
     "phone": "1899-9900",
-    "latitude": 37.2383731,
-    "longitude": 127.1058574,
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ],
-    "holidayStatus": "정상",
-    "detailUrl": "https://www.costco.co.kr/store-finder/Gongse",
-    "officialName": "Gongse"
+    "holidayStatus": "정상"
   },
   {
-    "storeId": "costcoKoreaWarehouse051",
+    "sid": "9603fd6d1c37ae5b",
     "store": "광명점",
     "storeType": "warehouse",
     "sido": "경기도",
     "sigungu": "광명시",
     "address": "경기도 광명시 일직로 40 (일직동 163-3)",
     "phone": "1899-9900",
-    "latitude": 37.420739,
-    "longitude": 126.886415,
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ],
-    "holidayStatus": "정상",
-    "detailUrl": "https://www.costco.co.kr/store-finder/Gwangmyeong",
-    "officialName": "Gwangmyeong"
+    "holidayStatus": "정상"
   },
   {
-    "storeId": "costcoKoreaWarehouse053",
+    "sid": "0d47d86bc09a7901",
     "store": "의정부점",
     "storeType": "warehouse",
     "sido": "경기도",
     "sigungu": "의정부시",
     "address": "경기도 의정부시 용민로 489번길 9 (민락동 903-1)",
     "phone": "1899-9900",
-    "latitude": 37.750644,
-    "longitude": 127.119474,
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ],
-    "holidayStatus": "정상",
-    "detailUrl": "https://www.costco.co.kr/store-finder/Euijeongbu",
-    "officialName": "Euijeongbu"
+    "holidayStatus": "정상"
   },
   {
-    "storeId": "costcoKoreaWarehouse855",
+    "sid": "7e1bba1a3d1f9f86",
     "store": "일산점",
     "storeType": "warehouse",
     "sido": "경기도",
     "sigungu": "고양시",
     "address": "경기도 고양시 일산동구 장백로 25 (백석동 1312)",
     "phone": "1899-9900",
-    "latitude": 37.6404891,
-    "longitude": 126.7861402,
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ],
-    "holidayStatus": "정상",
-    "detailUrl": "https://www.costco.co.kr/store-finder/Ilsan",
-    "officialName": "Ilsan"
+    "holidayStatus": "정상"
   },
   {
-    "storeId": "costcoKoreaWarehouse064",
+    "sid": "c2fde7a6ed6c0f03",
     "store": "평택점",
     "storeType": "warehouse",
     "sido": "경기도",
     "sigungu": "평택시",
     "address": "경기도 평택시 경기대로 975 (장당동 153-1)",
     "phone": "1899-9900",
-    "latitude": 37.0358,
-    "longitude": 127.0692,
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ],
-    "holidayStatus": "정상",
-    "detailUrl": "https://www.costco.co.kr/store-finder/Pyeongtaek",
-    "officialName": "Pyeongtaek"
+    "holidayStatus": "정상"
   },
   {
-    "storeId": "costcoKoreaWarehouse060",
+    "sid": "da4b88c2d62c8878",
     "store": "하남점",
     "storeType": "warehouse",
     "sido": "경기도",
     "sigungu": "하남시",
     "address": "경기도 하남시 미사강변중앙로 40 (풍산동 609)",
     "phone": "1899-9900",
-    "latitude": 37.5506306,
-    "longitude": 127.1915575,
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ],
-    "holidayStatus": "정상",
-    "detailUrl": "https://www.costco.co.kr/store-finder/Hanam",
-    "officialName": "Hanam"
+    "holidayStatus": "정상"
   },
   {
-    "storeId": "costcoKoreaWarehouse061",
+    "sid": "120e3c1f1627c92d",
     "store": "김해점",
     "storeType": "warehouse",
     "sido": "경상남도",
     "sigungu": "김해시",
     "address": "경상남도 김해시 주촌면 선천남로 16 (천곡리 1522)",
     "phone": "1899-9900",
-    "latitude": 35.2356,
-    "longitude": 128.8387,
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ],
-    "holidayStatus": "정상",
-    "detailUrl": "https://www.costco.co.kr/store-finder/Gimhae",
-    "officialName": "Gimhae"
+    "holidayStatus": "정상"
   },
   {
-    "storeId": "costcoKoreaWarehouse059",
+    "sid": "5445d7062e07c345",
     "store": "대구 혁신도시점",
     "storeType": "warehouse",
     "sido": "대구광역시",
     "sigungu": "동구",
     "address": "대구광역시 동구 첨단로 10 (신서동 1187)",
     "phone": "1899-9900",
-    "latitude": 35.8770503,
-    "longitude": 128.7307368,
     "holidays": [
       "2026-10-12",
       "2026-10-26"
     ],
-    "holidayStatus": "정상",
-    "detailUrl": "https://www.costco.co.kr/store-finder/DaeguInnovationCity",
-    "officialName": "DaeguInnovationCity"
+    "holidayStatus": "정상"
   },
   {
-    "storeId": "costcoKoreaWarehouse851",
+    "sid": "5a1da9524f8c8139",
     "store": "대구점",
     "storeType": "warehouse",
     "sido": "대구광역시",
     "sigungu": "북구",
     "address": "대구광역시 북구 검단로 97 (산격동 1817)",
     "phone": "1899-9900",
-    "latitude": 35.9063933,
-    "longitude": 128.6159164,
     "holidays": [
       "2026-10-12",
       "2026-10-26"
     ],
-    "holidayStatus": "정상",
-    "detailUrl": "https://www.costco.co.kr/store-finder/Daegu",
-    "officialName": "Daegu"
+    "holidayStatus": "정상"
   },
   {
-    "storeId": "costcoKoreaWarehouse852",
+    "sid": "fb6721ee98aa2fc0",
     "store": "대전점",
     "storeType": "warehouse",
     "sido": "대전광역시",
     "sigungu": "중구",
     "address": "대전광역시 중구 오류로 41 (오류동 116-3)",
     "phone": "1899-9900",
-    "latitude": 36.324444,
-    "longitude": 127.403515,
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ],
-    "holidayStatus": "정상",
-    "detailUrl": "https://www.costco.co.kr/store-finder/Daejeon",
-    "officialName": "Daejeon"
+    "holidayStatus": "정상"
   },
   {
-    "storeId": "costcoKoreaWarehouse856",
+    "sid": "7e19188e2e5f7c10",
     "store": "부산점",
     "storeType": "warehouse",
     "sido": "부산광역시",
     "sigungu": "수영구",
     "address": "부산광역시 수영구 구락로 137 (망미동 195-1)",
     "phone": "1899-9900",
-    "latitude": 35.1785594,
-    "longitude": 129.1131993,
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ],
-    "holidayStatus": "정상",
-    "detailUrl": "https://www.costco.co.kr/store-finder/Busan",
-    "officialName": "Busan"
+    "holidayStatus": "정상"
   },
   {
-    "storeId": "costcoKoreaWarehouse062",
+    "sid": "2a384604ec975c43",
     "store": "고척점",
     "storeType": "warehouse",
     "sido": "서울특별시",
     "sigungu": "구로구",
     "address": "서울특별시 구로구 경인로43길 49 (고척동 100-7)",
     "phone": "1899-9900",
-    "latitude": 37.4974,
-    "longitude": 126.861,
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ],
-    "holidayStatus": "정상",
-    "detailUrl": "https://www.costco.co.kr/store-finder/Gocheok",
-    "officialName": "Gocheok"
+    "holidayStatus": "정상"
   },
   {
-    "storeId": "costcoKoreaWarehouse854",
+    "sid": "37eacd13f892fb05",
     "store": "상봉점",
     "storeType": "warehouse",
     "sido": "서울특별시",
     "sigungu": "중랑구",
     "address": "서울특별시 중랑구 망우로 336 (상봉동 81)",
     "phone": "1899-9900",
-    "latitude": 37.5968633,
-    "longitude": 127.0880572,
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ],
-    "holidayStatus": "정상",
-    "detailUrl": "https://www.costco.co.kr/store-finder/Sangbong",
-    "officialName": "Sangbong"
+    "holidayStatus": "정상"
   },
   {
-    "storeId": "costcoKoreaWarehouse853",
+    "sid": "7fb9d37de3218fad",
     "store": "양재점",
     "storeType": "warehouse",
     "sido": "서울특별시",
     "sigungu": "서초구",
     "address": "서울특별시 서초구 양재대로 159 (양재동 217-6)",
     "phone": "1899-9900",
-    "latitude": 37.4620183,
-    "longitude": 127.0340753,
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ],
-    "holidayStatus": "정상",
-    "detailUrl": "https://www.costco.co.kr/store-finder/Yangjae",
-    "officialName": "Yangjae"
+    "holidayStatus": "정상"
   },
   {
-    "storeId": "costcoKoreaWarehouse850",
+    "sid": "f269808b59882751",
     "store": "양평점",
     "storeType": "warehouse",
     "sido": "서울특별시",
     "sigungu": "영등포구",
     "address": "서울특별시 영등포구 선유로 156 (양평동 3가 65)",
     "phone": "1899-9900",
-    "latitude": 37.528066,
-    "longitude": 126.892092,
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ],
-    "holidayStatus": "정상",
-    "detailUrl": "https://www.costco.co.kr/store-finder/Yangpyung",
-    "officialName": "Yangpyung"
+    "holidayStatus": "정상"
   },
   {
-    "storeId": "costcoKoreaWarehouse058",
+    "sid": "6e2ee6ae749b8c01",
     "store": "세종점",
     "storeType": "warehouse",
     "sido": "세종특별자치시",
     "sigungu": "세종시",
     "address": "세종특별자치시 종합운동장 1로 14 (대평동 584-7)",
     "phone": "1899-9900",
-    "latitude": 36.4679813,
-    "longitude": 127.2668772,
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ],
-    "holidayStatus": "정상",
-    "detailUrl": "https://www.costco.co.kr/store-finder/Sejong",
-    "officialName": "Sejong"
+    "holidayStatus": "정상"
   },
   {
-    "storeId": "costcoKoreaWarehouse050",
+    "sid": "0b30ccfd8255c7b2",
     "store": "울산점",
     "storeType": "warehouse",
     "sido": "울산광역시",
     "sigungu": "북구",
     "address": "울산광역시 북구 진장유통로 78-12 (진장동 283-3)",
     "phone": "1899-9900",
-    "latitude": 35.577283,
-    "longitude": 129.357973,
     "holidays": [
       "2026-10-14",
       "2026-10-25"
     ],
-    "holidayStatus": "정상",
-    "detailUrl": "https://www.costco.co.kr/store-finder/Ulsan",
-    "officialName": "Ulsan"
+    "holidayStatus": "정상"
   },
   {
-    "storeId": "costcoKoreaWarehouse057",
+    "sid": "e9cfcd49298efffb",
     "store": "송도점",
     "storeType": "warehouse",
     "sido": "인천광역시",
     "sigungu": "연수구",
     "address": "인천 연수구 컨벤시아대로230번길 60 (송도동 98)",
     "phone": "1899-9900",
-    "latitude": 37.3902286,
-    "longitude": 126.6333036,
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ],
-    "holidayStatus": "정상",
-    "detailUrl": "https://www.costco.co.kr/store-finder/Songdo",
-    "officialName": "Songdo"
+    "holidayStatus": "정상"
   },
   {
-    "storeId": "costcoKoreaWarehouse063",
+    "sid": "dba4cb029101733c",
     "store": "청라점",
     "storeType": "warehouse",
     "sido": "인천광역시",
     "sigungu": "서해구",
     "address": "인천 서해구 첨단서로 188 (청라동 12-2)",
     "phone": "1899-9900",
-    "latitude": 37.5396377,
-    "longitude": 126.6165795,
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ],
-    "holidayStatus": "정상",
-    "detailUrl": "https://www.costco.co.kr/store-finder/Cheongna",
-    "officialName": "Cheongna"
+    "holidayStatus": "정상"
   },
   {
-    "storeId": "costcoKoreaWarehouse052",
+    "sid": "f6821d055322735f",
     "store": "천안점",
     "storeType": "warehouse",
     "sido": "충청남도",
     "sigungu": "천안시",
     "address": "충청남도 천안시 서북구 3공단 6로 77 (차암동 438)",
     "phone": "1899-9900",
-    "latitude": 36.84258,
-    "longitude": 127.105224,
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ],
-    "holidayStatus": "정상",
-    "detailUrl": "https://www.costco.co.kr/store-finder/Cheonan",
-    "officialName": "Cheonan"
+    "holidayStatus": "정상"
   }
 ]

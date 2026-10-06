@@ -8,6 +8,14 @@ const MART_CONFIG =
   window.MART_CONFIG || {};
 
 
+/*
+보호 배포 시 build workflow가
+실제 redirect gateway 주소를 이 값에 주입합니다.
+일반 개발/기존 배포에서는 빈 문자열을 유지합니다.
+*/
+const BUILD_OFFICIAL_STORE_REDIRECT_BASE = 'https://mart-store-link-gateway.mart-holiday-david12448.workers.dev/r';
+
+
 const TISTORY_POST_URL =
   "javascript:void(0)";
 
@@ -424,6 +432,7 @@ function getStoreDetailUrl(store) {
   const redirectBase =
     String(
       MART_CONFIG.officialStoreRedirectBase ??
+      BUILD_OFFICIAL_STORE_REDIRECT_BASE ??
       ""
     )
       .trim()

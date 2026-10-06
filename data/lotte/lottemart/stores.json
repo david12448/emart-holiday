@@ -1,6 +1,6 @@
 [
   {
-    "storeId": "f6ff7c61def7",
+    "sid": "264d648160200c59",
     "store": "원주점",
     "storeType": "hypermarket",
     "sido": "강원특별자치도",
@@ -12,11 +12,10 @@
       "2026-10-28"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=강원&m_market=2801",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "2c5398a72e9c",
+    "sid": "494ea63389ded69b",
     "store": "석사점",
     "storeType": "hypermarket",
     "sido": "강원특별자치도",
@@ -28,11 +27,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=강원&m_market=2804",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "8827f4046bfc",
+    "sid": "0ca49a8889e56510",
     "store": "춘천점",
     "storeType": "hypermarket",
     "sido": "강원특별자치도",
@@ -43,11 +41,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=강원&m_market=2802",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "a82faf08b340",
+    "sid": "0409827afc2abe85",
     "store": "고양점",
     "storeType": "hypermarket",
     "sido": "경기도",
@@ -59,11 +56,10 @@
       "2026-10-28"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=2455",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "3f9c99f7c400",
+    "sid": "2c8956459c0edf32",
     "store": "주엽점",
     "storeType": "hypermarket",
     "sido": "경기도",
@@ -75,11 +71,10 @@
       "2026-10-28"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=2403",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "20168706da2c",
+    "sid": "578911d71d373039",
     "store": "화정점",
     "storeType": "hypermarket",
     "sido": "경기도",
@@ -91,11 +86,10 @@
       "2026-10-28"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=2408",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "402beba01bd4",
+    "sid": "640b2c6d4f6ab076",
     "store": "김포한강점",
     "storeType": "hypermarket",
     "sido": "경기도",
@@ -106,11 +100,10 @@
       "2026-10-28"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=2479",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "02ccdedfef06",
+    "sid": "5aab259069e9ac68",
     "store": "덕소점",
     "storeType": "hypermarket",
     "sido": "경기도",
@@ -122,11 +115,10 @@
       "2026-10-28"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=2457",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "00617bde82f4",
+    "sid": "888a15e8eea55c8b",
     "store": "마석점",
     "storeType": "hypermarket",
     "sido": "경기도",
@@ -138,11 +130,10 @@
       "2026-10-28"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=2453",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "280a69d36152",
+    "sid": "e3d2d003e3921dc4",
     "store": "동두천점",
     "storeType": "hypermarket",
     "sido": "경기도",
@@ -154,11 +145,10 @@
       "2026-10-28"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=2435",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "bdbc61d7e976",
+    "sid": "d1181d265db19fdd",
     "store": "판교점",
     "storeType": "hypermarket",
     "sido": "경기도",
@@ -170,11 +160,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=2471",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "bc6852075b4c",
+    "sid": "9f771415272c0e7b",
     "store": "광교점",
     "storeType": "hypermarket",
     "sido": "경기도",
@@ -186,11 +175,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=2463",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "0fd0e0384b01",
+    "sid": "c7e17ad5b2dbde34",
     "store": "권선점",
     "storeType": "hypermarket",
     "sido": "경기도",
@@ -202,11 +190,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=2458",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "a1ff9cc247f6",
+    "sid": "991483016cadfb0d",
     "store": "수원점",
     "storeType": "hypermarket",
     "sido": "경기도",
@@ -218,11 +205,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=2462",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "0ac5f2a6d094",
+    "sid": "07b843aa476a82a4",
     "store": "천천점",
     "storeType": "hypermarket",
     "sido": "경기도",
@@ -234,11 +220,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=2411",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "1d946a9b4ea9",
+    "sid": "5e0db71b7f04e6c0",
     "store": "시화점",
     "storeType": "hypermarket",
     "sido": "경기도",
@@ -250,11 +235,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=2456",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "ff1f640a7adf",
+    "sid": "7ee56027fe7de9cb",
     "store": "시흥배곧점",
     "storeType": "hypermarket",
     "sido": "경기도",
@@ -266,11 +250,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=2476",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "a57e6be2df0e",
+    "sid": "2014aaea2ab61133",
     "store": "시흥점",
     "storeType": "hypermarket",
     "sido": "경기도",
@@ -282,11 +265,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=2459",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "2bf542bf2fdf",
+    "sid": "7ee78dbe17a31c0a",
     "store": "상록점",
     "storeType": "hypermarket",
     "sido": "경기도",
@@ -297,11 +279,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=2464",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "903ca633092d",
+    "sid": "bf0970fb3df88532",
     "store": "선부점",
     "storeType": "hypermarket",
     "sido": "경기도",
@@ -313,11 +294,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=2475",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "b7439294e278",
+    "sid": "a73b672843117a9f",
     "store": "안산점",
     "storeType": "hypermarket",
     "sido": "경기도",
@@ -329,11 +309,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=2415",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "f60388b28d48",
+    "sid": "bf08ce0a9f476c2a",
     "store": "안성점",
     "storeType": "hypermarket",
     "sido": "경기도",
@@ -345,11 +324,10 @@
       "2026-10-28"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=2417",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "80ff36ca15f4",
+    "sid": "0f61cb0cafe4aee1",
     "store": "경기양평점",
     "storeType": "hypermarket",
     "sido": "경기도",
@@ -360,11 +338,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=2473",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "c06b5a2e2a9b",
+    "sid": "2e141119e91ce14d",
     "store": "오산점",
     "storeType": "hypermarket",
     "sido": "경기도",
@@ -376,11 +353,10 @@
       "2026-10-28"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=2410",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "8ebb88afb8f2",
+    "sid": "fcd75894af2a86a2",
     "store": "롯데몰수지점",
     "storeType": "hypermarket",
     "sido": "경기도",
@@ -391,11 +367,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=2446",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "2cfdd5e2803b",
+    "sid": "2c644e87eacd06d2",
     "store": "신갈점",
     "storeType": "hypermarket",
     "sido": "경기도",
@@ -407,11 +382,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=2468",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "9e121d5e0004",
+    "sid": "e1bb583a49df8dc7",
     "store": "의왕점",
     "storeType": "hypermarket",
     "sido": "경기도",
@@ -423,11 +397,10 @@
       "2026-10-28"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=2409",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "60691142328e",
+    "sid": "3a0759def05e355f",
     "store": "장암점",
     "storeType": "hypermarket",
     "sido": "경기도",
@@ -439,11 +412,10 @@
       "2026-10-28"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=2430",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "593621bc096f",
+    "sid": "b2ffe34902278ac5",
     "store": "이천점",
     "storeType": "hypermarket",
     "sido": "경기도",
@@ -454,11 +426,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=2422",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "4a58165c39b4",
+    "sid": "12bf55764d2139ae",
     "store": "평택점",
     "storeType": "hypermarket",
     "sido": "경기도",
@@ -469,11 +440,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경기&m_market=2436",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "34765a2f139e",
+    "sid": "a48e058e9305e205",
     "store": "거제점",
     "storeType": "hypermarket",
     "sido": "경상남도",
@@ -485,11 +455,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경남&m_market=2645",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "f7f77e2eb91c",
+    "sid": "fbddde9e9aaab841",
     "store": "김해점",
     "storeType": "hypermarket",
     "sido": "경상남도",
@@ -501,11 +470,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경남&m_market=2642",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "0493e99d2fde",
+    "sid": "367953c646d3c840",
     "store": "장유점",
     "storeType": "hypermarket",
     "sido": "경상남도",
@@ -517,11 +485,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경남&m_market=2609",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "57dccf8ac5bf",
+    "sid": "6266b322baa682aa",
     "store": "웅상점",
     "storeType": "hypermarket",
     "sido": "경상남도",
@@ -533,11 +500,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경남&m_market=2610",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "5e844a8056b9",
+    "sid": "c055664d358bdf6a",
     "store": "진주점",
     "storeType": "hypermarket",
     "sido": "경상남도",
@@ -549,11 +515,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경남&m_market=2648",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "166195358e16",
+    "sid": "aa0e85573a3c0435",
     "store": "마산점",
     "storeType": "hypermarket",
     "sido": "경상남도",
@@ -565,11 +530,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경남&m_market=2607",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "8fc330739416",
+    "sid": "9637f3640c7adb3b",
     "store": "삼계점",
     "storeType": "hypermarket",
     "sido": "경상남도",
@@ -581,11 +545,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경남&m_market=2639",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "c42e5e7ba12d",
+    "sid": "9453fcd4241a8b19",
     "store": "시티세븐점",
     "storeType": "hypermarket",
     "sido": "경상남도",
@@ -597,11 +560,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경남&m_market=2620",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "36091642d706",
+    "sid": "d07312bcd4f22439",
     "store": "양덕점",
     "storeType": "hypermarket",
     "sido": "경상남도",
@@ -613,11 +575,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경남&m_market=2643",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "df4554a472ec",
+    "sid": "bfcc79d475464ecc",
     "store": "진해점",
     "storeType": "hypermarket",
     "sido": "경상남도",
@@ -629,11 +590,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경남&m_market=2611",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "3d795f3c39af",
+    "sid": "42c2e43355f371ce",
     "store": "통영점",
     "storeType": "hypermarket",
     "sido": "경상남도",
@@ -645,11 +605,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경남&m_market=2608",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "5b247cb65205",
+    "sid": "17df308d8d2a45e6",
     "store": "구미점",
     "storeType": "hypermarket",
     "sido": "경상북도",
@@ -661,11 +620,10 @@
       "2026-10-28"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경북&m_market=2613",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "36ab0d9a71c3",
+    "sid": "3eb31ac93371c9ae",
     "store": "김천점",
     "storeType": "hypermarket",
     "sido": "경상북도",
@@ -677,11 +635,10 @@
       "2026-10-28"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경북&m_market=2647",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "165b21e90ec1",
+    "sid": "fb8df43c0ed4dbb6",
     "store": "포항점",
     "storeType": "hypermarket",
     "sido": "경상북도",
@@ -693,11 +650,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=경북&m_market=2623",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "80725a5f1c6d",
+    "sid": "d7c04bedb3690222",
     "store": "수완점",
     "storeType": "hypermarket",
     "sido": "광주광역시",
@@ -709,11 +665,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=광주&m_market=2715",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "7ba2bdb9322b",
+    "sid": "aad3eb771dd59b83",
     "store": "첨단점",
     "storeType": "hypermarket",
     "sido": "광주광역시",
@@ -725,11 +680,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=광주&m_market=2704",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "78912f04f1d8",
+    "sid": "f291b84ea586dd00",
     "store": "월드컵점",
     "storeType": "hypermarket",
     "sido": "광주광역시",
@@ -741,11 +695,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=광주&m_market=2706",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "a37a22d97a55",
+    "sid": "b58c16b5e5d260af",
     "store": "대구율하점",
     "storeType": "hypermarket",
     "sido": "대구광역시",
@@ -757,11 +710,10 @@
       "2026-10-26"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=대구&m_market=2629",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "a9183b8756d7",
+    "sid": "f0377800b7e4dffc",
     "store": "노은점",
     "storeType": "hypermarket",
     "sido": "대전광역시",
@@ -773,11 +725,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=대전&m_market=2516",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "53d519c7876b",
+    "sid": "8a2bb191a9bc084d",
     "store": "대덕점",
     "storeType": "hypermarket",
     "sido": "대전광역시",
@@ -789,11 +740,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=대전&m_market=2508",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "a2b3342a80cd",
+    "sid": "4cbed406f8a11eab",
     "store": "서대전점",
     "storeType": "hypermarket",
     "sido": "대전광역시",
@@ -805,11 +755,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=대전&m_market=2504",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "3d2e593ae42e",
+    "sid": "34b894325f512c63",
     "store": "동래점",
     "storeType": "hypermarket",
     "sido": "부산광역시",
@@ -821,11 +770,10 @@
       "2026-10-26"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=부산&m_market=2618",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "426a7fb8beb8",
+    "sid": "94841e6d388745f0",
     "store": "부산점",
     "storeType": "hypermarket",
     "sido": "부산광역시",
@@ -837,11 +785,10 @@
       "2026-10-26"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=부산&m_market=2626",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "ba9ff6bc9109",
+    "sid": "58bd0aa92570070b",
     "store": "화명점",
     "storeType": "hypermarket",
     "sido": "부산광역시",
@@ -853,11 +800,10 @@
       "2026-10-26"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=부산&m_market=2605",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "b6343e4bf630",
+    "sid": "61d1cb3b9db6078b",
     "store": "사상점",
     "storeType": "hypermarket",
     "sido": "부산광역시",
@@ -869,11 +815,10 @@
       "2026-10-26"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=부산&m_market=2612",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "d3bae73c434d",
+    "sid": "c0fd45d2405484f4",
     "store": "동부산점",
     "storeType": "hypermarket",
     "sido": "부산시",
@@ -885,11 +830,10 @@
       "2026-10-26"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=부산&m_market=2658",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "61d664ed2e34",
+    "sid": "a488b4477a881c99",
     "store": "사하점",
     "storeType": "hypermarket",
     "sido": "부산시",
@@ -901,11 +845,10 @@
       "2026-10-26"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=부산&m_market=2603",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "718f4a17cabe",
+    "sid": "7c61ea00b5893d79",
     "store": "광복점",
     "storeType": "hypermarket",
     "sido": "부산시",
@@ -917,11 +860,10 @@
       "2026-10-26"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=부산&m_market=2655",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "8ad9b26f2de4",
+    "sid": "696b0c85019aa098",
     "store": "천호점",
     "storeType": "hypermarket",
     "sido": "서울특별시",
@@ -933,11 +875,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=서울&m_market=2303",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "1e56485d1069",
+    "sid": "d8fe9faa2d62ae8e",
     "store": "삼양점",
     "storeType": "hypermarket",
     "sido": "서울특별시",
@@ -949,11 +890,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=서울&m_market=2316",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "869d09715173",
+    "sid": "00e072c931175387",
     "store": "김포공항점",
     "storeType": "hypermarket",
     "sido": "서울특별시",
@@ -965,11 +905,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=서울&m_market=2441",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "63217d1db194",
+    "sid": "87d6570cfa88f5cb",
     "store": "강변점",
     "storeType": "hypermarket",
     "sido": "서울특별시",
@@ -981,11 +920,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=서울&m_market=2301",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "bf944ae46901",
+    "sid": "9021906305779ede",
     "store": "금천점",
     "storeType": "hypermarket",
     "sido": "서울특별시",
@@ -997,11 +935,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=서울&m_market=2335",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "3fc63fba2998",
+    "sid": "0a4c9a6a90caa24b",
     "store": "중계점",
     "storeType": "hypermarket",
     "sido": "서울특별시",
@@ -1013,11 +950,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=서울&m_market=2307",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "57a043f1eee5",
+    "sid": "a7f6cf54cc5fe5f0",
     "store": "청량리점",
     "storeType": "hypermarket",
     "sido": "서울특별시",
@@ -1029,11 +965,10 @@
       "2026-10-28"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=서울&m_market=2312",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "a173d047f309",
+    "sid": "405a9c76abf5a1fb",
     "store": "서초점",
     "storeType": "hypermarket",
     "sido": "서울특별시",
@@ -1045,11 +980,10 @@
       "2026-10-28"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=서울&m_market=2340",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "9205fce52210",
+    "sid": "1d5a6c09872b39f3",
     "store": "행당역점",
     "storeType": "hypermarket",
     "sido": "서울특별시",
@@ -1061,11 +995,10 @@
       "2026-10-28"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=서울&m_market=2323",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "646248e97000",
+    "sid": "e63c56e2411b29bc",
     "store": "송파점",
     "storeType": "hypermarket",
     "sido": "서울특별시",
@@ -1077,11 +1010,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=서울&m_market=2322",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "313a36032d18",
+    "sid": "12ca15eadc095be3",
     "store": "월드타워점",
     "storeType": "hypermarket",
     "sido": "서울특별시",
@@ -1093,11 +1025,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=서울&m_market=2334",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "1f9375475315",
+    "sid": "ad2d8b58d66501bd",
     "store": "제타플렉스 잠실점",
     "storeType": "hypermarket",
     "sido": "서울특별시",
@@ -1109,11 +1040,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=서울&m_market=2302",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "49f9b4f77c18",
+    "sid": "cb197cb53b206a16",
     "store": "양평점",
     "storeType": "hypermarket",
     "sido": "서울특별시",
@@ -1125,11 +1055,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=서울&m_market=2328",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "ca5c32d7c6be",
+    "sid": "2fe66738f33ec476",
     "store": "제타플렉스 서울역점",
     "storeType": "hypermarket",
     "sido": "서울특별시",
@@ -1141,11 +1070,10 @@
       "2026-10-28"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=서울&m_market=2200",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "29e19e5c98d3",
+    "sid": "20d9860a65727965",
     "store": "울산점",
     "storeType": "hypermarket",
     "sido": "울산광역시",
@@ -1157,11 +1085,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=울산&m_market=2601",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "30531c4d9032",
+    "sid": "7fee22af511e0082",
     "store": "진장점",
     "storeType": "hypermarket",
     "sido": "울산광역시",
@@ -1173,11 +1100,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=울산&m_market=2614",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "d3323f83496c",
+    "sid": "ee3d140bff21e734",
     "store": "계양점",
     "storeType": "hypermarket",
     "sido": "인천광역시",
@@ -1189,11 +1115,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=인천&m_market=2469",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "9a2243ce0dcc",
+    "sid": "b2745f6ae06ee131",
     "store": "부평역점",
     "storeType": "hypermarket",
     "sido": "인천광역시",
@@ -1205,11 +1130,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=인천&m_market=2404",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "cb91118013b2",
+    "sid": "6158e097d7eaf7e3",
     "store": "부평점",
     "storeType": "hypermarket",
     "sido": "인천광역시",
@@ -1221,11 +1145,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=인천&m_market=2426",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "ff4e1eb3d366",
+    "sid": "bc2be42a4960f8aa",
     "store": "삼산점",
     "storeType": "hypermarket",
     "sido": "인천광역시",
@@ -1237,11 +1160,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=인천&m_market=2418",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "9559127210a6",
+    "sid": "5f15d11ec1d13938",
     "store": "검단점",
     "storeType": "hypermarket",
     "sido": "인천광역시",
@@ -1253,11 +1175,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=인천&m_market=2433",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "0902a031aaa6",
+    "sid": "e408be2860cf3d31",
     "store": "청라점",
     "storeType": "hypermarket",
     "sido": "인천광역시",
@@ -1269,11 +1190,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=인천&m_market=2461",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "f0e36883f163",
+    "sid": "ebd8926d6917af79",
     "store": "송도점",
     "storeType": "hypermarket",
     "sido": "인천광역시",
@@ -1285,11 +1205,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=인천&m_market=2465",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "a4062c82acf2",
+    "sid": "81daa014fb59f000",
     "store": "연수점",
     "storeType": "hypermarket",
     "sido": "인천광역시",
@@ -1301,11 +1220,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=인천&m_market=2406",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "de75aec6f3f0",
+    "sid": "c453d51cf731a51a",
     "store": "영종도점",
     "storeType": "hypermarket",
     "sido": "인천광역시",
@@ -1317,11 +1235,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=인천&m_market=2424",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "4e3bbd33346c",
+    "sid": "5721c3d89bd94514",
     "store": "나주점",
     "storeType": "hypermarket",
     "sido": "전라남도",
@@ -1333,11 +1250,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=전남&m_market=2719",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "149e7f3fe1a3",
+    "sid": "02d8a604ad356a42",
     "store": "남악점",
     "storeType": "hypermarket",
     "sido": "전라남도",
@@ -1349,11 +1265,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=전남&m_market=2724",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "e106f395d365",
+    "sid": "4d7e5359c0edd105",
     "store": "여수점",
     "storeType": "hypermarket",
     "sido": "전라남도",
@@ -1365,11 +1280,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=전남&m_market=2705",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "56c24dc9e155",
+    "sid": "144ca7342d566b7f",
     "store": "여천점",
     "storeType": "hypermarket",
     "sido": "전라남도",
@@ -1381,11 +1295,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=전남&m_market=2710",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "1af8ca0cce37",
+    "sid": "e6e4d4c5179852af",
     "store": "군산점",
     "storeType": "hypermarket",
     "sido": "전북특별자치도",
@@ -1397,11 +1310,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=전북&m_market=2707",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "99e2225f9e11",
+    "sid": "a8222af8815af662",
     "store": "남원점",
     "storeType": "hypermarket",
     "sido": "전북특별자치도",
@@ -1413,11 +1325,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=전북&m_market=2713",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "642dcf6e8a18",
+    "sid": "a5cd435cc3fd6985",
     "store": "익산점",
     "storeType": "hypermarket",
     "sido": "전북특별자치도",
@@ -1429,11 +1340,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=전북&m_market=2702",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "6fc2caef6483",
+    "sid": "0e46093247081296",
     "store": "전주점",
     "storeType": "hypermarket",
     "sido": "전북특별자치도",
@@ -1445,11 +1355,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=전북&m_market=2708",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "208c4d4caae5",
+    "sid": "1e922ca6341f396a",
     "store": "정읍점",
     "storeType": "hypermarket",
     "sido": "전북특별자치도",
@@ -1461,11 +1370,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=전북&m_market=2709",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "8e6d4d7db7d8",
+    "sid": "fc9aabe32ec67ef4",
     "store": "제주점",
     "storeType": "hypermarket",
     "sido": "제주특별자치도",
@@ -1477,11 +1385,10 @@
       "2026-10-24"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=기타&m_market=2852",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "a0f4aa33b9e6",
+    "sid": "4582bd30957369e6",
     "store": "당진점",
     "storeType": "hypermarket",
     "sido": "충청남도",
@@ -1493,11 +1400,10 @@
       "2026-10-28"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=충남&m_market=2515",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "fa72ba3cd5f7",
+    "sid": "b5feb9ca393008dd",
     "store": "서산점",
     "storeType": "hypermarket",
     "sido": "충청남도",
@@ -1509,11 +1415,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=충남&m_market=2506",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "d94413add587",
+    "sid": "477d80da9b1e51f9",
     "store": "아산터미널점",
     "storeType": "hypermarket",
     "sido": "충청남도",
@@ -1525,11 +1430,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=충남&m_market=2512",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "be0bc06779a9",
+    "sid": "1ac292049c579f44",
     "store": "성정점",
     "storeType": "hypermarket",
     "sido": "충청남도",
@@ -1541,11 +1445,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=충남&m_market=2507",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "52a594c69ecf",
+    "sid": "97bf84e3063132e9",
     "store": "홍성점",
     "storeType": "hypermarket",
     "sido": "충청남도",
@@ -1557,11 +1460,10 @@
       "2026-10-28"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=충남&m_market=2518",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "1c2b5e2f6c4b",
+    "sid": "369a103aa3929df6",
     "store": "제천점",
     "storeType": "hypermarket",
     "sido": "충청북도",
@@ -1573,11 +1475,10 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=충북&m_market=2509",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "66219478037c",
+    "sid": "2b62fb59af645cad",
     "store": "상당점",
     "storeType": "hypermarket",
     "sido": "충청북도",
@@ -1589,11 +1490,10 @@
       "2026-10-28"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=충북&m_market=2519",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "b1d7a0a88216",
+    "sid": "26c0868ca5e8a9b9",
     "store": "서청주점",
     "storeType": "hypermarket",
     "sido": "충청북도",
@@ -1605,11 +1505,10 @@
       "2026-10-28"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=충북&m_market=2513",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "4689eb488606",
+    "sid": "f6e66005c62a09ce",
     "store": "청주점",
     "storeType": "hypermarket",
     "sido": "충청북도",
@@ -1621,11 +1520,10 @@
       "2026-10-28"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=충북&m_market=2501",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   },
   {
-    "storeId": "9520c0a0181c",
+    "sid": "e24957a6299bb123",
     "store": "충주점",
     "storeType": "hypermarket",
     "sido": "충청북도",
@@ -1637,7 +1535,6 @@
       "2026-10-25"
     ],
     "holidayStatus": "정상",
-    "detailUrl": "https://company.lottemart.com/mobiledowa/market/search_shop.asp?m_area=충북&m_market=2505",
     "updatedAt": "2026-10-01T02:20:57+09:00"
   }
 ]

@@ -10,7 +10,6 @@
   "change_count": 3,
   "changes": [
     {
-      "id": "3239",
       "store": "노브랜드 구성TR점",
       "region": "경기",
       "added_holidays": [
@@ -18,10 +17,10 @@
       ],
       "removed_holidays": [
         "2026-10-10"
-      ]
+      ],
+      "sid": "02d2ea575c21909c"
     },
     {
-      "id": "3252",
       "store": "노브랜드 양주옥정2점",
       "region": "경기",
       "added_holidays": [
@@ -31,10 +30,10 @@
       "removed_holidays": [
         "2026-10-07",
         "2026-10-21"
-      ]
+      ],
+      "sid": "7acddb8e5e290762"
     },
     {
-      "id": "3815",
       "store": "노브랜드 경산사동점",
       "region": "경상",
       "added_holidays": [
@@ -44,7 +43,8 @@
       "removed_holidays": [
         "2026-10-07",
         "2026-10-21"
-      ]
+      ],
+      "sid": "628d8b64045dfd55"
     }
   ],
   "message": "공식 홈페이지의 휴무 일정이 이전 확인 때와 달라졌습니다."

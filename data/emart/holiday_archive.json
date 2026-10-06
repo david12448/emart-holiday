@@ -1,14 +1,13 @@
 [
   {
-    "id": "1043",
+    "sid": "a5f3aed87a01981d",
     "store": "이마트 강릉점",
-    "region": "강원",
     "storeType": "standard",
+    "region": "강원",
     "sido": "강원특별자치도",
     "sigungu": "강릉시",
     "address": "강원특별자치도 강릉시 경강로 2398-10 (송정동) ( 25563 )",
     "phone": "033-649-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1043&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28",
@@ -17,15 +16,14 @@
     ]
   },
   {
-    "id": "1052",
+    "sid": "460fae2d32ac3ef3",
     "store": "이마트 동해점",
-    "region": "강원",
     "storeType": "standard",
+    "region": "강원",
     "sido": "강원특별자치도",
     "sigungu": "동해시",
     "address": "강원특별자치도 동해시 천곡로 100 (천곡동, 동해이마트) ( 25769 )",
     "phone": "033-539-7123",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1052&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -34,15 +32,14 @@
     ]
   },
   {
-    "id": "1049",
+    "sid": "45fe5fc644713b2e",
     "store": "이마트 속초점",
-    "region": "강원",
     "storeType": "standard",
+    "region": "강원",
     "sido": "강원특별자치도",
     "sigungu": "속초시",
     "address": "강원특별자치도 속초시 설악금강대교로 12 (청호동, E마트) ( 24885 )",
     "phone": "033-630-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1049&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -51,15 +48,14 @@
     ]
   },
   {
-    "id": "1011",
+    "sid": "4abf9d07a2660736",
     "store": "이마트 원주점",
-    "region": "강원",
     "storeType": "standard",
+    "region": "강원",
     "sido": "강원특별자치도",
     "sigungu": "원주시",
     "address": "강원특별자치도 원주시 북원로 1928 (무실동, 이마트) ( 26395 )",
     "phone": "033-749-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1011&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28",
@@ -68,15 +64,14 @@
     ]
   },
   {
-    "id": "1066",
+    "sid": "dce648a990de65ba",
     "store": "이마트 춘천점",
-    "region": "강원",
     "storeType": "standard",
+    "region": "강원",
     "sido": "강원특별자치도",
     "sigungu": "춘천시",
     "address": "강원특별자치도 춘천시 경춘로 2353 (온의동, 이마트) ( 24435 )",
     "phone": "033-240-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1066&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -85,15 +80,14 @@
     ]
   },
   {
-    "id": "1079",
+    "sid": "4216f717dcbfc1cd",
     "store": "이마트 태백점",
-    "region": "강원",
     "storeType": "standard",
+    "region": "강원",
     "sido": "강원특별자치도",
     "sigungu": "태백시",
     "address": "강원특별자치도 태백시 굴거랑길 4 (화전동)이마트 태백점 ( 26003 )",
     "phone": "033-580-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1079&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28",
@@ -102,15 +96,14 @@
     ]
   },
   {
-    "id": "1085",
+    "sid": "3662fb1f78d65e3c",
     "store": "스타필드 마켓 동탄점",
-    "region": "경기",
     "storeType": "starfieldmarket",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "화성시",
     "address": "경기 화성시 동탄구 동탄중앙로 376 (석우동, 화성 동탄 이마트)(주)스타필드마켓 동탄점 ( 18451 )",
     "phone": "031-647-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1085&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -119,15 +112,14 @@
     ]
   },
   {
-    "id": "1068",
+    "sid": "81d6c09ffe0e1eb1",
     "store": "스타필드 마켓 죽전점",
-    "region": "경기",
     "storeType": "starfieldmarket",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "용인시",
     "address": "경기도 용인시 수지구 포은대로 552 ( 448-160 )",
     "phone": "031-888-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1068&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -136,15 +128,14 @@
     ]
   },
   {
-    "id": "1133",
+    "sid": "1fe505f2df107e3d",
     "store": "스타필드마켓 일산점",
-    "region": "경기",
     "storeType": "starfieldmarket",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "고양시",
     "address": "경기도 고양시 일산서구 킨텍스로 171(대화동)171 ( 411-410 )",
     "phone": "031-936-1123",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1133&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28",
@@ -153,15 +144,14 @@
     ]
   },
   {
-    "id": "1107",
+    "sid": "6fd958408c99dc31",
     "store": "이마트 경기광주점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "광주시",
     "address": "경기 광주시 광주대로 30 ( 464-010 )",
     "phone": "031-8026-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1107&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -170,30 +160,28 @@
     ]
   },
   {
-    "id": "1135",
+    "sid": "10e191b899a17616",
     "store": "이마트 과천점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "과천시",
     "address": "경기도 과천시 별양상가3로 11 ( 427-705 )",
     "phone": "02-6445-4123",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1135&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "1134",
+    "sid": "f940fc9f2b97a3e9",
     "store": "이마트 광교점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "수원시",
     "address": "경기도 수원시 광교로 191(이의동) ( 443-270 )",
     "phone": "031-328-9123",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1134&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -202,15 +190,14 @@
     ]
   },
   {
-    "id": "1112",
+    "sid": "8bed892c271e88c6",
     "store": "이마트 광명소하점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "광명시",
     "address": "경기도 광명시 소하로 97 ( 423-050 )",
     "phone": "02-6918-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1112&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -219,15 +206,14 @@
     ]
   },
   {
-    "id": "1131",
+    "sid": "0b6f4f9e9d5de5b4",
     "store": "이마트 김포한강점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "김포시",
     "address": "경기 김포시 김포한강7로 71 (구래동, 이마트 김포한강점) ( 10071 )",
     "phone": "031-990-7124",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1131&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28",
@@ -236,15 +222,14 @@
     ]
   },
   {
-    "id": "1069",
+    "sid": "2a2116ec48ebd3b3",
     "store": "이마트 남양주점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "남양주시",
     "address": "경기도 남양주시 늘을2로 27 ( 472-120 )",
     "phone": "031-590-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1069&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28",
@@ -253,30 +238,28 @@
     ]
   },
   {
-    "id": "1086",
+    "sid": "631809be41f632b2",
     "store": "이마트 다산점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "남양주시",
     "address": "경기도 남양주시 도농로 24 ( 472-100 )",
     "phone": "031-579-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1086&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "1075",
+    "sid": "63a624c666c31f3e",
     "store": "이마트 동백점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "용인시",
     "address": "경기도 용인시 기흥구 동백죽전대로 444 ( 446-765 )",
     "phone": "031-546-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1075&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -285,15 +268,14 @@
     ]
   },
   {
-    "id": "1129",
+    "sid": "bdbccad99b8c6611",
     "store": "이마트 별내점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "남양주시",
     "address": "경기도 남양주시 순화궁로 167(별내동) ( 472-501 )",
     "phone": "031-550-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1129&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28",
@@ -302,15 +284,14 @@
     ]
   },
   {
-    "id": "1094",
+    "sid": "a00e952dce7a04b7",
     "store": "이마트 보라점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "용인시",
     "address": "경기 용인시 기흥구 한보라1로 92 (보라동, 보라지구EMART) ( 17080 )",
     "phone": "031-8009-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1094&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -319,15 +300,14 @@
     ]
   },
   {
-    "id": "1998",
+    "sid": "0def6c3775a9e5aa",
     "store": "이마트 부천점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "부천시",
     "address": "경기 부천시 소사구 부천로 1 (심곡본동, 부천역사 쇼핑몰)부천 역사 쇼핑몰 ( 14637 )",
     "phone": "032-610-5123",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1998&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -336,15 +316,14 @@
     ]
   },
   {
-    "id": "1003",
+    "sid": "0e239b7af6c2e365",
     "store": "이마트 분당점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "성남시",
     "address": "경기도 성남시 분당구 불정로 134 ( 463-815 )",
     "phone": "031-710-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1003&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -353,15 +332,14 @@
     ]
   },
   {
-    "id": "1015",
+    "sid": "367a2f278ea7117d",
     "store": "이마트 산본점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "군포시",
     "address": "경기 군포시 산본로 347 ( 435-040 )",
     "phone": "031-450-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1015&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -370,30 +348,28 @@
     ]
   },
   {
-    "id": "1067",
+    "sid": "6d0c0df552e0f5e0",
     "store": "이마트 서수원점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "수원시",
     "address": "경기도 수원시 권선구 수인로 291 ( 441-819 )",
     "phone": "031-895-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1067&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "1110",
+    "sid": "645bf9292a477a0f",
     "store": "이마트 성남점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "성남시",
     "address": "경기도 성남시 수정구 수정로 201 ( 461-190 )",
     "phone": "031-8023-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1110&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -402,15 +378,14 @@
     ]
   },
   {
-    "id": "1030",
+    "sid": "4a0ce7bc5415eb12",
     "store": "이마트 수원점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "수원시",
     "address": "경기 수원시 권선구 경수대로 270 (권선동, 주차빌딩) ( 16585 )",
     "phone": "031-303-3410",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1030&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -419,15 +394,14 @@
     ]
   },
   {
-    "id": "1047",
+    "sid": "77d990fa9e457712",
     "store": "이마트 수지점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "용인시",
     "address": "경기도 용인시 수지구 수지로 203(신봉동) ( 448-150 )",
     "phone": "031-270-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1047&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -436,30 +410,28 @@
     ]
   },
   {
-    "id": "1044",
+    "sid": "6bfff753b2f9789b",
     "store": "이마트 안산고잔점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "안산시",
     "address": "경기도 안산시 단원구 원포공원1로 46 ( 425-856 )",
     "phone": "031-599-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1044&type=2",
     "holidays": [
       "2026-10-10",
       "2026-10-25"
     ]
   },
   {
-    "id": "1092",
+    "sid": "f92211ef79457cfd",
     "store": "이마트 안성점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "안성시",
     "address": "경기도 안성시 중앙로 246 ( 456-240 )",
     "phone": "031-686-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1092&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28",
@@ -468,15 +440,14 @@
     ]
   },
   {
-    "id": "1999",
+    "sid": "0376983369155e9a",
     "store": "이마트 안양점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "안양시",
     "address": "경기 안양시 동안구 관악대로 104 (비산동, 부방유통) ( 13954 )",
     "phone": "031-380-3300",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1999&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28",
@@ -485,15 +456,14 @@
     ]
   },
   {
-    "id": "1055",
+    "sid": "27d511ea8bef09f9",
     "store": "이마트 양주점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "양주시",
     "address": "경기도 양주시 평화로 1713 ( 482-170 )",
     "phone": "031-860-0123",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1055&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28",
@@ -502,15 +472,14 @@
     ]
   },
   {
-    "id": "1084",
+    "sid": "bd73f08b314cb052",
     "store": "이마트 여주점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "여주시",
     "address": "경기도 여주시 세종로 151 ( 469-806 )",
     "phone": "031-887-6123",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1084&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28",
@@ -519,15 +488,14 @@
     ]
   },
   {
-    "id": "1070",
+    "sid": "470e2cc14d89400d",
     "store": "이마트 오산점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "오산시",
     "address": "경기도 오산시 경기대로 181 ( 447-060 )",
     "phone": "031-369-7123",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1070&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28",
@@ -536,30 +504,28 @@
     ]
   },
   {
-    "id": "1071",
+    "sid": "f94cf57ffc9469de",
     "store": "이마트 용인점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "용인시",
     "address": "경기도 용인시 처인구 명지로 53이마트 용인점 ( 449-070 )",
     "phone": "031-326-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1071&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "1137",
+    "sid": "a8df97b556b17b93",
     "store": "이마트 의왕점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "의왕시",
     "address": "경기 의왕시 경수대로 262 (오전동, 서해그랑블)B1F~B2F 이마트의왕점 ( 16058 )",
     "phone": "031-8063-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1137&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28",
@@ -568,15 +534,14 @@
     ]
   },
   {
-    "id": "1128",
+    "sid": "69ae065c1cc8c453",
     "store": "이마트 의정부점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "의정부시",
     "address": "경기 의정부시 민락로 210 ( 480-090 )",
     "phone": "031-850-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1128&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28",
@@ -585,15 +550,14 @@
     ]
   },
   {
-    "id": "1020",
+    "sid": "9cc41a56b2d78978",
     "store": "이마트 이천점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "이천시",
     "address": "경기 이천시 이섭대천로 1440-50 ( 467-110 )",
     "phone": "031-644-8123",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1020&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -602,15 +566,14 @@
     ]
   },
   {
-    "id": "1002",
+    "sid": "850965e05a37c51a",
     "store": "이마트 일산점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "고양시",
     "address": "경기 고양시 일산동구 중앙로 1124 ( 10421 )",
     "phone": "031-900-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1002&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28",
@@ -619,15 +582,14 @@
     ]
   },
   {
-    "id": "1097",
+    "sid": "cc28ea0397696d44",
     "store": "이마트 중동점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "부천시",
     "address": "경기 부천시 원미구 석천로 188 (중동, (주)신세계이마트중동점) ( 14547 )",
     "phone": "032-718-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1097&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -636,15 +598,14 @@
     ]
   },
   {
-    "id": "1115",
+    "sid": "1aa43460c0c4077c",
     "store": "이마트 진접점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "남양주시",
     "address": "경기도 남양주시 진접읍 금강로유연들1길 154 ( 472-863 )",
     "phone": "031-522-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1115&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28",
@@ -653,15 +614,14 @@
     ]
   },
   {
-    "id": "1119",
+    "sid": "d8114a08856b5873",
     "store": "이마트 파주운정점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "파주시",
     "address": "경기도 파주시 한울로 123 ( 413-833 )",
     "phone": "031-931-2123",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1119&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28",
@@ -670,15 +630,14 @@
     ]
   },
   {
-    "id": "1057",
+    "sid": "837dd0b07dcbff96",
     "store": "이마트 파주점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "파주시",
     "address": "경기도 파주시 당하길 10 ( 413-831 )",
     "phone": "031-950-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1057&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28",
@@ -687,15 +646,14 @@
     ]
   },
   {
-    "id": "1099",
+    "sid": "035aadb33dff23af",
     "store": "이마트 평촌점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "안양시",
     "address": "경기도 안양시 동안구 시민대로 300 ( 431-060 )",
     "phone": "031-687-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1099&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28",
@@ -704,15 +662,14 @@
     ]
   },
   {
-    "id": "1032",
+    "sid": "8a561561a55a762d",
     "store": "이마트 평택점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "평택시",
     "address": "경기 평택시 영신로 29 ( 450-090 )",
     "phone": "031-371-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1032&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -721,15 +678,14 @@
     ]
   },
   {
-    "id": "1111",
+    "sid": "d1ed07e1c1f22e46",
     "store": "이마트 포천점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "포천시",
     "address": "경기도 포천시 호국로 915 ( 487-030 )",
     "phone": "031-540-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1111&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28",
@@ -738,15 +694,14 @@
     ]
   },
   {
-    "id": "1130",
+    "sid": "0e27165189fa2c84",
     "store": "이마트 풍산점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "고양시",
     "address": "경기 고양시 일산동구 무궁화로 237 ( 410-315 )",
     "phone": "031-910-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1130&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28",
@@ -755,15 +710,14 @@
     ]
   },
   {
-    "id": "1088",
+    "sid": "1760fa775a8cad68",
     "store": "이마트 하남점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "하남시",
     "address": "경기도 하남시 덕풍서로 70 ( 465-010 )",
     "phone": "031-524-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1088&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28",
@@ -772,15 +726,14 @@
     ]
   },
   {
-    "id": "1126",
+    "sid": "6979f6eb4d3639f9",
     "store": "이마트 화성봉담점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "화성시",
     "address": "경기 화성시 효행구 봉담읍 효행로 278 (동화리, 이마트) ( 18298 )",
     "phone": "031-228-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1126&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -789,15 +742,14 @@
     ]
   },
   {
-    "id": "1096",
+    "sid": "44d95961cca9464b",
     "store": "이마트 화정점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "고양시",
     "address": "경기도 고양시 덕양구 백양로 79 ( 412-270 )",
     "phone": "031-995-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1096&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28",
@@ -806,15 +758,14 @@
     ]
   },
   {
-    "id": "1105",
+    "sid": "f0f14bbb9c3e9934",
     "store": "이마트 흥덕점",
-    "region": "경기",
     "storeType": "standard",
+    "region": "경기",
     "sido": "경기도",
     "sigungu": "용인시",
     "address": "경기도 용인시 기흥구 흥덕중앙로 60 ( 446-908 )",
     "phone": "031-8021-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1105&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -823,15 +774,14 @@
     ]
   },
   {
-    "id": "1074",
+    "sid": "ff2f59f1056f1e5e",
     "store": "스타필드 마켓 경산점",
-    "region": "경상",
     "storeType": "starfieldmarket",
+    "region": "경상",
     "sido": "경상북도",
     "sigungu": "경산시",
     "address": "경북 경산시 옥산로 227 (중산동, 경산이마트)이마트 경산점 ( 38664 )",
     "phone": "053-940-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1074&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28",
@@ -840,15 +790,14 @@
     ]
   },
   {
-    "id": "1039",
+    "sid": "3e84b2a974ea5a41",
     "store": "이마트 구미점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상북도",
     "sigungu": "구미시",
     "address": "경상북도 구미시 구미대로 256 ( 730-080 )",
     "phone": "054-467-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1039&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28",
@@ -857,15 +806,14 @@
     ]
   },
   {
-    "id": "1007",
+    "sid": "762a00ab9d50f7ba",
     "store": "이마트 김천점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상북도",
     "sigungu": "김천시",
     "address": "경북 김천시 시청로 75 ( 740-150 )",
     "phone": "054-420-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1007&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28",
@@ -874,15 +822,14 @@
     ]
   },
   {
-    "id": "1136",
+    "sid": "01b85cc0b27a7957",
     "store": "이마트 김해점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상남도",
     "sigungu": "김해시",
     "address": "경남 김해시 김해대로 2232 (외동)이마트 김해점 ( 50938 )",
     "phone": "055-310-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1136&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -891,15 +838,14 @@
     ]
   },
   {
-    "id": "1122",
+    "sid": "17bb3d53e5fd15c4",
     "store": "이마트 동구미점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상북도",
     "sigungu": "구미시",
     "address": "경상북도 구미시 이계북로 23 ( 730-350 )",
     "phone": "054-480-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1122&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28",
@@ -908,30 +854,28 @@
     ]
   },
   {
-    "id": "1101",
+    "sid": "043eb64b61db2828",
     "store": "이마트 마산점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상남도",
     "sigungu": "창원시",
     "address": "경상남도 창원시 마산합포구 서성로 3 ( 631-870 )",
     "phone": "055-711-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1101&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "1116",
+    "sid": "fb57fc3252124947",
     "store": "이마트 사천점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상남도",
     "sigungu": "사천시",
     "address": "경상남도 사천시 삼천포대교로 591 ( 664-130 )",
     "phone": "055-850-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1116&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -940,15 +884,14 @@
     ]
   },
   {
-    "id": "1081",
+    "sid": "848041f57c6adb70",
     "store": "이마트 상주점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상북도",
     "sigungu": "상주시",
     "address": "경상북도 상주시 경상대로 3141 ( 742-260 )",
     "phone": "054-537-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1081&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28",
@@ -957,15 +900,14 @@
     ]
   },
   {
-    "id": "1061",
+    "sid": "aa22389c9d6541c3",
     "store": "이마트 안동점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상북도",
     "sigungu": "안동시",
     "address": "경북 안동시 옥동 1길2 ( 760-310 )",
     "phone": "054-850-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1061&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28",
@@ -974,15 +916,14 @@
     ]
   },
   {
-    "id": "1056",
+    "sid": "a35ba85406837679",
     "store": "이마트 양산점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상남도",
     "sigungu": "양산시",
     "address": "경상남도 양산시 양산역6길 12 ( 626-050 )",
     "phone": "055-371-8123",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1056&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -991,15 +932,14 @@
     ]
   },
   {
-    "id": "1053",
+    "sid": "a440c6f390d41d32",
     "store": "이마트 영천점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상북도",
     "sigungu": "영천시",
     "address": "경상북도 영천시 최무선로 83 ( 770-240 )",
     "phone": "054-330-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1053&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28",
@@ -1008,15 +948,14 @@
     ]
   },
   {
-    "id": "1021",
+    "sid": "771a489c5f6eaac0",
     "store": "이마트 진주점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상남도",
     "sigungu": "진주시",
     "address": "경남 진주시 진양호로 477 ( 660-020 )",
     "phone": "055-749-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1021&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1025,15 +964,14 @@
     ]
   },
   {
-    "id": "1040",
+    "sid": "f7bb262f25c802a6",
     "store": "이마트 창원점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상남도",
     "sigungu": "창원시",
     "address": "경상남도 창원시 성산구 원이대로 608 ( 641-845 )",
     "phone": "055-211-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1040&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1042,15 +980,14 @@
     ]
   },
   {
-    "id": "1064",
+    "sid": "7619cadb341538fa",
     "store": "이마트 통영점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상남도",
     "sigungu": "통영시",
     "address": "경상남도 통영시 광도면 죽림4로 9 ( 650-826 )",
     "phone": "055-650-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1064&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1059,15 +996,14 @@
     ]
   },
   {
-    "id": "1102",
+    "sid": "7959561bea5fb444",
     "store": "이마트 포항이동점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상북도",
     "sigungu": "포항시",
     "address": "경북 포항시 북구 대이로 188 (득량동, 이마트) ( 37694 )",
     "phone": "054-721-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1102&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1076,15 +1012,14 @@
     ]
   },
   {
-    "id": "1035",
+    "sid": "de2277793975f9a1",
     "store": "이마트 포항점",
-    "region": "경상",
     "storeType": "standard",
+    "region": "경상",
     "sido": "경상북도",
     "sigungu": "포항시",
     "address": "경북 포항시 남구 냉천로 10 ( 790-832 )",
     "phone": "054-223-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1035&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1093,30 +1028,28 @@
     ]
   },
   {
-    "id": "1054",
+    "sid": "6654d0e42bbb5540",
     "store": "이마트 광산점",
-    "region": "광주",
     "storeType": "standard",
+    "region": "광주",
     "sido": "전라남도",
     "sigungu": "광산구",
     "address": "전남광주통합특별시 광산구 사암로 172 (우산동, 광산 이마트)172 ( 62364 )",
     "phone": "062-949-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1054&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "1138",
+    "sid": "3fb0d223c20e50ac",
     "store": "이마트 광주점",
-    "region": "광주",
     "storeType": "standard",
+    "region": "광주",
     "sido": "전라남도",
     "sigungu": "서구",
     "address": "전남광주통합특별시 서구 죽봉대로 61 (화정동, 광주 이마트) ( 61937 )",
     "phone": "062-360-0123",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1138&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1125,15 +1058,14 @@
     ]
   },
   {
-    "id": "1082",
+    "sid": "b184fe627243d4b5",
     "store": "이마트 봉선점",
-    "region": "광주",
     "storeType": "standard",
+    "region": "광주",
     "sido": "전라남도",
     "sigungu": "남구",
     "address": "전남광주통합특별시 남구 봉선로 198 (봉선동, 이마트)198 ( 61705 )",
     "phone": "062-611-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1082&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1142,15 +1074,14 @@
     ]
   },
   {
-    "id": "1024",
+    "sid": "37ea300760b384f9",
     "store": "이마트 만촌점",
-    "region": "대구",
     "storeType": "standard",
+    "region": "대구",
     "sido": "대구광역시",
     "sigungu": "수성구",
     "address": "대구 수성구 동원로 136 (만촌동, 이마트만촌점) ( 42037 )",
     "phone": "053-602-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1024&type=2",
     "holidays": [
       "2026-10-12",
       "2026-10-26",
@@ -1159,15 +1090,14 @@
     ]
   },
   {
-    "id": "1058",
+    "sid": "65dea0f0e39792d2",
     "store": "이마트 반야월점",
-    "region": "대구",
     "storeType": "standard",
+    "region": "대구",
     "sido": "대구광역시",
     "sigungu": "동구",
     "address": "대구광역시 동구 안심로 389-2 ( 701-300 )",
     "phone": "053-665-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1058&type=2",
     "holidays": [
       "2026-10-12",
       "2026-10-26",
@@ -1176,15 +1106,14 @@
     ]
   },
   {
-    "id": "1014",
+    "sid": "97bbf27021234aea",
     "store": "이마트 성서점",
-    "region": "대구",
     "storeType": "standard",
+    "region": "대구",
     "sido": "대구광역시",
     "sigungu": "달서구",
     "address": "대구 달서구 이곡동로 24 ( 704-140 )",
     "phone": "053-605-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1014&type=2",
     "holidays": [
       "2026-10-12",
       "2026-10-26",
@@ -1193,15 +1122,14 @@
     ]
   },
   {
-    "id": "1027",
+    "sid": "f1dfffa5a37f2f9e",
     "store": "이마트 월배점",
-    "region": "대구",
     "storeType": "standard",
+    "region": "대구",
     "sido": "대구광역시",
     "sigungu": "달서구",
     "address": "대구 달서구 진천로 92이마트 월배점 ( 704-330 )",
     "phone": "053-607-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1027&type=2",
     "holidays": [
       "2026-10-12",
       "2026-10-26",
@@ -1210,15 +1138,14 @@
     ]
   },
   {
-    "id": "1037",
+    "sid": "56ea314dc34583e4",
     "store": "이마트 칠성점",
-    "region": "대구",
     "storeType": "standard",
+    "region": "대구",
     "sido": "대구광역시",
     "sigungu": "북구",
     "address": "대구 북구 침산로 93 ( 702-062 )",
     "phone": "053-609-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1037&type=2",
     "holidays": [
       "2026-10-12",
       "2026-10-26",
@@ -1227,15 +1154,14 @@
     ]
   },
   {
-    "id": "1141",
+    "sid": "d71a736e6e69bb21",
     "store": "이마트 푸드마켓 수성점",
-    "region": "대구",
     "storeType": "foodmarket",
+    "region": "대구",
     "sido": "대구광역시",
     "sigungu": "수성구",
     "address": "대구 수성구 수성로 393 (수성동4가, 수성하이츠)지하1층 ( 42007 )",
     "phone": "053-288-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1141&type=2",
     "holidays": [
       "2026-10-12",
       "2026-10-26",
@@ -1244,15 +1170,14 @@
     ]
   },
   {
-    "id": "1121",
+    "sid": "c0148b1822bde423",
     "store": "이마트 대전터미널점",
-    "region": "대전",
     "storeType": "standard",
+    "region": "대전",
     "sido": "대전광역시",
     "sigungu": "동구",
     "address": "대전광역시 동구 동서대로 1689 ( 300-824 )",
     "phone": "042-615-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1121&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1261,45 +1186,42 @@
     ]
   },
   {
-    "id": "1038",
+    "sid": "2faa1b2fec6845d8",
     "store": "이마트 둔산점",
-    "region": "대전",
     "storeType": "standard",
+    "region": "대전",
     "sido": "대전광역시",
     "sigungu": "서구",
     "address": "대전 서구 둔산북로 41 ( 302-120 )",
     "phone": "042-479-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1038&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "1046",
+    "sid": "340865f8079bd876",
     "store": "이마트 금정점",
-    "region": "부산",
     "storeType": "standard",
+    "region": "부산",
     "sido": "부산광역시",
     "sigungu": "금정구",
     "address": "부산 금정구 중앙대로1841번길 24 (구서동, (주)이마트금정점) ( 46233 )",
     "phone": "051-606-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1046&type=2",
     "holidays": [
       "2026-10-12",
       "2026-10-26"
     ]
   },
   {
-    "id": "1045",
+    "sid": "356d1a5f13ed6bfb",
     "store": "이마트 문현점",
-    "region": "부산",
     "storeType": "standard",
+    "region": "부산",
     "sido": "부산광역시",
     "sigungu": "남구",
     "address": "부산광역시 남구 전포대로91번길 47 ( 608-040 )",
     "phone": "051-609-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1045&type=2",
     "holidays": [
       "2026-10-12",
       "2026-10-26",
@@ -1308,15 +1230,14 @@
     ]
   },
   {
-    "id": "1050",
+    "sid": "7b7617677614fc01",
     "store": "이마트 사상점",
-    "region": "부산",
     "storeType": "standard",
+    "region": "부산",
     "sido": "부산광역시",
     "sigungu": "사상구",
     "address": "부산광역시 사상구 광장로 17 ( 617-060 )",
     "phone": "051-329-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1050&type=2",
     "holidays": [
       "2026-10-12",
       "2026-10-26",
@@ -1325,15 +1246,14 @@
     ]
   },
   {
-    "id": "1036",
+    "sid": "2a83eb07cc2237f4",
     "store": "이마트 연제점",
-    "region": "부산",
     "storeType": "standard",
+    "region": "부산",
     "sido": "부산광역시",
     "sigungu": "연제구",
     "address": "부산 연제구 연수로 89이마트 연제점 ( 611-082 )",
     "phone": "051-860-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1036&type=2",
     "holidays": [
       "2026-10-12",
       "2026-10-26",
@@ -1342,15 +1262,14 @@
     ]
   },
   {
-    "id": "1018",
+    "sid": "7135ccae7f7608c7",
     "store": "이마트 해운대점",
-    "region": "부산",
     "storeType": "standard",
+    "region": "부산",
     "sido": "부산광역시",
     "sigungu": "해운대구",
     "address": "부산 해운대구 좌동순환로 511 ( 612-010 )",
     "phone": "051-608-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1018&type=2",
     "holidays": [
       "2026-10-12",
       "2026-10-26",
@@ -1359,15 +1278,14 @@
     ]
   },
   {
-    "id": "1059",
+    "sid": "c93a041a46ebd065",
     "store": "스타필드 마켓 월계점",
-    "region": "서울",
     "storeType": "starfieldmarket",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "노원구",
     "address": "서울특별시 노원구 마들로3길 15SFM 월계점 ( 139-053 )",
     "phone": "02-2092-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1059&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1376,15 +1294,14 @@
     ]
   },
   {
-    "id": "1118",
+    "sid": "26744cf0b4147ae1",
     "store": "이마트 가든5점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "송파구",
     "address": "서울특별시 송파구 충민로 10 ( 138-200 )",
     "phone": "02-411-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1118&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1393,15 +1310,14 @@
     ]
   },
   {
-    "id": "1012",
+    "sid": "57fcd7d79406b5e2",
     "store": "이마트 구로점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "구로구",
     "address": "서울 구로구 디지털로 32길 43 ( 152-848 )",
     "phone": "02-2009-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1012&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1410,15 +1326,14 @@
     ]
   },
   {
-    "id": "1123",
+    "sid": "1e4daba4770274ed",
     "store": "이마트 마포점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "마포구",
     "address": "서울특별시 마포구 백범로 212 ( 121-030 )",
     "phone": "02-2197-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1123&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1427,15 +1342,14 @@
     ]
   },
   {
-    "id": "1041",
+    "sid": "46bef1a5a7ba7e7c",
     "store": "이마트 명일점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "강동구",
     "address": "서울 강동구 고덕로 276 ( 134-070 )",
     "phone": "02-2145-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1041&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1444,15 +1358,14 @@
     ]
   },
   {
-    "id": "1104",
+    "sid": "4a6da325e90c265a",
     "store": "이마트 목동점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "양천구",
     "address": "서울특별시 양천구 오목로 299 ( 158-051 )",
     "phone": "02-6923-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1104&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1461,15 +1374,14 @@
     ]
   },
   {
-    "id": "1117",
+    "sid": "2145520adb9e3f14",
     "store": "이마트 묵동점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "중랑구",
     "address": "서울특별시 중랑구 동일로 932 ( 131-140 )",
     "phone": "02-2083-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1117&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1478,15 +1390,14 @@
     ]
   },
   {
-    "id": "1093",
+    "sid": "b86bbc153982fe37",
     "store": "이마트 미아점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "성북구",
     "address": "서울특별시 성북구 도봉로 17(길음동) ( 136-110 )",
     "phone": "02-944-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1093&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1495,15 +1406,14 @@
     ]
   },
   {
-    "id": "1108",
+    "sid": "caf6e68295e08103",
     "store": "이마트 수색점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "은평구",
     "address": "서울 은평구 수색로 217 (수색동, 디엠씨 자이1단지(DMC 자이1)) ( 03504 )",
     "phone": "02-6943-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1108&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1512,15 +1422,14 @@
     ]
   },
   {
-    "id": "1029",
+    "sid": "62e803cd88050bce",
     "store": "이마트 수서점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "강남구",
     "address": "서울특별시 강남구 광평로 280 ( 135-744 )",
     "phone": "02-451-6123",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1029&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1529,15 +1438,14 @@
     ]
   },
   {
-    "id": "1083",
+    "sid": "f07c6a4ff6160816",
     "store": "이마트 신도림점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "구로구",
     "address": "서울특별시 구로구 새말로 97테크노마트 지하2층 ( 152-725 )",
     "phone": "02-6715-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1083&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1546,15 +1454,14 @@
     ]
   },
   {
-    "id": "1013",
+    "sid": "c85ed5d7ea462f4e",
     "store": "이마트 신월점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "양천구",
     "address": "서울특별시 양천구 화곡로 59 ( 158-095 )",
     "phone": "02-6716-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1013&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1563,15 +1470,14 @@
     ]
   },
   {
-    "id": "1139",
+    "sid": "b2855ef26ebc7571",
     "store": "이마트 신촌점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "마포구",
     "address": "서울 마포구 신촌로 94 (노고산동, 그랜드플라자) ( 04058 )",
     "phone": "02-6288-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1139&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1580,30 +1486,28 @@
     ]
   },
   {
-    "id": "1062",
+    "sid": "790f09d9a962ee42",
     "store": "이마트 양재점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "서초구",
     "address": "서울특별시 서초구 매헌로 16 ( 137-130 )",
     "phone": "02-6040-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1062&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28"
     ]
   },
   {
-    "id": "1087",
+    "sid": "8e7c7711f5256f37",
     "store": "이마트 여의도점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "영등포구",
     "address": "서울특별시 영등포구 여의동로3길 10 ( 150-010 )",
     "phone": "02-2280-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1087&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1612,15 +1516,14 @@
     ]
   },
   {
-    "id": "1095",
+    "sid": "4560e1c3532027cd",
     "store": "이마트 역삼점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "강남구",
     "address": "서울특별시 강남구 역삼로 310 ( 135-080 )",
     "phone": "02-6908-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1095&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1629,15 +1532,14 @@
     ]
   },
   {
-    "id": "1106",
+    "sid": "3722642917d51f71",
     "store": "이마트 영등포점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "영등포구",
     "address": "서울특별시 영등포구 영중로 15타임스퀘어 內 ( 150-034 )",
     "phone": "02-3468-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1106&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1646,15 +1548,14 @@
     ]
   },
   {
-    "id": "1090",
+    "sid": "08d3026b87c13366",
     "store": "이마트 왕십리점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "성동구",
     "address": "서울특별시 성동구 왕십리광장로 17이마트 왕십리점 ( 133-070 )",
     "phone": "02-6438-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1090&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1663,15 +1564,14 @@
     ]
   },
   {
-    "id": "1060",
+    "sid": "24bf9d3f2fbc213d",
     "store": "이마트 용산점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "용산구",
     "address": "서울특별시 용산구 한강대로23길 55지하 1층, 지하2층 ( 140-780 )",
     "phone": "02-6363-2200",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1060&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1680,15 +1580,14 @@
     ]
   },
   {
-    "id": "1033",
+    "sid": "d857fd29b1617c08",
     "store": "이마트 은평점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "은평구",
     "address": "서울 은평구 은평로 111 (응암동, 은평이마트)이마트 은평점 ( 03461 )",
     "phone": "02-380-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1033&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1697,15 +1596,14 @@
     ]
   },
   {
-    "id": "1080",
+    "sid": "515fa42e65547d49",
     "store": "이마트 자양점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "광진구",
     "address": "서울특별시 광진구 아차산로 272 ( 143-190 )",
     "phone": "02-6742-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1080&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1714,15 +1612,14 @@
     ]
   },
   {
-    "id": "1001",
+    "sid": "672a00499af97906",
     "store": "이마트 창동점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "도봉구",
     "address": "서울 도봉구 노해로 65길 4 ( 132-045 )",
     "phone": "02-901-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1001&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1731,15 +1628,14 @@
     ]
   },
   {
-    "id": "1016",
+    "sid": "1134dc8f54fe2b42",
     "store": "이마트 천호점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "강동구",
     "address": "서울 강동구 천호대로 1017 ( 134-874 )",
     "phone": "02-2224-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1016&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1748,15 +1644,14 @@
     ]
   },
   {
-    "id": "1089",
+    "sid": "b5c498cbbc702f74",
     "store": "이마트 청계천점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "중구",
     "address": "서울특별시 중구 청계천로 400 ( 100-440 )",
     "phone": "02-2290-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1089&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28",
@@ -1765,15 +1660,14 @@
     ]
   },
   {
-    "id": "1142",
+    "sid": "e7e3c85ceeeb0953",
     "store": "이마트 푸드마켓 고덕점",
-    "region": "서울",
     "storeType": "foodmarket",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "강동구",
     "address": "서울 강동구 고덕비즈밸리로 51B1층 ( 05203 )",
     "phone": "02-6444-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1142&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1782,30 +1676,28 @@
     ]
   },
   {
-    "id": "1125",
+    "sid": "adc2a59caa7454de",
     "store": "이마트 하월곡점",
-    "region": "서울",
     "storeType": "standard",
+    "region": "서울",
     "sido": "서울특별시",
     "sigungu": "성북구",
     "address": "서울특별시 성북구 종암로 167(하월곡동, 동일하이빌뉴시티) ( 136-130 )",
     "phone": "02-6936-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1125&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25"
     ]
   },
   {
-    "id": "1132",
+    "sid": "3952de228c63e5fa",
     "store": "이마트 세종점",
-    "region": "세종",
     "storeType": "standard",
+    "region": "세종",
     "sido": "세종특별자치시",
     "sigungu": "",
     "address": "세종특별자치시 금송로 687 ( 339-014 )",
     "phone": "044-902-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1132&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1814,15 +1706,14 @@
     ]
   },
   {
-    "id": "1051",
+    "sid": "2857455ac0d17bf5",
     "store": "이마트 울산점",
-    "region": "울산",
     "storeType": "standard",
+    "region": "울산",
     "sido": "울산광역시",
     "sigungu": "남구",
     "address": "울산광역시 남구 남중로 48 ( 680-020 )",
     "phone": "052-220-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1051&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-25",
@@ -1831,15 +1722,14 @@
     ]
   },
   {
-    "id": "1077",
+    "sid": "f86df66de57d7064",
     "store": "이마트 검단점",
-    "region": "인천",
     "storeType": "standard",
+    "region": "인천",
     "sido": "인천광역시",
     "sigungu": "검단구",
     "address": "인천 검단구 서곶로 754 (당하동) ( 23576 )",
     "phone": "032-440-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1077&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1848,15 +1738,14 @@
     ]
   },
   {
-    "id": "1098",
+    "sid": "21f507e238e8861b",
     "store": "이마트 계양점",
-    "region": "인천",
     "storeType": "standard",
+    "region": "인천",
     "sido": "인천광역시",
     "sigungu": "계양구",
     "address": "인천광역시 계양구 봉오대로 785이마트계양점 ( 407-060 )",
     "phone": "032-717-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1098&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1865,15 +1754,14 @@
     ]
   },
   {
-    "id": "1023",
+    "sid": "8e4d194de5e68431",
     "store": "이마트 동인천점",
-    "region": "인천",
     "storeType": "standard",
+    "region": "인천",
     "sido": "인천광역시",
     "sigungu": "제물포구",
     "address": "인천 제물포구 인중로 134 ( 22324 )",
     "phone": "032-451-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1023&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1882,15 +1770,14 @@
     ]
   },
   {
-    "id": "1042",
+    "sid": "9aa14eb1dabd7421",
     "store": "이마트 연수점",
-    "region": "인천",
     "storeType": "standard",
+    "region": "인천",
     "sido": "인천광역시",
     "sigungu": "연수구",
     "address": "인천광역시 연수구 경원대로 184 ( 406-130 )",
     "phone": "032-820-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1042&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1899,15 +1786,14 @@
     ]
   },
   {
-    "id": "1025",
+    "sid": "b591277102fa1703",
     "store": "스타필드마켓 군산점",
-    "region": "전라",
     "storeType": "starfieldmarket",
+    "region": "전라",
     "sido": "전북특별자치도",
     "sigungu": "군산시",
     "address": "전북특별자치도 군산시 구암3.1로 137 ( 54032 )",
     "phone": "063-472-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1025&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1916,15 +1802,14 @@
     ]
   },
   {
-    "id": "1005",
+    "sid": "e5c06de3dc8b5c28",
     "store": "이마트 남원점",
-    "region": "전라",
     "storeType": "standard",
+    "region": "전라",
     "sido": "전북특별자치도",
     "sigungu": "남원시",
     "address": "전북특별자치도 남원시 남문로 385-16 ( 55764 )",
     "phone": "063-620-3123",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1005&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1933,15 +1818,14 @@
     ]
   },
   {
-    "id": "1022",
+    "sid": "51a3c7bd05991a0a",
     "store": "이마트 목포점",
-    "region": "전라",
     "storeType": "standard",
+    "region": "전라",
     "sido": "전라남도",
     "sigungu": "목포시",
     "address": "전남광주통합특별시 목포시 옥암로 138 (옥암동, 목포이마트) ( 58657 )",
     "phone": "061-260-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1022&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1950,15 +1834,14 @@
     ]
   },
   {
-    "id": "1065",
+    "sid": "9ae4d148d6f6f506",
     "store": "이마트 순천점",
-    "region": "전라",
     "storeType": "standard",
+    "region": "전라",
     "sido": "전라남도",
     "sigungu": "순천시",
     "address": "전남광주통합특별시 순천시 팔마로 191 (덕암동, (주)이마트) ( 57964 )",
     "phone": "061-749-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1065&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1967,15 +1850,14 @@
     ]
   },
   {
-    "id": "1034",
+    "sid": "b7eb63b1a585158a",
     "store": "이마트 여수점",
-    "region": "전라",
     "storeType": "standard",
+    "region": "전라",
     "sido": "전라남도",
     "sigungu": "여수시",
     "address": "전남광주통합특별시 여수시 좌수영로 277 (오림동, 이마트) ( 59714 )",
     "phone": "061-650-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1034&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -1984,15 +1866,14 @@
     ]
   },
   {
-    "id": "1076",
+    "sid": "c3160e1153e0b9f9",
     "store": "이마트 익산점",
-    "region": "전라",
     "storeType": "standard",
+    "region": "전라",
     "sido": "전북특별자치도",
     "sigungu": "익산시",
     "address": "전북특별자치도 익산시 평동로 705 (동산동, E마트) ( 54606 )",
     "phone": "063-860-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1076&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -2001,15 +1882,14 @@
     ]
   },
   {
-    "id": "1010",
+    "sid": "03a2766fd81d79ac",
     "store": "이마트 전주점",
-    "region": "전라",
     "storeType": "standard",
+    "region": "전라",
     "sido": "전북특별자치도",
     "sigungu": "전주시",
     "address": "전북특별자치도 전주시 완산구 당산로 111 ( 54949 )",
     "phone": "063-259-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1010&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -2018,15 +1898,14 @@
     ]
   },
   {
-    "id": "1073",
+    "sid": "38b14f3c66223e71",
     "store": "이마트 서귀포점",
-    "region": "제주",
     "storeType": "standard",
+    "region": "제주",
     "sido": "제주특별자치도",
     "sigungu": "서귀포시",
     "address": "제주특별자치도 서귀포시 일주동로 9209 ( 697-110 )",
     "phone": "064-797-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1073&type=2",
     "holidays": [
       "2026-10-16",
       "2026-10-24",
@@ -2035,30 +1914,28 @@
     ]
   },
   {
-    "id": "1048",
+    "sid": "f35eb949c5f6fbf9",
     "store": "이마트 신제주점",
-    "region": "제주",
     "storeType": "standard",
+    "region": "제주",
     "sido": "제주특별자치도",
     "sigungu": "제주시",
     "address": "제주특별자치도 제주시 1100로 3348 ( 690-180 )",
     "phone": "064-798-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1048&type=2",
     "holidays": [
       "2026-10-09",
       "2026-10-24"
     ]
   },
   {
-    "id": "1004",
+    "sid": "38c705c346b8871b",
     "store": "이마트 제주점",
-    "region": "제주",
     "storeType": "standard",
+    "region": "제주",
     "sido": "제주특별자치도",
     "sigungu": "제주시",
     "address": "제주특별자치도 제주시 탑동로 38 ( 690-032 )",
     "phone": "064-729-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1004&type=2",
     "holidays": [
       "2026-10-09",
       "2026-10-24",
@@ -2067,15 +1944,14 @@
     ]
   },
   {
-    "id": "1091",
+    "sid": "67bd629d78af6866",
     "store": "이마트 보령점",
-    "region": "충청",
     "storeType": "standard",
+    "region": "충청",
     "sido": "충청남도",
     "sigungu": "보령시",
     "address": "충청남도 보령시 해안로 25 ( 355-060 )",
     "phone": "041-640-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1091&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28",
@@ -2084,15 +1960,14 @@
     ]
   },
   {
-    "id": "1124",
+    "sid": "40bfbbbba0676d55",
     "store": "이마트 서산점",
-    "region": "충청",
     "storeType": "standard",
+    "region": "충청",
     "sido": "충청남도",
     "sigungu": "서산시",
     "address": "충청남도 서산시 서해로 3685 ( 356-040 )",
     "phone": "041-670-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1124&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -2101,15 +1976,14 @@
     ]
   },
   {
-    "id": "1078",
+    "sid": "b0b5c54c9596f333",
     "store": "이마트 아산점",
-    "region": "충청",
     "storeType": "standard",
+    "region": "충청",
     "sido": "충청남도",
     "sigungu": "아산시",
     "address": "충남 아산시 온천대로 1678 (풍기동) ( 31528 )",
     "phone": "041-422-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1078&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -2118,15 +1992,14 @@
     ]
   },
   {
-    "id": "1109",
+    "sid": "6771e6f2a02fb20a",
     "store": "이마트 제천점",
-    "region": "충청",
     "storeType": "standard",
+    "region": "충청",
     "sido": "충청북도",
     "sigungu": "제천시",
     "address": "충청북도 제천시 장평천로 11 ( 390-160 )",
     "phone": "043-641-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1109&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -2135,15 +2008,14 @@
     ]
   },
   {
-    "id": "1127",
+    "sid": "5b23af8c96a74a12",
     "store": "이마트 천안서북점",
-    "region": "충청",
     "storeType": "standard",
+    "region": "충청",
     "sido": "충청남도",
     "sigungu": "천안시",
     "address": "충남 천안시 서북구 삼성대로 20 ( 331-220 )",
     "phone": "041-580-9123",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1127&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -2152,15 +2024,14 @@
     ]
   },
   {
-    "id": "1028",
+    "sid": "b9891253d1bff66f",
     "store": "이마트 천안점",
-    "region": "충청",
     "storeType": "standard",
+    "region": "충청",
     "sido": "충청남도",
     "sigungu": "천안시",
     "address": "충남 천안시 서북구 충무로 187 ( 331-090 )",
     "phone": "041-620-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1028&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -2169,15 +2040,14 @@
     ]
   },
   {
-    "id": "1114",
+    "sid": "1c949024c4740da9",
     "store": "이마트 천안터미널점",
-    "region": "충청",
     "storeType": "standard",
+    "region": "충청",
     "sido": "충청남도",
     "sigungu": "천안시",
     "address": "충청남도 천안시 동남구 만남로 43 ( 330-942 )",
     "phone": "041-411-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1114&type=2",
     "holidays": [
       "2026-10-11",
       "2026-10-25",
@@ -2186,15 +2056,14 @@
     ]
   },
   {
-    "id": "1009",
+    "sid": "849893e4f25c5496",
     "store": "이마트 청주점",
-    "region": "충청",
     "storeType": "standard",
+    "region": "충청",
     "sido": "충청북도",
     "sigungu": "청주시",
     "address": "충북 청주시 서원구 청남로 1853 ( 361-202 )",
     "phone": "043-210-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1009&type=2",
     "holidays": [
       "2026-10-14",
       "2026-10-28",
@@ -2203,15 +2072,14 @@
     ]
   },
   {
-    "id": "1031",
+    "sid": "140bc7cec92e8320",
     "store": "이마트 충주점",
-    "region": "충청",
     "storeType": "standard",
+    "region": "충청",
     "sido": "충청북도",
     "sigungu": "충주시",
     "address": "충북 충주시 중원대로 3420 (문화동, 이마트) ( 27407 )",
     "phone": "043-841-1234",
-    "detailUrl": "https://store.emart.com/branch/view.do?id=1031&type=2",
     "holidays": [
       "2026-10-10",
       "2026-10-25",

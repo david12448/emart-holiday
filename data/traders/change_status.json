@@ -10,7 +10,6 @@
   "change_count": 1,
   "changes": [
     {
-      "id": "2024",
       "store": "트레이더스 홀세일 클럽 구월점",
       "region": "인천",
       "added_holidays": [
@@ -18,7 +17,8 @@
       ],
       "removed_holidays": [
         "2026-11-21"
-      ]
+      ],
+      "sid": "0e91d2814fac1b4a"
     }
   ],
   "message": "공식 홈페이지의 휴무 일정이 이전 확인 때와 달라졌습니다."
