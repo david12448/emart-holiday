@@ -136,3 +136,87 @@
    - 실제 HTML에는 `<base href="/spartacus/assets/">`가 있어 JS 번들의 기준 경로가 다릅니다.
    - 첫 진단 결과의 `/main-*.js` 주소는 잘못된 조합이었습니다.
    - 수정 후 `/spartacus/assets/main-*.js`를 기준으로 번들을 분석하고 있습니다.
+
+
+### 2026-10-06 — 공식 구조화 API 발견 및 최종 구현 방향
+
+#### 공식 API
+
+매장 찾기 페이지의 SAP Spartacus 번들을 분석한 결과 다음 OCC 엔드포인트를 확인했습니다.
+
+- `https://www.costco.co.kr/rest/v2/korea/stores?fields=FULL`
+
+이 API는 현재 국내 20개 매장을 반환하며 다음 정보를 구조화된 JSON으로 제공합니다.
+
+- 공식 점포 ID(`warehouseCode`)
+- 한글 점포명(`displayName`)
+- 주소 / 대표 전화번호
+- 위도 / 경도
+- 공식 상세 페이지 URL
+- 영업시간
+- 특별 영업일 / 휴무일(`openingHours.specialDayOpeningList`)
+
+따라서 **휴무일 이미지를 OCR하는 방식은 주 수집 경로에서 제외**하고, 공식 OCC API를 최우선 원본으로 사용합니다.
+`/closedSchedule` 이미지는 사람이 공식 공지를 교차 확인하거나 API 이상 여부를 확인할 때 쓰는 2차 검증 경로로 남깁니다.
+
+#### 휴무일 판별 안전장치
+
+공식 API를 확인하는 과정에서 청라점에 다음 특이점이 있었습니다.
+
+- `closed=true`인 날짜가 10/11~10/25 사이에 연속으로 존재
+- 그중 실제 공식 휴무일 이미지에 표시된 10/11, 10/25에는 `name` 값이 존재
+- 내부 운영용으로 보이는 중간 날짜들은 `name=null`
+
+다른 점포까지 공식 10월 이미지와 전부 대조한 결과,
+**실제 공지 휴무일은 `closed=true`이면서 `name`이 있는 항목과 일치**했습니다.
+
+따라서 `fetch_costco.py`는 이름 없는 `closed=true` 항목을 휴무일로 자동 확정하지 않습니다.
+이 안전장치가 없으면 청라점에 잘못된 연속 휴무가 표시될 수 있습니다.
+
+#### ID 전환 시행착오
+
+9. 초기 화면 골격을 만들 때 임시 ID(`costco-...`)를 사용했고, 이후 공식 API의 `warehouseCode`로 전환했습니다.
+   - ID만 기준으로 이전 스냅샷과 새 스냅샷을 비교하면 동일 점포를 신규/삭제 점포처럼 오인할 수 있었습니다.
+   - 아카이브에도 임시 ID와 공식 ID가 함께 남을 가능성이 있었습니다.
+   - 해결: 최초 마이그레이션에서는 점포명을 보조 키로 사용해 과거 이력을 공식 ID로 이어받도록 했습니다.
+   - 휴무일 변경 감지도 점포명을 우선 비교 키로 사용해 ID 교체 자체가 변경 알림을 만들지 않도록 했습니다.
+   - 수정 후 아카이브는 20개 공식 ID 점포로 정리되고 `change_status.json`은 변경 0건으로 확인됐습니다.
+
+10. 주소 문자열에 API 원본의 불규칙한 공백이 포함되는 점을 확인했습니다.
+   - 해결: 주소 줄별 공백을 정규화한 뒤 합칩니다.
+
+11. 검증기를 먼저 강화한 직후 한 번의 중간 테스트가 실패했습니다.
+   - 당시 기존 임시 데이터에는 주소/전화/공식 상세 URL이 아직 들어 있지 않았기 때문입니다.
+   - 이후 테스트 workflow가 먼저 공식 API 수집기를 실행하고 그 결과를 검증하도록 순서를 변경했습니다.
+   - 최신 테스트는 수집, 20개 점포 검증, 주소/전화/공식 URL 검증까지 모두 통과했습니다.
+
+#### 최종 자동화
+
+- 주 수집기: `fetch_costco.py`
+- 공식 원본: Costco Korea OCC `/rest/v2/korea/stores?fields=FULL`
+- 데이터 검증: `validate_costco_data.py`
+- 운영 자동화: `.github/workflows/update-costco.yml`
+- 실행 주기: 이마트 계열과 같은 월/목 주 2회
+- 동시 실행 충돌 방지를 위해 `concurrency`를 사용합니다.
+- push 전에 `git pull --rebase`를 실행해 테스트 과정에서 발생했던 non-fast-forward 충돌 가능성을 낮춥니다.
+- 공식 휴무일 이미지 확인은 `fetch_costco_source.py`와 수동 workflow로 별도 유지합니다.
+
+실제 운영 workflow 테스트에서 공식 API 수집 → 검증 → 데이터 커밋 → push 전체가 성공했고,
+Actions가 `Update Costco official holiday data` 커밋을 생성했습니다.
+
+#### 최종 공개 데이터 계약
+
+`data/costco/stores.json`의 각 점포는 공통 UI가 그대로 사용할 수 있도록 다음 필드를 가집니다.
+
+- `storeId`: Costco 공식 `warehouseCode`
+- `store`: 한글 점포명
+- `storeType`: `warehouse`
+- `sido`, `sigungu`
+- `address`, `phone`
+- `latitude`, `longitude`
+- `holidays`
+- `holidayStatus`
+- `detailUrl`: 코스트코 공식 점포 상세 페이지
+- `officialName`: Costco 내부 영문 점포명
+
+이 구조를 위해 기존 이마트/롯데 공통 JavaScript는 수정하지 않았습니다.
