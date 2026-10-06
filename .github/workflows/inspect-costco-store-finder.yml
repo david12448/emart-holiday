@@ -147,6 +147,37 @@ jobs:
               encoding="utf-8",
           )
 
+          target_chunks = [
+              "chunk-TPDW35KC.js",
+              "chunk-7RAJ75VS.js",
+              "chunk-KNSLAS22.js",
+          ]
+
+          downloaded_chunks = {}
+
+          for chunk_name in target_chunks:
+              chunk_url = urljoin(
+                  asset_base,
+                  chunk_name,
+              )
+              chunk_response = session.get(
+                  chunk_url,
+                  timeout=60,
+              )
+              chunk_response.raise_for_status()
+
+              Path(chunk_name).write_text(
+                  chunk_response.text,
+                  encoding="utf-8",
+              )
+
+              downloaded_chunks[chunk_name] = {
+                  "url": chunk_url,
+                  "bytes": len(
+                      chunk_response.content
+                  ),
+              }
+
           keywords = [
               "store-finder",
               "warehouse",
@@ -231,6 +262,7 @@ jobs:
                       ),
                       "findings": findings,
                       "apiLikeUrls": api_like_urls,
+                      "downloadedChunks": downloaded_chunks,
                   },
                   ensure_ascii=False,
                   indent=2,
@@ -270,4 +302,7 @@ jobs:
             costco_store_finder_resources.json
             costco_store_finder_findings.json
             costco_main.js
+            chunk-TPDW35KC.js
+            chunk-7RAJ75VS.js
+            chunk-KNSLAS22.js
           retention-days: 1
