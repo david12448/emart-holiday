@@ -90,11 +90,22 @@ def clean_detail_url(value):
         absolute
     )
 
+    path = parts.path
+
+    if path.startswith(
+        "/store/"
+    ):
+        path = (
+            "/store-finder/"
+            +
+            path[len("/store/"):]
+        )
+
     return urlunsplit(
         (
             parts.scheme,
             parts.netloc,
-            parts.path,
+            path,
             "",
             "",
         )
