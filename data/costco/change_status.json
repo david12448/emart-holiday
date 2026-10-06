@@ -1,14 +1,12 @@
 {
-  "checkedAt": "2026-10-06",
+  "checkedAt": "2026-10-06T18:13:43+09:00",
+  "previousCheckedAt": "2026-10-06T17:58:52+09:00",
   "changed": false,
   "notice_active": false,
   "lastChangeAt": null,
   "noticeUntil": null,
   "summary": {
-    "addedStores": 0,
-    "removedStores": 0,
     "updatedStores": 0,
-    "fieldChanges": 0,
     "totalChanges": 0
   },
   "changes": []
