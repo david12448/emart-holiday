@@ -678,6 +678,44 @@ function formatStoreDisplayName(
 
   }
 
+
+  if (
+    storeType === "traders"
+  ) {
+
+    const baseName =
+      rawDisplayName
+        .replace(
+          /^트레이더스\s*홀세일\s*클럽\s*/,
+          ""
+        )
+        .replace(
+          /^트레이더스\s*/,
+          ""
+        )
+        .trim();
+
+    return `
+      <span class="
+        store-special-name
+        store-special-name-traders
+      ">
+        <span class="
+          store-special-base
+        ">
+          ${baseName}
+        </span>
+        <span class="
+          store-type-text
+          store-type-text-traders
+        ">
+          트레이더스
+        </span>
+      </span>
+    `;
+
+  }
+
   return rawDisplayName;
 
 }
@@ -6250,6 +6288,175 @@ if (!officialUrl) {
 
 /*
 ==================================================
+보조 브랜드 데이터 읽기
+
+예:
+이마트 페이지에서 트레이더스 데이터를
+별도 파일 구조는 유지한 채 함께 표시합니다.
+==================================================
+*/
+
+async function loadSupplementalDataSources(
+  cacheKey
+) {
+
+  const sources =
+    Array.isArray(
+      MART_CONFIG.supplementalDataSources
+    )
+      ? MART_CONFIG.supplementalDataSources
+      : [];
+
+
+  const supplementalItems = [];
+
+
+  for (
+    const source
+    of sources
+  ) {
+
+    const candidates =
+      [
+        source?.archiveDataUrl,
+        source?.currentDataUrl
+      ]
+        .filter(Boolean);
+
+
+    let sourceData =
+      null;
+
+
+    for (
+      const dataUrl
+      of candidates
+    ) {
+
+      try {
+
+        const response =
+          await fetch(
+            `${dataUrl}?time=` +
+            cacheKey,
+            {
+              cache:
+                "no-store"
+            }
+          );
+
+
+        if (
+          !response.ok
+        ) {
+
+          continue;
+
+        }
+
+
+        const payload =
+          await response.json();
+
+
+        if (
+          Array.isArray(
+            payload
+          )
+        ) {
+
+          sourceData =
+            payload;
+
+          break;
+
+        }
+
+      } catch (
+        sourceError
+      ) {
+
+        console.warn(
+          "보조 점포 데이터를 불러오지 못했습니다.",
+          dataUrl,
+          sourceError
+        );
+
+      }
+
+    }
+
+
+    if (
+      !Array.isArray(
+        sourceData
+      )
+    ) {
+
+      continue;
+
+    }
+
+
+    sourceData.forEach(
+      item => {
+
+        const originalId =
+          getStoreId(
+            item
+          );
+
+
+        const mappedItem = {
+          ...item
+        };
+
+
+        if (
+          source?.storeType
+        ) {
+
+          mappedItem.storeType =
+            String(
+              source.storeType
+            );
+
+        }
+
+
+        if (
+          source?.storeIdPrefix
+          &&
+          originalId
+        ) {
+
+          mappedItem.storeId =
+            String(
+              source.storeIdPrefix
+            )
+            +
+            originalId;
+
+        }
+
+
+        supplementalItems.push(
+          mappedItem
+        );
+
+      }
+    );
+
+  }
+
+
+  return supplementalItems;
+
+}
+
+
+/*
+==================================================
 데이터 읽기
 
 월 이동을 위해 holiday_archive.json을 우선 사용합니다.
@@ -6411,6 +6618,28 @@ async function loadData() {
 
       holidayData =
         currentData;
+
+    }
+
+
+    /*
+    브랜드별 데이터 파일은 그대로 유지하면서
+    현재 화면에서 함께 보여줄 보조 점포 데이터를 합칩니다.
+    */
+    const supplementalData =
+      await loadSupplementalDataSources(
+        cacheKey
+      );
+
+
+    if (
+      supplementalData.length > 0
+    ) {
+
+      holidayData = [
+        ...holidayData,
+        ...supplementalData
+      ];
 
     }
 
