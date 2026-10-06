@@ -220,3 +220,18 @@ Actions가 `Update Costco official holiday data` 커밋을 생성했습니다.
 - `officialName`: Costco 내부 영문 점포명
 
 이 구조를 위해 기존 이마트/롯데 공통 JavaScript는 수정하지 않았습니다.
+
+
+### 2026-10-06 — 코스트코 상세 링크 경로 수정
+
+사용자 확인 결과 코스트코 점포 링크는 `/store/<영문명>`이 아니라
+`/store-finder/<영문명>` 형식으로 연결하는 것이 맞습니다.
+
+예:
+- 이전: `https://www.costco.co.kr/store/Cheongna`
+- 수정: `https://www.costco.co.kr/store-finder/Cheongna`
+
+현재 공개 데이터의 모든 코스트코 점포 상세 URL을 새 형식으로 변경했고,
+다음 자동 수집 때 다시 이전 형식으로 돌아가지 않도록 `fetch_costco.py`에서
+공식 API의 `/store/` 경로를 공개 링크용 `/store-finder/` 경로로 변환합니다.
+`validate_costco_data.py`도 동일 형식만 통과하도록 수정했습니다.
