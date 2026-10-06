@@ -155,7 +155,7 @@ def main():
             )
 
         if not detail_url.startswith(
-            "https://www.costco.co.kr/store/"
+            "https://www.costco.co.kr/store-finder/"
         ):
             fail(
                 f"{name} 공식 상세 URL 형식 오류: {detail_url!r}"
