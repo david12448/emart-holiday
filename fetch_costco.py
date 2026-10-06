@@ -102,15 +102,19 @@ def clean_detail_url(value):
 
 
 def normalize_address(address):
-    line1 = str(
-        address.get("line1")
-        or ""
-    ).strip()
+    line1 = " ".join(
+        str(
+            address.get("line1")
+            or ""
+        ).split()
+    )
 
-    line2 = str(
-        address.get("line2")
-        or ""
-    ).strip()
+    line2 = " ".join(
+        str(
+            address.get("line2")
+            or ""
+        ).split()
+    )
 
     return " ".join(
         part
@@ -421,40 +425,56 @@ def merge_archive(
     fresh_items,
     today,
 ):
-    old_map = {
+    old_by_id = {
         item_id(item): item
         for item in old_items
         if item_id(item)
     }
 
-    fresh_map = {
-        item_id(item): item
-        for item in fresh_items
-        if item_id(item)
+    old_by_name = {
+        str(
+            item.get("store")
+            or ""
+        ): item
+        for item in old_items
+        if str(
+            item.get("store")
+            or ""
+        ).strip()
     }
 
     merged = []
     today_key = today.isoformat()
+    matched_old_ids = set()
 
-    for store_id in sorted(
-        set(old_map)
-        |
-        set(fresh_map)
-    ):
-        old = old_map.get(
-            store_id,
-            {},
-        )
-
-        fresh = fresh_map.get(
-            store_id,
-            {},
-        )
-
-        base = (
+    for fresh in fresh_items:
+        store_id = item_id(
             fresh
-            or old
         )
+
+        store_name = str(
+            fresh.get("store")
+            or ""
+        )
+
+        old = old_by_id.get(
+            store_id
+        )
+
+        if old is None:
+            old = old_by_name.get(
+                store_name
+            )
+
+        old = (
+            old
+            or {}
+        )
+
+        if item_id(old):
+            matched_old_ids.add(
+                item_id(old)
+            )
 
         old_past = {
             value
@@ -489,7 +509,7 @@ def merge_archive(
         }
 
         item = dict(
-            base
+            fresh
         )
 
         item[
@@ -499,6 +519,70 @@ def merge_archive(
             |
             fresh_dates
         )
+
+        merged.append(
+            item
+        )
+
+    # 공식 API에서 점포가 사라진 경우에도
+    # 이미 보관한 과거 이력은 바로 버리지 않습니다.
+    for old in old_items:
+        old_id = item_id(
+            old
+        )
+
+        if (
+            not old_id
+            or
+            old_id in matched_old_ids
+        ):
+            continue
+
+        old_name = str(
+            old.get("store")
+            or ""
+        )
+
+        if any(
+            str(
+                item.get("store")
+                or ""
+            )
+            == old_name
+            for item in fresh_items
+        ):
+            continue
+
+        past_dates = sorted(
+            {
+                value
+                for value in (
+                    old.get(
+                        "holidays"
+                    )
+                    or []
+                )
+                if (
+                    isinstance(
+                        value,
+                        str,
+                    )
+                    and
+                    value < today_key
+                )
+            }
+        )
+
+        if not past_dates:
+            continue
+
+        item = dict(
+            old
+        )
+
+        item[
+            "holidays"
+        ] = past_dates
 
         merged.append(
             item
@@ -642,11 +726,47 @@ def compare_snapshots(
         today.isoformat()
     )
 
-    old_map = snapshot_map(
+    def snapshot_name_map(
+        snapshot,
+    ):
+        result = {}
+
+        for item in (
+            snapshot.get(
+                "stores"
+            )
+            or []
+        ):
+            store_name = str(
+                item.get("store")
+                or ""
+            ).strip()
+
+            key = (
+                store_name
+                or
+                str(
+                    item.get("storeId")
+                    or item.get("id")
+                    or ""
+                )
+            )
+
+            if key:
+                result[
+                    key
+                ] = item
+
+        return result
+
+    # 코스트코 최초 구현 과정에서 임시 ID에서
+    # 공식 warehouseCode로 전환될 수 있으므로
+    # 휴무일 변경 비교는 점포명을 우선 키로 사용합니다.
+    old_map = snapshot_name_map(
         old_snapshot
     )
 
-    new_map = snapshot_map(
+    new_map = snapshot_name_map(
         new_snapshot
     )
 
@@ -674,18 +794,18 @@ def compare_snapshots(
 
     changes = []
 
-    for store_id in sorted(
+    for store_key in sorted(
         set(old_map)
         |
         set(new_map)
     ):
         old = old_map.get(
-            store_id,
+            store_key,
             {},
         )
 
         new = new_map.get(
-            store_id,
+            store_key,
             {},
         )
 
@@ -723,7 +843,11 @@ def compare_snapshots(
 
         changes.append(
             {
-                "storeId": store_id,
+                "storeId": str(
+                    base.get("storeId")
+                    or base.get("id")
+                    or store_key
+                ),
                 "store": base.get(
                     "store",
                     "",
