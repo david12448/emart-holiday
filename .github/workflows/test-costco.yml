@@ -1,0 +1,46 @@
+name: Test Costco Data
+
+on:
+  workflow_dispatch:
+
+  pull_request:
+    paths:
+      - "costco/**"
+      - "data/costco/**"
+      - "fetch_costco.py"
+      - "validate_costco_data.py"
+      - "requirements.txt"
+      - ".github/workflows/update-costco.yml"
+      - ".github/workflows/test-costco.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 저장소 파일 불러오기
+        uses: actions/checkout@v4
+
+      - name: Python 설치
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 필요한 라이브러리 설치
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: 코스트코 공식 API 수집 테스트
+        run: python fetch_costco.py
+
+      - name: 코스트코 공개 데이터 검증
+        run: python validate_costco_data.py
+
+      - name: 생성 데이터 확인
+        run: |
+          echo "===== stores.json ====="
+          head -n 80 data/costco/stores.json
+          echo ""
+          echo "===== change_status.json ====="
+          cat data/costco/change_status.json
