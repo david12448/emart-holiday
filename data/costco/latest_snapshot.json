@@ -1,0 +1,251 @@
+{
+  "checked_at": "2026-10-06T17:58:52+09:00",
+  "months": [
+    "2026-10"
+  ],
+  "source_page_url": "https://www.costco.co.kr/closedSchedule",
+  "source_image_url": "https://azure-na-images.contentstack.com/v3/assets/bltfc0c2adf9ebb4217/blt9518ae4f6c31e4a7/6aac6e75f64fd85c6de18cbe/2026년10월_휴무일안내_(KOR).jpg",
+  "source_image_sha256": "f74c28fcb0cef24ad789925cbedb0fa1fe787334c2509a219ec68fdf8a79c268",
+  "stores": [
+    {
+      "storeId": "costco-yangpyeong",
+      "store": "양평점",
+      "storeType": "warehouse",
+      "sido": "서울특별시",
+      "sigungu": "영등포구",
+      "holidays": [
+        "2026-10-11",
+        "2026-10-25"
+      ],
+      "detailUrl": "https://www.costco.co.kr/store-finder"
+    },
+    {
+      "storeId": "costco-yangjae",
+      "store": "양재점",
+      "storeType": "warehouse",
+      "sido": "서울특별시",
+      "sigungu": "서초구",
+      "holidays": [
+        "2026-10-11",
+        "2026-10-25"
+      ],
+      "detailUrl": "https://www.costco.co.kr/store-finder"
+    },
+    {
+      "storeId": "costco-sangbong",
+      "store": "상봉점",
+      "storeType": "warehouse",
+      "sido": "서울특별시",
+      "sigungu": "중랑구",
+      "holidays": [
+        "2026-10-11",
+        "2026-10-25"
+      ],
+      "detailUrl": "https://www.costco.co.kr/store-finder"
+    },
+    {
+      "storeId": "costco-gocheok",
+      "store": "고척점",
+      "storeType": "warehouse",
+      "sido": "서울특별시",
+      "sigungu": "구로구",
+      "holidays": [
+        "2026-10-11",
+        "2026-10-25"
+      ],
+      "detailUrl": "https://www.costco.co.kr/store-finder"
+    },
+    {
+      "storeId": "costco-songdo",
+      "store": "송도점",
+      "storeType": "warehouse",
+      "sido": "인천광역시",
+      "sigungu": "연수구",
+      "holidays": [
+        "2026-10-11",
+        "2026-10-25"
+      ],
+      "detailUrl": "https://www.costco.co.kr/store-finder"
+    },
+    {
+      "storeId": "costco-cheongna",
+      "store": "청라점",
+      "storeType": "warehouse",
+      "sido": "인천광역시",
+      "sigungu": "서구",
+      "holidays": [
+        "2026-10-11",
+        "2026-10-25"
+      ],
+      "detailUrl": "https://www.costco.co.kr/store-finder"
+    },
+    {
+      "storeId": "costco-ilsan",
+      "store": "일산점",
+      "storeType": "warehouse",
+      "sido": "경기도",
+      "sigungu": "고양시",
+      "holidays": [
+        "2026-10-14",
+        "2026-10-28"
+      ],
+      "detailUrl": "https://www.costco.co.kr/store-finder"
+    },
+    {
+      "storeId": "costco-gwangmyeong",
+      "store": "광명점",
+      "storeType": "warehouse",
+      "sido": "경기도",
+      "sigungu": "광명시",
+      "holidays": [
+        "2026-10-11",
+        "2026-10-25"
+      ],
+      "detailUrl": "https://www.costco.co.kr/store-finder"
+    },
+    {
+      "storeId": "costco-uijeongbu",
+      "store": "의정부점",
+      "storeType": "warehouse",
+      "sido": "경기도",
+      "sigungu": "의정부시",
+      "holidays": [
+        "2026-10-11",
+        "2026-10-25"
+      ],
+      "detailUrl": "https://www.costco.co.kr/store-finder"
+    },
+    {
+      "storeId": "costco-gongse",
+      "store": "공세점",
+      "storeType": "warehouse",
+      "sido": "경기도",
+      "sigungu": "용인시",
+      "holidays": [
+        "2026-10-11",
+        "2026-10-25"
+      ],
+      "detailUrl": "https://www.costco.co.kr/store-finder"
+    },
+    {
+      "storeId": "costco-hanam",
+      "store": "하남점",
+      "storeType": "warehouse",
+      "sido": "경기도",
+      "sigungu": "하남시",
+      "holidays": [
+        "2026-10-11",
+        "2026-10-25"
+      ],
+      "detailUrl": "https://www.costco.co.kr/store-finder"
+    },
+    {
+      "storeId": "costco-pyeongtaek",
+      "store": "평택점",
+      "storeType": "warehouse",
+      "sido": "경기도",
+      "sigungu": "평택시",
+      "holidays": [
+        "2026-10-11",
+        "2026-10-25"
+      ],
+      "detailUrl": "https://www.costco.co.kr/store-finder"
+    },
+    {
+      "storeId": "costco-daejeon",
+      "store": "대전점",
+      "storeType": "warehouse",
+      "sido": "대전광역시",
+      "sigungu": "중구",
+      "holidays": [
+        "2026-10-11",
+        "2026-10-25"
+      ],
+      "detailUrl": "https://www.costco.co.kr/store-finder"
+    },
+    {
+      "storeId": "costco-sejong",
+      "store": "세종점",
+      "storeType": "warehouse",
+      "sido": "세종특별자치시",
+      "sigungu": "세종시",
+      "holidays": [
+        "2026-10-11",
+        "2026-10-25"
+      ],
+      "detailUrl": "https://www.costco.co.kr/store-finder"
+    },
+    {
+      "storeId": "costco-cheonan",
+      "store": "천안점",
+      "storeType": "warehouse",
+      "sido": "충청남도",
+      "sigungu": "천안시",
+      "holidays": [
+        "2026-10-11",
+        "2026-10-25"
+      ],
+      "detailUrl": "https://www.costco.co.kr/store-finder"
+    },
+    {
+      "storeId": "costco-daegu",
+      "store": "대구점",
+      "storeType": "warehouse",
+      "sido": "대구광역시",
+      "sigungu": "북구",
+      "holidays": [
+        "2026-10-12",
+        "2026-10-26"
+      ],
+      "detailUrl": "https://www.costco.co.kr/store-finder"
+    },
+    {
+      "storeId": "costco-daegu-innovation",
+      "store": "대구 혁신도시점",
+      "storeType": "warehouse",
+      "sido": "대구광역시",
+      "sigungu": "동구",
+      "holidays": [
+        "2026-10-12",
+        "2026-10-26"
+      ],
+      "detailUrl": "https://www.costco.co.kr/store-finder"
+    },
+    {
+      "storeId": "costco-gimhae",
+      "store": "김해점",
+      "storeType": "warehouse",
+      "sido": "경상남도",
+      "sigungu": "김해시",
+      "holidays": [
+        "2026-10-11",
+        "2026-10-25"
+      ],
+      "detailUrl": "https://www.costco.co.kr/store-finder"
+    },
+    {
+      "storeId": "costco-ulsan",
+      "store": "울산점",
+      "storeType": "warehouse",
+      "sido": "울산광역시",
+      "sigungu": "북구",
+      "holidays": [
+        "2026-10-14",
+        "2026-10-25"
+      ],
+      "detailUrl": "https://www.costco.co.kr/store-finder"
+    },
+    {
+      "storeId": "costco-busan",
+      "store": "부산점",
+      "storeType": "warehouse",
+      "sido": "부산광역시",
+      "sigungu": "수영구",
+      "holidays": [
+        "2026-10-11",
+        "2026-10-25"
+      ],
+      "detailUrl": "https://www.costco.co.kr/store-finder"
+    }
+  ]
+}
