@@ -83,7 +83,7 @@ const isAllRegions =
   requestedRegion === "전체";
 
 
-const requestedStoreId =
+let requestedStoreId =
   urlParams.get("storeId");
 
 
@@ -312,6 +312,10 @@ function updateRegionInUrl(
   params.delete(
     "storeId"
   );
+
+
+  requestedStoreId =
+    null;
 
 
   const newUrl =
@@ -672,6 +676,44 @@ function formatStoreDisplayName(
           store-type-text-starfieldmarket
         ">
           스타필드
+        </span>
+      </span>
+    `;
+
+  }
+
+
+  if (
+    storeType === "traders"
+  ) {
+
+    const baseName =
+      rawDisplayName
+        .replace(
+          /^트레이더스\s*홀세일\s*클럽\s*/,
+          ""
+        )
+        .replace(
+          /^트레이더스\s*/,
+          ""
+        )
+        .trim();
+
+    return `
+      <span class="
+        store-special-name
+        store-special-name-traders
+      ">
+        <span class="
+          store-special-base
+        ">
+          ${baseName}
+        </span>
+        <span class="
+          store-type-text
+          store-type-text-traders
+        ">
+          트레이더스
         </span>
       </span>
     `;
@@ -2171,6 +2213,38 @@ function buildStoreClickGuide() {
       : "";
 
 
+  const useInternalStoreView =
+    MART_CONFIG.allRegionsStoreLinksUseInternalView === true
+    &&
+    selectedRegion === "all"
+    &&
+    !requestedStoreId;
+
+
+  const storeGuideText =
+    useInternalStoreView
+      ? `
+        <span class="store-click-guide-line">
+          점포별 휴무일을 자세히 보려면
+          <strong>아래 점포명을 클릭하세요.</strong>
+        </span>
+
+        <span class="store-click-guide-sub">
+          같은 페이지에서 선택한 점포 1곳만 표시합니다.
+        </span>
+      `
+      : `
+        <span class="store-click-guide-line">
+          점포별 영업시간·전화번호 등 자세한 정보는
+          <strong>아래 점포명을 클릭해 확인할 수 있습니다.</strong>
+        </span>
+
+        <span class="store-click-guide-sub">
+          ${MART_CONFIG.officialPageLabel || "공식 점포 페이지"}로 이동합니다.
+        </span>
+      `;
+
+
   return `
     <div class="store-click-guide">
 
@@ -2186,14 +2260,7 @@ function buildStoreClickGuide() {
 
         ${regionGuide}
 
-        <span class="store-click-guide-line">
-          점포별 영업시간·전화번호 등 자세한 정보는
-          <strong>아래 점포명을 클릭해 확인할 수 있습니다.</strong>
-        </span>
-
-        <span class="store-click-guide-sub">
-          ${MART_CONFIG.officialPageLabel || "공식 점포 페이지"}로 이동합니다.
-        </span>
+        ${storeGuideText}
 
       </span>
 
@@ -6055,6 +6122,59 @@ document.addEventListener(
 
 /*
 ==================================================
+점포 1곳 내부 화면 주소 생성
+==================================================
+*/
+
+function buildInternalStoreViewUrl(
+  storeId
+) {
+
+  const params =
+    new URLSearchParams(
+      window.location.search
+    );
+
+
+  params.set(
+    "storeId",
+    String(storeId)
+  );
+
+
+  params.set(
+    "date",
+    getSelectedMonthKey()
+  );
+
+
+  if (
+    selectedRegion === "all"
+  ) {
+
+    params.set(
+      "region",
+      "all"
+    );
+
+  }
+
+
+  return (
+    window.location.pathname
+    +
+    "?"
+    +
+    params.toString()
+    +
+    window.location.hash
+  );
+
+}
+
+
+/*
+==================================================
 점포 클릭 처리
 ==================================================
 */
@@ -6086,6 +6206,32 @@ document.addEventListener(
       console.error(
         "점포 ID가 없습니다."
       );
+
+      return;
+
+    }
+
+
+    /*
+    코스트코처럼 전체 지역 화면의 점포명을
+    외부 공식 사이트가 아니라
+    현재 페이지의 단일 점포 화면으로 연결할 수 있습니다.
+
+    단일 점포 화면 안의 "공식 점포 페이지" 버튼은
+    requestedStoreId가 있으므로 기존처럼 외부 공식 URL로 이동합니다.
+    */
+    if (
+      MART_CONFIG.allRegionsStoreLinksUseInternalView === true
+      &&
+      selectedRegion === "all"
+      &&
+      !requestedStoreId
+    ) {
+
+      window.location.href =
+        buildInternalStoreViewUrl(
+          storeId
+        );
 
       return;
 
@@ -6142,6 +6288,175 @@ if (!officialUrl) {
 
   }
 );
+
+
+/*
+==================================================
+보조 브랜드 데이터 읽기
+
+예:
+이마트 페이지에서 트레이더스 데이터를
+별도 파일 구조는 유지한 채 함께 표시합니다.
+==================================================
+*/
+
+async function loadSupplementalDataSources(
+  cacheKey
+) {
+
+  const sources =
+    Array.isArray(
+      MART_CONFIG.supplementalDataSources
+    )
+      ? MART_CONFIG.supplementalDataSources
+      : [];
+
+
+  const supplementalItems = [];
+
+
+  for (
+    const source
+    of sources
+  ) {
+
+    const candidates =
+      [
+        source?.archiveDataUrl,
+        source?.currentDataUrl
+      ]
+        .filter(Boolean);
+
+
+    let sourceData =
+      null;
+
+
+    for (
+      const dataUrl
+      of candidates
+    ) {
+
+      try {
+
+        const response =
+          await fetch(
+            `${dataUrl}?time=` +
+            cacheKey,
+            {
+              cache:
+                "no-store"
+            }
+          );
+
+
+        if (
+          !response.ok
+        ) {
+
+          continue;
+
+        }
+
+
+        const payload =
+          await response.json();
+
+
+        if (
+          Array.isArray(
+            payload
+          )
+        ) {
+
+          sourceData =
+            payload;
+
+          break;
+
+        }
+
+      } catch (
+        sourceError
+      ) {
+
+        console.warn(
+          "보조 점포 데이터를 불러오지 못했습니다.",
+          dataUrl,
+          sourceError
+        );
+
+      }
+
+    }
+
+
+    if (
+      !Array.isArray(
+        sourceData
+      )
+    ) {
+
+      continue;
+
+    }
+
+
+    sourceData.forEach(
+      item => {
+
+        const originalId =
+          getStoreId(
+            item
+          );
+
+
+        const mappedItem = {
+          ...item
+        };
+
+
+        if (
+          source?.storeType
+        ) {
+
+          mappedItem.storeType =
+            String(
+              source.storeType
+            );
+
+        }
+
+
+        if (
+          source?.storeIdPrefix
+          &&
+          originalId
+        ) {
+
+          mappedItem.storeId =
+            String(
+              source.storeIdPrefix
+            )
+            +
+            originalId;
+
+        }
+
+
+        supplementalItems.push(
+          mappedItem
+        );
+
+      }
+    );
+
+  }
+
+
+  return supplementalItems;
+
+}
 
 
 /*
@@ -6307,6 +6622,28 @@ async function loadData() {
 
       holidayData =
         currentData;
+
+    }
+
+
+    /*
+    브랜드별 데이터 파일은 그대로 유지하면서
+    현재 화면에서 함께 보여줄 보조 점포 데이터를 합칩니다.
+    */
+    const supplementalData =
+      await loadSupplementalDataSources(
+        cacheKey
+      );
+
+
+    if (
+      supplementalData.length > 0
+    ) {
+
+      holidayData = [
+        ...holidayData,
+        ...supplementalData
+      ];
 
     }
 
