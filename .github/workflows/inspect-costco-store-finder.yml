@@ -25,36 +25,38 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: 코스트코 매장 찾기 원본 수집
+      - name: 코스트코 매장 찾기 번들 조사
         run: |
           python - <<'PY'
           import json
+          import re
+          from pathlib import Path
           from urllib.parse import urljoin
 
           import requests
           from bs4 import BeautifulSoup
 
-          url = "https://www.costco.co.kr/store-finder"
+          PAGE_URL = "https://www.costco.co.kr/store-finder"
+          HEADERS = {
+              "User-Agent": (
+                  "Mozilla/5.0 "
+                  "(compatible; emart-holiday/1.0; "
+                  "+https://github.com/david12448/emart-holiday)"
+              )
+          }
 
-          response = requests.get(
-              url,
-              headers={
-                  "User-Agent": (
-                      "Mozilla/5.0 "
-                      "(compatible; emart-holiday/1.0; "
-                      "+https://github.com/david12448/emart-holiday)"
-                  )
-              },
+          session = requests.Session()
+          session.headers.update(HEADERS)
+
+          response = session.get(
+              PAGE_URL,
               timeout=30,
           )
           response.raise_for_status()
 
-          open(
-              "costco_store_finder.html",
-              "w",
+          Path("costco_store_finder.html").write_text(
+              response.text,
               encoding="utf-8",
-          ).write(
-              response.text
           )
 
           soup = BeautifulSoup(
@@ -62,38 +64,200 @@ jobs:
               "html.parser",
           )
 
-          scripts = []
+          base_tag = soup.find("base")
+          base_href = (
+              base_tag.get("href")
+              if base_tag
+              else "/"
+          )
+          asset_base = urljoin(
+              PAGE_URL,
+              base_href,
+          )
+
+          resources = []
+
           for tag in soup.find_all("script"):
               src = tag.get("src")
               if src:
-                  scripts.append(
+                  resources.append(
                       urljoin(
-                          url,
+                          asset_base,
                           src,
                       )
                   )
 
-          open(
-              "costco_store_finder_scripts.json",
-              "w",
-              encoding="utf-8",
-          ).write(
+          for tag in soup.find_all("link"):
+              rel = tag.get("rel") or []
+              href = tag.get("href")
+              if (
+                  href
+                  and
+                  "modulepreload" in rel
+              ):
+                  resources.append(
+                      urljoin(
+                          asset_base,
+                          href,
+                      )
+                  )
+
+          resources = list(
+              dict.fromkeys(resources)
+          )
+
+          Path(
+              "costco_store_finder_resources.json"
+          ).write_text(
               json.dumps(
-                  scripts,
+                  {
+                      "baseHref": base_href,
+                      "assetBase": asset_base,
+                      "resources": resources,
+                  },
                   ensure_ascii=False,
                   indent=2,
               )
-              + "\n"
+              + "\n",
+              encoding="utf-8",
+          )
+
+          main_urls = [
+              url
+              for url in resources
+              if "/main-" in url
+          ]
+
+          if not main_urls:
+              raise RuntimeError(
+                  "main JS 번들을 찾지 못했습니다."
+              )
+
+          main_url = main_urls[0]
+          main_response = session.get(
+              main_url,
+              timeout=60,
+          )
+          main_response.raise_for_status()
+
+          main_text = main_response.text
+
+          Path("costco_main.js").write_text(
+              main_text,
+              encoding="utf-8",
+          )
+
+          keywords = [
+              "store-finder",
+              "warehouse",
+              "warehouses",
+              "warehouse-locator",
+              "salesLocations",
+              "location",
+              "latitude",
+              "longitude",
+              "postalCode",
+              "phone",
+          ]
+
+          findings = {}
+
+          for keyword in keywords:
+              contexts = []
+              start = 0
+
+              while True:
+                  index = main_text.find(
+                      keyword,
+                      start,
+                  )
+
+                  if index < 0:
+                      break
+
+                  left = max(
+                      0,
+                      index - 350,
+                  )
+                  right = min(
+                      len(main_text),
+                      index + len(keyword) + 350,
+                  )
+
+                  contexts.append(
+                      main_text[left:right]
+                  )
+
+                  if len(contexts) >= 20:
+                      break
+
+                  start = index + len(keyword)
+
+              if contexts:
+                  findings[keyword] = contexts
+
+          url_candidates = sorted(
+              set(
+                  re.findall(
+                      r"https?://[^\"'\\\s)]+",
+                      main_text,
+                  )
+              )
+          )
+
+          api_like_urls = [
+              value
+              for value in url_candidates
+              if any(
+                  token in value.lower()
+                  for token in (
+                      "api",
+                      "warehouse",
+                      "location",
+                      "costco",
+                  )
+              )
+          ]
+
+          Path(
+              "costco_store_finder_findings.json"
+          ).write_text(
+              json.dumps(
+                  {
+                      "pageUrl": PAGE_URL,
+                      "mainUrl": main_url,
+                      "mainBytes": len(
+                          main_response.content
+                      ),
+                      "findings": findings,
+                      "apiLikeUrls": api_like_urls,
+                  },
+                  ensure_ascii=False,
+                  indent=2,
+              )
+              + "\n",
+              encoding="utf-8",
           )
 
           print(
-              f"HTML bytes: {len(response.content)}"
+              f"base: {asset_base}"
           )
           print(
-              f"script count: {len(scripts)}"
+              f"resource count: {len(resources)}"
           )
           print(
-              "\n".join(scripts)
+              f"main: {main_url}"
+          )
+          print(
+              f"main bytes: {len(main_response.content)}"
+          )
+          print(
+              "keywords found: "
+              + ", ".join(findings.keys())
+          )
+          print(
+              "API-like URL count: "
+              + str(len(api_like_urls))
           )
           PY
 
@@ -103,5 +267,7 @@ jobs:
           name: costco-store-finder-diagnostic
           path: |
             costco_store_finder.html
-            costco_store_finder_scripts.json
+            costco_store_finder_resources.json
+            costco_store_finder_findings.json
+            costco_main.js
           retention-days: 1
