@@ -1,0 +1,13 @@
+# Private-build artifacts must never be committed.
+.build-private/
+dist-private/
+*.redirect-map.json
+
+# Local secrets / environment files
+.env
+.env.*
+!.env.example
+
+# Python cache
+__pycache__/
+*.pyc
