@@ -282,3 +282,27 @@ Actions가 `Update Costco official holiday data` 커밋을 생성했습니다.
 
 따라서 이마트 전체 화면에서 일반 이마트, 푸드마켓, 스타필드 마켓, 트레이더스를 함께 확인할 수 있고,
 트레이더스 점포를 클릭하면 동일한 내부 1개 점포 화면으로 이동합니다.
+
+
+### 2026-10-06 — Private source / Public deploy 분리 준비
+
+티스토리·AdSense 운영을 고려해 F12나 JSON 다운로드만으로 공식 점포 URL 및 수집 구조를 통째로 가져가기 어렵게 만드는 방향을 검토했습니다.
+
+단순 JavaScript 난독화만으로는 실제 브라우저에 전달된 URL을 숨길 수 없으므로,
+최종 구조를 **Private source → sanitized Public deploy → server-side redirect gateway**로 분리하기로 했습니다.
+
+현재 Private source 저장소가 GitHub connector에서 아직 확인되지 않아,
+기존 서비스는 그대로 유지하면서 공개 저장소에 마이그레이션 호환층만 먼저 추가합니다.
+
+추가된 보호 준비:
+
+- HMAC-SHA256 기반 opaque `sid` 생성기
+- 공개 payload에서 원본 ID 및 `detailUrl` 제거
+- 실제 URL을 private redirect map으로 분리
+- 공개 JSON에 URL/금지 키가 섞이면 빌드 실패
+- `.build-private/`, redirect map, 환경 파일 gitignore
+- 공통 UI에서 `sid`를 점포 ID로 사용 가능
+- `officialStoreRedirectBase`가 설정되면 `<gateway>/<sid>`로 공식 점포 링크 생성
+- 현재 운영 데이터에는 설정하지 않아 기존 사이트 동작은 유지
+
+다음 실제 마이그레이션은 Private 저장소가 연결된 후 진행합니다.
