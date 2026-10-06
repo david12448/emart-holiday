@@ -3,6 +3,13 @@ name: Watch Costco Official Schedule Source
 on:
   workflow_dispatch:
 
+  push:
+    branches:
+      - feature/costco
+    paths:
+      - "fetch_costco_source.py"
+      - ".github/workflows/watch-costco-source.yml"
+
 permissions:
   contents: write
 
