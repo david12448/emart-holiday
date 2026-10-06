@@ -45,6 +45,74 @@
       margin-bottom: 25px;
     }
 
+    .tab-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      width: 100%;
+    }
+
+    .special-store-tab-row {
+      margin-top: 2px;
+      padding-top: 10px;
+      border-top: 1px solid #e6e6e6;
+      align-items: center;
+    }
+
+    .special-filter-label {
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      padding: 0 2px;
+      color: #777;
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .special-filter-button {
+      font-weight: 700;
+    }
+
+    .special-filter-button-traders {
+      border-color: #8fb8e8;
+      background: #f7fbff;
+      color: #1d4f91;
+    }
+
+    .tab-button.special-filter-button-traders:hover,
+    .tab-button.special-filter-button-traders.active {
+      border-color: #60a5fa;
+      background: #dbeafe;
+      color: #1d4f91;
+    }
+
+    .special-filter-button-foodmarket {
+      border-color: #d5c49f;
+      background: #fdfbf6;
+      color: #715525;
+    }
+
+    .tab-button.special-filter-button-foodmarket:hover,
+    .tab-button.special-filter-button-foodmarket.active {
+      border-color: #c7ae78;
+      background: #f4ead6;
+      color: #715525;
+    }
+
+    .special-filter-button-starfieldmarket {
+      border-color: #e7a09a;
+      background: #fff9f8;
+      color: #a83228;
+    }
+
+    .tab-button.special-filter-button-starfieldmarket:hover,
+    .tab-button.special-filter-button-starfieldmarket.active {
+      border-color: #df7c73;
+      background: #ffe2df;
+      color: #a83228;
+    }
+
     .tab-button {
       border: 1px solid #ddd;
       background: white;
