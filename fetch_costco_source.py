@@ -12,6 +12,7 @@ from bs4 import BeautifulSoup
 
 PAGE_URL = "https://www.costco.co.kr/closedSchedule"
 OUTPUT_PATH = Path("data/costco/source_state.json")
+IMAGE_OUTPUT_PATH = Path("costco_schedule_source.jpg")
 KST = ZoneInfo("Asia/Seoul")
 
 
@@ -160,6 +161,10 @@ def main():
     image_hash = hashlib.sha256(
         image_response.content
     ).hexdigest()
+
+    IMAGE_OUTPUT_PATH.write_bytes(
+        image_response.content
+    )
 
     previous = read_json(
         OUTPUT_PATH
