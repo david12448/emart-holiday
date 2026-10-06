@@ -1,0 +1,95 @@
+name: Test Public Holiday Site
+
+on:
+  workflow_dispatch:
+
+  pull_request:
+    paths:
+      - "index.html"
+      - "lotte/**"
+      - "costco/**"
+      - "traders/**"
+      - "everyday/**"
+      - "nobrand/**"
+      - "assets/**"
+      - "data/**"
+      - ".github/workflows/test-public-site.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout public runtime repository
+        uses: actions/checkout@v4
+
+      - name: Check shared JavaScript syntax
+        run: node --check assets/holiday-app.js
+
+      - name: Validate runtime JSON
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          required = [
+              "data/emart/holidays.json",
+              "data/emart/holiday_archive.json",
+              "data/emart/change_status.json",
+              "data/traders/holidays.json",
+              "data/traders/holiday_archive.json",
+              "data/traders/change_status.json",
+              "data/lotte/lottemart/stores.json",
+              "data/lotte/change_status.json",
+              "data/costco/stores.json",
+              "data/costco/holiday_archive.json",
+              "data/costco/change_status.json",
+          ]
+
+          for name in required:
+              path = Path(name)
+
+              if not path.exists():
+                  raise SystemExit(f"필수 공개 데이터 누락: {name}")
+
+              json.loads(
+                  path.read_text(encoding="utf-8")
+              )
+
+          costco = json.loads(
+              Path("data/costco/stores.json")
+              .read_text(encoding="utf-8")
+          )
+
+          if len(costco) < 20:
+              raise SystemExit(
+                  f"코스트코 공개 점포 수 이상: {len(costco)}"
+              )
+
+          print("Public runtime JSON OK")
+          PY
+
+      - name: Reject private-source files
+        run: |
+          test ! -e fetch_emart.py
+          test ! -e fetch_emart_family.py
+          test ! -e fetch_costco.py
+          test ! -e fetch_costco_source.py
+          test ! -e validate_costco_data.py
+          test ! -e data/costco/latest_snapshot.json
+          test ! -e data/costco/source_state.json
+
+          test ! -e data/emart/latest_snapshot.json
+          test ! -e data/traders/latest_snapshot.json
+          test ! -e data/everyday/latest_snapshot.json
+          test ! -e data/nobrand/latest_snapshot.json
+
+          test ! -e holidays.json
+          test ! -e holiday_archive.json
+
+          test ! -e docs/PRIVATE_SOURCE_MIGRATION.md
+          test ! -e docs/IMPLEMENTATION_NOTES.md
+
+          test ! -e scripts/build_public_payload.py
+          test ! -e scripts/verify_public_payload.py
+          test ! -e scripts/test_public_build.py
