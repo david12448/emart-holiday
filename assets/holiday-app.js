@@ -83,7 +83,7 @@ const isAllRegions =
   requestedRegion === "전체";
 
 
-const requestedStoreId =
+let requestedStoreId =
   urlParams.get("storeId");
 
 
@@ -312,6 +312,10 @@ function updateRegionInUrl(
   params.delete(
     "storeId"
   );
+
+
+  requestedStoreId =
+    null;
 
 
   const newUrl =
