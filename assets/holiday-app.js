@@ -13,7 +13,7 @@ const MART_CONFIG =
 실제 redirect gateway 주소를 이 값에 주입합니다.
 일반 개발/기존 배포에서는 빈 문자열을 유지합니다.
 */
-const BUILD_OFFICIAL_STORE_REDIRECT_BASE = 'https://mart-store-link-gateway.mart-holiday-david12448.workers.dev/r';
+const BUILD_OFFICIAL_STORE_REDIRECT_BASE = "https://mart-store-link-gateway.mart-holiday-david12448.workers.dev/r";
 
 
 const TISTORY_POST_URL =
@@ -80,6 +80,53 @@ const requestedRegion =
 
 
 /*
+브랜드별 선택 옵션으로 제공하는
+특수 매장 유형 탭입니다.
+
+설정이 없는 브랜드에는
+두 번째 탭 줄이 나타나지 않습니다.
+*/
+const specialStoreTabs =
+  Array.isArray(
+    MART_CONFIG.specialStoreTabs
+  )
+    ? MART_CONFIG.specialStoreTabs
+        .map(
+          item => ({
+            type:
+              String(
+                item?.type || ""
+              ).trim(),
+
+            label:
+              String(
+                item?.label || ""
+              ).trim()
+          })
+        )
+        .filter(
+          item =>
+            item.type &&
+            item.label
+        )
+    : [];
+
+
+const requestedSpecialType =
+  urlParams.get("type");
+
+
+let selectedSpecialType =
+  specialStoreTabs.some(
+    item =>
+      item.type ===
+      requestedSpecialType
+  )
+    ? requestedSpecialType
+    : null;
+
+
+/*
 ?region=all
 또는
 ?region=전체
@@ -96,18 +143,22 @@ let requestedStoreId =
 
 
 let selectedRegion =
-  (
-    requestedRegion === "all"
-    ||
-    requestedRegion === "전체"
-  )
+  selectedSpecialType
     ? "all"
     : (
-        regionOrder.includes(
-          requestedRegion
+        (
+          requestedRegion === "all"
+          ||
+          requestedRegion === "전체"
         )
-          ? requestedRegion
-          : "서울"
+          ? "all"
+          : (
+              regionOrder.includes(
+                requestedRegion
+              )
+                ? requestedRegion
+                : "서울"
+            )
       );
 
 /*
@@ -322,6 +373,15 @@ function updateRegionInUrl(
   );
 
 
+  params.delete(
+    "type"
+  );
+
+
+  selectedSpecialType =
+    null;
+
+
   requestedStoreId =
     null;
 
@@ -341,6 +401,64 @@ function updateRegionInUrl(
 
 }
 
+
+/*
+특수 매장 탭 선택 시
+전국 + 매장 유형을 URL에 함께 반영합니다.
+*/
+function updateSpecialTypeInUrl(
+  type
+) {
+
+  const params =
+    new URLSearchParams(
+      window.location.search
+    );
+
+
+  params.set(
+    "region",
+    "all"
+  );
+
+
+  params.set(
+    "type",
+    type
+  );
+
+
+  params.set(
+    "date",
+    getSelectedMonthKey()
+  );
+
+
+  params.delete(
+    "storeId"
+  );
+
+
+  requestedStoreId =
+    null;
+
+
+  const newUrl =
+    window.location.pathname +
+    "?" +
+    params.toString() +
+    window.location.hash;
+
+
+  window.history.replaceState(
+    null,
+    "",
+    newUrl
+  );
+
+}
+
+
 /*
 ==================================================
 점포 데이터 공통 형식 변환
@@ -355,6 +473,16 @@ function getStoreId(store) {
     store?.id ??
     ""
   );
+
+}
+
+
+function getStoreType(store) {
+
+  return String(
+    store?.storeType ||
+    "standard"
+  ).trim();
 
 }
 
@@ -3458,7 +3586,8 @@ function createTabs() {
 
 
   /*
-  실제로 이 브랜드의 점포가 존재하는 지역만 표시
+  실제 점포가 존재하는 지역만 표시합니다.
+  브랜드마다 없는 지역 탭은 자동으로 숨겨집니다.
   */
   const availableRegions =
     regionOrder.filter(
@@ -3471,11 +3600,9 @@ function createTabs() {
     );
 
 
-  /*
-  region=all은 정상적인 선택값이므로
-  첫 번째 지역으로 강제 변경하지 않습니다.
-  */
   if (
+    !selectedSpecialType
+    &&
     selectedRegion !== "all"
     &&
     !availableRegions.includes(
@@ -3491,11 +3618,15 @@ function createTabs() {
   }
 
 
-  /*
-  ==================================================
-  전체 버튼
-  ==================================================
-  */
+  const regionRow =
+    document.createElement(
+      "div"
+    );
+
+
+  regionRow.className =
+    "tab-row region-tab-row";
+
 
   const allButton =
     document.createElement(
@@ -3509,6 +3640,8 @@ function createTabs() {
 
   if (
     selectedRegion === "all"
+    &&
+    !selectedSpecialType
   ) {
 
     allButton.classList.add(
@@ -3526,13 +3659,14 @@ function createTabs() {
     "click",
     () => {
 
+      selectedSpecialType =
+        null;
+
+
       selectedRegion =
         "all";
 
 
-      /*
-      보고 있던 월 유지
-      */
       updateRegionInUrl(
         "all"
       );
@@ -3546,16 +3680,10 @@ function createTabs() {
   );
 
 
-  tabs.appendChild(
+  regionRow.appendChild(
     allButton
   );
 
-
-  /*
-  ==================================================
-  지역 버튼
-  ==================================================
-  */
 
   availableRegions.forEach(
     region => {
@@ -3571,6 +3699,8 @@ function createTabs() {
 
 
       if (
+        !selectedSpecialType
+        &&
         region ===
         selectedRegion
       ) {
@@ -3590,14 +3720,14 @@ function createTabs() {
         "click",
         () => {
 
+          selectedSpecialType =
+            null;
+
+
           selectedRegion =
             region;
 
 
-          /*
-          지역을 바꾸더라도
-          보고 있던 월은 그대로 유지
-          */
           updateRegionInUrl(
             region
           );
@@ -3611,15 +3741,155 @@ function createTabs() {
       );
 
 
-      tabs.appendChild(
+      regionRow.appendChild(
         button
       );
 
     }
   );
 
-}
 
+  tabs.appendChild(
+    regionRow
+  );
+
+
+  /*
+  브랜드 설정에 등록되고
+  실제 점포가 존재하는 특수 유형만 표시합니다.
+  */
+  const availableSpecialTabs =
+    specialStoreTabs.filter(
+      tab =>
+        holidayData.some(
+          item =>
+            getStoreType(item) ===
+            tab.type
+        )
+    );
+
+
+  if (
+    availableSpecialTabs.length === 0
+  ) {
+
+    return;
+
+  }
+
+
+  const specialRow =
+    document.createElement(
+      "div"
+    );
+
+
+  specialRow.className =
+    "tab-row special-store-tab-row";
+
+
+  specialRow.setAttribute(
+    "aria-label",
+    "매장 유형"
+  );
+
+
+  const label =
+    document.createElement(
+      "span"
+    );
+
+
+  label.className =
+    "special-filter-label";
+
+
+  label.textContent =
+    "매장 유형";
+
+
+  specialRow.appendChild(
+    label
+  );
+
+
+  availableSpecialTabs.forEach(
+    tab => {
+
+      const button =
+        document.createElement(
+          "button"
+        );
+
+
+      const safeType =
+        tab.type.replace(
+          /[^a-z0-9_-]/gi,
+          ""
+        );
+
+
+      button.className =
+        "tab-button " +
+        "special-filter-button " +
+        "special-filter-button-" +
+        safeType;
+
+
+      if (
+        selectedSpecialType ===
+        tab.type
+      ) {
+
+        button.classList.add(
+          "active"
+        );
+
+      }
+
+
+      button.textContent =
+        tab.label;
+
+
+      button.addEventListener(
+        "click",
+        () => {
+
+          selectedSpecialType =
+            tab.type;
+
+
+          selectedRegion =
+            "all";
+
+
+          updateSpecialTypeInUrl(
+            tab.type
+          );
+
+
+          createTabs();
+
+          renderSpecialType();
+
+        }
+      );
+
+
+      specialRow.appendChild(
+        button
+      );
+
+    }
+  );
+
+
+  tabs.appendChild(
+    specialRow
+  );
+
+}
 
 /*
 ==================================================
@@ -4831,7 +5101,16 @@ function renderRegion() {
 ?region=all
 ==================================================
 */
-function renderAllRegions() {
+function renderAllRegions(
+  stores = holidayData,
+  titleText = "전국",
+  descriptionText = null
+) {
+
+  const targetStores =
+    Array.isArray(stores)
+      ? stores
+      : holidayData;
 
   const tabs =
     document.getElementById(
@@ -4861,12 +5140,13 @@ function renderAllRegions() {
   );
 
   description.textContent =
+    descriptionText ||
     `전국의 ${MART_CONFIG.brandName || "마트"} 휴무일을 휴무 유형별로 한눈에 확인할 수 있습니다.`;
 
 
   const monthStores =
     getMonthStores(
-      holidayData
+      targetStores
     );
 
 
@@ -4874,17 +5154,17 @@ function renderAllRegions() {
 
     <h2 class="region-title">
 
-      전국
+      ${titleText}
 
       <span class="region-count">
-        · ${holidayData.length}개 점포
+        · ${targetStores.length}개 점포
       </span>
 
     </h2>
 
     ${
       buildChangeNotice(
-        holidayData
+        targetStores
       )
     }
 
@@ -4894,7 +5174,7 @@ function renderAllRegions() {
 
     ${
       buildMonthCalendar(
-        holidayData
+        targetStores
       )
     }
 
@@ -6089,6 +6369,52 @@ function buildRegionStoreSummary(
 
 
 /*
+==================================================
+특수 매장 유형 화면
+==================================================
+*/
+
+function renderSpecialType() {
+
+  const tab =
+    specialStoreTabs.find(
+      item =>
+        item.type ===
+        selectedSpecialType
+    );
+
+
+  if (!tab) {
+
+    selectedSpecialType =
+      null;
+
+
+    renderAllRegions();
+
+    return;
+
+  }
+
+
+  const stores =
+    holidayData.filter(
+      item =>
+        getStoreType(item) ===
+        tab.type
+    );
+
+
+  renderAllRegions(
+    stores,
+    tab.label,
+    `전국의 ${tab.label} 점포 휴무일만 모아서 확인할 수 있습니다.`
+  );
+
+}
+
+
+/*
 현재 화면 다시 그리기
 달력 좌우 버튼에서 사용
 */
@@ -6119,6 +6445,20 @@ function renderCurrentView() {
   }
 
 
+  createTabs();
+
+
+  if (
+    selectedSpecialType
+  ) {
+
+    renderSpecialType();
+
+    return;
+
+  }
+
+
   if (
     selectedRegion === "all"
   ) {
@@ -6129,8 +6469,6 @@ function renderCurrentView() {
 
   }
 
-
-  createTabs();
 
   renderRegion();
 
@@ -6773,19 +7111,46 @@ async function loadData() {
     }
 
 
-if (
-  selectedRegion === "all"
-) {
+    if (
+      selectedSpecialType
+      &&
+      !holidayData.some(
+        item =>
+          getStoreType(item) ===
+          selectedSpecialType
+      )
+    ) {
 
-  createTabs();
+      selectedSpecialType =
+        null;
 
-  renderAllRegions();
-
-  return;
-}
+    }
 
 
     createTabs();
+
+
+    if (
+      selectedSpecialType
+    ) {
+
+      renderSpecialType();
+
+      return;
+
+    }
+
+
+    if (
+      selectedRegion === "all"
+    ) {
+
+      renderAllRegions();
+
+      return;
+
+    }
+
 
     renderRegion();
 
