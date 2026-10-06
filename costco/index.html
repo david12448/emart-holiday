@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <meta
+    name="description"
+    content="코스트코 전국 매장의 휴무일을 지역별로 확인할 수 있습니다."
+  >
+
+  <title>코스트코 휴무일 안내</title>
+
+  <link
+    rel="stylesheet"
+    href="../assets/holiday.css?v=20261006-3"
+  >
+
+  <style>
+    :root {
+      --brand-main: #e31837;
+      --brand-main-hover: #c91430;
+
+      --brand-dark: #005dab;
+      --brand-on-dark: #ffffff;
+
+      --brand-border: #d7dce2;
+      --brand-badge: #e31837;
+
+      --brand-soft: #f7f9fc;
+      --brand-soft-border: #d8e2ec;
+      --brand-soft-text: #43566b;
+      --brand-soft-strong: #203b57;
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <main class="container">
+
+    <header class="page-header">
+
+      <h1 id="page-title">
+        코스트코 휴무일 안내
+      </h1>
+
+      <p id="page-description">
+        코스트코 지역별 매장 휴무일을 확인할 수 있습니다.
+      </p>
+
+    </header>
+
+
+    <nav
+      id="tabs"
+      class="tabs"
+      aria-label="지역 선택"
+    ></nav>
+
+
+    <section
+      id="content"
+      class="content"
+    >
+
+      <div class="loading">
+        코스트코 휴무일 정보를 불러오는 중입니다.
+      </div>
+
+    </section>
+
+
+    <footer class="page-footer">
+
+      <div id="source-label">
+        자료 출처 : 코스트코 코리아 공식 홈페이지
+      </div>
+
+    </footer>
+
+  </main>
+
+
+  <script>
+
+    window.MART_CONFIG = {
+
+      brandKey:
+        "costco",
+
+      brandName:
+        "코스트코",
+
+      storePrefix:
+        "",
+
+      currentDataUrl:
+        "../data/costco/stores.json",
+
+      archiveDataUrl:
+        "../data/costco/stores.json",
+
+      changeStatusUrl:
+        "../data/costco/change_status.json",
+
+      detailBaseUrl:
+        "",
+
+      sourceLabel:
+        "코스트코 코리아 공식 홈페이지",
+
+      officialPageLabel:
+        "코스트코 공식 매장 안내"
+
+    };
+
+  </script>
+
+
+  <script src="../assets/holiday-app.js?v=20261006-3"></script>
+
+</body>
+
+</html>
