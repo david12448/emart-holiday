@@ -342,6 +342,7 @@ function updateRegionInUrl(
 function getStoreId(store) {
 
   return String(
+    store?.sid ??
     store?.storeId ??
     store?.id ??
     ""
@@ -405,11 +406,61 @@ function getStoreRegion(store) {
 
 function getStoreDetailUrl(store) {
 
-  return String(
-    store?.detailUrl ??
-    store?.detail_url ??
-    ""
-  );
+  const directUrl =
+    String(
+      store?.detailUrl ??
+      store?.detail_url ??
+      ""
+    ).trim();
+
+
+  if (directUrl) {
+
+    return directUrl;
+
+  }
+
+
+  const redirectBase =
+    String(
+      MART_CONFIG.officialStoreRedirectBase ??
+      ""
+    )
+      .trim()
+      .replace(
+        /\/+$/,
+        ""
+      );
+
+
+  const redirectKey =
+    String(
+      store?.redirectKey ??
+      store?.sid ??
+      ""
+    ).trim();
+
+
+  if (
+    redirectBase
+    &&
+    redirectKey
+  ) {
+
+    return (
+      redirectBase
+      +
+      "/"
+      +
+      encodeURIComponent(
+        redirectKey
+      )
+    );
+
+  }
+
+
+  return "";
 
 }
 
