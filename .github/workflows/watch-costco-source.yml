@@ -34,6 +34,13 @@ jobs:
       - name: 코스트코 공식 휴무일 원본 확인
         run: python fetch_costco_source.py
 
+      - name: 공식 휴무일 이미지 검증용 보관
+        uses: actions/upload-artifact@v4
+        with:
+          name: costco-schedule-source
+          path: costco_schedule_source.jpg
+          retention-days: 1
+
       - name: 변경 파일 확인
         run: |
           git status
