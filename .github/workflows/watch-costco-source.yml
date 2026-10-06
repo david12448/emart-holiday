@@ -3,15 +3,12 @@ name: Watch Costco Official Schedule Source
 on:
   workflow_dispatch:
 
-  push:
-    branches:
-      - feature/costco
-    paths:
-      - "fetch_costco_source.py"
-      - ".github/workflows/watch-costco-source.yml"
-
 permissions:
   contents: write
+
+concurrency:
+  group: costco-source-watch
+  cancel-in-progress: false
 
 jobs:
   watch-source:
@@ -59,5 +56,7 @@ jobs:
             echo "공식 원본 상태 변경이 없습니다."
           else
             git commit -m "Update Costco official schedule source state"
-            git push
+
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
           fi
