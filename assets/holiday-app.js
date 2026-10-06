@@ -2385,7 +2385,9 @@ function buildSpecialNotice() {
 
 /*
 ==================================================
-점포명을 클릭하면 공식 점포 페이지로 이동한다는 안내
+점포명 클릭 안내
+목록에서는 내부 단일 점포 화면으로,
+단일 점포 화면의 공식 버튼만 외부 공식 페이지로 이동
 ==================================================
 */
 
@@ -2403,8 +2405,6 @@ function buildStoreClickGuide() {
 
   const useInternalStoreView =
     MART_CONFIG.allRegionsStoreLinksUseInternalView === true
-    &&
-    selectedRegion === "all"
     &&
     !requestedStoreId;
 
@@ -6611,17 +6611,15 @@ document.addEventListener(
 
 
     /*
-    코스트코처럼 전체 지역 화면의 점포명을
-    외부 공식 사이트가 아니라
-    현재 페이지의 단일 점포 화면으로 연결할 수 있습니다.
+    점포 목록의 점포명은 전국/지역/달력 등 어느 화면에서 눌러도
+    외부 공식 사이트가 아니라 현재 GitHub Pages의
+    단일 점포 화면으로 연결합니다.
 
     단일 점포 화면 안의 "공식 점포 페이지" 버튼은
     requestedStoreId가 있으므로 기존처럼 외부 공식 URL로 이동합니다.
     */
     if (
       MART_CONFIG.allRegionsStoreLinksUseInternalView === true
-      &&
-      selectedRegion === "all"
       &&
       !requestedStoreId
     ) {
