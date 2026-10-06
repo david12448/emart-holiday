@@ -235,3 +235,17 @@ Actions가 `Update Costco official holiday data` 커밋을 생성했습니다.
 다음 자동 수집 때 다시 이전 형식으로 돌아가지 않도록 `fetch_costco.py`에서
 공식 API의 `/store/` 경로를 공개 링크용 `/store-finder/` 경로로 변환합니다.
 `validate_costco_data.py`도 동일 형식만 통과하도록 수정했습니다.
+
+
+### 2026-10-06 — 전체 화면 점포 클릭을 내부 단일 점포 화면으로 변경
+
+코스트코 전국(전체) 화면에서 점포명을 클릭했을 때 곧바로 코스트코 공식 사이트로 이동하던 동작을 변경했습니다.
+
+- 전체 화면의 점포명 클릭 → 현재 코스트코 페이지의 `storeId` 단일 점포 화면
+- 예: `?region=all&date=2026-10&storeId=costcoKoreaWarehouse063`
+- 단일 점포 화면에서는 선택한 점포 1곳의 달력과 휴무일, 주소, 전화번호만 표시
+- 단일 점포 화면의 “공식 점포 페이지” 버튼은 기존대로 코스트코 공식 `/store-finder/<slug>` 페이지로 이동
+
+공통 JavaScript에는 브랜드 설정값 `allRegionsStoreLinksUseInternalView`을 추가해,
+이 기능을 활성화한 브랜드에서만 전체 화면 클릭 동작을 내부 화면으로 전환합니다.
+현재는 코스트코에서만 활성화했으므로 이마트·롯데 등의 기존 클릭 동작에는 영향이 없습니다.
