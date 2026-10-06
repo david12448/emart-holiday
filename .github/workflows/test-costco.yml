@@ -1,0 +1,30 @@
+name: Test Costco Data
+
+on:
+  workflow_dispatch:
+
+  push:
+    branches:
+      - feature/costco
+    paths:
+      - "costco/**"
+      - "data/costco/**"
+      - "fetch_costco_source.py"
+      - "validate_costco_data.py"
+      - ".github/workflows/test-costco.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 저장소 파일 불러오기
+        uses: actions/checkout@v4
+
+      - name: Python 설치
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 코스트코 공개 데이터 검증
+        run: python validate_costco_data.py
