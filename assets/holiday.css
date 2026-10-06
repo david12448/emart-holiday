@@ -1348,6 +1348,19 @@
   font-weight: 800;
 }
 
+
+.store-special-name-traders {
+  border-color: #8fb8e8;
+  background: #f7fbff;
+  box-shadow: 0 1px 3px rgba(29, 78, 216, .08);
+}
+
+.store-type-text-traders {
+  background: #dbeafe;
+  color: #1d4f91;
+  font-weight: 800;
+}
+
 .store-special-name-brand {
   border-color: #cbd5e1;
   background: #f8fafc;
