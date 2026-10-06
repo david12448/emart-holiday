@@ -291,6 +291,77 @@ jobs:
               "API-like URL count: "
               + str(len(api_like_urls))
           )
+
+          candidate_paths = [
+              "/rest/v2/basesite?fields=FULL",
+              "/rest/v2/basesites?fields=FULL",
+              "/rest/v2/korea/stores?fields=FULL",
+              "/rest/v2/korea/stores?fields=DEFAULT",
+          ]
+
+          api_tests = {}
+
+          for candidate_path in candidate_paths:
+              candidate_url = urljoin(
+                  PAGE_URL,
+                  candidate_path,
+              )
+
+              candidate_response = session.get(
+                  candidate_url,
+                  timeout=30,
+              )
+
+              content_type = (
+                  candidate_response.headers.get(
+                      "content-type",
+                      ""
+                  )
+              )
+
+              body_text = candidate_response.text
+
+              api_tests[candidate_path] = {
+                  "url": candidate_url,
+                  "status": candidate_response.status_code,
+                  "contentType": content_type,
+                  "bodyPreview": body_text[:3000],
+              }
+
+              safe_name = (
+                  candidate_path
+                  .strip("/")
+                  .replace("/", "_")
+                  .replace("?", "_")
+                  .replace("&", "_")
+                  .replace("=", "-")
+              )
+
+              Path(
+                  "api_" + safe_name + ".txt"
+              ).write_text(
+                  body_text,
+                  encoding="utf-8",
+              )
+
+          Path(
+              "costco_api_tests.json"
+          ).write_text(
+              json.dumps(
+                  api_tests,
+                  ensure_ascii=False,
+                  indent=2,
+              )
+              + "\n",
+              encoding="utf-8",
+          )
+
+          for path, result in api_tests.items():
+              print(
+                  path,
+                  result["status"],
+                  result["contentType"],
+              )
           PY
 
       - name: 조사 자료 업로드
@@ -305,4 +376,6 @@ jobs:
             chunk-TPDW35KC.js
             chunk-7RAJ75VS.js
             chunk-KNSLAS22.js
+            costco_api_tests.json
+            api_*.txt
           retention-days: 1
