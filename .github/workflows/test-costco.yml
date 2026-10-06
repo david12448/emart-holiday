@@ -1,4 +1,4 @@
-name: Test Costco Data
+name: Test Shared Holiday UI
 
 on:
   workflow_dispatch:
@@ -38,6 +38,35 @@ jobs:
 
       - name: 공통 JavaScript 문법 검사
         run: node --check assets/holiday-app.js
+
+      - name: 트레이더스 보조 데이터 확인
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path("data/traders/holiday_archive.json")
+          stores = json.loads(path.read_text(encoding="utf-8"))
+
+          if len(stores) < 20:
+              raise SystemExit(
+                  f"트레이더스 점포 수가 예상보다 적습니다: {len(stores)}"
+              )
+
+          missing = [
+              item.get("store", item.get("id"))
+              for item in stores
+              if not item.get("detailUrl")
+          ]
+
+          if missing:
+              raise SystemExit(
+                  "트레이더스 공식 상세 URL 누락: "
+                  + ", ".join(map(str, missing))
+              )
+
+          print(f"Traders supplemental data OK: {len(stores)} stores")
+          PY
 
       - name: 코스트코 공식 API 수집 테스트
         run: python fetch_costco.py
