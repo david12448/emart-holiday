@@ -3,15 +3,14 @@ name: Test Costco Data
 on:
   workflow_dispatch:
 
-  push:
-    branches:
-      - feature/costco
+  pull_request:
     paths:
       - "costco/**"
       - "data/costco/**"
       - "fetch_costco.py"
-      - "fetch_costco_source.py"
       - "validate_costco_data.py"
+      - "requirements.txt"
+      - ".github/workflows/update-costco.yml"
       - ".github/workflows/test-costco.yml"
 
 jobs:
@@ -45,10 +44,3 @@ jobs:
           echo ""
           echo "===== change_status.json ====="
           cat data/costco/change_status.json
-
-      - name: 생성 데이터 아티팩트
-        uses: actions/upload-artifact@v4
-        with:
-          name: costco-generated-data
-          path: data/costco/
-          retention-days: 1
