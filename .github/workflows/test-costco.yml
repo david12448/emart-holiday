@@ -5,9 +5,13 @@ on:
 
   pull_request:
     paths:
+      - "index.html"
+      - "lotte/**"
       - "costco/**"
       - "assets/holiday-app.js"
+      - "assets/holiday.css"
       - "data/costco/**"
+      - "data/traders/**"
       - "fetch_costco.py"
       - "validate_costco_data.py"
       - "requirements.txt"
