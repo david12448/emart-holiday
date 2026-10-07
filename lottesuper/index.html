@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <meta
+    name="description"
+    content="롯데슈퍼 전국 점포의 휴무일과 기본 정보를 지역별로 확인할 수 있습니다."
+  >
+
+  <title>롯데슈퍼 휴무일 안내</title>
+
+  <link
+    rel="stylesheet"
+    href="../assets/holiday.css?v=20261007-2"
+  >
+
+  <style>
+    :root {
+      --brand-main: #e60012;
+      --brand-main-hover: #c90010;
+      --brand-dark: #2f3033;
+      --brand-on-dark: #ffffff;
+      --brand-border: #efb9bd;
+      --brand-badge: #e60012;
+      --brand-soft: #fff7f8;
+      --brand-soft-border: #f1d4d6;
+      --brand-soft-text: #71474a;
+      --brand-soft-strong: #542d30;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="container">
+
+    <header class="page-header">
+
+      <h1 id="page-title">
+        롯데슈퍼 휴무일 안내
+      </h1>
+
+      <p id="page-description">
+        롯데슈퍼 지역별 점포 휴무일과 기본 정보를 확인할 수 있습니다.
+        휴무일은 롯데슈퍼 공식 안내와 해당 지자체의 대형마트·SSM 의무휴업 공지를 확인해 반영합니다.
+      </p>
+
+    </header>
+
+
+    <nav
+      id="tabs"
+      class="tabs"
+      aria-label="지역 선택"
+    ></nav>
+
+
+    <section
+      id="content"
+      class="content"
+    >
+
+      <div class="loading">
+        롯데슈퍼 점포 정보를 불러오는 중입니다.
+      </div>
+
+    </section>
+
+
+    <footer class="page-footer">
+
+      <div id="source-label">
+        자료 출처 : 롯데슈퍼 공식 매장안내 · 각 지자체 대형마트·SSM 의무휴업 공지
+      </div>
+
+    </footer>
+
+  </main>
+
+
+  <script>
+
+    window.MART_CONFIG = {
+
+      brandKey:
+        "lottesuper",
+
+      brandName:
+        "롯데슈퍼",
+
+      storePrefix:
+        "롯데슈퍼 ",
+
+      currentDataUrl:
+        "../data/lottesuper/stores.json",
+
+      archiveDataUrl:
+        "../data/lottesuper/stores.json",
+
+      detailBaseUrl:
+        "",
+
+      allRegionsStoreLinksUseInternalView:
+        true,
+
+      showLocalBadgeForAllRegions:
+        true,
+
+      sourceLabel:
+        "롯데슈퍼 공식 매장안내 · 각 지자체 대형마트·SSM 의무휴업 공지",
+
+      officialPageLabel:
+        "롯데슈퍼 공식 매장안내"
+
+    };
+
+  </script>
+
+
+  <script src="../assets/holiday-app.js?v=20261007-4"></script>
+
+</body>
+
+</html>
