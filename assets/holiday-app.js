@@ -64,6 +64,16 @@ let changeStatusData = null;
 
 
 /*
+달력에서 선택한 휴무 날짜입니다.
+
+값이 있으면 달력 아래에 별도 점포 요약을 만들지 않고,
+기존 하단 휴무 패턴 목록 자체를 해당 날짜의 점포만 보이도록
+필터링합니다.
+*/
+let selectedCalendarDate = null;
+
+
+/*
 주소 파라미터
 예:
 ?region=대구
@@ -350,6 +360,10 @@ function updateRegionInUrl(
   region
 ) {
 
+  selectedCalendarDate =
+    null;
+
+
   const params =
     new URLSearchParams(
       window.location.search
@@ -409,6 +423,10 @@ function updateRegionInUrl(
 function updateSpecialTypeInUrl(
   type
 ) {
+
+  selectedCalendarDate =
+    null;
+
 
   const params =
     new URLSearchParams(
@@ -1061,6 +1079,187 @@ function getMonthStores(stores) {
 
 
 /*
+달력에서 날짜가 선택된 경우
+해당 날짜에 실제로 쉬는 점포만 남깁니다.
+
+점포의 월 전체 holidays 배열은 유지하므로
+하단에서는 "2·4째 일요일", "3·5째 일요일" 같은
+원래 휴무 패턴과 전체 패턴 날짜를 그대로 보여줄 수 있습니다.
+*/
+function getCalendarFilteredMonthStores(
+  stores
+) {
+
+  const monthStores =
+    getMonthStores(
+      stores
+    );
+
+
+  if (
+    !selectedCalendarDate
+  ) {
+
+    return monthStores;
+
+  }
+
+
+  return monthStores.filter(
+    store =>
+      Array.isArray(
+        store.holidays
+      )
+      &&
+      store.holidays.includes(
+        selectedCalendarDate
+      )
+  );
+
+}
+
+
+function getCalendarDateStores(
+  stores,
+  dateKey = selectedCalendarDate
+) {
+
+  if (!dateKey) {
+    return [];
+  }
+
+
+  const matched =
+    stores.filter(
+      store =>
+        getMonthHolidays(
+          store
+        ).includes(
+          dateKey
+        )
+    );
+
+
+  return Array.from(
+    new Map(
+      matched.map(
+        store => [
+          getStoreId(store) ||
+            String(store?.store || ""),
+          store
+        ]
+      )
+    ).values()
+  );
+
+}
+
+
+function formatCalendarSelectedDate(
+  dateString
+) {
+
+  const parts =
+    String(dateString || "")
+      .split("-")
+      .map(Number);
+
+
+  if (
+    parts.length !== 3 ||
+    parts.some(
+      value =>
+        !Number.isFinite(value)
+    )
+  ) {
+
+    return String(dateString || "");
+
+  }
+
+
+  const weekday =
+    getWeekday(
+      dateString
+    );
+
+
+  return (
+    `${parts[0]}년 ` +
+    `${parts[1]}월 ` +
+    `${parts[2]}일` +
+    (
+      weekday
+        ? `(${weekday.charAt(0)})`
+        : ""
+    )
+  );
+
+}
+
+
+function buildCalendarDateFilterBar(
+  stores
+) {
+
+  if (
+    !selectedCalendarDate
+    ||
+    !selectedCalendarDate.startsWith(
+      getSelectedMonthKey() + "-"
+    )
+  ) {
+
+    return "";
+
+  }
+
+
+  const count =
+    getCalendarDateStores(
+      stores,
+      selectedCalendarDate
+    ).length;
+
+
+  return `
+    <div
+      class="calendar-date-filter"
+      aria-live="polite"
+    >
+
+      <div class="calendar-date-filter-text">
+
+        <span class="calendar-date-filter-label">
+          선택 날짜
+        </span>
+
+        <strong>
+          ${formatCalendarSelectedDate(
+            selectedCalendarDate
+          )}
+        </strong>
+
+        <span class="calendar-date-filter-count">
+          · ${count}개 점포만 표시 중
+        </span>
+
+      </div>
+
+      <button
+        type="button"
+        class="calendar-date-filter-clear"
+      >
+        전체 보기
+      </button>
+
+    </div>
+  `;
+
+}
+
+
+/*
 holiday_archive.json에 존재하는
 가장 이른 달 / 가장 늦은 달
 */
@@ -1240,6 +1439,13 @@ function moveMonth(step) {
 
   selectedMonth =
     target.month;
+
+
+  /*
+  월이 바뀌면 이전 달의 날짜 필터는 해제합니다.
+  */
+  selectedCalendarDate =
+    null;
 
 
   /*
@@ -2789,6 +2995,7 @@ function buildMonthCalendar(stores) {
           ${isClosed ? "closed calendar-day-clickable" : ""}
           ${isClosed && isPast ? "past-closed" : ""}
           ${isToday ? "today" : ""}
+          ${dateKey === selectedCalendarDate ? "calendar-day-selected" : ""}
         "
         ${
           isClosed
@@ -2836,15 +3043,10 @@ function buildMonthCalendar(stores) {
   html += `
       </div>
 
-      <div
-        class="calendar-day-detail"
-        hidden
-      ></div>
-
       <div class="calendar-legend">
         색상이 표시된 날짜는 휴무일이며,
         지난 휴무일은 연하게 표시됩니다.
-        휴무 날짜를 클릭하면 해당 점포를 확인할 수 있습니다.
+        휴무 날짜를 클릭하면 아래 목록이 해당 날짜의 점포만 표시합니다.
       </div>
 
     </div>
@@ -2861,31 +3063,9 @@ function buildMonthCalendar(stores) {
 ==================================================
 */
 
-function openCalendarDayDetail(
+function toggleCalendarDateFilter(
   calendarDay
 ) {
-
-  const calendar =
-    calendarDay.closest(
-      ".month-calendar"
-    );
-
-
-  if (!calendar) {
-    return;
-  }
-
-
-  const detail =
-    calendar.querySelector(
-      ".calendar-day-detail"
-    );
-
-
-  if (!detail) {
-    return;
-  }
-
 
   const dateKey =
     calendarDay.dataset
@@ -2897,312 +3077,20 @@ function openCalendarDayDetail(
   }
 
 
-  let storeIds = [];
-
-  try {
-
-    storeIds =
-      JSON.parse(
-        decodeURIComponent(
-          calendarDay.dataset
-            .calendarStoreIds ||
-          "%5B%5D"
-        )
-      );
-
-  } catch (error) {
-
-    console.error(
-      "달력 점포 ID 읽기 실패:",
-      error
-    );
-
-    return;
-  }
-
-
-  const stores =
-    storeIds
-      .map(
-        storeId =>
-          holidayData.find(
-            store =>
-              getStoreId(
-                store
-              ) ===
-              String(storeId)
-          )
-      )
-      .filter(Boolean)
-      .sort(
-        (a, b) =>
-          String(
-            a.store || ""
-          ).localeCompare(
-            String(
-              b.store || ""
-            ),
-            "ko"
-          )
-      );
-
-
   /*
-  같은 날짜를 다시 누르면 닫기
+  같은 날짜를 다시 누르면 전체 보기로 돌아갑니다.
+  다른 날짜를 누르면 그 날짜만 아래 종합 목록에 표시합니다.
   */
-  if (
-    !detail.hidden
-    &&
-    detail.dataset.date ===
+  selectedCalendarDate =
+    selectedCalendarDate ===
     dateKey
-  ) {
-
-    detail.hidden = true;
-
-    detail.innerHTML = "";
-
-    delete detail.dataset.date;
-
-    calendar
-      .querySelectorAll(
-        ".calendar-day-selected"
-      )
-      .forEach(
-        item =>
-          item.classList.remove(
-            "calendar-day-selected"
-          )
-      );
-
-    return;
-  }
+      ? null
+      : dateKey;
 
 
-  calendar
-    .querySelectorAll(
-      ".calendar-day-selected"
-    )
-    .forEach(
-      item =>
-        item.classList.remove(
-          "calendar-day-selected"
-        )
-    );
-
-
-  calendarDay.classList.add(
-    "calendar-day-selected"
-  );
-
-
-  const parts =
-    dateKey
-      .split("-")
-      .map(
-        Number
-      );
-
-
-  const weekday =
-    getWeekday(
-      dateKey
-    );
-
-
-  const weekdayShort =
-    weekday
-      ? weekday.charAt(0)
-      : "";
-
-
-  const title =
-    `${parts[0]}년 ` +
-    `${parts[1]}월 ` +
-    `${parts[2]}일` +
-    (
-      weekdayShort
-        ? `(${weekdayShort})`
-        : ""
-    );
-
-
-  let bodyHtml = "";
-
-
-  /*
-  전체 탭에서는 지역별로 묶기
-  */
-  if (
-    selectedRegion === "all"
-  ) {
-
-    const regionGroups = {};
-
-
-    stores.forEach(
-      store => {
-
-        const region =
-          getStoreRegion(
-            store
-          ) || "기타";
-
-
-        if (
-          !regionGroups[
-            region
-          ]
-        ) {
-
-          regionGroups[
-            region
-          ] = [];
-
-        }
-
-
-        regionGroups[
-          region
-        ].push(
-          store
-        );
-
-      }
-    );
-
-
-    const orderedRegions = [
-      ...regionOrder.filter(
-        region =>
-          regionGroups[
-            region
-          ]
-      ),
-
-      ...Object.keys(
-        regionGroups
-      ).filter(
-        region =>
-          !regionOrder.includes(
-            region
-          )
-      )
-    ];
-
-
-    bodyHtml =
-      orderedRegions
-        .map(
-          region => {
-
-            const links =
-              regionGroups[
-                region
-              ]
-                .map(
-                  store => {
-
-                    const displayName =
-                      shortStoreName(
-                        store.store
-                      );
-
-                    return `
-                      <a
-                        class="
-                          calendar-day-store-link
-                          store-link
-                        "
-                        href="${TISTORY_POST_URL}"
-                        data-store-id="${getStoreId(store)}"
-                        title="${displayName} 상세정보 보기"
-                      >
-                        ${displayName}
-                      </a>
-                    `;
-
-                  }
-                )
-                .join(
-                  `<span class="calendar-day-store-separator">, </span>`
-                );
-
-
-            return `
-              <div class="calendar-day-detail-row">
-
-                <div class="calendar-day-detail-region">
-                  ${region}
-                </div>
-
-                <div class="calendar-day-detail-stores">
-                  ${links}
-                </div>
-
-              </div>
-            `;
-
-          }
-        )
-        .join("");
-
-  } else {
-
-    bodyHtml =
-      stores
-        .map(
-          store => {
-
-            const displayName =
-              shortStoreName(
-                store.store
-              );
-
-            return `
-              <a
-                class="
-                  calendar-day-store-link
-                  store-link
-                "
-                href="${TISTORY_POST_URL}"
-                data-store-id="${getStoreId(store)}"
-                title="${displayName} 상세정보 보기"
-              >
-                ${displayName}
-              </a>
-            `;
-
-          }
-        )
-        .join(
-          `<span class="calendar-day-store-separator">, </span>`
-        );
-
-  }
-
-
-  detail.innerHTML = `
-    <div class="calendar-day-detail-title">
-      ${title} 휴무 점포
-      <span class="calendar-day-detail-count">
-        · ${stores.length}곳
-      </span>
-    </div>
-
-    <div class="calendar-day-detail-body">
-      ${bodyHtml}
-    </div>
-  `;
-
-
-  detail.dataset.date =
-    dateKey;
-
-
-  detail.hidden = false;
+  renderCurrentView();
 
 }
-
 
 document.addEventListener(
   "click",
@@ -3219,7 +3107,7 @@ document.addEventListener(
     }
 
 
-    openCalendarDayDetail(
+    toggleCalendarDateFilter(
       calendarDay
     );
 
@@ -3256,12 +3144,46 @@ document.addEventListener(
     event.preventDefault();
 
 
-    openCalendarDayDetail(
+    toggleCalendarDateFilter(
       calendarDay
     );
 
   }
 );
+
+/*
+==================================================
+선택 날짜 필터 해제
+==================================================
+*/
+
+document.addEventListener(
+  "click",
+  function(event) {
+
+    const button =
+      event.target.closest(
+        ".calendar-date-filter-clear"
+      );
+
+
+    if (!button) {
+      return;
+    }
+
+
+    event.preventDefault();
+
+
+    selectedCalendarDate =
+      null;
+
+
+    renderCurrentView();
+
+  }
+);
+
 
 /*
 ==================================================
@@ -3586,6 +3508,18 @@ function buildWeekdayGroups(
       (store.holidays || [])
         .forEach(
           date => {
+
+            if (
+              selectedCalendarDate
+              &&
+              date !==
+              selectedCalendarDate
+            ) {
+
+              return;
+
+            }
+
 
             const weekday =
               getWeekday(
@@ -3996,8 +3930,20 @@ function renderSingleStore(store) {
     getMonthHolidays(store);
 
 
+  const visibleMonthHolidays =
+    (
+      selectedCalendarDate
+      &&
+      monthHolidays.includes(
+        selectedCalendarDate
+      )
+    )
+      ? [selectedCalendarDate]
+      : monthHolidays;
+
+
   const dates =
-    monthHolidays
+    visibleMonthHolidays
       .map(
         date =>
           formatDate(date)
@@ -4047,6 +3993,12 @@ function renderSingleStore(store) {
       )
     }
 
+    ${
+      buildCalendarDateFilterBar(
+        [store]
+      )
+    }
+
 
     <div class="holiday-accordion">
 
@@ -4056,7 +4008,11 @@ function renderSingleStore(store) {
       >
 
         <div class="date-title">
-          ${selectedYear}년 ${selectedMonth}월 휴무일
+          ${
+            selectedCalendarDate
+              ? `${formatCalendarSelectedDate(selectedCalendarDate)} 휴무`
+              : `${selectedYear}년 ${selectedMonth}월 휴무일`
+          }
         </div>
 
         <div class="store-grid-item">
@@ -4135,7 +4091,7 @@ function renderStoreCollection(
 
 
   const monthStores =
-    getMonthStores(
+    getCalendarFilteredMonthStores(
       stores
     );
 
@@ -4168,6 +4124,12 @@ function renderStoreCollection(
 
     ${
       buildMonthCalendar(
+        stores
+      )
+    }
+
+    ${
+      buildCalendarDateFilterBar(
         stores
       )
     }
@@ -4402,7 +4364,7 @@ function renderRegionPatternView(
     );
 
   const monthStores =
-    getMonthStores(
+    getCalendarFilteredMonthStores(
       stores
     );
 
@@ -4435,6 +4397,12 @@ function renderRegionPatternView(
 
     ${
       buildMonthCalendar(
+        stores
+      )
+    }
+
+    ${
+      buildCalendarDateFilterBar(
         stores
       )
     }
@@ -5214,7 +5182,7 @@ function renderAllRegions(
 
 
   const monthStores =
-    getMonthStores(
+    getCalendarFilteredMonthStores(
       targetStores
     );
 
@@ -5243,6 +5211,12 @@ function renderAllRegions(
 
     ${
       buildMonthCalendar(
+        targetStores
+      )
+    }
+
+    ${
+      buildCalendarDateFilterBar(
         targetStores
       )
     }
