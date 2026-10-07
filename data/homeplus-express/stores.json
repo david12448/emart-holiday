@@ -1,0 +1,4539 @@
+[
+  {
+    "sid": "d8ddd33ebe975f05",
+    "store": "가산점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "금천구",
+    "address": "서울특별시 금천구 가산로 106, 112",
+    "phone": "02-856-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "19255c0d04ecc9e6",
+    "store": "갈현점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "은평구",
+    "address": "서울특별시 은평구 서오릉로 222",
+    "phone": "02-359-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "67278755441227f7",
+    "store": "감삼점",
+    "storeType": "standard",
+    "region": "대구",
+    "sido": "대구광역시",
+    "sigungu": "달서구",
+    "address": "대구광역시 달서구 당산로 83",
+    "phone": "053-553-8545",
+    "holidays": [
+      "2026-10-12",
+      "2026-10-26"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "2849a9e53b354a76",
+    "store": "강서사옥점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "강서구",
+    "address": "서울 강서구 화곡로 398 (등촌동, 홈플러스 강서점 앤 본사 사옥)",
+    "phone": "00-000-0000",
+    "holidays": [],
+    "holidayStatus": "unknown",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "7c3453a7e95b368f",
+    "store": "강서점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "강서구",
+    "address": "서울특별시 강서구 화곡로 347, 101",
+    "phone": "02-2695-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "7ef338d48246b1a3",
+    "store": "개롱점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "송파구",
+    "address": "서울특별시 송파구 오금로 410",
+    "phone": "02-2043-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "4461834093230ab1",
+    "store": "개봉점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "구로구",
+    "address": "서울특별시 구로구 경인로 319, 101",
+    "phone": "02-2683-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "7a8b50f89b1447b7",
+    "store": "개포2점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "강남구",
+    "address": "서울특별시 강남구 언주로 110",
+    "phone": "02-529-8544",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "b04e44c3273fa84f",
+    "store": "개포점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "강남구",
+    "address": "서울특별시 강남구 개포로 615",
+    "phone": "02-3412-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "952076652008c3c7",
+    "store": "거여점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "송파구",
+    "address": "서울특별시 송파구 오금로 512",
+    "phone": "02-3012-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "8ca9b89e3385a81f",
+    "store": "거제고현점",
+    "storeType": "standard",
+    "region": "경상",
+    "sido": "경상남도",
+    "sigungu": "거제시",
+    "address": "경상남도 거제시 중곡로 35",
+    "phone": "055-633-8548",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "1c133d07bd279ac0",
+    "store": "거제상동점",
+    "storeType": "standard",
+    "region": "경상",
+    "sido": "경상남도",
+    "sigungu": "거제시",
+    "address": "경상남도 거제시 상동1길 15-3",
+    "phone": "055-636-8544",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "a28948805b1dd423",
+    "store": "경주안강점",
+    "storeType": "standard",
+    "region": "경상",
+    "sido": "경상북도",
+    "sigungu": "경주시",
+    "address": "경상북도 경주시 안강읍 구부랑4길 2",
+    "phone": "054-761-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "689b909b55e810c8",
+    "store": "계룡엄사점",
+    "storeType": "standard",
+    "region": "충청",
+    "sido": "충청남도",
+    "sigungu": "계룡시",
+    "address": "충청남도 계룡시 엄사면 번영로 26",
+    "phone": "042-840-8545",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "4c9d5c8c39d4111e",
+    "store": "고양대화역점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "고양시",
+    "address": "경기도 고양시 일산서구 강성로 261(대화동 1층)",
+    "phone": "031-925-8565",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "4ba06713fbf394e8",
+    "store": "고양성사점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "고양시",
+    "address": "경기도 고양시 덕양구 호국로 822",
+    "phone": "031-968-8545",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "dde9296fe87562b8",
+    "store": "고양정발산2점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "고양시",
+    "address": "경기도 고양시 일산동구 대산로 19",
+    "phone": "031-915-8545",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "ae5867e5ba50a5ac",
+    "store": "고양정발산점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "고양시",
+    "address": "경기도 고양시 일산동구 일산로 450",
+    "phone": "031-919-8546",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "a06c5fa950b6c8d2",
+    "store": "고양주엽점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "고양시",
+    "address": "경기도 고양시 일산서구 주화로 76",
+    "phone": "031-925-8576",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "3da16cebefda2b80",
+    "store": "고양중산2점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "고양시",
+    "address": "경기도 고양시 일산동구 중산로 229",
+    "phone": "031-976-8544",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "35fef8d6ff909c96",
+    "store": "고양중산점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "고양시",
+    "address": "경기도 고양시 일산동구 하늘마을1로 14",
+    "phone": "031-976-8546",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "0227660fa27f33f9",
+    "store": "고양토당점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "고양시",
+    "address": "경기도 고양시 덕양구 지도로35번길 12-3",
+    "phone": "031-978-8544",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "34ec926fc127baf3",
+    "store": "고양행신2점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "고양시",
+    "address": "경기도 고양시 덕양구 중앙로 442",
+    "phone": "031-970-8545",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "d87f7a7366f49b01",
+    "store": "고양화정점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "고양시",
+    "address": "경기도 고양시 덕양구 화중로 205, 102",
+    "phone": "031-963-8546",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "a031ed79b4474cfa",
+    "store": "고양후곡2점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "고양시",
+    "address": "경기도 고양시 일산서구 일산로 571 뉴시티프라자1층",
+    "phone": "031-923-8542",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "45b4f856e9f8e3c1",
+    "store": "공릉점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "노원구",
+    "address": "서울특별시 노원구 동일로 1101",
+    "phone": "02-949-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "19e694fde5b55ad7",
+    "store": "광명점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "광명시",
+    "address": "경기도 광명시 도덕로 28",
+    "phone": "02-2060-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "cf9af2bc9b7e2169",
+    "store": "광명철산2점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "광명시",
+    "address": "경기도 광명시 도덕공원로 21-1",
+    "phone": "02-2689-7102",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "6b6e9af73cf03f85",
+    "store": "광명철산역점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "광명시",
+    "address": "경기도 광명시 철산동 385",
+    "phone": "02-2688-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "d2e0f5d10dc0d54c",
+    "store": "광명하안2점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "광명시",
+    "address": "경기도 광명시 하안로 361",
+    "phone": "02-897-8546",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "a186a7e3ce5041db",
+    "store": "광명하안점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "광명시",
+    "address": "경기도 광명시 하안동 안현로 35",
+    "phone": "02-897-8557",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "a503214e96ea2b18",
+    "store": "광안점",
+    "storeType": "standard",
+    "region": "부산",
+    "sido": "부산광역시",
+    "sigungu": "수영구",
+    "address": "부산광역시 수영구 수영로 625",
+    "phone": "051-756-2277",
+    "holidays": [
+      "2026-10-12",
+      "2026-10-26"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "425236b60db006f3",
+    "store": "광화문점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "종로구",
+    "address": "서울특별시 종로구 새문안로 91",
+    "phone": "02-737-9994",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "ac59f993907b6732",
+    "store": "괴정점",
+    "storeType": "standard",
+    "region": "대전",
+    "sido": "대전광역시",
+    "sigungu": "서구",
+    "address": "대전광역시 서구 갈마로 257",
+    "phone": "042-525-8546",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "211f19831046f27c",
+    "store": "구로점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "구로구",
+    "address": "서울특별시 구로구 구일로10길 27",
+    "phone": "02-868-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "66094df27e1d093c",
+    "store": "구산점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "은평구",
+    "address": "서울특별시 은평구 서오릉로 145",
+    "phone": "02-358-8546",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "2feb365f2621cd6c",
+    "store": "구월점",
+    "storeType": "standard",
+    "region": "인천",
+    "sido": "인천광역시",
+    "sigungu": "남동구",
+    "address": "인천광역시 남동구 구월남로 198",
+    "phone": "032-463-8547",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "7932999785fc26f5",
+    "store": "군포궁내점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "군포시",
+    "address": "경기도 군포시 고산로539번길 7-36",
+    "phone": "031-393-8547",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "023ce61049226e85",
+    "store": "군포부곡점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "군포시",
+    "address": "경기도 군포시 번영로28번길 37-12",
+    "phone": "031-462-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "40ae1eba36606068",
+    "store": "군포수리산역점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "군포시",
+    "address": "경기도 군포시 번영로 380-1, 110",
+    "phone": "031-398-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "aebe18bf3e10914f",
+    "store": "군포오금점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "군포시",
+    "address": "경기도 군포시 번영로 405",
+    "phone": "031-393-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "c87b80028f059965",
+    "store": "금촌점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "파주시",
+    "address": "경기도 파주시 금빛로 4-1",
+    "phone": "031-947-8531",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "c18fce25bb146482",
+    "store": "금호2점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "성동구",
+    "address": "서울특별시 성동구 동호로 102",
+    "phone": "02-2253-8541",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "a854dee0315c0867",
+    "store": "금호점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "성동구",
+    "address": "서울특별시 성동구 행당로 6",
+    "phone": "02-2292-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "e143688a52413855",
+    "store": "길동점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "강동구",
+    "address": "서울특별시 강동구 양재대로 1486",
+    "phone": "02-470-8529",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "8c3ebb0fd1f214bf",
+    "store": "길음점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "성북구",
+    "address": "서울특별시 성북구 길음로 13길 22",
+    "phone": "02-942-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "eb2501c46b3199c5",
+    "store": "김포고창2점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "김포시",
+    "address": "경기도 김포시 김포한강2로 106",
+    "phone": "031-984-4253",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "4125e8065efc7df8",
+    "store": "김포고창점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "김포시",
+    "address": "경기도 김포시 장기동 5132-4 지상1층",
+    "phone": "031-981-8543",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "2eb45620148893af",
+    "store": "김포고촌점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "김포시",
+    "address": "경기도 김포시 고촌읍 인향로 10 지상1층",
+    "phone": "031-982-8547",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "c432074100c29e69",
+    "store": "김포양곡점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "김포시",
+    "address": "경기도 김포시 김포한강8로 333",
+    "phone": "031-986-8548",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "ad3e9d5dedc10065",
+    "store": "김포장기2점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "김포시",
+    "address": "경기도 김포시 청송로 26",
+    "phone": "031-984-8544",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "7fdf8ca2b2bfbfb6",
+    "store": "남성점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "동작구",
+    "address": "서울특별시 동작구 사당로 215",
+    "phone": "02-3481-8541",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "81dbcc45fc41bb86",
+    "store": "남양주별내2점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "남양주시",
+    "address": "경기도 남양주시 별내3로 64-7",
+    "phone": "031-575-9159",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "dab4f4fdbf2b784e",
+    "store": "남양주진접점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "남양주시",
+    "address": "경기도 남양주시 진접읍 해밀예당3로 51",
+    "phone": "031-529-8545",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "aef884465b26de91",
+    "store": "노은점",
+    "storeType": "standard",
+    "region": "대전",
+    "sido": "대전광역시",
+    "sigungu": "유성구",
+    "address": "대전광역시 유성구 노은로 178, 110",
+    "phone": "042-826-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "77f2748a5eece440",
+    "store": "능곡점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "시흥시",
+    "address": "경기도 시흥시 능곡로 182",
+    "phone": "031-404-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "06bc717ea8699e3b",
+    "store": "다대포점",
+    "storeType": "standard",
+    "region": "부산",
+    "sido": "부산광역시",
+    "sigungu": "사하구",
+    "address": "부산광역시 사하구 다대낙조2길 3",
+    "phone": "051-266-8542",
+    "holidays": [
+      "2026-10-12",
+      "2026-10-26"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "bf7fe96a6d342557",
+    "store": "당산점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "영등포구",
+    "address": "서울특별시 영등포구 당산로44길 3",
+    "phone": "02-2671-8546",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "dfba1e88924c200b",
+    "store": "대구구암2점",
+    "storeType": "standard",
+    "region": "대구",
+    "sido": "대구광역시",
+    "sigungu": "북구",
+    "address": "대구광역시 북구 구암로32길 6-10",
+    "phone": "053-326-8545",
+    "holidays": [
+      "2026-10-12",
+      "2026-10-26"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "239b8ffd8e2e3c8f",
+    "store": "대구상인점",
+    "storeType": "standard",
+    "region": "대구",
+    "sido": "대구광역시",
+    "sigungu": "달서구",
+    "address": "대구광역시 달서구 송현로7길 19",
+    "phone": "053-631-8545",
+    "holidays": [
+      "2026-10-12",
+      "2026-10-26"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "d8ae1357a12f6aa0",
+    "store": "대구용산점",
+    "storeType": "standard",
+    "region": "대구",
+    "sido": "대구광역시",
+    "sigungu": "달서구",
+    "address": "대구광역시 달서구 용산로 220",
+    "phone": "053-525-8545",
+    "holidays": [
+      "2026-10-12",
+      "2026-10-26"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "df5624458f4b06dd",
+    "store": "대구침산점",
+    "storeType": "standard",
+    "region": "대구",
+    "sido": "대구광역시",
+    "sigungu": "북구",
+    "address": "대구광역시 북구 침산남로 180-4",
+    "phone": "053-352-8545",
+    "holidays": [
+      "2026-10-12",
+      "2026-10-26"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "63143d81ad804766",
+    "store": "대방점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "동작구",
+    "address": "서울특별시 동작구 노량진로 4",
+    "phone": "02-813-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "09187c3d7f374651",
+    "store": "대야점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "시흥시",
+    "address": "경기도 시흥시 은행로173번길 17",
+    "phone": "031-314-8542",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "b3a2156ce81e8721",
+    "store": "대전갈마점",
+    "storeType": "standard",
+    "region": "대전",
+    "sido": "대전광역시",
+    "sigungu": "서구",
+    "address": "대전광역시 서구 갈마중로 12",
+    "phone": "042-535-8546",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "edab9bc934e22082",
+    "store": "대전관저점",
+    "storeType": "standard",
+    "region": "대전",
+    "sido": "대전광역시",
+    "sigungu": "서구",
+    "address": "대전광역시 서구 관저북로 71, 133",
+    "phone": "042-545-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "9ac61e27a9dbb989",
+    "store": "대전관평점",
+    "storeType": "standard",
+    "region": "대전",
+    "sido": "대전광역시",
+    "sigungu": "유성구",
+    "address": "대전시 유성구 관평2로 52",
+    "phone": "042-933-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "ca237e4bf0f4dec7",
+    "store": "대전도안2점",
+    "storeType": "standard",
+    "region": "대전",
+    "sido": "대전광역시",
+    "sigungu": "서구",
+    "address": "대전광역시 서구 원도안로 191",
+    "phone": "042-545-8591",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "831a7c279155e032",
+    "store": "대전도안점",
+    "storeType": "standard",
+    "region": "대전",
+    "sido": "대전광역시",
+    "sigungu": "유성구",
+    "address": "대전광역시 유성구 도안대로 511-6",
+    "phone": "042-826-8542",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "89a9e618444207de",
+    "store": "대전둔산점",
+    "storeType": "standard",
+    "region": "대전",
+    "sido": "대전광역시",
+    "sigungu": "서구",
+    "address": "대전광역시 서구 청사로 281",
+    "phone": "042-477-8546",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "ecc185eefd577741",
+    "store": "대전신성점",
+    "storeType": "standard",
+    "region": "대전",
+    "sido": "대전광역시",
+    "sigungu": "유성구",
+    "address": "대전광역시 유성구 신성남로 51",
+    "phone": "042-863-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "f72988f09cf23ed2",
+    "store": "대전오류점",
+    "storeType": "standard",
+    "region": "대전",
+    "sido": "대전광역시",
+    "sigungu": "중구",
+    "address": "대전광역시 중구 계룡로 858",
+    "phone": "042-525-8847",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "a07b6a31ce7eb73f",
+    "store": "대전원내점",
+    "storeType": "standard",
+    "region": "대전",
+    "sido": "대전광역시",
+    "sigungu": "유성구",
+    "address": "대전광역시 유성구 진잠로 78번길 70",
+    "phone": "042-545-9550",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "f426fa27d072954b",
+    "store": "대치점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "강남구",
+    "address": "서울특별시 강남구 도곡로 450",
+    "phone": "02-569 - 8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "793dc39db65a9e81",
+    "store": "도림점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "영등포구",
+    "address": "서울특별시 영등포구 도신로 75",
+    "phone": "02-833-8535",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "c2daa3df6d47f9b9",
+    "store": "도원점",
+    "storeType": "standard",
+    "region": "대구",
+    "sido": "대구광역시",
+    "sigungu": "달서구",
+    "address": "대구광역시 달서구 도원로 36",
+    "phone": "053-632-8544",
+    "holidays": [
+      "2026-10-12",
+      "2026-10-26"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "33ee117992458e3d",
+    "store": "도화점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "마포구",
+    "address": "서울특별시 마포구 새창로8길 72, 상가",
+    "phone": "02-3272-8544",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "d35e36c184c39eb5",
+    "store": "동두천지행점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "동두천시",
+    "address": "경기도 동두천시 지행로 50",
+    "phone": "031-866-8545",
+    "holidays": [
+      "2026-10-18"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "1228b3cb05c88b1f",
+    "store": "동탄2점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "화성시",
+    "address": "경기도 화성시 동탄구 10용사로 349-11위너스프라자",
+    "phone": "031-613-8559",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "c1bf9db8044f4d62",
+    "store": "동탄3점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "화성시",
+    "address": "경기도 화성시 동탄구 동탄지성로 142 에이앤비프라자 1층",
+    "phone": "031-8003-8542",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "6eaf8a71d2b7f024",
+    "store": "동탄점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "화성시",
+    "address": "경기도 화성시 동탄구 동탄솔빛로53 모닝타운",
+    "phone": "031-8003-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "fd9ff47c88d400a1",
+    "store": "등촌점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "강서구",
+    "address": "서울특별시 강서구 공항대로41길 56",
+    "phone": "02-2658-8544",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "0d43f5050a773d7e",
+    "store": "마두점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "고양시",
+    "address": "경기도 고양시 일산동구 일산로 198",
+    "phone": "031-901-8545",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "452c2e87b11cc1e0",
+    "store": "마산양덕점",
+    "storeType": "standard",
+    "region": "경상",
+    "sido": "경상남도",
+    "sigungu": "창원시",
+    "address": "경상남도 창원시 마산회원구 율림교로 12",
+    "phone": "055-297-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "a94805f050f4d636",
+    "store": "마산호계점",
+    "storeType": "standard",
+    "region": "경상",
+    "sido": "경상남도",
+    "sigungu": "창원시",
+    "address": "경상남도 창원시 마산회원구 내서읍 광려천북로 198-2",
+    "phone": "055-232-8051",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "035a9140eca84af9",
+    "store": "망우점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "중랑구",
+    "address": "서울특별시 중랑구 용마산 494",
+    "phone": "02-434-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "f1849b8f7fae9fda",
+    "store": "매탄점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "수원시",
+    "address": "경기도 수원시 영통구 효원로 363",
+    "phone": "031-212-8543",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "b4aba7b61ff119e7",
+    "store": "메트로시티점",
+    "storeType": "standard",
+    "region": "부산",
+    "sido": "부산광역시",
+    "sigungu": "남구",
+    "address": "부산광역시 남구 분포로 113, 1005-201",
+    "phone": "051-612-8003",
+    "holidays": [
+      "2026-10-12",
+      "2026-10-26"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "5c5a12df3a4f6079",
+    "store": "면목점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "중랑구",
+    "address": "서울특별시 중랑구 면목로 357",
+    "phone": "02-493-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "9c949eabfc87ced0",
+    "store": "명륜2점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "종로구",
+    "address": "서울특별시 종로구 혜화로3길 5",
+    "phone": "02-764-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "d3d81d49e4dd01f5",
+    "store": "명륜점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "종로구",
+    "address": "서울특별시 종로구 혜화로 17",
+    "phone": "02-747-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "12ae7c36773359f5",
+    "store": "명촌점",
+    "storeType": "standard",
+    "region": "울산",
+    "sido": "울산광역시",
+    "sigungu": "북구",
+    "address": "울산광역시 북구 명촌 10길 3",
+    "phone": "052-287-8543",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "b60f6a6e22a97c40",
+    "store": "모라점",
+    "storeType": "standard",
+    "region": "부산",
+    "sido": "부산광역시",
+    "sigungu": "사상구",
+    "address": "부산광역시 사상구 모라로 116",
+    "phone": "051-328-2862",
+    "holidays": [
+      "2026-10-12",
+      "2026-10-26"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "0a0c3e96feae5d34",
+    "store": "목동2점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "양천구",
+    "address": "서울특별시 양천구 등촌로 172",
+    "phone": "02-2062-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "5e51e80a4f0779e3",
+    "store": "목동점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "양천구",
+    "address": "서울특별시 양천구 목동동로 401",
+    "phone": "02-2651-8546",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "c469221f52f04ffd",
+    "store": "문현점",
+    "storeType": "standard",
+    "region": "부산",
+    "sido": "부산광역시",
+    "sigungu": "남구",
+    "address": "부산광역시 남구 고동골로 66",
+    "phone": "051-638-8545",
+    "holidays": [
+      "2026-10-12",
+      "2026-10-26"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "7bbecf0d031e4db9",
+    "store": "미아점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "강북구",
+    "address": "서울특별시 강북구 도봉로 172",
+    "phone": "02-980-8547",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "c531c1a0638ecd05",
+    "store": "반석점",
+    "storeType": "standard",
+    "region": "대전",
+    "sido": "대전광역시",
+    "sigungu": "유성구",
+    "address": "대전광역시 유성구 반석동로 52",
+    "phone": "042-822-8540",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "3c9683042b10b284",
+    "store": "반포2점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "서초구",
+    "address": "서울특별시 서초구 반포대로 287",
+    "phone": "02-3481-8545",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "88c0513d78cca96b",
+    "store": "반포점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "서초구",
+    "address": "서울특별시 서초구 사평대로45길 10-25",
+    "phone": "02-536-8545",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "9061cca4854204f7",
+    "store": "발산점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "강서구",
+    "address": "서울시 강서구 발산 수명로 68-35",
+    "phone": "02-2667-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "b54076efe3aeab34",
+    "store": "보문점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "성북구",
+    "address": "서울특별시 성북구 보문로 61",
+    "phone": "02-921-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "0841cf406fb5d325",
+    "store": "봉명점",
+    "storeType": "standard",
+    "region": "대전",
+    "sido": "대전광역시",
+    "sigungu": "유성구",
+    "address": "대전광역시 유성구 계룡로 48",
+    "phone": "042-825-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "59128c8d5929f52b",
+    "store": "봉천점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "관악구",
+    "address": "서울특별시 관악구 양녕로 46",
+    "phone": "02-872-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "f0bf7cf3ee8f12bd",
+    "store": "부개점",
+    "storeType": "standard",
+    "region": "인천",
+    "sido": "인천광역시",
+    "sigungu": "부평구",
+    "address": "인천광역시 부평구 부개로 73",
+    "phone": "032-330-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "f099e224d4e5da38",
+    "store": "부산금곡점",
+    "storeType": "standard",
+    "region": "부산",
+    "sido": "부산광역시",
+    "sigungu": "북구",
+    "address": "부산광역시 북구 효열로 222",
+    "phone": "051-362-8545",
+    "holidays": [
+      "2026-10-12",
+      "2026-10-26"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "766cd60bbe9f52ec",
+    "store": "부산센텀점",
+    "storeType": "standard",
+    "region": "부산",
+    "sido": "부산광역시",
+    "sigungu": "해운대구",
+    "address": "부산광역시 해운대구 센텀중앙로 145",
+    "phone": "051-746-8547",
+    "holidays": [
+      "2026-10-12",
+      "2026-10-26"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "8db1961073b7632c",
+    "store": "부산연제점",
+    "storeType": "standard",
+    "region": "부산",
+    "sido": "부산광역시",
+    "sigungu": "연제구",
+    "address": "부산광역시 연제구 배산로 10",
+    "phone": "051-867-8548",
+    "holidays": [
+      "2026-10-12",
+      "2026-10-26"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "f06f999294d25741",
+    "store": "부산용호점",
+    "storeType": "standard",
+    "region": "부산",
+    "sido": "부산광역시",
+    "sigungu": "남구",
+    "address": "부산광역시 남구 오륙도로 85",
+    "phone": "051-611-8540",
+    "holidays": [
+      "2026-10-12",
+      "2026-10-26"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "646ab196a7c50333",
+    "store": "부산정관점",
+    "storeType": "standard",
+    "region": "부산",
+    "sido": "부산광역시",
+    "sigungu": "기장군",
+    "address": "부산광역시 기장군 정관읍 정관로 395",
+    "phone": "051-727-8545",
+    "holidays": [
+      "2026-10-12",
+      "2026-10-26"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "e7c00f6af6e97e3d",
+    "store": "부산좌산점",
+    "storeType": "standard",
+    "region": "부산",
+    "sido": "부산광역시",
+    "sigungu": "해운대구",
+    "address": "부산광역시 해운대구 좌동순환로 303",
+    "phone": "051-702-8540",
+    "holidays": [
+      "2026-10-12",
+      "2026-10-26"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "5f8d267b458aacc2",
+    "store": "부전점",
+    "storeType": "standard",
+    "region": "부산",
+    "sido": "부산광역시",
+    "sigungu": "부산진구",
+    "address": "부산광역시 부산진구 중앙대로 786",
+    "phone": "051-806-8546",
+    "holidays": [
+      "2026-10-12",
+      "2026-10-26"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "b8988388155a23b9",
+    "store": "부천도당점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "부천시",
+    "address": "경기도 부천시 원미구 삼작로 294",
+    "phone": "032-676-8544",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "decd52a59c5e0422",
+    "store": "부천상동2점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "부천시",
+    "address": "경기도 부천시 원미구 길주로121번길 18-3",
+    "phone": "032-325-8544",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "b626eb132839f857",
+    "store": "부천상동3점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "부천시",
+    "address": "경기도 부천시 원미구 상동로117번길 37",
+    "phone": "032-325-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "f4e7e44d6bcf4193",
+    "store": "부천상동역점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "부천시",
+    "address": "경기도 부천시 원미구 소향로13번길 14-22",
+    "phone": "032-325-8664",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "13bb3533d5e0c0c9",
+    "store": "부천상동점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "부천시",
+    "address": "경기도 부천시 원미구 상일로 100",
+    "phone": "032-327-8535",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "f22cd852bf0b8f8c",
+    "store": "부천역곡점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "부천시",
+    "address": "경기도 부천시 원미구 지봉로 53",
+    "phone": "032-341-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "7bafead0e30759c5",
+    "store": "부천중동2점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "부천시",
+    "address": "경기도 부천시 원미구 중동로248번길 52",
+    "phone": "032-323-8542",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "0196cd17c2728795",
+    "store": "부천중동3점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "부천시",
+    "address": "경기도 부천시 원미구 중동로 143",
+    "phone": "032-656-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "f5f8f2acf7c27487",
+    "store": "부천중동4점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "부천시",
+    "address": "경기도 부천시 원미구 길주로 219",
+    "phone": "032-322-8546",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "5bdd570dcb3d08f8",
+    "store": "북가좌점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "서대문구",
+    "address": "서울특별시 서대문구 응암로 112",
+    "phone": "02-302-8023",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "1d57b6e9e3177247",
+    "store": "북변점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "김포시",
+    "address": "경기도 김포시 사우중로 77",
+    "phone": "031-989-8545",
+    "holidays": [],
+    "holidayStatus": "unknown",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "41659310190e88f9",
+    "store": "분당구미점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "성남시",
+    "address": "경기도 성남시 분당구 구미로 115",
+    "phone": "031-786-1058",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "13a3bae9e55fd6fb",
+    "store": "분당금곡점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "성남시",
+    "address": "경기도 성남시 분당구 미금로 232",
+    "phone": "031-715-8542",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "8950197a930b4cb3",
+    "store": "분당동판교점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "성남시",
+    "address": "경기도 성남시 분당구 동판교로 59",
+    "phone": "031-8016-8543",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "0504bb7fdc3f516e",
+    "store": "분당미금점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "성남시",
+    "address": "경기도 성남시 분당구 정자일로 55 (금곡동, 분당두산위브아파트)",
+    "phone": "031-8022-8596",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "3c9ce5d8ffc692bc",
+    "store": "분당서판교점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "성남시",
+    "address": "경기도 성남시 분당구 운중로 122",
+    "phone": "031-8017-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "0df6f3a7962cd2a0",
+    "store": "분당서현점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "성남시",
+    "address": "경기도 성남시 분당구 불정로 382",
+    "phone": "031-781-8546",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "7b835d2ceb86b238",
+    "store": "분당이매점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "성남시",
+    "address": "경기도 성남시 분당구 양현로 192",
+    "phone": "031-781-8540",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "0addb5b1ade28f43",
+    "store": "분당점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "성남시",
+    "address": "경기도 성남시 분당구 장안로 39",
+    "phone": "031-701-8549",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "6afa4668087fd968",
+    "store": "분당정자점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "성남시",
+    "address": "경기도 성남시 분당구 내정로 58",
+    "phone": "031-717-8546",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "c8d53d7210000641",
+    "store": "불광점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "은평구",
+    "address": "서울특별시 은평구 불광로 121",
+    "phone": "02-356-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "d20b31e657a65c94",
+    "store": "산본점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "군포시",
+    "address": "경기도 군포시 고산로 691",
+    "phone": "031-391-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "102d7daa5815089e",
+    "store": "삼선점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "성북구",
+    "address": "서울특별시 성북구 삼선교로 6",
+    "phone": "02-3675-8543",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "1abf0f899014e67a",
+    "store": "삼전역점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "송파구",
+    "address": "서울시 송파구 삼전동 9-19 지하1층",
+    "phone": "02-3431-9336",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "adc6ecdeadf2e4f8",
+    "store": "상갈점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "용인시",
+    "address": "경기도 용인시 기흥구 금화로 111",
+    "phone": "031-283-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "4cd848771f553c11",
+    "store": "상계장암점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "노원구",
+    "address": "서울시 노원구 상계동 1313-4",
+    "phone": "02-931-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "a8c7eb43d5fec34e",
+    "store": "상계점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "노원구",
+    "address": "서울특별시 노원구 동일로 1323",
+    "phone": "02-935-0183",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "fed251f95969f80c",
+    "store": "상도2점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "동작구",
+    "address": "서울특별시 동작구 만양로 26",
+    "phone": "02-816-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "92f96557b756580e",
+    "store": "상도3점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "동작구",
+    "address": "서울특별시 동작구 양녕로 170 (상도동,롯데캐슬상가)",
+    "phone": "02-3280-8544",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "803d72c194ce4cbb",
+    "store": "상현점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "용인시",
+    "address": "경기도 용인시 수지구 만현로 120 sr프라자지하1층",
+    "phone": "031-898-0066",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "cc09d48e01b019dd",
+    "store": "서대신점",
+    "storeType": "standard",
+    "region": "부산",
+    "sido": "부산광역시",
+    "sigungu": "서구",
+    "address": "부산광역시 서구 구덕로 317-1",
+    "phone": "051-253-8545",
+    "holidays": [
+      "2026-10-12",
+      "2026-10-26"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "27190cd1c5ec2fda",
+    "store": "서래마을점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "서초구",
+    "address": "서울특별시 서초구 서래로 23",
+    "phone": "02-595-8545",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "4cea464bfddce1e1",
+    "store": "서울내발산점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "강서구",
+    "address": "서울특별시 강서구 우장산로 21-5",
+    "phone": "02-3665-8639",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "2e6dc3bf99fdca81",
+    "store": "서울쌍문점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "도봉구",
+    "address": "서울시 도봉구 도봉로 517",
+    "phone": "02-3297-3980",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "98037ee74d26ed65",
+    "store": "서울오금점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "송파구",
+    "address": "서울시 송파구 동남로23길 57",
+    "phone": "02-448-8562",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "db02cda6b85de5eb",
+    "store": "서울오류점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "구로구",
+    "address": "서울특별시 구로구 서해안로 2295",
+    "phone": "02-2619-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "dba91e6c13949a13",
+    "store": "서울천왕역점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "구로구",
+    "address": "서울시 구로구 오리로 1149",
+    "phone": "02-2681-8542",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "e01a4ba4fb0f5f6d",
+    "store": "서울천왕점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "구로구",
+    "address": "서울특별시 구로구 천왕로 36",
+    "phone": "02-2689-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "aa2bb5e672e49f15",
+    "store": "서초2점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "서초구",
+    "address": "서울특별시 서초구 서초중앙로 56",
+    "phone": "02-587-8545",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "7a910e55e128ac9f",
+    "store": "서초점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "서초구",
+    "address": "서울특별시 서초구 서초중앙로 188, 338",
+    "phone": "02-3478-8545",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "f3656c54eabc589f",
+    "store": "석전점",
+    "storeType": "standard",
+    "region": "경상",
+    "sido": "경상남도",
+    "sigungu": "창원시",
+    "address": "경상남도 창원시 마산회원구 양덕서8길 10",
+    "phone": "055-255-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "1c608f2cbc2ac653",
+    "store": "성남금광점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "성남시",
+    "address": "경기도 성남시 중원구 금상로 61",
+    "phone": "031-733-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "2a5ec2f64bc64e4d",
+    "store": "성남복정점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "성남시",
+    "address": "경기도 성남시 수정구 복정로 41",
+    "phone": "031-759-8005",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "9cfeb8f0faf4e94f",
+    "store": "성남여수점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "성남시",
+    "address": "경기도 성남시 중원구 여수동 583",
+    "phone": "031-756-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "4aa864bac1166f87",
+    "store": "성내점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "강동구",
+    "address": "서울특별시 강동구 풍성로 138",
+    "phone": "02-475-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "2d725588ea50754f",
+    "store": "소하점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "광명시",
+    "address": "경기도 광명시 하안로 200",
+    "phone": "02-899-8546",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "52c57eb1d036988a",
+    "store": "송촌점",
+    "storeType": "standard",
+    "region": "대전",
+    "sido": "대전광역시",
+    "sigungu": "대덕구",
+    "address": "대전광역시 대덕구 동춘당로94번길 11-15",
+    "phone": "042-634-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "de1b38d644e93958",
+    "store": "송파점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "송파구",
+    "address": "서울특별시 송파구 가락로 30길 6",
+    "phone": "02-3431-8544",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "ecc7f8ed5b57966c",
+    "store": "수곡점",
+    "storeType": "standard",
+    "region": "충청",
+    "sido": "충청북도",
+    "sigungu": "청주시",
+    "address": "충청북도 청주시 서원구 구룡산로 321",
+    "phone": "043-286-8541",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "9df4f97c1d7be8b3",
+    "store": "수내점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "성남시",
+    "address": "경기도 성남시 분당구 내정로173번길 11",
+    "phone": "031-712-8501",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "8fa660b56eefbfdc",
+    "store": "수원곡반정점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "수원시",
+    "address": "경기도 수원시 권선구 동수원로146번길 6-5",
+    "phone": "031-223-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "e6a554d376de29ed",
+    "store": "수원권선점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "수원시",
+    "address": "경기도 수원시 권선구 동수원로145번길 73",
+    "phone": "031-237-8595",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "46c402f42634b426",
+    "store": "수원매탄2점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "수원시",
+    "address": "경기도 수원시 영통구 중부대로 254",
+    "phone": "031-217-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "4554996e718a7548",
+    "store": "수원신영통점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "수원시",
+    "address": "경기도 수원시 영통구 덕영대로1555번길 20",
+    "phone": "031-206-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "031c5db464d9ee4d",
+    "store": "수원연무점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "수원시",
+    "address": "경기도 수원시 장안구 창룡대로 193",
+    "phone": "031-256-8546",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "f7881d2ecfe1b57f",
+    "store": "수원영통점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "수원시",
+    "address": "경기도 수원시 영통구 영통로 514",
+    "phone": "031-204-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "d183c9b7dcfb344f",
+    "store": "수원오목천점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "수원시",
+    "address": "경기도 수원시 권선구 삼천병마로 1595",
+    "phone": "031-292-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "11d1097f9f165647",
+    "store": "수원정자점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "수원시",
+    "address": "경기도 수원시 장안구 정자로 146",
+    "phone": "031-268-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "e499d40611c5d4fa",
+    "store": "수원천천점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "수원시",
+    "address": "경기도 수원시 장안구 하률로12번길 92-8",
+    "phone": "031-269-9545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "0365c83c257f07d0",
+    "store": "수진점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "성남시",
+    "address": "경기도 성남시 수정구 수정로 140",
+    "phone": "031-723-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "657d805a9dfaba5c",
+    "store": "숭인점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "종로구",
+    "address": "서울특별시 종로구 종로 347",
+    "phone": "02-743-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "cec68da99c011876",
+    "store": "시흥배곧점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "시흥시",
+    "address": "경기도 시흥시 정왕동 2511 시흥배곧 c1 호반 써밋플레이스 105~108호",
+    "phone": "031-8042-2293",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "5158e0932a8eed2e",
+    "store": "시흥월곶점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "시흥시",
+    "address": "경기도 시흥시 월곶중앙로 70번길 3",
+    "phone": "031-312-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "fb09afb45db0a4e7",
+    "store": "시흥정왕2점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "시흥시",
+    "address": "경기도 시흥시 함송로14번길 30",
+    "phone": "031-497-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "0c808dbd0a891213",
+    "store": "신갈점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "용인시",
+    "address": "경기도 용인시 기흥구 새천년로16번길 3-16",
+    "phone": "031-275-8546",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "4091f34def0bd021",
+    "store": "신길2점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "영등포구",
+    "address": "서울특별시 영등포구 영등포로 364",
+    "phone": "02-843-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "5a4793c80ef7a091",
+    "store": "신길3점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "영등포구",
+    "address": "서울특별시 영등포구 가마산로 69가길 12",
+    "phone": "02-832-8546",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "679f658816cf707b",
+    "store": "신길점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "영등포구",
+    "address": "서울특별시 영등포구 여의대방로 65",
+    "phone": "02-846-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "5d15ad486c85a2ad",
+    "store": "신당점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "중구",
+    "address": "서울특별시 중구 다산로 222",
+    "phone": "02-2236-8543",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "cdef709d7e166f1d",
+    "store": "신사점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "은평구",
+    "address": "서울특별시 은평구 갈현로 10",
+    "phone": "02-352-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "a4d012e4438e45ca",
+    "store": "신정2점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "양천구",
+    "address": "서울특별시 양천구 목동동로8길 23",
+    "phone": "02-2651-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "462257e00be664e2",
+    "store": "신정3점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "양천구",
+    "address": "서울특별시 양천구 목동동로 53",
+    "phone": "02-2646-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "fd4bbfdb9e28645a",
+    "store": "신정점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "양천구",
+    "address": "서울특별시 양천구 중앙로 255-1",
+    "phone": "02-2696-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "08b42d3672a79748",
+    "store": "아산배방점",
+    "storeType": "standard",
+    "region": "충청",
+    "sido": "충청남도",
+    "sigungu": "아산시",
+    "address": "충청남도 아산시 배방읍 배방로 57-20",
+    "phone": "041-534-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "028938e2d18ca18a",
+    "store": "안산고잔점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "안산시",
+    "address": "경기도 안산시 단원구 보배4길 15",
+    "phone": "031-487-9762",
+    "holidays": [
+      "2026-10-10",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "aa1093c43897967b",
+    "store": "안산와동점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "안산시",
+    "address": "경기도 안산시 단원구 와동1로 6",
+    "phone": "031-481-8593",
+    "holidays": [
+      "2026-10-10",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "e46e779482e96169",
+    "store": "안산월피2점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "안산시",
+    "address": "경기도 안산시 상록구 월피로 68",
+    "phone": "031-401-8545",
+    "holidays": [
+      "2026-10-10",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "d82df86f902d808f",
+    "store": "안산월피점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "안산시",
+    "address": "경기도 안산시 상록구 월피로 31 지하1층",
+    "phone": "031-411-8545",
+    "holidays": [
+      "2026-10-10",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "906217c9c37506f5",
+    "store": "안양석수점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "안양시",
+    "address": "경기도 안양시 만안구 충훈로 88",
+    "phone": "031-473-8546",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "4eaf8f27183ee9e0",
+    "store": "안양인덕원점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "안양시",
+    "address": "경기도 안양시 동안구 흥안대로456번길 46",
+    "phone": "031-421-8546",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "762dc343e49610d4",
+    "store": "안양점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "안양시",
+    "address": "경기도 안양시 만안구 냉천로 7",
+    "phone": "031-465-8543",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "880fd3f284d7d297",
+    "store": "안양평촌2점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "안양시",
+    "address": "경기도 안양시 동안구 귀인로 204",
+    "phone": "031-386-8545",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "585ca79176a537d3",
+    "store": "안양평촌3점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "안양시",
+    "address": "경기도 안양시 동안구 관평로170번길 33",
+    "phone": "031-381-8545",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "a6ce91a084f1dc9d",
+    "store": "안양평촌점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "안양시",
+    "address": "경기도 안양시 동안구 귀인로 289",
+    "phone": "031-423-8544",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "e6f7b64a75fb5365",
+    "store": "안양호계2점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "안양시",
+    "address": "경기도 안양시 동안구 평촌대로 133-1",
+    "phone": "031-383-8545",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "a9f17c7ab74c5b18",
+    "store": "암사점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "강동구",
+    "address": "서울특별시 강동구 고덕로 24길 50",
+    "phone": "02-441-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "c14b724fc0577cc4",
+    "store": "양산삼호점",
+    "storeType": "standard",
+    "region": "경상",
+    "sido": "경상남도",
+    "sigungu": "양산시",
+    "address": "경상남도 양산시 삼호로 74",
+    "phone": "055-388-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "08618ad55983442d",
+    "store": "양재점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "서초구",
+    "address": "서울특별시 서초구 동산로16길 8",
+    "phone": "02-2058-0612",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "0561a0e2aec229bf",
+    "store": "연남점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "마포구",
+    "address": "서울특별시 마포구 연남로 52",
+    "phone": "02-337-8541",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "24dcff05393ed13f",
+    "store": "연희점",
+    "storeType": "standard",
+    "region": "인천",
+    "sido": "인천광역시",
+    "sigungu": "서구",
+    "address": "인천광역시 서구 서곶로 351",
+    "phone": "032-568-8565",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "d2f7f256b7765cfe",
+    "store": "오목교점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "양천구",
+    "address": "서울시 양천구 목동동로 196(신정동 86-1)",
+    "phone": "02-6954-7683",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "a5e104d100f409fc",
+    "store": "오산세교점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "오산시",
+    "address": "경기도 오산시 수청로 193",
+    "phone": "031-376-8545",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "d8ff283c9578858d",
+    "store": "오정점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "부천시",
+    "address": "경기도 부천시 오정구 오정로 246",
+    "phone": "032-671-8517",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "0f18e9a391343625",
+    "store": "옥수점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "성동구",
+    "address": "서울특별시 성동구 독서당로 171",
+    "phone": "02-2294-8574",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "2e842b9e34564c75",
+    "store": "왕십리점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "성동구",
+    "address": "서울특별시 성동구 왕십리로 333",
+    "phone": "02-2299-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "c02aa7d0a690fc96",
+    "store": "용강점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "마포구",
+    "address": "서울특별시 마포구 토정로32길 4",
+    "phone": "02-701-8544",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "e7cb90c2eea7a0f8",
+    "store": "용문점",
+    "storeType": "standard",
+    "region": "대전",
+    "sido": "대전광역시",
+    "sigungu": "서구",
+    "address": "대전시 서구 용문동 257-2",
+    "phone": "042-528-8546",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "25642ef8ff83b5ea",
+    "store": "용산2점",
+    "storeType": "standard",
+    "region": "대구",
+    "sido": "대구광역시",
+    "sigungu": "달서구",
+    "address": "대구광역시 달서구 성지로 27",
+    "phone": "053-586-8540",
+    "holidays": [
+      "2026-10-12",
+      "2026-10-26"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "3ff47eab056f2ad3",
+    "store": "용인구성점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "용인시",
+    "address": "경기도 용인시 기흥구 구성3로 28번길 24번",
+    "phone": "031-282-8547",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "08fd1c7303d15b5a",
+    "store": "용인보정2점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "용인시",
+    "address": "경기도 용인시 기흥구 보정로 32",
+    "phone": "031-263-8544",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "d51fb2f37a9510b9",
+    "store": "용인신봉점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "용인시",
+    "address": "경기도 용인시 수지구 신봉2로14번길 16",
+    "phone": "031-265-8546",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "53fab5e054388865",
+    "store": "용인죽전점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "용인시",
+    "address": "경기도 용인시 수지구 현암로 154",
+    "phone": "031-262-8546",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "e7dfffb1c391e5cf",
+    "store": "용인중동점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "용인시",
+    "address": "경기도 용인시 기흥구 동백죽전대로527번길 98-2",
+    "phone": "031-281-8560",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "9f2b3f0272f7f426",
+    "store": "용인풍덕천점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "용인시",
+    "address": "경기도 용인시 수지구 풍덕천로 122",
+    "phone": "031-272-8546",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "1db9cd7d215c782c",
+    "store": "울산매곡점",
+    "storeType": "standard",
+    "region": "울산",
+    "sido": "울산광역시",
+    "sigungu": "북구",
+    "address": "울산광역시 북구 매산로 65",
+    "phone": "052-286-8545",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "ed23434015edd20a",
+    "store": "원주무실점",
+    "storeType": "standard",
+    "region": "강원",
+    "sido": "강원특별자치도",
+    "sigungu": "원주시",
+    "address": "강원특별자치도 원주시 시청로 80",
+    "phone": "033-735-8539",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "06fa5ed8ad64a8c4",
+    "store": "월평점",
+    "storeType": "standard",
+    "region": "대전",
+    "sido": "대전광역시",
+    "sigungu": "서구",
+    "address": "대전광역시 서구 월평북로 90",
+    "phone": "042-482-8543",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "0b6f9704b7f7add3",
+    "store": "유천점",
+    "storeType": "standard",
+    "region": "대전",
+    "sido": "대전광역시",
+    "sigungu": "중구",
+    "address": "대전광역시 중구 평촌로 58, 101",
+    "phone": "042-528-8543",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "69f311b48918efd7",
+    "store": "응암점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "은평구",
+    "address": "서울특별시 은평구 응암로 247",
+    "phone": "02-386-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "509498b6e6a2a896",
+    "store": "의왕포일점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "의왕시",
+    "address": "경기도 의왕시 포일동 664",
+    "phone": "031-426-9753",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "d3992a64e7e3ab1c",
+    "store": "의정부민락점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "의정부시",
+    "address": "경기도 의정부시 용민로 395",
+    "phone": "031-852-8635",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "fb35f2f57a54edd9",
+    "store": "의정부호원점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "의정부시",
+    "address": "경기도 의정부시 신흥로 81",
+    "phone": "031-873-8545",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "e291c9c185c35238",
+    "store": "인창점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "구리시",
+    "address": "경기도 구리시 건원대로76번길 42",
+    "phone": "031-565-8545",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "6737bf1e33436f8f",
+    "store": "인천경서2점",
+    "storeType": "standard",
+    "region": "인천",
+    "sido": "인천광역시",
+    "sigungu": "서구",
+    "address": "인천광역시 서구 청라루비로144번길 6",
+    "phone": "032-563-8546",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "95561dd947642c6d",
+    "store": "인천경서점",
+    "storeType": "standard",
+    "region": "인천",
+    "sido": "인천광역시",
+    "sigungu": "서구",
+    "address": "인천광역시 서구 도요지로 24",
+    "phone": "032-565-8491",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "61709d7d86d61cf1",
+    "store": "인천귤현점",
+    "storeType": "standard",
+    "region": "인천",
+    "sido": "인천광역시",
+    "sigungu": "계양구",
+    "address": "인천광역시 계양구 귤현길3",
+    "phone": "032-552-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "009c1dc4d63b7319",
+    "store": "인천논곡점",
+    "storeType": "standard",
+    "region": "인천",
+    "sido": "인천광역시",
+    "sigungu": "남동구",
+    "address": "인천광역시 남동구 함박뫼로 441",
+    "phone": "032-427-8546",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "e11dde43ea4277aa",
+    "store": "인천논현2점",
+    "storeType": "standard",
+    "region": "인천",
+    "sido": "인천광역시",
+    "sigungu": "남동구",
+    "address": "인천광역시 남동구 논현로235",
+    "phone": "032-434-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "65471cb1277a8b1b",
+    "store": "인천논현점",
+    "storeType": "standard",
+    "region": "인천",
+    "sido": "인천광역시",
+    "sigungu": "남동구",
+    "address": "인천광역시 남동구 논현로 42",
+    "phone": "032-433-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "779078a61d4bd772",
+    "store": "인천마전점",
+    "storeType": "standard",
+    "region": "인천",
+    "sido": "인천광역시",
+    "sigungu": "서구",
+    "address": "인천광역시 서구 완정로 70",
+    "phone": "032-566-8544",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "292b402c150fecf6",
+    "store": "인천부개역점",
+    "storeType": "standard",
+    "region": "인천",
+    "sido": "인천광역시",
+    "sigungu": "부평구",
+    "address": "인천광역시 부평구 부일로 87",
+    "phone": "032-521-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "64b9448afba20dc3",
+    "store": "인천송도점",
+    "storeType": "standard",
+    "region": "인천",
+    "sido": "인천광역시",
+    "sigungu": "연수구",
+    "address": "인천광역시 연수구 센트럴로 232",
+    "phone": "032-834-8547",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "f764a1c570ebaa91",
+    "store": "인천송현점",
+    "storeType": "standard",
+    "region": "인천",
+    "sido": "인천광역시",
+    "sigungu": "동구",
+    "address": "인천광역시 동구 화수로18",
+    "phone": "032-773-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "cc04e92f2f5db33d",
+    "store": "인천연수점",
+    "storeType": "standard",
+    "region": "인천",
+    "sido": "인천광역시",
+    "sigungu": "연수구",
+    "address": "인천광역시 연수구 새말로 146",
+    "phone": "032-814-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "eb7770424732a62b",
+    "store": "인천오류점",
+    "storeType": "standard",
+    "region": "인천",
+    "sido": "인천광역시",
+    "sigungu": "서구",
+    "address": "인천광역시 서구 단봉로 107(성우프라자 1층)",
+    "phone": "032-562-8546",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "06143b3f107c1f76",
+    "store": "인천주안2점",
+    "storeType": "standard",
+    "region": "인천",
+    "sido": "인천광역시",
+    "sigungu": "미추홀구",
+    "address": "인천광역시 미추홀구 인하로352번길 4",
+    "phone": "032-437-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "98d97d05d9b93d97",
+    "store": "인천주안점",
+    "storeType": "standard",
+    "region": "인천",
+    "sido": "인천광역시",
+    "sigungu": "미추홀구",
+    "address": "인천광역시 미추홀구 석산로42",
+    "phone": "032-441-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "94adc203df7fa621",
+    "store": "인천중앙점",
+    "storeType": "standard",
+    "region": "인천",
+    "sido": "인천광역시",
+    "sigungu": "서구",
+    "address": "인천광역시 서구 솔빛로 93",
+    "phone": "032-569-6536",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "9878bd8f6e15f686",
+    "store": "인천학익점",
+    "storeType": "standard",
+    "region": "인천",
+    "sido": "인천광역시",
+    "sigungu": "미추홀구",
+    "address": "인천광역시 미추홀구 매소홀로 488번길 6-32",
+    "phone": "032-873-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "69edf39fde40aece",
+    "store": "인천한화2점",
+    "storeType": "standard",
+    "region": "인천",
+    "sido": "인천광역시",
+    "sigungu": "남동구",
+    "address": "인천광역시 남동구 소래역남로22",
+    "phone": "032-424-7545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "b6a4ea29f687e8af",
+    "store": "인천한화점",
+    "storeType": "standard",
+    "region": "인천",
+    "sido": "인천광역시",
+    "sigungu": "남동구",
+    "address": "인천시 남동구 에코중앙로 156번길 5-9",
+    "phone": "032-431-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "f737ad31a7e26e73",
+    "store": "잠실점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "송파구",
+    "address": "서울특별시 송파구 석천호수로 133",
+    "phone": "02-418-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "5e6443615768cb61",
+    "store": "장기점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "김포시",
+    "address": "경기도 김포시 김포한강1로51번길 40",
+    "phone": "031-984-8545",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "f4478da570343c09",
+    "store": "전주서신점",
+    "storeType": "standard",
+    "region": "전라",
+    "sido": "전북특별자치도",
+    "sigungu": "전주시",
+    "address": "전북특별자치도 전주시 완산구 온고을로 62",
+    "phone": "063-251-8543",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "70b97cdca9af5961",
+    "store": "좌동2점",
+    "storeType": "standard",
+    "region": "부산",
+    "sido": "부산광역시",
+    "sigungu": "해운대구",
+    "address": "부산광역시 해운대구 세실로 33",
+    "phone": "051-701-8545",
+    "holidays": [
+      "2026-10-12",
+      "2026-10-26"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "dcf8d131a8b054ae",
+    "store": "좌동점",
+    "storeType": "standard",
+    "region": "부산",
+    "sido": "부산광역시",
+    "sigungu": "해운대구",
+    "address": "부산광역시 해운대구 좌동순환로 78",
+    "phone": "051-747-8365",
+    "holidays": [
+      "2026-10-12",
+      "2026-10-26"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "e9982548d2f340c4",
+    "store": "좌천점",
+    "storeType": "standard",
+    "region": "부산",
+    "sido": "부산광역시",
+    "sigungu": "동구",
+    "address": "부산광역시 동구 고관로 143",
+    "phone": "051-647-8564",
+    "holidays": [
+      "2026-10-12",
+      "2026-10-26"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "d94d3394f3e81ad4",
+    "store": "중계점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "노원구",
+    "address": "서울특별시 노원구 중계로 225, b-101",
+    "phone": "02-930-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "3dafab0b8ba8253d",
+    "store": "중곡2점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "광진구",
+    "address": "서울특별시 광진구 용마산로 10",
+    "phone": "02-3437-8546",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "57e32fca96adf797",
+    "store": "중곡점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "광진구",
+    "address": "서울특별시 광진구 능동로 314",
+    "phone": "02-447-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "62926c0c207bfdd2",
+    "store": "중동점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "부천시",
+    "address": "경기도 부천시 원미구 신흥로 170",
+    "phone": "032-666-8542",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "cc6ade940cbd0600",
+    "store": "진영점",
+    "storeType": "standard",
+    "region": "경상",
+    "sido": "경상남도",
+    "sigungu": "김해시",
+    "address": "경상남도 김해시 진영읍 장등로19번길 39",
+    "phone": "055-343-8546",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "e9e88939dbb6e366",
+    "store": "창원남양점",
+    "storeType": "standard",
+    "region": "경상",
+    "sido": "경상남도",
+    "sigungu": "창원시",
+    "address": "경상남도 창원시 성산구 가음로 45",
+    "phone": "055-289-8546",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "d8c6b2dc50a8a43a",
+    "store": "천안불당점",
+    "storeType": "standard",
+    "region": "충청",
+    "sido": "충청남도",
+    "sigungu": "천안시",
+    "address": "충청남도 천안시 서북구 불당4로 39-38",
+    "phone": "041-554-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "ae8a4742cd3ad67c",
+    "store": "천안성정점",
+    "storeType": "standard",
+    "region": "충청",
+    "sido": "충청남도",
+    "sigungu": "천안시",
+    "address": "충청남도 천안시 서북구 쌍용대로 290 (성정동)",
+    "phone": "041-592-7810",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "f98bb0eaeff427cb",
+    "store": "천안신방점",
+    "storeType": "standard",
+    "region": "충청",
+    "sido": "충청남도",
+    "sigungu": "천안시",
+    "address": "충청남도 천안시 동남구 서부대로 219",
+    "phone": "041-571-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "005d707d1ca26701",
+    "store": "천안쌍용점",
+    "storeType": "standard",
+    "region": "충청",
+    "sido": "충청남도",
+    "sigungu": "천안시",
+    "address": "충청남도 천안시 서북구 월봉로 128",
+    "phone": "041-573-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "c0c7f4118032204b",
+    "store": "청원오송점",
+    "storeType": "standard",
+    "region": "충청",
+    "sido": "충청북도",
+    "sigungu": "청주시",
+    "address": "충북 청주시 흥덕구 오송읍 오송생명5로 184-6 모아미래도프라자",
+    "phone": "043-231-8545",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "93a4a59d650f3140",
+    "store": "청주개신점",
+    "storeType": "standard",
+    "region": "충청",
+    "sido": "충청북도",
+    "sigungu": "청주시",
+    "address": "충청북도 청주시 서원구 경신로 45",
+    "phone": "043-231-8570",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "8ccd3578aa975b1b",
+    "store": "청주금천점",
+    "storeType": "standard",
+    "region": "충청",
+    "sido": "충청북도",
+    "sigungu": "청주시",
+    "address": "충청북도 청주시 상당구 산성로92번길 41",
+    "phone": "043-292-8545",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "feb73d5e69f329ad",
+    "store": "청주성화2점",
+    "storeType": "standard",
+    "region": "충청",
+    "sido": "충청북도",
+    "sigungu": "청주시",
+    "address": "충청북도 청주시 서원구 구룡산로52번길 14",
+    "phone": "043-238-8401",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "081f8ad6db084e84",
+    "store": "청주용암점",
+    "storeType": "standard",
+    "region": "충청",
+    "sido": "충청북도",
+    "sigungu": "청주시",
+    "address": "충청북도 청주시 상당구 월평로 174",
+    "phone": "043-291-8451",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "f59f0c9f1806583c",
+    "store": "탄방점",
+    "storeType": "standard",
+    "region": "대전",
+    "sido": "대전광역시",
+    "sigungu": "서구",
+    "address": "대전광역시 서구 문예로 15(탄방동732) 그랑수아빌딩 1층",
+    "phone": "042-710-7212",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "db13033bbe9e3143",
+    "store": "탄현2점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "고양시",
+    "address": "경기도 고양시 일산서구 산현로17번길 9",
+    "phone": "031-917-8544",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "a3b9589ad93f881c",
+    "store": "탄현점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "고양시",
+    "address": "경기도 고양시 일산서구 일현로 123",
+    "phone": "031-916-8545",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "faa92dbfb09de44b",
+    "store": "태릉점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "중랑구",
+    "address": "서울특별시 중랑구 동일로 129길 35",
+    "phone": "02-491-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "b3ae0c8547691614",
+    "store": "태안점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "화성시",
+    "address": "경기 화성시 병점구 병점2로 65",
+    "phone": "031-223-8593",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "34614a552b7c9dbc",
+    "store": "토곡점",
+    "storeType": "standard",
+    "region": "부산",
+    "sido": "부산광역시",
+    "sigungu": "연제구",
+    "address": "부산광역시 연제구 과정로 226",
+    "phone": "051-751-8565",
+    "holidays": [
+      "2026-10-12",
+      "2026-10-26"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "237935a98ad1f348",
+    "store": "파주와동점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "파주",
+    "address": "경기 파주 와동 와석 순환로 427",
+    "phone": "031-944-8753",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "93a763fc10a33a5d",
+    "store": "평택서정점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "평택시",
+    "address": "경기도 평택시 관광특구로 25 1층",
+    "phone": "031-668-8213",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "1f41ef75fba3a80f",
+    "store": "평택청북점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "평택시",
+    "address": "경기도 평택시 청북면 안청로 332",
+    "phone": "031-684-8544",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "946e9bc9cddc37ab",
+    "store": "푸른마을점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "성남시",
+    "address": "경기도 성남시 분당구 불정로 255",
+    "phone": "031-726-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "1810fb673d15a97d",
+    "store": "풍납점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "송파구",
+    "address": "서울특별시 송파구 올림픽로51길 30",
+    "phone": "02-474-8541",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "fd60903e88026d4c",
+    "store": "풍동점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "고양시",
+    "address": "경기도 고양시 일산동구 숲속마을로 40 유진프라자",
+    "phone": "031-932-8545",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "32ecf9f2677b6cc9",
+    "store": "학동역점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "강남구",
+    "address": "서울특별시 강남구 학동로 176",
+    "phone": "02-516-8546",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "24f5831265af1456",
+    "store": "한남점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "용산구",
+    "address": "서울특별시 용산구 유엔빌리지길 11, 201",
+    "phone": "02-792-8542",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "8693adf917643b9e",
+    "store": "화곡2점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "강서구",
+    "address": "서울특별시 강서구 까치산로 106",
+    "phone": "02-2698-8545",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "6f4dd214da840666",
+    "store": "화곡점",
+    "storeType": "standard",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "강서구",
+    "address": "서울특별시 강서구 화곡로 153",
+    "phone": "02-2065-8543",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "bfcdfcda222903e5",
+    "store": "화서점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "수원시",
+    "address": "경기 수원시 팔달구 화양로 35번길 6",
+    "phone": "031-255-8543",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "54d61d52d706037d",
+    "store": "화성능동점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "화성시",
+    "address": "경기도 화성시 동탄구 남여울3길4",
+    "phone": "031-8003-8770",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "0f04d91c08dfbd5f",
+    "store": "화성반월점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "화성시",
+    "address": "경기도 화성시 병점구 동탄지성로 324",
+    "phone": "031-898-6850",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  },
+  {
+    "sid": "b323a9e442ae0398",
+    "store": "후곡점",
+    "storeType": "standard",
+    "region": "경기",
+    "sido": "경기도",
+    "sigungu": "고양시",
+    "address": "경기도 고양시 일산서구 일산로 530, 104",
+    "phone": "031-913-8545",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-28"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T13:16:03+09:00"
+  }
+]
