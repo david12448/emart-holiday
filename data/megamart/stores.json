@@ -1,0 +1,169 @@
+[
+  {
+    "sid": "fee30f55b49309b4",
+    "store": "기장점",
+    "storeType": "standard",
+    "region": "부산",
+    "sido": "부산광역시",
+    "sigungu": "기장군",
+    "address": "부산시 기장군 일광면 기장대로 673",
+    "phone": "051-290-6000",
+    "holidays": [
+      "2026-10-12",
+      "2026-10-26"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T16:06:26+09:00"
+  },
+  {
+    "sid": "c87fc1f2285d444c",
+    "store": "김해점",
+    "storeType": "standard",
+    "region": "경상",
+    "sido": "경상남도",
+    "sigungu": "김해시",
+    "address": "경남 김해시 김해대로 2492번길 20",
+    "phone": "055-371-6000",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T16:06:26+09:00"
+  },
+  {
+    "sid": "b90a2f71eedda08e",
+    "store": "덕계점",
+    "storeType": "standard",
+    "region": "경상",
+    "sido": "경상남도",
+    "sigungu": "양산시",
+    "address": "경남 양산시 덕계로 60-1",
+    "phone": "055-388-7770",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T16:06:26+09:00"
+  },
+  {
+    "sid": "c950bb4c187d28d0",
+    "store": "덕천점",
+    "storeType": "standard",
+    "region": "부산",
+    "sido": "부산광역시",
+    "sigungu": "북구",
+    "address": "부산시 북구 기찰로 164",
+    "phone": "051-241-6000",
+    "holidays": [
+      "2026-10-12",
+      "2026-10-26"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T16:06:26+09:00"
+  },
+  {
+    "sid": "a1eef3db23b04777",
+    "store": "동래점",
+    "storeType": "standard",
+    "region": "부산",
+    "sido": "부산광역시",
+    "sigungu": "동래구",
+    "address": "부산시 동래구 충렬대로 197",
+    "phone": "051-550-6000",
+    "holidays": [
+      "2026-10-12",
+      "2026-10-26"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T16:06:26+09:00"
+  },
+  {
+    "sid": "6f07cc169e6ddd34",
+    "store": "문현점",
+    "storeType": "standard",
+    "region": "부산",
+    "sido": "부산광역시",
+    "sigungu": "남구",
+    "address": "부산시 남구 수영로39번길 2-5",
+    "phone": "051-633-8405",
+    "holidays": [],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T16:06:26+09:00"
+  },
+  {
+    "sid": "77686546ee02baeb",
+    "store": "방이점",
+    "storeType": "megamarket",
+    "region": "서울",
+    "sido": "서울특별시",
+    "sigungu": "송파구",
+    "address": "서울시 송파구 양재대로 1178",
+    "phone": "02-407-0326",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T16:06:26+09:00"
+  },
+  {
+    "sid": "a61ae7b74f5e432a",
+    "store": "언양점",
+    "storeType": "standard",
+    "region": "울산",
+    "sido": "울산광역시",
+    "sigungu": "울주군",
+    "address": "울산시 울주군 삼남읍 반구대로 612",
+    "phone": "052-255-6000",
+    "holidays": [],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T16:06:26+09:00"
+  },
+  {
+    "sid": "3498a1e779123b55",
+    "store": "외동점",
+    "storeType": "standard",
+    "region": "경상",
+    "sido": "경상남도",
+    "sigungu": "김해시",
+    "address": "경남 김해시 함박로 101번길1",
+    "phone": "055-324-7301",
+    "holidays": [
+      "2026-10-11",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T16:06:26+09:00"
+  },
+  {
+    "sid": "1f9e4208ffe30a61",
+    "store": "울산점",
+    "storeType": "standard",
+    "region": "울산",
+    "sido": "울산광역시",
+    "sigungu": "북구",
+    "address": "울산시 북구 진장17길 10",
+    "phone": "052-219-6000",
+    "holidays": [
+      "2026-10-14",
+      "2026-10-25"
+    ],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T16:06:26+09:00"
+  },
+  {
+    "sid": "24f0e290f98f5959",
+    "store": "춘천점",
+    "storeType": "department",
+    "region": "강원",
+    "sido": "강원특별자치도",
+    "sigungu": "춘천시",
+    "address": "강원도 춘천시 금강로 68-9",
+    "phone": "033-248-7000",
+    "holidays": [],
+    "holidayStatus": "confirmed",
+    "updatedAt": "2026-10-07T16:06:26+09:00"
+  }
+]
