@@ -3926,7 +3926,7 @@ function renderSingleStore(store) {
 휴무 패턴 중심 압축 화면을 사용합니다.
 */
   tabs.style.display =
-    "";
+    "none";
 
 
   const displayName =
@@ -3953,6 +3953,16 @@ function renderSingleStore(store) {
 
 
   content.innerHTML = `
+
+    <div class="single-store-toolbar">
+      <a
+        class="single-store-back-link"
+        href="${buildStoreListReturnUrl()}"
+      >
+        <span aria-hidden="true">←</span>
+        점포 목록으로
+      </a>
+    </div>
 
     <h2 class="region-title">
 
@@ -4011,11 +4021,11 @@ function renderSingleStore(store) {
             <span class="store-detail-text">
 
               <span>
-                ${displayName} 점포 상세정보 보기
+                ${MART_CONFIG.officialPageLabel || "공식 점포 페이지"} 열기
               </span>
 
               <span class="store-detail-sub">
-                ${MART_CONFIG.officialPageLabel || "공식 점포 페이지"}
+                외부 공식 홈페이지로 이동합니다.
               </span>
 
             </span>
@@ -6548,6 +6558,57 @@ function buildInternalStoreViewUrl(
 
   if (
     selectedRegion === "all"
+  ) {
+
+    params.set(
+      "region",
+      "all"
+    );
+
+  }
+
+
+  return (
+    window.location.pathname
+    +
+    "?"
+    +
+    params.toString()
+    +
+    window.location.hash
+  );
+
+}
+
+/*
+==================================================
+단일 점포 화면 → 원래 목록 화면 주소 생성
+==================================================
+*/
+
+function buildStoreListReturnUrl() {
+
+  const params =
+    new URLSearchParams(
+      window.location.search
+    );
+
+
+  params.delete(
+    "storeId"
+  );
+
+
+  params.set(
+    "date",
+    getSelectedMonthKey()
+  );
+
+
+  if (
+    !params.get(
+      "region"
+    )
   ) {
 
     params.set(
