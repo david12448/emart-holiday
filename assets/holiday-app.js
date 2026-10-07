@@ -1119,6 +1119,31 @@ function getCalendarFilteredMonthStores(
 }
 
 
+/* 날짜가 없는 점포를 정상 영업으로 해석하지 않도록 확인 범위를 안내합니다.
+   날짜 선택 중에는 해당 날짜의 점포 목록만 유지합니다. */
+function buildMonthCoverageNotice(stores) {
+  if (selectedCalendarDate || !stores.length) {
+    return "";
+  }
+
+  const withDates = getMonthStores(stores).length;
+  const withoutDates = stores.length - withDates;
+  if (!withoutDates) {
+    return "";
+  }
+
+  return `
+    <div class="auto-summary" role="note">
+      ${selectedYear}년 ${selectedMonth}월 휴무 날짜 등록:
+      ${withDates}개 / 전체 ${stores.length}개 점포.
+      날짜가 등록되지 않은 ${withoutDates}개 점포는 아래 휴무 목록에 포함되지 않습니다.
+      날짜가 없다는 뜻이 정상 영업을 의미하지는 않습니다.
+      임시휴업·영업종료 등 운영상태는 점포별 상세 화면에서 확인해 주세요.
+    </div>
+  `;
+}
+
+
 function getCalendarDateStores(
   stores,
   dateKey = selectedCalendarDate
@@ -4137,6 +4162,8 @@ function renderStoreCollection(
     ${
       buildStoreClickGuide()
     }
+
+    ${buildMonthCoverageNotice(stores)}
   `;
 
 
@@ -4410,6 +4437,8 @@ function renderRegionPatternView(
     ${
       buildStoreClickGuide()
     }
+
+    ${buildMonthCoverageNotice(stores)}
 
   `;
 
@@ -5224,6 +5253,8 @@ function renderAllRegions(
     ${
       buildStoreClickGuide()
     }
+
+    ${buildMonthCoverageNotice(targetStores)}
   `;
 
 
@@ -7270,3 +7301,4 @@ async function loadData() {
 
 
 loadData();
+
