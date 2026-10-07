@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <meta
+    name="description"
+    content="그랑그로서리 점포 휴무일을 확인할 수 있습니다."
+  >
+
+  <title>그랑그로서리 휴무일 안내</title>
+
+  <link
+    rel="stylesheet"
+    href="../assets/holiday.css?v=20261007-2"
+  >
+
+  <style>
+    :root {
+      --brand-main: #e60012;
+      --brand-main-hover: #e60012;
+      --brand-dark: #30343b;
+      --brand-on-dark: #ffffff;
+      --brand-border: #e1c4c7;
+      --brand-badge: #e60012;
+      --brand-soft: #fff7f7;
+      --brand-soft-border: #f0d4d6;
+      --brand-soft-text: #6c4a4d;
+      --brand-soft-strong: #492d30;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="container">
+
+    <header class="page-header">
+
+      <h1 id="page-title">
+        그랑그로서리 휴무일 안내
+      </h1>
+
+      <p id="page-description">
+        그랑그로서리 점포 휴무일을 확인할 수 있습니다.
+      </p>
+
+    </header>
+
+
+    <nav
+      id="tabs"
+      class="tabs"
+      aria-label="지역 선택"
+    ></nav>
+
+
+    <section
+      id="content"
+      class="content"
+    >
+
+      <div class="loading">
+        그랑그로서리 휴무일 정보를 불러오는 중입니다.
+      </div>
+
+    </section>
+
+
+    <footer class="page-footer">
+
+      <div id="source-label">
+        자료 출처 : 롯데마트 공식 홈페이지 · 롯데마트 도와센터
+      </div>
+
+    </footer>
+
+  </main>
+
+
+  <script>
+
+    window.MART_CONFIG = {
+
+      brandKey:
+        "grandgrocery",
+
+      brandName:
+        "그랑그로서리",
+
+      storePrefix:
+        "",
+
+      currentDataUrl:
+        "../data/lotte/grandgrocery/stores.json",
+
+      archiveDataUrl:
+        "../data/lotte/grandgrocery/stores.json",
+
+      changeStatusUrl:
+        "../data/lotte/change_status.json",
+
+      detailBaseUrl:
+        "",
+
+      allRegionsStoreLinksUseInternalView:
+        true,
+
+      showLocalBadgeForAllRegions:
+        true,
+
+      sourceLabel:
+        "롯데마트 공식 홈페이지 · 롯데마트 도와센터",
+
+      officialPageLabel:
+        "그랑그로서리 공식 점포 페이지"
+
+    };
+
+  </script>
+
+
+  <script src="../assets/holiday-app.js?v=20261007-4"></script>
+
+</body>
+
+</html>
