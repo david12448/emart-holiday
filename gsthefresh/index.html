@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <meta
+    name="description"
+    content="GS더프레시 전국 점포의 휴무일을 지역별로 확인할 수 있습니다."
+  >
+
+  <title>GS더프레시 휴무일 안내</title>
+
+  <link
+    rel="stylesheet"
+    href="../assets/holiday.css?v=20261007-2"
+  >
+
+  <style>
+    :root {
+      --brand-main: #00784a;
+      --brand-main-hover: #00683f;
+      --brand-dark: #30343b;
+      --brand-on-dark: #ffffff;
+      --brand-border: #b6d7c4;
+      --brand-badge: #00784a;
+      --brand-soft: #f5fbf7;
+      --brand-soft-border: #cde6d7;
+      --brand-soft-text: #365a45;
+      --brand-soft-strong: #244435;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="container">
+
+    <header class="page-header">
+
+      <h1 id="page-title">
+        GS더프레시 휴무일 안내
+      </h1>
+
+      <p id="page-description">
+        GS더프레시 지역별 점포 휴무일을 확인할 수 있습니다.
+      </p>
+
+    </header>
+
+
+    <nav
+      id="tabs"
+      class="tabs"
+      aria-label="지역 선택"
+    ></nav>
+
+
+    <section
+      id="content"
+      class="content"
+    >
+
+      <div class="loading">
+        GS더프레시 휴무일 정보를 불러오는 중입니다.
+      </div>
+
+    </section>
+
+
+    <footer class="page-footer">
+
+      <div id="source-label">
+        자료 출처 : GS리테일 공식 매장찾기
+      </div>
+
+    </footer>
+
+  </main>
+
+
+  <script>
+
+    window.MART_CONFIG = {
+
+      brandKey:
+        "gsthefresh",
+
+      brandName:
+        "GS더프레시",
+
+      storePrefix:
+        "GS더프레시 ",
+
+      currentDataUrl:
+        "../data/gsthefresh/stores.json",
+
+      archiveDataUrl:
+        "../data/gsthefresh/stores.json",
+
+      changeStatusUrl:
+        "../data/gsthefresh/change_status.json",
+
+      detailBaseUrl:
+        "",
+
+      allRegionsStoreLinksUseInternalView:
+        true,
+
+      showLocalBadgeForAllRegions:
+        true,
+
+      sourceLabel:
+        "GS리테일 공식 매장찾기",
+
+      officialPageLabel:
+        "GS더프레시 공식 매장찾기"
+
+    };
+
+  </script>
+
+
+  <script src="../assets/holiday-app.js?v=20261007-4"></script>
+
+</body>
+
+</html>
