@@ -13,7 +13,7 @@ const MART_CONFIG =
 실제 redirect gateway 주소를 이 값에 주입합니다.
 일반 개발/기존 배포에서는 빈 문자열을 유지합니다.
 */
-const BUILD_OFFICIAL_STORE_REDIRECT_BASE = 'https://mart-store-link-gateway.mart-holiday-david12448.workers.dev/r';
+const BUILD_OFFICIAL_STORE_REDIRECT_BASE = "https://mart-store-link-gateway.mart-holiday-david12448.workers.dev/r";
 
 
 const TISTORY_POST_URL =
@@ -976,6 +976,63 @@ function getMonthHolidays(store) {
             date.startsWith(prefix)
         )
       : []
+  );
+
+}
+
+/*
+단일 점포 화면에서 휴무일 데이터가 비어 있을 때
+운영상태를 우선해서 안내합니다.
+*/
+function getSingleStoreHolidayMessage(
+  store,
+  formattedDates
+) {
+
+  const status =
+    String(
+      store?.holidayStatus || ""
+    )
+      .trim()
+      .toLowerCase();
+
+
+  if (
+    status === "temporarily_closed"
+  ) {
+
+    return (
+      "공식 매장 정보에서 현재 임시휴업으로 안내 중입니다."
+    );
+
+  }
+
+
+  if (
+    status === "closed"
+  ) {
+
+    return (
+      "공식 매장 정보에서 영업종료로 안내 중입니다."
+    );
+
+  }
+
+
+  if (
+    status === "unknown"
+  ) {
+
+    return (
+      "이번 달 휴무일 정보가 공식 데이터에서 확인되지 않았습니다. 방문 전 공식 매장 안내를 확인해 주세요."
+    );
+
+  }
+
+
+  return (
+    formattedDates ||
+    "등록된 휴무일이 없습니다."
   );
 
 }
@@ -4004,8 +4061,10 @@ function renderSingleStore(store) {
 
         <div class="store-grid-item">
           ${
-            dates ||
-            "등록된 휴무일이 없습니다."
+            getSingleStoreHolidayMessage(
+              store,
+              dates
+            )
           }
         </div>
 
