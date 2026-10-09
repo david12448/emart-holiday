@@ -7377,6 +7377,11 @@ const CARD_PANEL_BRANDS = new Set(['emart','lotte','lottemart','homeplus','costc
 const cardBenefitCache = new Map();
 
 function getCardBenefitBrand() {
+  if (selectedSpecialType) return '';
+  if (requestedStoreId) {
+    const store=holidayData.find(s=>getStoreId(s)===String(requestedStoreId));
+    if (!store || getStoreType(store)!=='standard') return '';
+  }
   const key=MART_CONFIG.brandKey || (MART_CONFIG.brandName === '롯데마트' ? 'lottemart' : '');
   return key === 'lotte' ? 'lottemart' : key;
 }
