@@ -1,0 +1,45 @@
+name: Test Public URL Pilot
+on:
+  pull_request:
+    paths:
+      - "emart/**"
+      - "assets/**"
+      - "index.html"
+      - "data/public-routes/**"
+      - "tests/test_url_pilot.cjs"
+      - "sitemap-routes.xml"
+      - "robots.txt"
+      - ".github/workflows/test-url-pilot.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: |
+          npm install --no-save playwright@1.62.1
+          npx playwright install --with-deps chromium
+      - name: Verify static direct navigation and shared UI
+        run: |
+          mkdir -p /tmp/url-preview
+          ln -s "$GITHUB_WORKSPACE" /tmp/url-preview/emart-holiday
+          python -m http.server 8765 --directory /tmp/url-preview > /tmp/pilot-http.log 2>&1 &
+          node tests/test_url_pilot.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: public-url-pilot
+          path: |
+            emart
+            assets
+            data
+            index.html
+            sitemap-routes.xml
+            robots.txt
+          retention-days: 7
