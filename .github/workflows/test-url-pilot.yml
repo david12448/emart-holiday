@@ -42,4 +42,5 @@ jobs:
             index.html
             sitemap-routes.xml
             robots.txt
+            test-results
           retention-days: 7

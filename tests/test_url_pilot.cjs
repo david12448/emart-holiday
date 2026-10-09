@@ -1,7 +1,9 @@
 const {chromium} = require('playwright');
 const assert = require('node:assert/strict');
+const fs = require('node:fs');
 (async () => {
   const browser = await chromium.launch();
+  fs.mkdirSync('test-results',{recursive:true});
   const base = process.env.PILOT_BASE || 'http://127.0.0.1:8765/emart-holiday';
   for (const viewport of [{width:1280,height:900},{width:390,height:844}]) {
     const page = await browser.newPage({viewport});
@@ -29,6 +31,8 @@ const assert = require('node:assert/strict');
     await page.locator('#content a[data-store-id="26744cf0b4147ae1"]').first().click();
     await page.waitForURL('**/emart/seoul/garden5/**');
     await page.locator('.single-store-back-link').waitFor();
+    assert.match(await page.title(),/가든5/);
+    await page.screenshot({path:'test-results/garden5-' + viewport.width + '.png',fullPage:true});
     await page.waitForFunction(() => document.querySelector('link[rel="canonical"]').href.endsWith('/emart/seoul/garden5/'));
     const official = await page.evaluate(() => getStoreDetailUrl(holidayData.find(s => getStoreId(s) === '26744cf0b4147ae1')));
     assert.match(official,/mart-store-link-gateway.*\/r\/26744cf0b4147ae1/);
@@ -49,6 +53,7 @@ const assert = require('node:assert/strict');
     await page.goto(base + '/emart/seoul/garden5/calendar/');
     await page.locator('.month-calendar').waitFor();
     assert.equal(await page.locator('#page-title').isVisible(),false);
+    await page.screenshot({path:'test-results/calendar-' + viewport.width + '.png',fullPage:true});
     assert.equal(await page.locator('#source-label').isVisible(),false);
     assert.equal(await page.locator('#embed-month-tabs button').count(),2);
     await page.locator('#embed-month-tabs button').last().click();
@@ -58,7 +63,7 @@ const assert = require('node:assert/strict');
     await page.locator('#embed-month-tabs button').first().click();
     assert.match(await page.locator('.calendar-month-title').innerText(),/2026년 10월/);
     // Separate unknown fixture: never erase the real archived November dates.
-    await page.route('**/data/emart/holiday_archive.json', async route => {
+    await page.route('**/data/emart/holiday_archive.json*', async route => {
       const response = await route.fetch();
       const rows = await response.json();
       for (const row of rows) if (row.sid === '26744cf0b4147ae1') {
