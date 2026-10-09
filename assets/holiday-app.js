@@ -1173,7 +1173,7 @@ function buildMonthCoverageNotice(stores) {
     <div class="auto-summary" role="note">
       ${selectedYear}년 ${selectedMonth}월 휴무 날짜 등록:
       ${withDates}개 / 전체 ${stores.length}개 점포.
-      날짜가 등록되지 않은 ${withoutDates}개 점포는 아래 휴무 목록에 포함되지 않습니다.
+      ${MART_CONFIG.showStoreHours ? `휴무일이 확인되지 않은 ${withoutDates}개 점포는 아래 확인 필요 목록에서 영업시간을 볼 수 있습니다.` : `날짜가 등록되지 않은 ${withoutDates}개 점포는 아래 휴무 목록에 포함되지 않습니다.`}
       날짜가 없다는 뜻이 정상 영업을 의미하지는 않습니다.
       임시휴업·영업종료 등 운영상태는 점포별 상세 화면에서 확인해 주세요.
     </div>
@@ -3120,7 +3120,7 @@ function buildMonthCalendar(stores) {
   `;
 
 
-  return html;
+  return html + buildCardBenefitsPanel();
 
 }
 
@@ -6667,12 +6667,12 @@ function buildInternalStoreViewUrl(
 
 
   if (
-    selectedRegion === "all"
+    selectedRegion === "all" || MART_CONFIG.remoteInventoryPath
   ) {
 
     params.set(
       "region",
-      "all"
+      selectedRegion
     );
 
   }
@@ -7371,6 +7371,79 @@ if (MART_CONFIG.remoteInventoryPath) {
   });
   observer.observe(content,{childList:true});
 }
+/* Embedded into the common holiday app at build/source authoring time.
+   No card conditions or financial calculation live in this UI. */
+const CARD_PANEL_BRANDS = new Set(['emart','lotte','lottemart','homeplus','costco']);
+const cardBenefitCache = new Map();
+
+function getCardBenefitBrand() {
+  const key=MART_CONFIG.brandKey || (MART_CONFIG.brandName === '롯데마트' ? 'lottemart' : '');
+  return key === 'lotte' ? 'lottemart' : key;
+}
+function buildCardBenefitsPanel() {
+  const brand=getCardBenefitBrand();
+  if (!CARD_PANEL_BRANDS.has(brand)) return '';
+  const key = brand + ':' + getSelectedMonthKey();
+  return `<section class="card-benefits-panel" data-card-key="${key}" aria-labelledby="card-benefits-title"><h2 id="card-benefits-title">이 마트에서 할인받는 카드</h2><p class="card-benefits-state" role="status">선택한 달의 카드 혜택을 확인하고 있습니다.</p><div class="card-benefits-items"></div></section>`;
+}
+
+function cardBenefitMoney(value) {
+  return Number.isSafeInteger(value) && value >= 0 ? value.toLocaleString('ko-KR') + '원' : '조건 확인 필요';
+}
+
+function cardBenefitMarkup(row, month, gateway) {
+  const scenarios = (row.scenarios || []).filter(s => s.month === month);
+  const examples = [300000,700000].map(spend => {
+    const s = scenarios.find(x => x.mart_spend === spend);
+    const known = s?.status === 'calculated';
+    return `<p>마트 월 ${spend/10000}만원 이용 시 → ${known ? cardBenefitMoney(s.amount) : '조건 확인 필요'}${s ? `<br><small>전월 카드 인정실적 ${cardBenefitMoney(s.previous_month_spend)} 기준${s.assumptions?.length ? ' · '+s.assumptions.map(consumerEscape).join(' · ') : ''}</small>` : ''}</p>`;
+  }).join('');
+  const valid = `${row.valid_from} ~ ${row.valid_until || '종료일 미정'}`;
+  const label = row.kind === 'promotion' ? '기간 한정 추가 혜택' : '카드 기본 혜택';
+  const link = /^[a-f0-9]{32}$/.test(row.official_link_id || '') ? `<a class="card-benefit-official" href="${gateway}/card-out/${row.official_link_id}" target="_blank" rel="noopener noreferrer">공식 카드 혜택 확인</a>` : '';
+  return `<article class="card-benefit-card"><h3>${consumerEscape(row.card_name)} <small>${consumerEscape(row.issuer)}</small></h3><p>${label}${row.kind === "promotion" ? " · "+consumerEscape(valid) : ""} · ${consumerEscape(row.summary)}</p>${examples}<p>${consumerEscape(row.performance_condition)}<br>${consumerEscape(row.cap_summary)}</p><details><summary>상세 조건 확인</summary><p>적용기간: ${consumerEscape(valid)}<br>확인일: ${consumerEscape(row.verified_at?.slice(0,10))}</p><p>적용 점포: ${consumerEscape(row.store_scope)}</p><ul>${(row.conditions || []).map(x=>`<li>${consumerEscape(x)}</li>`).join('')}</ul>${scenarios.length ? scenarios.map(s=>`<p>마트 월 ${s.mart_spend/10000}만원 · 전월 인정실적 ${cardBenefitMoney(s.previous_month_spend)} 기준<br>3개월 예상 혜택: ${cardBenefitMoney(s.three_month_amount)}<br>실제 전체 적용기간 예상 혜택: ${cardBenefitMoney(s.full_period_amount)}</p>`).join('') : '<p>기간별 예상 혜택: 조건 확인 필요</p>'}<p>발급 보너스는 별도이며 자동 합산하지 않습니다.</p>${link}</details></article>`;
+}
+
+async function loadCardBenefitsPanel(panel, page = 1) {
+  const key = panel.dataset.cardKey;
+  const [brand,month] = key.split(':');
+  const state = panel.querySelector('.card-benefits-state');
+  const items = panel.querySelector('.card-benefits-items');
+  const gateway = BUILD_OFFICIAL_STORE_REDIRECT_BASE.replace(/\/r\/?$/,'');
+  panel.dataset.cardLoaded = 'true';
+  if (!gateway) {state.textContent='이 달에 검증 완료된 카드 혜택이 아직 없습니다.';return;}
+  const cacheKey = key+':'+page;
+  let entry = cardBenefitCache.get(cacheKey);
+  if (!entry || Date.now()-entry.at > 300000) {
+    const controller = new AbortController();
+    const timer = setTimeout(()=>controller.abort(),5000);
+    const promise = fetch(`${gateway}/api/card-benefits?brand=${encodeURIComponent(brand)}&month=${month}&page=${page}`,{signal:controller.signal}).then(r=>{if(!r.ok)throw Error('Card lookup failed');return r.json();}).finally(()=>clearTimeout(timer));
+    entry={at:Date.now(),promise};cardBenefitCache.set(cacheKey,entry);
+    if(cardBenefitCache.size>48)cardBenefitCache.delete(cardBenefitCache.keys().next().value);
+  }
+  try {
+    const data=await entry.promise;
+    if (!panel.isConnected || panel.dataset.cardKey!==key) return;
+    if(data.version!==1 || data.brand!==brand || data.month!==month || !Array.isArray(data.items) || data.items.length>3 || !Number.isSafeInteger(data.total) || data.total<0)throw Error('Invalid card handoff');
+    state.textContent=data.total ? `${month} · 확인된 카드 혜택 ${data.total}개 · 예상액은 표시된 결제 조건 기준입니다.` : '이 달에 검증 완료된 카드 혜택이 아직 없습니다.';
+    items.innerHTML=data.items.map(r=>cardBenefitMarkup(r,month,gateway)).join('');
+    if(data.total){
+      const expand=document.createElement('button');expand.type='button';expand.textContent='전체 카드 혜택 보기';expand.setAttribute('aria-expanded','false');expand.addEventListener('click',()=>{const open=expand.getAttribute('aria-expanded')!=='true';items.querySelectorAll('details').forEach(x=>x.open=open);expand.setAttribute('aria-expanded',String(open));expand.textContent=open?'간단히 보기':'전체 카드 혜택 보기';});items.append(expand);
+      if(data.total>3){
+        const nav=document.createElement('div');nav.className='card-benefits-pagination';
+        for(const [label,next] of [['이전 카드',page-1],['다음 카드',page+1]]){const button=document.createElement('button');button.type='button';button.textContent=label;button.disabled=next<1 || (next-1)*3>=data.total;button.addEventListener('click',()=>loadCardBenefitsPanel(panel,next));nav.append(button);}items.append(nav);
+      }
+    }
+  } catch {
+    cardBenefitCache.delete(cacheKey);
+    if(panel.isConnected){state.textContent='카드 혜택을 확인하지 못했습니다. 휴무일 정보는 계속 이용할 수 있습니다.';items.replaceChildren();}
+  }
+}
+
+// Rendering a month or calendar date replaces the calendar DOM. The independent
+// month-key cache prevents duplicate requests when filtering holiday dates.
+if (typeof MutationObserver !== 'undefined' && document.body) new MutationObserver(()=>{
+  document.querySelectorAll('.card-benefits-panel:not([data-card-loaded])').forEach(panel=>loadCardBenefitsPanel(panel));
+}).observe(document.body,{childList:true,subtree:true});
+
 loadData();
-
-

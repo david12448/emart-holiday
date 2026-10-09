@@ -1474,3 +1474,17 @@
   font-weight: 800;
 }
 
+
+/* Optional shared card benefits: compact by default, conditions on demand. */
+.card-benefits-panel { margin: 16px 0; padding: 16px; border: 1px solid #ddd; border-radius: 12px; background: #fff; overflow-wrap: anywhere; }
+.card-benefits-panel h2 { font-size: 1.1rem; margin: 0 0 10px; }
+.card-benefits-state { font-size: .85rem; color: #555; }
+.card-benefit-card { padding: 12px 0; border-top: 1px solid #eee; }
+.card-benefit-card h3 { font-size: 1rem; margin: 0 0 8px; }
+.card-benefit-card h3 small { display: inline-block; font-size: .8rem; font-weight: normal; }
+.card-benefit-card p { font-size: .9rem; line-height: 1.6; margin: 6px 0; }
+.card-benefit-card small { color: #555; }
+.card-benefit-card summary { cursor: pointer; padding: 8px 0; }
+.card-benefits-panel button, .card-benefit-official { padding: 9px 12px; min-height: 44px; border: 1px solid #ddd; border-radius: 8px; background: #fff; cursor: pointer; }
+.card-benefits-pagination { display: flex; gap: 8px; margin-top: 10px; }
+.card-benefits-panel button:disabled { opacity: .45; cursor: default; }
