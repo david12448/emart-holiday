@@ -2,11 +2,25 @@
 (() => {
   const config = window.MART_CONFIG || {};
   const params = new URLSearchParams(location.search);
-  const sid = params.get("storeId");
+  const sid = params.has("storeId") ? params.get("storeId") : config.routeDefaults?.storeId;
   const canonical = document.querySelector('link[rel="canonical"]') ||
     document.head.appendChild(Object.assign(document.createElement("link"), {rel: "canonical"}));
   if (!canonical.href && config.routeCanonicalBase) {
-    canonical.href = new URL(config.routeCanonicalBase, location.origin).href;
+    const path = params.get("region") === "all" || params.get("region") === "전체" ?
+      config.routeCanonicalBase : config.routeCanonicalDefault || config.routeCanonicalBase;
+    canonical.href = new URL(path, location.origin).href;
+  }
+  const region = params.get("region");
+  if (!sid && region && !["all","전체"].includes(region) && config.publicRouteBase) {
+    fetch(config.publicRouteBase + "region-" + encodeURIComponent(region) + ".json")
+      .then(r => {if (!r.ok) throw new Error("route unavailable"); return r.json();})
+      .then(route => {
+        const url = new URL(route.path, location.origin);
+        if (url.origin === location.origin && !url.search && !url.hash) canonical.href = url.href;
+      }).catch(() => {
+        const url = new URL(location.href); url.search = "";
+        url.searchParams.set("region",region); canonical.href = url.href;
+      });
   }
   if (/^[a-f0-9]{16}$/.test(sid || "") && config.publicRouteBase) {
     fetch(config.publicRouteBase + sid + ".json").then(r => {
@@ -27,6 +41,30 @@
     });
   }
   const tabs = document.getElementById("embed-month-tabs");
+  // Resolve only the clicked public store, keeping bulk mappings off the client.
+  document.addEventListener("click", event => {
+    const anchor = event.target.closest("a[href]");
+    if (!anchor || event.defaultPrevented || event.button !== 0 ||
+        event.metaKey || event.ctrlKey || event.shiftKey || event.altKey ||
+        anchor.target === "_blank" || !config.publicRouteBase) return;
+    const target = new URL(anchor.href, location.href);
+    const id = target.searchParams.get("storeId");
+    if (target.origin !== location.origin || !/^[a-f0-9]{16}$/.test(id || "")) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    fetch(config.publicRouteBase + id + ".json").then(r => {
+      if (!r.ok) throw new Error("unregistered");
+      return r.json();
+    }).then(route => {
+      const destination = new URL(route.path, location.origin);
+      if (destination.origin !== location.origin) throw new Error("invalid route");
+      const query = new URLSearchParams(target.search);
+      query.delete("storeId");
+      destination.search = query.toString();
+      destination.hash = target.hash;
+      location.assign(destination.href);
+    }).catch(() => location.assign(target.href));
+  }, true);
   if (!tabs) return;
   const now = new Date(new Date().toLocaleString("en-US", {timeZone:"Asia/Seoul"}));
   for (let offset = 0; offset < 2; offset++) {

@@ -24,8 +24,14 @@ const assert = require('node:assert/strict');
       assert.equal(await page.locator('.calendar-day-detail').count(),0);
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 2));
     }
-    await page.goto(base + '/emart/seoul/garden5/?date=2026-10');
+    await page.goto(base + '/emart/seoul/?date=2026-10');
+    await page.locator('#content a[href*="storeId=26744cf0b4147ae1"]').first().waitFor();
+    await page.locator('#content a[href*="storeId=26744cf0b4147ae1"]').first().click();
+    await page.waitForURL('**/emart/seoul/garden5/**');
     await page.locator('.single-store-back-link').waitFor();
+    await page.waitForFunction(() => document.querySelector('link[rel="canonical"]').href.endsWith('/emart/seoul/garden5/'));
+    const official = await page.locator('.store-detail-button').getAttribute('href');
+    assert.match(official,/mart-store-link-gateway.*\/r\/26744cf0b4147ae1/);
     const back = await page.locator('.single-store-back-link').getAttribute('href');
     assert.match(back,/\/emart\/seoul\/\?date=2026-10/);
     await page.locator('.single-store-back-link').click();
@@ -42,9 +48,24 @@ const assert = require('node:assert/strict');
     assert.equal(await page.locator('#embed-month-tabs button').count(),2);
     await page.locator('#embed-month-tabs button').last().click();
     assert.match(await page.locator('.calendar-month-title').innerText(),/2026년 11월/);
-    assert.equal(await page.locator('#embed-unknown').isVisible(),true);
+    assert.equal(await page.locator('#embed-unknown').isVisible(),false);
+    assert.ok(await page.locator('.calendar-day-clickable').count());
     await page.locator('#embed-month-tabs button').first().click();
     assert.match(await page.locator('.calendar-month-title').innerText(),/2026년 10월/);
+    // Separate unknown fixture: never erase the real archived November dates.
+    await page.route('**/data/emart/holiday_archive.json', async route => {
+      const response = await route.fetch();
+      const rows = await response.json();
+      for (const row of rows) if (row.sid === '26744cf0b4147ae1') {
+        row.holidays = row.holidays.filter(d => !d.startsWith('2026-11-'));
+      }
+      await route.fulfill({response,json:rows});
+    });
+    await page.reload();
+    await page.locator('.month-calendar').waitFor();
+    await page.locator('#embed-month-tabs button').last().click();
+    assert.equal(await page.locator('#embed-unknown').isVisible(),true);
+    assert.equal(await page.locator('.calendar-day-clickable').count(),0);
     assert.deepEqual(errors,[]);
     await page.close();
   }

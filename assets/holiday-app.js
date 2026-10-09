@@ -6735,7 +6735,7 @@ function buildStoreListReturnUrl() {
 
 
   return (
-    (MART_CONFIG.routeListPath || window.location.pathname)
+    ((selectedRegion === "all" && MART_CONFIG.routeBrandPath) || MART_CONFIG.routeListPath || window.location.pathname)
     +
     "?"
     +
