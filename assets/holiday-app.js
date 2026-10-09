@@ -54,6 +54,43 @@ const weekdayNames = [
 
 
 let holidayData = [];
+let remoteInventoryMeta = null;
+
+function consumerEscape(value) {
+  return String(value || "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+function storeHoursSummary(store) {
+  if (!MART_CONFIG.showStoreHours) return "";
+  const labels={early_close:"22시 이전 마감",late_close:"22시 이후 마감",early_open:"조기 개점",late_open:"늦은 개점",host_holiday_unverified:"입점시설 휴무일 공유 여부 확인 필요"};
+  const periods=(store.hoursPeriods||[]).map(p=>`${p.scope==="weekday"?"평일":p.scope==="weekend"?"주말":"매일"} ${consumerEscape(p.hours)}`).join(" · ");
+  const text=periods || (store.hoursStatus === "verified" ? consumerEscape(store.hours) : "영업시간 확인 필요");
+  const notices=(store.notices||[]).map(n=>labels[n]).filter(Boolean).map(consumerEscape).join(" · ");
+  return `<span style="display:block;font-size:0.85em;color:#555">${text}${notices ? " · " + notices : ""}</span>`;
+}
+function buildUnscheduledHoursInventory(stores) {
+  if (!MART_CONFIG.showStoreHours || selectedCalendarDate) return "";
+  const rows=stores.filter(store=>getMonthHolidays(store).length===0);
+  if (!rows.length) return "";
+  return `<details class="holiday-accordion hours-inventory" open><summary>휴무일 확인 필요 · ${rows.length}개 점포</summary><div class="accordion-content"><div class="store-grid">${rows.map(store=>`<a class="store-grid-item store-link" href="${TISTORY_POST_URL}" data-store-id="${getStoreId(store)}">${consumerEscape(shortStoreName(store.store))}${storeHoursSummary(store)}</a>`).join("")}</div></div></details>`;
+}
+function remoteInventoryNavigation() {
+  if (!remoteInventoryMeta || requestedStoreId) return;
+  const content=document.getElementById("content"),meta=remoteInventoryMeta;
+  const box=document.createElement("div");box.className="month-coverage-notice";
+  const info=document.createElement("p");info.textContent=`현재 공식 자료를 확인한 일부 점포만 제공합니다. 조회 결과 ${meta.total}개 중 ${holidayData.length}개 표시 · ${meta.page}페이지. 달력과 휴무 목록은 현재 표시된 점포 기준입니다.`;box.appendChild(info);
+  const form=document.createElement("form"),input=document.createElement("input"),submit=document.createElement("button");
+  input.type="search";input.name="q";input.setAttribute("aria-label","매장명 또는 주소 검색");input.placeholder="매장명 또는 주소";input.value=urlParams.get("q")||"";
+  submit.textContent="검색";form.append(input,submit);form.addEventListener("submit",e=>{e.preventDefault();const u=new URL(location.href);u.searchParams.set("q",input.value.trim());u.searchParams.delete("page");location.href=u;});box.appendChild(form);
+  for(const [label,page] of [["이전",meta.page-1],["다음",meta.page+1]]) {
+    const button=document.createElement("button");button.textContent=label;button.disabled=page<1||(page-1)*meta.pageSize>=meta.total;
+    button.addEventListener("click",()=>{const u=new URL(location.href);u.searchParams.set("page",page);location.href=u;});box.appendChild(button);
+  }
+  content.prepend(box);
+}
+function reloadRemoteRegion(region) {
+  if (!MART_CONFIG.remoteInventoryPath) return false;
+  const u=new URL(location.href);u.searchParams.set("region",region);u.searchParams.delete("page");u.searchParams.delete("storeId");location.href=u;return true;
+}
 
 
 /*
@@ -1291,11 +1328,15 @@ holiday_archive.json에 존재하는
 function getAvailableMonthRange() {
 
   const months = [];
+  if (MART_CONFIG.showStoreHours) months.push(`${koreaToday.getFullYear()}-${pad2(koreaToday.getMonth()+1)}`);
 
 
   holidayData.forEach(
     store => {
 
+      if (MART_CONFIG.showStoreHours) {
+        for (const event of store.specialEvents || []) if (/^\d{4}-\d{2}-\d{2}$/.test(event.date)) months.push(event.date.slice(0,7));
+      }
       (store.holidays || [])
         .forEach(
           date => {
@@ -1750,6 +1791,7 @@ function buildCalendarQuickSummary(
 */
 
 function getChangeStatusUrl() {
+  if (MART_CONFIG.remoteInventoryPath) return null;
 
   if (
     MART_CONFIG.changeStatusUrl
@@ -3608,7 +3650,7 @@ function createTabs() {
   const availableRegions =
     regionOrder.filter(
       region =>
-        holidayData.some(
+        remoteInventoryMeta ? remoteInventoryMeta.regions.includes(region) : holidayData.some(
           item =>
             getStoreRegion(item) ===
             region
@@ -3681,7 +3723,7 @@ function createTabs() {
 
       selectedRegion =
         "all";
-
+      if (reloadRemoteRegion("all")) return;
 
       updateRegionInUrl(
         "all"
@@ -3742,7 +3784,7 @@ function createTabs() {
 
           selectedRegion =
             region;
-
+          if (reloadRemoteRegion(region)) return;
 
           updateRegionInUrl(
             region
@@ -4025,6 +4067,7 @@ function renderSingleStore(store) {
     }
 
 
+    ${MART_CONFIG.showStoreHours ? `<div class="month-coverage-notice"><p>현재 확인된 일반 영업시간</p>${storeHoursSummary(store)}<p>최근 시간 확인: ${consumerEscape((store.hoursCheckedAt || "").slice(0,10)) || "확인 필요"}</p>${(store.specialEvents||[]).filter(e=>e.date.startsWith(`${selectedYear}-${String(selectedMonth).padStart(2,"0")}`)).map(e=>`<p>${consumerEscape(e.date)} · ${{holiday_open:"명절 영업 확인",holiday_closed:"명절 휴무",temporary_closed:"임시휴업",special_hours:"특별 영업시간"}[e.type] || "확인된 특별 일정"}${e.hours!=="unknown"?" · "+consumerEscape(e.hours):" · 시간 확인 필요"}</p>`).join("")}<p>평일·주말 차이, 명절 특별영업 및 임시휴업은 확인된 내용만 표시합니다. 확인되지 않은 일정은 영업으로 간주하지 않습니다.</p>${store.hostLocationName ? `<p>입점시설: ${consumerEscape(store.hostLocationName)} · 휴무일 공유 여부 확인 필요</p>` : ""}</div>` : ""}
     <div class="holiday-accordion">
 
       <div
@@ -4164,6 +4207,7 @@ function renderStoreCollection(
     }
 
     ${buildMonthCoverageNotice(stores)}
+    ${buildUnscheduledHoursInventory(stores)}
   `;
 
 
@@ -4335,7 +4379,7 @@ function renderStoreCollection(
                       data-store-id="${getStoreId(store)}"
                       title="${displayName} 상세정보 보기"
                     >
-                      ${visibleName}
+                      ${visibleName}${storeHoursSummary(store)}
                     </a>
                   `;
 
@@ -4439,6 +4483,7 @@ function renderRegionPatternView(
     }
 
     ${buildMonthCoverageNotice(stores)}
+    ${buildUnscheduledHoursInventory(stores)}
 
   `;
 
@@ -4749,7 +4794,7 @@ function renderRegionPatternView(
             data-store-id="${getStoreId(store)}"
             title="${displayName} 상세정보 보기"
           >
-            ${displayName}
+            ${displayName}${storeHoursSummary(store)}
           </a>
 
         `;
@@ -5255,6 +5300,7 @@ function renderAllRegions(
     }
 
     ${buildMonthCoverageNotice(targetStores)}
+    ${buildUnscheduledHoursInventory(targetStores)}
   `;
 
 
@@ -5684,7 +5730,7 @@ function compactDate(
               data-store-id="${getStoreId(store)}"
               title="${displayName} 상세정보 보기"
             >
-              ${formattedDisplayName}
+              ${formattedDisplayName}${storeHoursSummary(store)}
             </a>
           `;
 
@@ -6992,7 +7038,7 @@ async function loadSupplementalDataSources(
 async function loadData() {
 
   document.title =
-    `${MART_CONFIG.brandName || "마트"} 휴점일 안내`;
+    MART_CONFIG.pageTitle || `${MART_CONFIG.brandName || "마트"} 휴점일 안내`;
 
   const heading =
     document.getElementById("page-title");
@@ -7000,7 +7046,7 @@ async function loadData() {
   if (heading) {
 
     heading.textContent =
-      `${MART_CONFIG.brandName || "마트"} 휴점일 안내`;
+      MART_CONFIG.pageTitle || `${MART_CONFIG.brandName || "마트"} 휴점일 안내`;
 
   }
 
@@ -7021,10 +7067,20 @@ async function loadData() {
       Date.now();
 
 
+    let currentUrl = `${MART_CONFIG.currentDataUrl}?time=${cacheKey}`;
+    if (MART_CONFIG.remoteInventoryPath) {
+      const gateway = BUILD_OFFICIAL_STORE_REDIRECT_BASE.replace(/\/r\/?$/, "");
+      if (!gateway.startsWith("https://")) throw new Error("data gateway missing");
+      const u = new URL(MART_CONFIG.remoteInventoryPath, gateway);
+      u.searchParams.set("region", selectedRegion);
+      u.searchParams.set("page", urlParams.get("page") || "1");
+      u.searchParams.set("q", urlParams.get("q") || "");
+      if (requestedStoreId) {u.searchParams.set("sid",requestedStoreId);u.searchParams.set("page","1");u.searchParams.delete("q");}
+      currentUrl=u.toString();
+    }
     const currentResponse =
       await fetch(
-        `${MART_CONFIG.currentDataUrl}?time=` +
-        cacheKey,
+        currentUrl,
         {
           cache: "no-store"
         }
@@ -7042,8 +7098,12 @@ async function loadData() {
     }
 
 
-    const currentData =
-      await currentResponse.json();
+    const currentPayload = await currentResponse.json();
+    if (MART_CONFIG.remoteInventoryPath) {
+      if (!Array.isArray(currentPayload.items) || !Array.isArray(currentPayload.regions)) throw new Error("invalid inventory response");
+      remoteInventoryMeta=currentPayload;
+    }
+    const currentData = MART_CONFIG.remoteInventoryPath ? currentPayload.items : currentPayload;
 
 
     /*
@@ -7100,6 +7160,7 @@ async function loadData() {
 
     try {
 
+      if (MART_CONFIG.remoteInventoryPath) throw new Error("remote inventory has no historical archive");
       const archiveResponse =
         await fetch(
           `${MART_CONFIG.archiveDataUrl}?time=` +
@@ -7123,7 +7184,7 @@ async function loadData() {
       archiveError
     ) {
 
-      console.warn(
+      if (!MART_CONFIG.remoteInventoryPath) console.warn(
         "holiday_archive.json을 사용할 수 없어 현재 달 데이터로 대체합니다.",
         archiveError
       );
@@ -7300,5 +7361,16 @@ async function loadData() {
 }
 
 
+if (MART_CONFIG.remoteInventoryPath) {
+  const content=document.getElementById("content");
+  const observer=new MutationObserver(()=>{
+    if (content.querySelector("[data-remote-navigation]")) return;
+    observer.disconnect();remoteInventoryNavigation();
+    const first=content.firstElementChild;if(first)first.dataset.remoteNavigation="true";
+    observer.observe(content,{childList:true});
+  });
+  observer.observe(content,{childList:true});
+}
 loadData();
+
 
