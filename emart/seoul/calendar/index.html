@@ -116,6 +116,7 @@ for (const source of window.MART_CONFIG.supplementalDataSources || []) {
   for (const key of ["currentDataUrl", "archiveDataUrl"]) source[key] = new URL(source[key], routeBase).href;
 }
 window.MART_CONFIG.routeDefaults = {"region": "서울"};
+window.MART_CONFIG.pageTitle = "이마트 서울 휴무일";
 window.MART_CONFIG.routeListPath = "/emart-holiday/emart/";
 window.MART_CONFIG.routeBrandPath = "/emart-holiday/emart/";
 window.MART_CONFIG.detailBaseUrl = "";

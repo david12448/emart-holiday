@@ -47,7 +47,9 @@
     if (!anchor || event.defaultPrevented || event.button !== 0 ||
         event.metaKey || event.ctrlKey || event.shiftKey || event.altKey ||
         anchor.target === "_blank" || !config.publicRouteBase) return;
-    const target = new URL(anchor.href, location.href);
+    const internal = anchor.dataset.storeId && !requestedStoreId &&
+      config.allRegionsStoreLinksUseInternalView === true;
+    const target = new URL(internal ? buildInternalStoreViewUrl(anchor.dataset.storeId) : anchor.href, location.href);
     const id = target.searchParams.get("storeId");
     if (target.origin !== location.origin || !/^[a-f0-9]{16}$/.test(id || "")) return;
     event.preventDefault();
