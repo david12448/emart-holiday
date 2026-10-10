@@ -1,0 +1,17 @@
+.route-navigation { margin-bottom: 1rem; line-height: 1.8; }
+.route-navigation ul { display: flex; gap: 1rem; flex-wrap: wrap; padding-left: 1rem; }
+.route-facts { margin: 1rem 0; }
+.route-facts li { margin: .5rem 0; overflow-wrap: anywhere; }
+.calendar-embed .container { max-width: 720px; padding: 8px; margin: 0 auto; }
+.calendar-embed .route-navigation,
+.calendar-embed .route-facts,
+.calendar-embed #page-title,
+.calendar-embed #page-description,
+.calendar-embed #tabs,
+.calendar-embed #source-label { display: none; }
+.calendar-embed #content > :not(.month-calendar) { display: none; }
+.calendar-embed .calendar-nav-button { visibility: hidden; }
+#embed-month-tabs { display: flex; gap: 8px; margin-bottom: 8px; }
+#embed-month-tabs button { flex: 1; padding: 10px; border: 1px solid #aaa; background: #fff; border-radius: 8px; }
+#embed-month-tabs button[aria-pressed="true"] { background: var(--brand-main, #ffd800); }
+#embed-unknown { padding: 10px; background: #fff8df; }

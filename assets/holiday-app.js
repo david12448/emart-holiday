@@ -121,6 +121,11 @@ const urlParams =
     window.location.search
   );
 
+// Generated static routes supply defaults; explicit legacy parameters win.
+for (const [key, value] of Object.entries(MART_CONFIG.routeDefaults || {})) {
+  if (!urlParams.has(key)) urlParams.set(key, String(value));
+}
+
 
 const requestedRegion =
   urlParams.get("region");
@@ -6723,14 +6728,14 @@ function buildStoreListReturnUrl() {
 
     params.set(
       "region",
-      "all"
+      MART_CONFIG.routeDefaults?.region || "all"
     );
 
   }
 
 
   return (
-    window.location.pathname
+    ((selectedRegion === "all" && MART_CONFIG.routeBrandPath) || MART_CONFIG.routeListPath || window.location.pathname)
     +
     "?"
     +
@@ -7452,3 +7457,4 @@ if (typeof MutationObserver !== 'undefined' && document.body) new MutationObserv
 }).observe(document.body,{childList:true,subtree:true});
 
 loadData();
+

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://david12448.github.io/emart-holiday/sitemap-routes.xml
