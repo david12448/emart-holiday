@@ -3,6 +3,7 @@ on:
   pull_request:
     paths:
       - "emart/**"
+      - "beauty/**"
       - "assets/**"
       - "index.html"
       - "data/public-routes/**"
