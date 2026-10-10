@@ -8,6 +8,12 @@ const fs = require('node:fs');
   for (const viewport of [{width:1280,height:900},{width:390,height:844}]) {
     const page = await browser.newPage({viewport});
     await page.clock.install({time: new Date('2026-10-10T00:00:00Z')});
+    const categoryResponse = await page.goto(base + '/beauty/');
+    assert.equal(categoryResponse.status(),200);
+    assert.match(await page.locator('h1').innerText(),/화장품 매장/);
+    assert.equal(await page.locator('.beauty-brands li').count(),4);
+    assert.equal(await page.locator('.beauty-brands a').count(),0);
+    assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 2));
     const errors = [];
     page.on('pageerror', e => errors.push(e.message));
     for (const route of ['emart/','emart/seoul/','emart/seoul/garden5/','emart/seoul/wangsimni/']) {
